@@ -4,34 +4,34 @@ import { FaArrowRightLong } from "react-icons/fa6";
 const Services = () => {
   const services = [
     {
-      title: "Web Development",
+      title: "WEB DEVELOPMENT",
       description:
-        "Custom websites and web apps built with modern frameworks for speed, security, and scalability.",
+        "Zemalt designs responsive websites to boost user interaction. Clean code ensures smooth navigation and quick access. Effective sites increase visitor satisfaction.",
     },
     {
-      title: "Mobile App Development",
+      title: "SEARCH ENGINE OPTIMIZATION",
       description:
-        "Cross-platform mobile applications with intuitive designs and powerful performance.",
+        "Zemalt improves online visibility using SEO. Targeted keywords and quality content build trust and boost rankings. Regular updates increase traffic and ensure clear goals guide every step",
     },
     {
-      title: "UI/UX Design",
+      title: "CONTENT WRITING",
       description:
-        "User-focused designs that blend aesthetics with functionality for optimal engagement.",
+        "Write clearly and engagingly to draw readers in. Strong writing informs the audience. It answers queries and builds trust and steady engagement.",
     },
     {
-      title: "Digital Marketing",
+      title: "SOCIAL MEDIA MARKETING",
       description:
-        "SEO, social media, and PPC campaigns to grow your online presence and reach your target audience.",
+        "We create targeted campaigns to grow audience reach. Clear posts build trust and answer common questions. Tailored ads boost engagement and conversions.",
     },
     {
-      title: "E-commerce Solutions",
+      title: "UI UX DESIGN",
       description:
-        "Complete online store setups with secure payment gateways and seamless shopping experiences.",
+        "We design simple layouts to make things easier to use. Good design boosts retention. It answers queries and keeps user satisfaction high",
     },
     {
-      title: "Cloud & DevOps",
+      title: "GOOGLE ADS MANAGEMENT",
       description:
-        "Cloud migration, deployment automation, and infrastructure optimization services.",
+        "You should run targeted ads to increase customer leads. Focused strategies reach prospects and address common queries to improve campaign results effectively.",
     },
   ];
 

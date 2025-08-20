@@ -4,19 +4,19 @@ const Servicefeatured = () => {
   return (
     <div className="Servicefeatured">
       <h1>
-        Our <span>Services</span> vitae ultrices facilisis gravida
+        Zemalt <span>Services</span> helps brands grow online
       </h1>
 
       <div className="Servicefeatured-bottom">
         <div className="top">
           <div className="left">
             <p>
-              enim. ullamcorper porta nibh Lorem nisl. consectetur eget at,
-              amet, dignissim, placerat varius tempor venenatis eu Ut ne varius tempor venenatis eu Ut ne
+              Zemalt offers expert marketing services. Clear plans reach the audience fast. Focus stays on results that drive more leads.
+
+
             </p>
             <p>
-              enim. ullamcorper porta nibh Lorem nisl. consectetur eget at,
-              amet, dignissim, placerat varius tempor venenatis eu Ut ne varius tempor venenatis eu Ut ne
+              Strong skills create trust effectively. The team works carefully to meet each goal.
             </p>
           </div>
           <div className="right">

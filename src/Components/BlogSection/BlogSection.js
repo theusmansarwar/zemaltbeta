@@ -37,7 +37,7 @@ const BlogSection = () => {
       <div className="blog-header">
         <div className="header-left">
           <h2>
-            Digital Marketing & SEO Services That Grow Traffic & Increase Revenue
+            Digital Marketing & SEO Services That Boost Reach & Increase Sales
           </h2>
         </div>
         <div className="header-right">

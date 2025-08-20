@@ -1,0 +1,79 @@
+.lastbottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 5%;
+  width: 90%;
+ 
+}
+
+.lastbottom-left {
+  flex: 1;
+  max-width: 60%;
+}
+
+.lastbottom-left h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.lastbottom-left p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.lastbottom-btn {
+  background: black;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s ease;
+}
+
+.lastbottom-btn:hover {
+  background: #333;
+}
+
+.arrow {
+  font-size: 1.2rem;
+}
+
+.lastbottom-right {
+  flex: 1;
+  max-width: 40%;
+}
+
+
+.lastbottom-image {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border-radius: var(--border-radius1);
+  overflow: hidden;
+  background-image: url(https://images.pexels.com/photos/3183172/pexels-photo-3183172.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+.image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
