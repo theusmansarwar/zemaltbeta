@@ -1,0 +1,34 @@
+:root {
+--text-color:#020407;
+--text-color2:#010205;
+--text-color3:#878C91;
+--text-color4:#ffffff;
+--background1:#00000033;
+--background2:#F0F0F0;
+--main-color:#000000;
+--primary-color:#688ECA;
+--secondary-color:#6A26F1;
+--border-radius1:20px;
+--border-radius2:8px;
+--default-width:90%;
+--left-space:5%;
+--default-p-size:14px;
+--default-box-shadow:0px 0px 2px black;
+}
+*{
+  padding: 0%;
+  margin: 0%;
+}
+.overlay{
+  background-color: #01020546;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+

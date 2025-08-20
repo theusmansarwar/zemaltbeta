@@ -1,0 +1,194 @@
+.realworld {
+  position: relative;
+  width: var(--default-width);
+  margin-left: var(--left-space);
+  border-radius: var(--border-radius1);
+ 
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.realworld::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/drive-card-img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+
+  transform: scale(1.7) scaleX(-1);
+
+  z-index: 0;
+}
+
+.realworld > * {
+  position: relative;
+  z-index: 1; 
+}
+.realworld h3 {
+  width: 80%;
+  font-size: 36px;
+  margin-top: 50px;
+  text-align: center;
+  color: white;
+}
+.realworld ul {
+  list-style: none;
+  display: flex;
+  width: 80%;
+  gap: 40px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  margin-top: 50px;
+}
+.realworld ul li {
+  padding: 10px 20px;
+  color: var(--text-color4);
+  border: 1px solid var(--text-color4);
+  border-radius: var(--border-radius1);
+  cursor: pointer;
+}
+.realworld ul li.active , .realworld ul li:hover{
+  padding: 10px 20px;
+  color: var(--text-color4);
+  border: 1px solid var(--primary-color);
+  border-radius: var(--border-radius1);
+  background-color: var(--primary-color);
+}
+.work-area {
+  display: flex;
+  width: 90%;
+  
+  margin-top: 50px;
+  overflow-x: scroll;
+  gap: 50px;
+  scrollbar-width: none;
+  margin-bottom: 50px;
+
+}
+.work-area .work-div {
+  height: 370px;
+  min-width: 370px;
+  background-image: url("/how-we-work.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 8px solid var(--text-color3);
+  border-radius: var(--border-radius1);
+  cursor: pointer;
+}
+.work-area .work-div:hover {
+  border-radius: 50%;
+}
+.work-area .work-div .detail-btn {
+  display: none;
+}
+.work-area .work-div:hover .detail-btn {
+  display: block;
+  height: 150px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+    
+
+}
+.work-area .work-div .work-overlay {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.work-area .work-div .work-overlay p{
+display: flex;
+align-items: center;
+width: 90%;
+gap: 5px;
+color: var(--text-color4);
+margin-top: 20px;
+margin-bottom: 20px;
+}
+.work-area .work-div .work-overlay p span {
+width: 10%;
+height: 2px;
+background-color: var(--text-color4);
+}
+.work-area .work-div:hover .work-overlay p {
+  display: none;
+}
+.work-area .work-div:hover .work-overlay {
+justify-content: center;
+}
+ @media (max-width: 900px) {
+  .realworld{
+    min-height: fit-content;
+  }
+  .realworld h3 {
+  width: 90%;
+  padding: 0px;
+  font-size: 24px;
+}
+.realworld ul {
+ 
+  width: 90%;
+  gap: 10px;
+}
+.realworld ul li {
+ white-space: nowrap;
+}
+
+.work-area {
+  display: flex;
+  width: 90%;
+  margin-top: 50px;
+  overflow-x: scroll;
+  gap: 10px;
+  scrollbar-width: none;
+
+}
+.work-area .work-div {
+  height: 300px;
+  min-width: 300px;
+  background-image: url("/how-we-work.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 8px solid var(--text-color3);
+  border-radius: var(--border-radius1);
+  cursor: pointer;
+}
+.work-area .work-div:hover {
+  border-radius: 50%;
+}
+.work-area .work-div .detail-btn {
+  display: none;
+}
+.work-area .work-div:hover .detail-btn {
+  display: block;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+    
+
+}
+
+.work-area .work-div:hover .work-overlay p {
+  display: none;
+}
+.work-area .work-div:hover .work-overlay {
+justify-content: center;
+}
+ }

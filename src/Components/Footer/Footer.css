@@ -1,0 +1,169 @@
+.footer {
+    color: #000000;
+    user-select: none;
+    background-color: white;
+    padding-top: 50px;
+  }
+  
+  .footer-container {
+    display: flex;
+    
+    justify-content: space-between;
+    width: 90%;
+
+  padding: 50px 5%;
+  }
+  
+  .footer-section {
+   width: 15%;
+   align-items: center;
+  }
+  .footer-section:first-child {
+    width: 47%;
+   }
+ 
+   
+  .logo {
+   
+    font-weight: bold;
+    margin-bottom: 15px;
+    height: 40px;
+  }
+  
+  .footer-description {
+    font-size: var(--default-p-size);
+
+  }
+  
+  .social-icons {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .icon {
+    color: #000;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: bold;
+  }
+  .icon:hover{
+    color: var(--shadow-low3);
+    background-color: transparent;
+    border: 2px solid var(--shadow-low3);
+    cursor: pointer;
+  }
+  
+  .footer-section h4 {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: var(--headings-color);
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: var(--default-p-size);
+    width: fit-content;
+  }
+  .footer-section ul li:hover {
+    color: var(--headings-color);
+  }
+  
+  
+  
+  .footer-section .contact-info p {
+    margin: 6px 0;
+    font-size: var(--default-p-size);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  .footer-section .contact-info p:hover {
+    color: var(--headings-color);
+  }
+  .footer-section .contact-info p svg {
+   color: var(--headings-color);
+   font-size: 16px;
+   margin-right: 5px;
+  }
+  .footer-section .contact-info p a {
+   text-decoration: none;
+   color:var(--text-color);
+
+  }
+   .footer-section .contact-info p a:hover {
+   color:var(--headings-color);
+   
+  }
+  
+.footer-upper{
+  height: 250px;
+width: 90%;
+  background-image: url('/drive-card-img.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  border-radius: var(--border-radius1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  gap: 50px;
+}
+.footer-upper h2{
+  font-size: 58px;
+  color:var(--text-color4)
+}
+  
+.footer-upper button {
+  border: none;
+  padding: 10px 20px;
+  background-color: var(--text-color4);
+display: flex;
+align-items: center;
+min-width: 180px;
+justify-content: space-between;
+  border: 1px solid var(--text-color);
+  border-radius: var(--border-radius1);
+  color: var(--text-color);
+}
+.footer-upper button:hover {
+  color: var(--text-color4);
+  background-color: transparent;
+  
+  border: 1px solid var(--text-color4);
+}
+  @media (max-width: 900px) {
+    .footer-container {
+      flex-direction: column;
+     
+      padding-top: 20px;
+      }
+    .footer-section {
+        margin-top: 20px;
+        width: 100%;
+       }
+       .footer-section:first-child {
+         width: 100%;
+        }
+       .footer-upper{
+ height: 200px;
+flex-direction: column;
+}
+.footer-upper h2{
+  font-size: 28px;
+  color:var(--text-color4)
+}
+
+  }

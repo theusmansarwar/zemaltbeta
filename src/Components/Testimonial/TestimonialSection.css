@@ -1,0 +1,54 @@
+.TestimonialSection {
+  width: 80%;
+  margin-left: 5%;
+  background-color: black;
+  height: fit-content;
+  padding: 50px 5%;
+  border-radius: var(--border-radius1);
+  position: relative;
+}
+.Testimonial-header {
+  display: flex;
+  width: 100%;
+  display: flex;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 2;
+}
+.Testimonial-header h2 {
+  width: 55%;
+  font-size: 48px;
+  color: white;
+}
+.Testimonial-header p {
+  width: 40%;
+  color: white;
+}
+.testimonial-icon{
+    position: absolute;
+ width: 30%;
+ z-index: 1;
+ right: 100px;
+
+}
+@media (max-width: 900px) {
+
+   .Testimonial-header {
+  flex-direction: column;
+}
+.Testimonial-header h2 {
+  width: 100%;
+
+}
+.Testimonial-header p {
+  width:100%;
+} 
+.testimonial-icon{
+    position: absolute;
+ width: 70%;
+ z-index: 1;
+ right: 10px;
+ top: 300px;
+
+}
+}
