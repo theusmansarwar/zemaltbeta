@@ -1,61 +1,53 @@
 .OutBox {
-  
   width: 100%;
   overflow: hidden;
-  padding:50px 0% ;
-
+  padding: 50px 0%;
 }
-
 
 .OutBox .top {
-  width: 90%;
+  width: var(--default-width);
   display: flex;
   justify-content: space-between;
-  padding: 0px 5%;
+  padding: 0px var(--left-space);
   margin-bottom: 50px;
-  
 }
- .OutBox .bottom{
-  width: 90%;
+.OutBox .bottom {
+  width: var(--default-width);
   display: flex;
   justify-content: space-between;
-  padding: 0px 5%;
+  padding: 0px var(--left-space);
   gap: 20px;
-  
-  
 }
-.OutBox .top h2{
-font-size: 48px;
-width: 57%;
+.OutBox .top h2 {
+  font-size: 48px;
+  width: 57%;
 }
-.OutBox .top p{
- width: 40%;
+.OutBox .top p {
+  width: 40%;
   color: var(--text-color3);
 }
-.OutBox .bottom .left{
-height: 350px;
-width: 35%;
-  background-image: url('/drive-card-img.png');
+.OutBox .bottom .left {
+  height: 350px;
+  width: 35%;
+  background-image: url("/drive-card-img.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
-  
+
   border-radius: var(--border-radius1);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 50px;
-
-
 }
-.ltop{
-  width:80%;
+.ltop {
+  width: 80%;
 }
-.ltop p{
+.ltop p {
   color: var(--text-color3);
 }
-.ltop h3{
+.ltop h3 {
   font-size: 78px;
   color: var(--text-color4);
   display: flex;
@@ -63,142 +55,131 @@ width: 35%;
 }
 .ltop h3 span {
   color: var(--primary-color);
-
 }
-.OutBox .bottom .right{
+.OutBox .bottom .right {
   height: 350px;
-width: calc(65% - 20px);
-  background-image: url('/how-we-work.png');
+  width: calc(65% - 20px);
+  background-image: url("/how-we-work.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
   border-radius: var(--border-radius1);
- 
+
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.OutBox .bottom .right p{
+.OutBox .bottom .right p {
   color: var(--text-color4);
   font-size: 58px;
 }
-.OutBox .bottom .right .play-box{
-height: 130px;
-width: 130px;
-position: absolute;
-bottom: 0;
-right: 0;
-background-color: var(--primary-color);
-border: 8px solid var(--text-color4);
-border-radius: 50%;
-display: flex;
-margin-right: -16px;
-margin-bottom: -16px;
-justify-self: flex-end;
-align-items: center;
-justify-content: center;
+.OutBox .bottom .right .play-box {
+  height: 130px;
+  width: 130px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: var(--primary-color);
+  border: 8px solid var(--text-color4);
+  border-radius: 50%;
+  display: flex;
+  margin-right: -16px;
+  margin-bottom: -16px;
+  justify-self: flex-end;
+  align-items: center;
+  justify-content: center;
 }
 
-.OutBox .bottom .right .play-box svg{
+.OutBox .bottom .right .play-box svg {
   font-size: 36px;
 }
-.circleimg-area{
+.circleimg-area {
   display: flex;
   align-items: center;
   width: 80%;
   gap: 2%;
   justify-content: center;
-
 }
-.circleimg-area svg{
+.circleimg-area svg {
   color: var(--text-color4);
   font-size: 32px;
 }
-.circleimg{
+.circleimg {
   height: 60px;
   width: 60px;
   border-radius: 50%;
   background-color: aqua;
-  
 }
- @media (max-width: 900px) {
-
+@media (max-width: 900px) {
   .OutBox .top {
- flex-direction: column;
-  
-}
+    flex-direction: column;
+  }
 
-.OutBox .top h2{
-font-size: 28px;
-width: 100%;
-}
-.OutBox .top p{
- width: 90%;
-}
+  .OutBox .top h2 {
+    font-size: 28px;
+    width: 100%;
+  }
+  .OutBox .top p {
+    width: var(--default-width);
+  }
 
-.OutBox .top p{
-  color: var(--text-color3);
-}
+  .OutBox .top p {
+    color: var(--text-color3);
+  }
 
-.OutBox .bottom .left{
-height: 185px;
-width: 50%;
- 
+  .OutBox .bottom .left {
+    height: 185px;
+    width: 50%;
+  }
+  .ltop {
+    width: var(--default-width);
+  }
+  .ltop p {
+    color: var(--text-color3);
+  }
+  .ltop h3 {
+    font-size: 32px;
+    color: var(--text-color4);
+    display: flex;
+    align-items: center;
+  }
+  .ltop h3 span svg {
+    color: var(--primary-color);
+    font-size: 32px;
+  }
+  .OutBox .bottom .right {
+    height: 185px;
+    width: 50%;
+  }
+  .OutBox .bottom .right p {
+    font-size: 28px;
+    text-align: center;
+  }
+  .OutBox .bottom .right .play-box {
+    height: 50px;
+    width: 50px;
+    margin-right: -10px;
+    margin-bottom: -10px;
+  }
 
-
+  .OutBox .bottom .right .play-box svg {
+    font-size: 16px;
+  }
+  .circleimg-area {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    gap: 2%;
+  }
+  .circleimg-area svg {
+    color: var(--text-color4);
+    font-size: 12px;
+  }
+  .circleimg {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: aqua;
+  }
 }
-.ltop{
-  width:90%;
-}
-.ltop p{
-  color: var(--text-color3);
-}
-.ltop h3{
-  font-size: 32px;
-  color: var(--text-color4);
-  display: flex;
-  align-items: center;
-}
-.ltop h3 span svg{
-  color: var(--primary-color);
-  font-size: 32px;
-}
-.OutBox .bottom .right{
-  height: 185px;
-  width: 50%;
-
-}
-.OutBox .bottom .right p{
-  font-size: 28px;
-  text-align: center;
-}
-.OutBox .bottom .right .play-box{
-height: 50px;
-width: 50px;
-margin-right: -10px;
-margin-bottom: -10px;
-}
-
-.OutBox .bottom .right .play-box svg{
-  font-size: 16px;
-}
-.circleimg-area{
-  display: flex;
-  align-items: center;
-  width: 80%;
-  gap: 2%;
-
-}
-.circleimg-area svg{
-  color: var(--text-color4);
-  font-size: 12px;
-}
-.circleimg{
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  background-color: aqua;
-  
-}
- }

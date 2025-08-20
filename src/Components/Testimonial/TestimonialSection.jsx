@@ -5,16 +5,15 @@ import { FaQuoteRight } from "react-icons/fa6";
 const TestimonialSection = () => {
   return (
     <div className="TestimonialSection">
-        <img src="/Vector.png" className="testimonial-icon"/>
+      <img src="/Vector.png" className="testimonial-icon" />
       <div className="Testimonial-header">
-        <h2>
-          Digital Marketing & SEO Services That Grow Traffic & Increase Revenue
-        </h2>
+        <h2>What Our Clients Say About Results</h2>
 
         <p>
-          We are the top digital marketing agency for branding corp. We offer a
-          full range of services to help clients improve their search engine
-          rankings and drive more traffic to their websites.
+          Zemalt is the premier digital marketing agency for brand-focused
+          companies. We offer a full range of services to help clients grow
+          search visibility. More traffic reaches their websites through smart
+          SEO work.
         </p>
       </div>
 

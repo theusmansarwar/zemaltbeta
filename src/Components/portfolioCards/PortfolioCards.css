@@ -7,13 +7,12 @@
   gap: 20px;
   scrollbar-width: none;
   margin-bottom: 50px;
-  background-color: white;
+  background-color: var(--text-color4);
   justify-content: center;
-
 }
 .Portfolio-card-area .Portfolio-card-div {
   height: 370px;
-  width:  calc(33% - 20px);
+  width: calc(33% - 20px);
   background-image: url("/how-we-Portfolio-card.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -47,23 +46,23 @@
   align-items: center;
   justify-content: space-between;
 }
-.Portfolio-card-area .Portfolio-card-div .Portfolio-card-overlay p{
-display: flex;
-align-items: center;
-width: 90%;
-gap: 5px;
-color: var(--text-color4);
-margin-top: 20px;
-margin-bottom: 20px;
+.Portfolio-card-area .Portfolio-card-div .Portfolio-card-overlay p {
+  display: flex;
+  align-items: center;
+  width: var(--default-width);
+  gap: 5px;
+  color: var(--text-color4);
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .Portfolio-card-area .Portfolio-card-div .Portfolio-card-overlay p span {
-width: 10%;
-height: 2px;
-background-color: var(--text-color4);
+  width: 10%;
+  height: 2px;
+  background-color: var(--text-color4);
 }
 .Portfolio-card-area .Portfolio-card-div:hover .Portfolio-card-overlay p {
   display: none;
 }
 .Portfolio-card-area .Portfolio-card-div:hover .Portfolio-card-overlay {
-justify-content: center;
+  justify-content: center;
 }

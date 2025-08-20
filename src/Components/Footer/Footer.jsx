@@ -33,18 +33,14 @@ const Footer = () => {
     }
   };
   const menuItems = [
-    { label: "Services", path: "/services" },
-    { label: "Blogs", path: "/blogs" },
-    { label: "Industries", path: "/industries" },
-    { label: "Testimonials", path: "/testimonial" },
-    { label: "Career", path: "/careers" },
-    { label: "Contact Us", path: "/contact" },
-    { label: "Success Stories", path: "/success-stories" },
-    { label: "Partner Program", path: "/partner" },
-    { label: "Why Us", path: "/why-us" },
-    { label: "Terms & Condition", path: "/terms-and-condition" },
+    { label: "Service", path: "/services" },
+    { label: "Agency", path: "/" },
+    { label: "Case Study", path: "/" },
+    { label: "Resource", path: "/" },
+    { label: "Contact", path: "/contact" },
     { label: "Privacy Policy", path: "/privacy-policy" },
-    { label: "About Us", path: "/about-us" },
+    { label: "Copyright", path: "/" },
+    { label: "Email Address", path: "/" },
   ];
 
   const handleNavClick = (item) => {
@@ -53,24 +49,24 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-
       <div className="footer-upper">
-        <h2>
-          Ready to work with us?
-        </h2>
-        <button>Get Started <FaArrowRightLong /></button>
+        <h2>Ready to work with us?</h2>
+        <button>
+          Get Started <FaArrowRightLong />
+        </button>
       </div>
       <div className="footer-container">
         {/* Logo & About */}
         <div className="footer-section">
           <img src="/zemalt-logo.png" className="logo" />
           <p className="footer-description">
-            Defending Digital Assets – Empowering Cybersecurity Experts, and
-            Shaping a Secure Future.
+            Zemalt is a full-service digital marketing agency specializing in
+            SEO, social media marketing, content writing, PPC, and web solutions
+            to help brands grow and strengthen their online presence.
           </p>
           <div className="social-icons">
             <a
-              href="https://www.facebook.com/PlutoSec.ca"
+              href="https://www.facebook.com/zemaltpvtltd"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -79,7 +75,7 @@ const Footer = () => {
               </div>
             </a>
             <a
-              href="https://www.linkedin.com/company/pluto-security-ltd/"
+              href="https://www.linkedin.com/company/zemalt/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -88,7 +84,7 @@ const Footer = () => {
               </div>
             </a>
             <a
-              href="https://www.instagram.com/PlutoSec.ca/"
+              href="https://www.instagram.com/zemaltpvtltd/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -96,32 +92,14 @@ const Footer = () => {
                 <AiFillInstagram />
               </div>
             </a>
-            <a
-              href="https://www.tiktok.com/@PlutoSec.cyber.sec"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="icon">
-                <RiTiktokFill />
-              </div>
-            </a>
-            <a
-              href="https://x.com/Pluto_Sec"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="icon">
-                <RiTwitterXFill />
-              </div>
-            </a>
           </div>
         </div>
 
         {/* Company Links */}
         <div className="footer-section">
-          <h4>Company</h4>
+          <h4>Navigation</h4>
           <ul>
-            {menuItems.slice(0, 6).map((item) => (
+            {menuItems.slice(0, 5).map((item) => (
               <li key={item.label} onClick={() => handleNavClick(item)}>
                 {item.label}
               </li>
@@ -131,9 +109,9 @@ const Footer = () => {
 
         {/* Other Links */}
         <div className="footer-section">
-          <h4>Others</h4>
+          <h4>Licence</h4>
           <ul>
-            {menuItems.slice(6).map((item) => (
+            {menuItems.slice(5).map((item) => (
               <li key={item.label} onClick={() => handleNavClick(item)}>
                 {item.label}
               </li>
@@ -148,26 +126,25 @@ const Footer = () => {
           <div className="contact-info">
             <p>
               <CiMail />{" "}
-              <a href="mailto:contact@PlutoSec.ca">contact@PlutoSec.ca</a>
+              <a href="mailto:company@zemalt.com">company@zemalt.com</a>
             </p>
             <p>
-              <IoCallOutline /> <a href="tel:+19053676038">+1 (905) 367-6038</a>
+              <IoCallOutline />{" "}
+              <a href="tel:+923007044566">+92-(300)-7044-566</a>
             </p>
             <p>
               <IoLocationOutline />{" "}
-               <a
-    href="https://www.google.com/maps/search/?api=1&query=201A-23+Westmore+Dr,+Etobicoke,+ON+M9V+3Y7"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-     201A-23 Westmore Dr. Etobicoke ON M9V 3Y7
-  </a>
+              <a
+                href="https://maps.app.goo.gl/owK9zDzZBdNGzWrL7"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Plaza 119, Allama Iqbal Rd, Garhi Shahu, Lahore PK
+              </a>
             </p>
           </div>
         </div>
       </div>
-
-     
     </footer>
   );
 };

@@ -1,5 +1,5 @@
 .why-us-section {
-padding: 50px 0px;
+  padding: 50px 0px;
   position: relative;
 }
 
@@ -28,8 +28,8 @@ padding: 50px 0px;
 }
 
 .why-us-header button {
-  background: #fff;
-  border: 1px solid #000;
+  background: var(--text-color4);
+  border: 1px solid var(--main-color);
   padding: 0.6rem 1.4rem;
   border-radius: 999px;
   cursor: pointer;
@@ -38,44 +38,42 @@ padding: 50px 0px;
 }
 
 .why-us-header button:hover {
-  background-color: #000;
-  color: #fff;
+  background-color: var(--main-color);
+  color: var(--text-color4);
 }
 
 .whyus-area {
   display: flex;
-  width: 90%;
-  margin-left: 5%;
+  width: var(--default-width);
+  margin-left: var(--left-space);
   justify-content: center;
-  
 }
 .why-usleft {
   width: 50%;
   position: relative;
 }
 
-
 .why-usright {
   width: 50%;
   padding-top: 100px;
   position: relative;
 }
- .why-usright img{
-    width: 90%;
-    height: auto;
-    position: absolute;
-    top: -110px;
-    right: 0px;
+.why-usright img {
+  width: var(--default-width);
+  height: auto;
+  position: absolute;
+  top: -110px;
+  right: 0px;
 }
 .why-usleft img {
-    width: 90%;
-    height: auto;
-    position: absolute;
-    bottom: -110px;
-    left: -10px;
+  width: var(--default-width);
+  height: auto;
+  position: absolute;
+  bottom: -110px;
+  left: -10px;
 }
 .why-usleft .outer-area1 .card {
-  background: #fff;
+  background: var(--text-color4);
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
   overflow: hidden;
@@ -83,11 +81,10 @@ padding: 50px 0px;
   flex-direction: column;
   align-items: center;
   transition: 0.3s ease;
- 
 }
 
 .why-usright .outer-area1 .card {
-  background: #fff;
+  background: var(--text-color4);
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
   overflow: hidden;
@@ -95,7 +92,6 @@ padding: 50px 0px;
   flex-direction: column;
   align-items: center;
   transition: 0.3s ease;
- 
 }
 
 .icon-area {
@@ -104,10 +100,10 @@ padding: 50px 0px;
   border-radius: 50%;
   background-color: #5284e3;
   margin-top: -50px;
-    display: flex;
+  display: flex;
   align-items: flex-end;
   justify-content: center;
-  color: white;
+  color: var(--text-color4);
   font-size: 42px;
   padding-bottom: 10px;
 }
@@ -117,9 +113,8 @@ padding: 50px 0px;
   padding: 30px;
   border-radius: var(--border-radius1);
   width: 60%;
-   position: relative;
+  position: relative;
   z-index: 2;
-
 }
 .why-usright .outer-area1 {
   border: 5px solid blue;
@@ -127,7 +122,7 @@ padding: 50px 0px;
   padding: 30px;
   border-radius: var(--border-radius1);
   width: 60%;
-   position: relative;
+  position: relative;
   z-index: 2;
 }
 .why-usleft .outer-area1:last-child {
@@ -163,49 +158,44 @@ padding: 50px 0px;
   color: #555;
 }
 
-
-
 @media (max-width: 900px) {
+  .whyus-area {
+    flex-direction: column;
+    align-items: center;
+  }
+  .why-usleft {
+    width: var(--default-width);
+  }
 
-   .whyus-area {
-flex-direction: column;
-  align-items: center;
-}
-.why-usleft {
-  width: 90%;
-}
+  .why-usright {
+    width: var(--default-width);
+    padding-top: 0px;
+  }
+  .why-usleft img {
+    top: 0;
+  }
 
-
-.why-usright {
-  width: 90%;
-  padding-top: 0px;
-} 
-.why-usleft img {
-  top: 0;
-}
-
-
-.why-usright img {
-  bottom:0;
-  top: auto;
-}
-.why-usright .outer-area1 {
-  width: calc(100% - 40px);
-  margin-top: 20px;
-  justify-self: center;
-}
-.why-usright .outer-area1:last-child {
-width: calc(100% - 40px);
-  margin-top: 20px;
-  justify-self: center;
-}
-.why-usleft .outer-area1 {
- width: calc(100% - 40px);
- justify-self: center;
-}
-.why-usleft .outer-area1:last-child {
-  width: calc(100% - 40px);
-  margin-top: 20px;
-  justify-self: center;
-}
+  .why-usright img {
+    bottom: 0;
+    top: auto;
+  }
+  .why-usright .outer-area1 {
+    width: calc(100% - 40px);
+    margin-top: 20px;
+    justify-self: center;
+  }
+  .why-usright .outer-area1:last-child {
+    width: calc(100% - 40px);
+    margin-top: 20px;
+    justify-self: center;
+  }
+  .why-usleft .outer-area1 {
+    width: calc(100% - 40px);
+    justify-self: center;
+  }
+  .why-usleft .outer-area1:last-child {
+    width: calc(100% - 40px);
+    margin-top: 20px;
+    justify-self: center;
+  }
 }

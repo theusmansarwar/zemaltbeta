@@ -1,8 +1,8 @@
 .faq-container {
   display: flex;
   justify-content: space-between;
-  padding: 50px 5%;
-  background-color: white;
+  padding: 50px var(--left-space);
+  background-color: var(--text-color4);
   gap: 40px;
   width: 80%;
   border-radius: var(--border-radius1);
@@ -27,22 +27,22 @@
   margin-bottom: 20px;
 }
 .faq-buttons button {
-   border: none;
+  border: none;
   padding: 10px 20px;
-  background-color:transparent;
+  background-color: transparent;
   color: var(--text-color);
   border: 1px solid var(--text-color);
   border-radius: var(--border-radius1);
 }
 
-.faq-buttons button:hover{
+.faq-buttons button:hover {
   cursor: pointer;
-  background-color:var(--main-color);
+  background-color: var(--main-color);
   color: var(--text-color4);
 }
 .faq-buttons a {
   text-decoration: underline;
-  color: black;
+  color: var(--main-color);
   align-self: center;
 }
 .faq-left img {
@@ -70,7 +70,7 @@
 .faq-answer {
   margin-top: 10px;
   font-size: var(--default-p-size);
-  color: #444;
+  color: var(--text-color2);
 }
 .faq-item:last-child {
   border-bottom: 1px solid #ccc;
@@ -79,12 +79,12 @@
 @media (max-width: 900px) {
   .faq-container {
     flex-direction: column;
-    width: 90%;
+    width: var(--default-width);
   }
   .faq-left {
     width: 100%;
   }
-  .faq-left img{
+  .faq-left img {
     display: none;
   }
   .faq-right {

@@ -249,7 +249,7 @@
     justify-content: space-between;
   }
   .Featured .right .bottom .left p {
-    width: 90%;
+    width: var(--default-width);
     display: flex;
     color: var(--text-color4);
     align-items: center;

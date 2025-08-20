@@ -162,7 +162,7 @@ const Realworld = () => {
 
   return (
     <div className='realworld'>
-      <h3>Real-world examples of how we have helped companies achieve their marketing objectives.</h3>
+      <h3>Real-world examples of how we support companies in achieving their clear marketing objectives</h3>
       
       <ul className="category-list">
         {categories.map((name) => {

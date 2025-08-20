@@ -6,13 +6,9 @@ const OutBox = () => {
   return (
     <div className="OutBox">
       <div className="top">
-        <h2>Provide the best service with out of the box ideas</h2>
+        <h2>Provide the Best Service With Unique Ideas</h2>
         <p>
-          we are a passionate team of digital marketing enthusiasts dedicated to
-          helping businesses succeed in the digital world. With years of
-          experience and a deep understanding of the ever-evolving online
-          landscape, we stay at the forefront of industry trends and
-          technologies.
+         Zemalt is a skilled team of experts. Brands get full support to grow online. Each goal receives clear focus and effort. Our experts bring deep knowledge and experience. We work at the front edge of trends and tools.
         </p>
       </div>
       <div className="bottom">

@@ -6,23 +6,23 @@ const faqs = [
   {
     question: "Why is digital marketing important for my business?",
     answer:
-      "Digital marketing allows businesses to reach and engage with a wider audience, generate leads, drive website traffic, and increase brand visibility. It provides measurable results, allows for targeted marketing efforts, and enables businesses to adapt and optimize their strategies based on data and insights.",
+      "Digital marketing is used to reach more people. It helps generate leads. It drives traffic. It improves brand visibility. You can measure the results. It is important to track performance.",
   },
   {
-    question: "How can digital marketing help improve my website's visibility?",
+    question: "How can digital marketing help improve my website’s visibility?",
     answer:
-      "By optimizing your website with SEO strategies and creating valuable content, digital marketing helps improve search engine rankings and attract more visitors.",
+      "Digital marketing uses clear methods to increase reach. Search tools show your site more often through a strong keyword focus.",
   },
   {
     question:
       "How long does it take to see results from digital marketing efforts?",
     answer:
-      "It depends on the strategy, but typically, SEO takes 3-6 months, while paid ads can show results within days.",
+      "Results from digital marketing take time to build. Most brands notice progress within a few weeks through steady action.",
   },
   {
     question: "How do you measure the success of digital marketing campaigns?",
     answer:
-      "Through KPIs like website traffic, conversion rates, ROI, bounce rates, and engagement metrics using tools like Google Analytics.",
+      "Success depends on real numbers and clear outcomes. Teams track growth through traffic, leads, and customer actions.",
   },
 ];
 
@@ -38,9 +38,7 @@ const Faq = () => {
       <div className="faq-left">
         <h2>FAQs</h2>
         <p>
-          As a leading digital marketing agency, we are dedicated to providing
-          comprehensive educational resources and answering frequently asked
-          questions to help our clients.
+          Zemalt is a leading digital marketing agency. We provide clear answers and practical guidance. Our clients receive dedicated support backed by proven expertise.
         </p>
         <div className="faq-buttons">
           <button>More Questions</button>

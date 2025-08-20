@@ -1,63 +1,62 @@
-
-.services-grid{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-    width: 90%;
-    padding: 0px 5%;
-    justify-content: center;
-    margin-top: 50px;
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  width: var(--default-width);
+  padding: 0px var(--left-space);
+  justify-content: center;
+  margin-top: 50px;
 }
-.servicecard{
-    width: 370px;
-    min-height: 360px;
-    height: fit-content;
-    border-radius: var(--border-radius1);
-position: relative;
-}
-.servicecard .overlay1 {
-    width: 370px;
-    min-height: 360px;
+.servicecard {
+  width: 370px;
+  min-height: 360px;
+  height: fit-content;
   border-radius: var(--border-radius1);
   position: relative;
-  overflow: hidden; 
-   display: flex;
- align-items: center;
- justify-content: center;
+}
+.servicecard .overlay1 {
+  width: 370px;
+  min-height: 360px;
+  border-radius: var(--border-radius1);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .servicecard .overlay1::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url('/Backgroundservice.jpg');
+  background-image: url("/Backgroundservice.jpg");
   background-size: cover;
   background-position: center;
   opacity: 0.2; /* Change this value for more or less transparency */
 }
-.servicecard .overlay2{
- width: 100%;
- height: 100%;
-    border-radius: var(--border-radius1);
-background-image: url('/BackgroundNoise.png');
-    background-size: cover;
-    background-position: center;
-    padding: 20px;
-   position: relative; /* Needed for z-index to apply */
-  z-index: 1; 
+.servicecard .overlay2 {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius1);
+  background-image: url("/BackgroundNoise.png");
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  position: relative; /* Needed for z-index to apply */
+  z-index: 1;
   display: flex;
   flex-direction: column;
- gap: 20px;
-
+  gap: 20px;
 }
-.servicecard .overlay2 h3{
-    font-size: 36px;
+.servicecard .overlay2 h3 {
+  font-size: 36px;
 }
-.servicecard .overlay2 h3, .servicecard .overlay2 p{
-    width: 100%;
-    text-align: center;
+.servicecard .overlay2 h3,
+.servicecard .overlay2 p {
+  width: 100%;
+  text-align: center;
 }
-.servicecard .overlay2 .btn-showmore{
+.servicecard .overlay2 .btn-showmore {
   border: none;
   padding: 10px 20px;
   background-color: var(--main-color);
@@ -74,49 +73,45 @@ background-image: url('/BackgroundNoise.png');
   color: var(--text-color);
   background-color: transparent;
 }
-.searchicon{
-    width: 90px;
-    height: 90px;
-    border: 10px solid white;
+.searchicon {
+  width: 90px;
+  height: 90px;
+  border: 10px solid var(--text-color4);
 
-    border-radius: 50%;
-    position: absolute;
-    bottom: -15px;
-    right: -15px;
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -15px;
+  right: -15px;
+  background-color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.searchicon img{
-width: 50px;
-height: 50px;
+.searchicon img {
+  width: 50px;
+  height: 50px;
 }
 @media (max-width: 900px) {
-.servicecard{
+  .servicecard {
     width: 300px;
     min-height: 360px;
     height: fit-content;
     border-radius: var(--border-radius1);
-position: relative;
-}
-.servicecard .overlay1 {
+    position: relative;
+  }
+  .servicecard .overlay1 {
     width: 100%;
     min-height: 360px;
-  border-radius: var(--border-radius1);
-  position: relative;
-  overflow: hidden; 
-   display: flex;
- align-items: center;
- justify-content: center;
-}
-
-
+    border-radius: var(--border-radius1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 @media (max-width: 756px) {
-.servicecard{
+  .servicecard {
     width: 100%;
-   
-        
-}
+  }
 }

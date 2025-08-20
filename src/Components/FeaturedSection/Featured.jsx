@@ -6,25 +6,29 @@ const Featured = () => {
     <div className="Featured">
       <div className="left">
         <h1>
-          Zemalt- <br /> Where Strategy Meets Success!
+          Zemalt- <br /> Where Strategy Meets Success
         </h1>
         <p>
-          An award-winning SEO agency with disciplines in digital marketing,
-          design, and website development. focused on understanding you.
+          You will find a top-rated SEO agency. It has expert teams in digital
+          marketing, design and web development. Each service aligns clearly
+          with your goals.
         </p>
         <div className="buttons-area">
           <button>
-            Schedule Call <FaArrowRightLong/>
+            Schedules a call <FaArrowRightLong />
           </button>
-          <p>View Case Study</p>
+          <p>Case Study</p>
         </div>
-        <div className="trusted"><p>Trusted by the world's biggest brands</p> <div className="personarea">
-          <div className="trusted-circle"></div>
-          <div className="trusted-circle"></div>
-          <div className="trusted-circle"></div>
-          <div className="trusted-circle"></div>
-          <FaPlus/>
-          </div> </div>
+        <div className="trusted">
+          <p>Trusted by top global brands</p>{" "}
+          <div className="personarea">
+            <div className="trusted-circle"></div>
+            <div className="trusted-circle"></div>
+            <div className="trusted-circle"></div>
+            <div className="trusted-circle"></div>
+            <FaPlus />
+          </div>{" "}
+        </div>
       </div>
       <div className="right">
         <div className="top">
@@ -35,7 +39,10 @@ const Featured = () => {
           </div>
           <div className="right">
             <p>251+</p>
-            <p>some big companies that we work with, and trust us very much</p>
+            <p>
+              Top companies choose to work with us. Trust grows through clear
+              results.
+            </p>
             <div className="progress-area">
               <div className="progress-left"></div>
             </div>

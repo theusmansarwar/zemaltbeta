@@ -42,9 +42,7 @@ const BlogSection = () => {
         </div>
         <div className="header-right">
           <p>
-            We are the top digital marketing agency for branding corp. We offer a
-            full range of services to help clients improve their search engine
-            rankings and drive more traffic to their websites.
+            Zemalt is a top digital marketing agency. Our team supports brands with complete service solutions. Clients see higher search rankings through expert guidance. More visitors reach their websites through clear strategies and focused action.
           </p>
           <button className="see-more">See more</button>
         </div>
