@@ -2,8 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 50px 5%;
-  width: 90%;
+  padding: 50px var(--left-space);
+  width: var(--default-width);
  
 }
 
@@ -28,7 +28,7 @@
 
 .lastbottom-btn {
   background: black;
-  color: white;
+  color: var(--text-color4);
   padding: 12px 24px;
   font-size: 1rem;
   border: none;
@@ -73,7 +73,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: var(--text-color4);
   font-size: 1.8rem;
   font-weight: bold;
 }

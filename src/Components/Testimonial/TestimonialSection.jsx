@@ -1,7 +1,6 @@
 import React from "react";
 import "./TestimonialSection.css";
 import Cards from "./Cards";
-import { FaQuoteRight } from "react-icons/fa6";
 const TestimonialSection = () => {
   return (
     <div className="TestimonialSection">

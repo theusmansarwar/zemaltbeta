@@ -7,7 +7,7 @@
   padding-top: 50px;
 }
 .Servicefeatured h1 {
-  font-size: 58px;
+  font-size: var(--heading-one);
   width: fit-content;
 }
 .Servicefeatured h1 span {
@@ -52,16 +52,14 @@
 }
 .Servicefeatured-bottom .top .right h2 {
   width: fit-content;
-  font-size: 58px;
+  font-size: var(--heading-one);
   color: var(--primary-color);
 }
 .Servicefeatured-bottom .top .right p {
   font-size: var(--default-p-size);
 }
 @media (max-width: 900px) {
-  .Servicefeatured h1 {
-    font-size: 46px;
-  }
+  
   .Servicefeatured-bottom {
     width: calc(100% - 40px);
     padding: 20px;

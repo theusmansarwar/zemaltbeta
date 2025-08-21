@@ -53,7 +53,7 @@
 .realworld ul li.active,
 .realworld ul li:hover {
   padding: 10px 20px;
-  color: var(--text-color4);
+  color: var(--main-color);
   border: 1px solid var(--primary-color);
   border-radius: var(--border-radius1);
   background-color: var(--primary-color);
@@ -78,6 +78,7 @@
   border: 8px solid var(--text-color3);
   border-radius: var(--border-radius1);
   cursor: pointer;
+  transition: 0.2s ease;
 }
 .work-area .work-div:hover {
   border-radius: 50%;

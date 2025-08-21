@@ -1,12 +1,18 @@
-import React from 'react'
-import './DesigningCardFeatured.css'
+import React from "react";
+import "./DesigningCardFeatured.css";
 const DesigningCardFeatured = () => {
   return (
-    <div className='DesigningCardFeatured'>
-    <h1>Designing <span>Service</span></h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. </p>
+    <div className="DesigningCardFeatured">
+      <h1>
+        CREATIVE <span>SERVICES</span>
+      </h1>
+      <p>
+        You need a clear design that grows your brand. Zemalt creates sharp
+        ideas that keep your style strong. You gain trust through smart detail
+        and clean art. Each project shows focus and clear results.{" "}
+      </p>
     </div>
-  )
-}
+  );
+};
 
-export default DesigningCardFeatured
+export default DesigningCardFeatured;

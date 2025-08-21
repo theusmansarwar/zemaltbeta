@@ -30,7 +30,7 @@ const TestimonialSlider = () => {
       <div className="testimonial-bottom">
         <div className="testimonial-user">
           <img src="/person.png" alt={name} />
-          <div>
+          <div className="user-container">
             <p className="user-name">{name}</p>
             <p className="user-position">{position}</p>
           </div>
@@ -42,6 +42,8 @@ const TestimonialSlider = () => {
             style={{
               opacity: currentIndex === 0 ? 0.5 : 1,
               pointerEvents: currentIndex === 0 ? "none" : "auto",
+             
+              
             }}
           >
             <FaArrowLeft />

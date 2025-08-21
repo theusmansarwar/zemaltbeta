@@ -5,7 +5,7 @@
 }
 
 .testimonial-quote {
-  font-size: 36px;
+  font-size: var(--heading-three);
   font-weight: 600;
   max-width: 100%;
   margin-bottom: 30px;
@@ -31,6 +31,11 @@
   border-radius: 50%;
   object-fit: cover;
 }
+.testimonial-user .user-container{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
 
 .user-name {
   font-weight: bold;
@@ -46,7 +51,6 @@
   align-items: center;
   gap: 12px;
 }
-
 .testimonial-controls .optbtns {
   background-color: var(--main-color);
   color: var(--text-color4);
@@ -59,7 +63,12 @@
   align-items: center;
   justify-content: center;
   border: 1px solid var(--main-color);
- 
+  transition: 0.2s ease;
+  user-select: none;
+}
+.testimonial-controls .optbtns:hover {
+  background-color: rgb(244, 240, 240);
+  color: var(--main-color);
 }
 .optbtns.inactive {
   cursor: not-allowed;
@@ -71,7 +80,6 @@
 
 @media (max-width: 900px) {
   .testimonial-quote {
-    font-size: 18px;
     text-align: center;
     width: 100%;
     margin: 0%;

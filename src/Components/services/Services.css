@@ -61,13 +61,15 @@
   padding: 10px 20px;
   background-color: var(--main-color);
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   width: fit-content;
   justify-content: center;
-  gap: 5px;
+  gap: 10px;
   border: 1px solid var(--text-color);
   border-radius: var(--border-radius1);
   color: var(--text-color4);
+  cursor:pointer;
+  transition:0.2s ease;
 }
 .servicecard .overlay2 .btn-showmore:hover {
   color: var(--text-color);

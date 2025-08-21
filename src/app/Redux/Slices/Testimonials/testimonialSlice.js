@@ -5,7 +5,7 @@ const testimoniaSlice = createSlice({
     TestimonialsData: [
       {
     quote:
-      "They study the market fully and check our target users. They create campaigns with a clear goal. Each plan aims to attract the right people. Their sharp ideas support our growth. Smart tools keep us ahead always.",
+      "Strong content was always a challenge for us until Zemalt stepped in. The team crafted messages that spoke directly to our audience. Every line felt natural, clear, and persuasive. Blog posts drew attention, and ad copy boosted conversions. ",
     name: "Michael Kaizer",
     position: "CEO of Basecamp Corp",
     image: "/images/michael.png",

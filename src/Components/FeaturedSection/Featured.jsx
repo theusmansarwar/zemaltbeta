@@ -17,7 +17,7 @@ const Featured = () => {
           <button>
             Schedules a call <FaArrowRightLong />
           </button>
-          <p>Case Study</p>
+          <p>View Case Study</p>
         </div>
         <div className="trusted">
           <p>Trusted by top global brands</p>{" "}

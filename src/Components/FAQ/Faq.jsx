@@ -2,9 +2,7 @@
 import React, { useState } from "react";
 import "./Faq.css";
 
-
-
-const Faq = ({faqs}) => {
+const Faq = ({ faqs }) => {
   const [openIndex, setOpenIndex] = useState(0);
 
   const toggle = (index) => {
@@ -15,12 +13,10 @@ const Faq = ({faqs}) => {
     <div className="faq-container">
       <div className="faq-left">
         <h2>{faqs?.title}</h2>
-        <p>
-          {faqs?.description}
-           </p>
+        <p>{faqs?.description}</p>
         <div className="faq-buttons">
           <button>More Questions</button>
-          <a href="#">Contact Us</a>
+          <span>Contact Us</span>
         </div>
         <img src="/Question.png" alt="FAQs" />
       </div>

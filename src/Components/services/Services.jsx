@@ -21,12 +21,12 @@ const Services = () => {
     {
       title: "SOCIAL MEDIA MARKETING",
       description:
-        "We create targeted campaigns to grow audience reach. Clear posts build trust and answer common questions. Tailored ads boost engagement and conversions.",
+        "Zemalt creates targeted campaigns to grow audience reach. Clear posts build trust and answer common questions. Tailored ads boost engagement and conversions.",
     },
     {
       title: "UI UX DESIGN",
       description:
-        "We design simple layouts to make things easier to use. Good design boosts retention. It answers queries and keeps user satisfaction high",
+        "Zemalt designs simple layouts to make things easier to use. Good design boosts retention. It answers queries and keeps user satisfaction high",
     },
     {
       title: "GOOGLE ADS MANAGEMENT",

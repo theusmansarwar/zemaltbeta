@@ -38,8 +38,11 @@
   margin-top: 80px;
   margin-bottom: 50px;
 }
+.designing-page-grid .designing-card h3{
+  font-size: var(--heading-four);
+}
 .designing-card ul {
-  width: 100%;
+  width: calc(100% - 40px);
   padding: 20px;
 }
 .icon-area-for-des {

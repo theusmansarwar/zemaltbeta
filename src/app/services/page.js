@@ -1,4 +1,3 @@
-
 import styles from "./page.module.css";
 import Realworld from "@/Components/Realworld/Realworld";
 import TestimonialSlider from "@/Components/TestimonialSlider/TestimonialSlider";
@@ -9,16 +8,12 @@ import LastBottom from "@/Components/LastBottom/LastBottom";
 export default function Page() {
   return (
     <div className={styles.Home}>
-      
-     <Servicefeatured/>
-     <Services/>
-     <BlogSection />
+      <Servicefeatured />
+      <Services />
+      <BlogSection />
       <Realworld />
       <TestimonialSlider />
-      <LastBottom/>
-     
-     
-      
+      <LastBottom />
     </div>
   );
 }

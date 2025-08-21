@@ -13,7 +13,7 @@
   width: 40%;
 }
 .faq-left h2 {
-  font-size: 38px;
+  font-size: var(--heading-two);
   margin-bottom: 10px;
 }
 .faq-left p {
@@ -23,7 +23,8 @@
 }
 .faq-buttons {
   display: flex;
-  gap: 15px;
+  align-items: center;
+  gap: 50px;
   margin-bottom: 20px;
 }
 .faq-buttons button {
@@ -33,6 +34,7 @@
   color: var(--text-color);
   border: 1px solid var(--text-color);
   border-radius: var(--border-radius1);
+  font-size: var(--default-p-size);
 }
 
 .faq-buttons button:hover {
@@ -40,10 +42,14 @@
   background-color: var(--main-color);
   color: var(--text-color4);
 }
-.faq-buttons a {
+.faq-buttons span {
   text-decoration: underline;
   color: var(--main-color);
-  align-self: center;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.faq-buttons span:hover {
+  color: rgb(109, 106, 106);
 }
 .faq-left img {
   height: 300px;

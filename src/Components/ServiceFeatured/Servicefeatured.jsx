@@ -11,18 +11,16 @@ const Servicefeatured = () => {
         <div className="top">
           <div className="left">
             <p>
-              Zemalt offers expert marketing services. Clear plans reach the audience fast. Focus stays on results that drive more leads.
-
-
+              Zemalt offers expert marketing services. Clear plans reach the
+              audience fast. Focus stays on results that drive more leads.
             </p>
             <p>
-              Strong skills create trust effectively. The team works carefully to meet each goal.
+              Strong skills create trust effectively. The team works carefully
+              to meet each goal.
             </p>
           </div>
           <div className="right">
-            <h2>
-                217+
-            </h2>
+            <h2>217+</h2>
             <p>Projects Done Successfully</p>
           </div>
         </div>

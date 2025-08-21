@@ -6,35 +6,39 @@ const blogs = [
   {
     title: "How a Digital Marketing Agency Can Boost Your Business",
     description:
-      "We are the top digital marketing agency for branding corp. We offer a full range...",
+      "We are the top digital marketing agency for branding corp. We offer a full range",
     readTime: "5 min read",
     icon: "⬤",
     buttonStyle: "dark",
   },
   {
-    title:
-      "The Latest Trends and Strategies with a Digital Marketing Agency",
+    title: "The Latest Trends and Strategies with a Digital Marketing Agency",
     description:
-      "Working with this digital marketing agency has been a true partnership. They have tak...",
+      "Working with this digital marketing agency has been a true partnership. They have tak",
     readTime: "5 min read",
     icon: "⬤",
     buttonStyle: "light",
   },
   {
-    title:
-      "Maximizing ROI with the Expertise of a Digital Marketing Agency",
+    title: "Maximizing ROI with the Expertise of a Digital Marketing Agency",
     description:
-      "What sets this digital marketing agency apart is their commitment to transparency a...",
+      "What sets this digital marketing agency apart is their commitment to transparency",
     readTime: "5 min read",
     icon: "⬤",
     buttonStyle: "light",
   },
 ];
+function truncateByWords(text, wordLimit) {
+  const words = text.trim().split(/\s+/); // split by spaces
+  if (words.length <= wordLimit) return text; // no truncation needed
+  return words.slice(0, wordLimit).join(" ") + "...";
+}
+const colors = ["#ff4d4d", "#4caf50", "#2196f3", "#ff9800", "#9c27b0"];
 
 const BlogSection = () => {
   return (
     <div className="blog-section">
-      <div className="blog-header">
+      <div className="blog-header2">
         <div className="header-left">
           <h2>
             Digital Marketing & SEO Services That Boost Reach & Increase Sales
@@ -42,7 +46,10 @@ const BlogSection = () => {
         </div>
         <div className="header-right">
           <p>
-            Zemalt is a top digital marketing agency. Our team supports brands with complete service solutions. Clients see higher search rankings through expert guidance. More visitors reach their websites through clear strategies and focused action.
+            Zemalt is a top digital marketing agency. Our team supports brands
+            with complete service solutions. Clients see higher search rankings
+            through expert guidance. More visitors reach their websites through
+            clear strategies and focused action.
           </p>
           <button className="see-more">See more</button>
         </div>
@@ -52,16 +59,26 @@ const BlogSection = () => {
         {blogs.map((blog, index) => (
           <div className="blog-card" key={index}>
             <div className="card-top">
-              <span className="icon-dot">{blog.icon}</span>
+              {/* pick color by index */}
+              <span
+                className="icon-dot"
+                style={{ color: colors[index % colors.length] }}
+              >
+                {blog.icon}
+              </span>
               <span className="read-time">{blog.readTime}</span>
             </div>
-            <h4>{blog.title}</h4>
-            <p className="description">{blog.description}</p>
-            <button
-              className={`read-button`}
-            >
-              <FaArrowRight />
-            </button>
+            <div className="card-bottom">
+              <h4>{blog.title}</h4>
+              <div className="desc-btn-container">
+                <p className="description">
+                  {truncateByWords(blog.description, 15)}
+                </p>
+                <button className="read-button">
+                  <FaArrowRight />
+                </button>
+              </div>
+            </div>
           </div>
         ))}
       </div>

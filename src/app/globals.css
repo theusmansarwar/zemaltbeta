@@ -1,25 +1,36 @@
 :root {
---text-color:#020407;
---text-color2:#050101;
---text-color3:#878C91;
---text-color4:#ffffff;
---background1:#00000033;
---background2:#F0F0F0;
---main-color:#000000;
---primary-color:#688ECA;
---secondary-color:#6A26F1;
---border-radius1:20px;
---border-radius2:8px;
---default-width:90%;
---left-space:5%;
---default-p-size:14px;
---default-box-shadow:0px 0px 2px black;
+  --text-color: #020407;
+  --text-color2: #050101;
+  --text-color3: #878c91;
+  --text-color4: #ffffff;
+  --background1: #00000033;
+  --background2: #f0f0f0;
+  --main-color: #000000;
+  --primary-color: #688eca;
+  --secondary-color: #6a26f1;
+  --border-radius1: 20px;
+  --border-radius2: 8px;
+  --default-width: 90%;
+  --left-space: 5%;
+  --default-box-shadow: 0px 0px 2px black;
+  --heading-one: 56px;
+  --heading-two: 42px;
+  --heading-three: 32px;
+  --heading-four: 24px;
+  --default-p-size: 16px;
 }
-*{
+* {
   padding: 0%;
   margin: 0%;
 }
-.overlay{
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+.overlay {
   background-color: #01020546;
   width: 100%;
   height: 100%;
@@ -29,6 +40,16 @@
   justify-content: center;
 }
 body {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
-
+@media (max-width: 900px) {
+  :root {
+    --default-width: 90%;
+    --left-space: 5%;
+    --default-box-shadow: 0px 0px 2px black;
+    --heading-one: 32px;
+    --heading-two: 28px;
+    --heading-three: 24px;
+    --heading-four: 18px;
+  }
+}

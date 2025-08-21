@@ -7,15 +7,14 @@
 
 .footer-container {
   display: flex;
-
   justify-content: space-between;
+  gap:40px;
   width: var(--default-width);
-
   padding: 50px var(--left-space);
 }
 
 .footer-section {
-  width: 15%;
+  width: 18%;
   align-items: center;
 }
 .footer-section:first-child {
@@ -47,9 +46,11 @@
   align-items: center;
   border-radius: 50%;
   font-weight: bold;
+  font-size: 24px;
+  flex-shrink: 0;
 }
 .icon:hover {
-  color: var(--shadow-low3);
+  color: var(--primary-color);
   background-color: transparent;
   border: 2px solid var(--shadow-low3);
   cursor: pointer;
@@ -57,7 +58,7 @@
 
 .footer-section h4 {
   margin-bottom: 20px;
-  font-size: 1.1rem;
+  font-size:18px;
   color: var(--headings-color);
 }
 
@@ -80,7 +81,7 @@
   margin: 6px 0;
   font-size: var(--default-p-size);
   display: flex;
-  align-items: center;
+  
   cursor: pointer;
 }
 .footer-section .contact-info p:hover {
@@ -90,6 +91,8 @@
   color: var(--headings-color);
   font-size: 16px;
   margin-right: 5px;
+  margin-top: 5px;
+  flex-shrink: 0;
 }
 .footer-section .contact-info p a {
   text-decoration: none;
@@ -115,7 +118,7 @@
   gap: 50px;
 }
 .footer-upper h2 {
-  font-size: 58px;
+  font-size: var(--heading-one);
   color: var(--text-color4);
 }
 
@@ -124,17 +127,19 @@
   padding: 10px 20px;
   background-color: var(--text-color4);
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   min-width: 180px;
   justify-content: space-between;
   border: 1px solid var(--text-color);
   border-radius: var(--border-radius1);
   color: var(--text-color);
+   font-size: var(--default-p-size);
+   cursor: pointer;
+   transition: 0.2s ease;
 }
 .footer-upper button:hover {
   color: var(--text-color4);
   background-color: transparent;
-
   border: 1px solid var(--text-color4);
 }
 @media (max-width: 900px) {
@@ -154,8 +159,5 @@
     height: 200px;
     flex-direction: column;
   }
-  .footer-upper h2 {
-    font-size: 28px;
-    color: var(--text-color4);
-  }
+
 }

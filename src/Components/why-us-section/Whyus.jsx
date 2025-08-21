@@ -2,16 +2,17 @@ import React from "react";
 import "./Whyus.css";
 import "../BlogSection/BlogSection.css";
 import { TiSpiral } from "react-icons/ti";
+import { PiSpiralLight } from "react-icons/pi";
 const Whyus = () => {
   return (
     <section class="why-us-section">
       <div className="blog-header">
-        <div className="header-left">
+        <div className="header-left2">
           <h2>
             Why You Should Choose Zemalt as Your Digital Marketing Partner
           </h2>
         </div>
-        <div className="header-right">
+        <div className="header-right2">
           <p>
             We are a top digital marketing agency for brand-focused firms. Offer
             comprehensive services to enhance search rankings. Our expert
@@ -27,7 +28,7 @@ const Whyus = () => {
           <div className="outer-area1">
             <div class="card">
               <div class="icon-area">
-                <TiSpiral />
+                <PiSpiralLight />
               </div>
               <div class="card-body">
                 <h4>Proven Expertise</h4>
@@ -42,7 +43,7 @@ const Whyus = () => {
           <div className="outer-area1">
             <div class="card">
               <div class="icon-area">
-                <TiSpiral />
+                <PiSpiralLight />
               </div>
               <div class="card-body">
                 <h4>Tailored Strategies</h4>
@@ -60,7 +61,7 @@ const Whyus = () => {
           <div className="outer-area1">
             <div class="card">
               <div class="icon-area">
-                <TiSpiral />
+                <PiSpiralLight />
               </div>
               <div class="card-body">
                 <h4>Full-Service Support</h4>
@@ -75,7 +76,7 @@ const Whyus = () => {
           <div className="outer-area1">
             <div class="card">
               <div class="icon-area">
-                <TiSpiral />
+              <PiSpiralLight />
               </div>
               <div class="card-body">
                 <h4>Transparent Reporting</h4>

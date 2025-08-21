@@ -33,8 +33,7 @@ const RevenueCalculator = () => {
     <div className="calculator-container">
       <h2>Calculate Your Revenue</h2>
       <p className="subtext">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. 
-        Sed cursus ante dapibus diam. Sed nisi.
+        Find out how much your web design package will cost. Choose the options that fit your project and see the estimate instantly.
       </p>
       <h4>Web Design Service Package</h4>
 
@@ -104,14 +103,12 @@ const RevenueCalculator = () => {
       <div className="blog-header">
         <div className="header-left">
           <h2>
-            Digital Marketing & SEO Services That Grow Traffic & Increase Revenue
+            Why Choose Zemalt for Expert Digital Marketing Solutions
           </h2>
         </div>
         <div className="header-right">
           <p>
-            We are the top digital marketing agency for branding corp. We offer a
-            full range of services to help clients improve their search engine
-            rankings and drive more traffic to their websites.
+          We are a full-service digital marketing and web design agency. Our goal is to help you rank higher in search results and bring more traffic to your site. From design to SEO, we cover it all so your business can succeed online.
           </p>
           <button className="see-more">See more</button>
         </div>

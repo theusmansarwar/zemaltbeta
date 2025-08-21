@@ -8,12 +8,11 @@
 .testimonial-card {
   display: flex;
   align-items: center;
-  background-color: #737373;
+  background-color: rgba(255, 255, 255, 0.5);
   padding: 20px;
   border-radius: 15px;
   color: var(--text-color4);
   width: calc(30% - 40px);
-  gap: 1rem;
 }
 
 .testimonial-content {
@@ -21,11 +20,11 @@
   height: 250px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 40px;
 }
 
 .testimonial-logo {
-  width: 80%;
+  width: 150px;
   height: auto;
 }
 
@@ -35,19 +34,20 @@
   justify-content: space-between;
   align-items: center;
   background-color: #cdd1e0;
-  border-radius: var(--border-radius2) var(--border-radius2)
-    var(--border-radius1) var(--border-radius1);
+  border-radius: var(--border-radius2) var(--border-radius2) 40px 40px;
   height: 250px;
   width: 100px;
   text-align: center;
   position: relative;
+  border: 5px solid #b6bccc;
 }
 
 .check-text {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   height: 160px;
-  font-size: 14px;
+  font-size: var(--default-p-size);
+  font-weight: 700;
   margin: 10px 0px;
   color: var(--main-color);
 }
@@ -58,10 +58,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: var(--border-radius1);
-  width: 100px;
-  height: 70px;
+  border-radius: 50px;
+  padding: 18px 40px;
   font-size: 28px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  margin-bottom: -5px;
+}
+.check-now-button:hover {
+  border-radius: var(--border-radius2);
+}
+.check-now-button:hover .check-text {
+  opacity: 0;
+}
+
+.check-now-button:hover .arrow-btn {
+  bottom: 50%;
+  transform: translateY(-160%);
+  background-color: transparent;
+  border: none;
+  color: var(--main-color);
 }
 @media (max-width: 900px) {
   .cards-area-testimonials {
@@ -69,12 +85,14 @@
   }
   .testimonial-content {
     height: 200px;
+    gap: 10px;
   }
   .testimonial-card {
     width: calc(100% - 40px);
     margin-top: 20px;
+    gap: 5px;
   }
   .testimonial-logo {
-    width: 50%;
+    width: 150px;
   }
 }
