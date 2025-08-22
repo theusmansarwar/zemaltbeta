@@ -8,16 +8,30 @@
   width: 40%;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 10px;
 }
 .WhyDesign img {
   width: 50%;
 }
 .WhyDesign .left h3 {
-  font-size: 46px;
+  font-size: var(--heading-two);
 }
 .WhyDesign .left p {
   font-size: var(--default-p-size);
   color: var(--text-color3);
   line-height: 2;
+}
+@media (max-width: 900px) {
+  .WhyDesign {
+    width: var(--default-width);
+    padding: 20px var(--left-space);
+    flex-direction: column;
+    gap: 20px;
+  }
+  .WhyDesign .left {
+    width: 100%;
+  }
+  .WhyDesign img {
+    width: 100%;
+  }
 }

@@ -1,0 +1,13 @@
+.image-in-service {
+  width: var(--default-width);
+  padding: 50px var(--left-space);
+ 
+  
+}
+
+.image-in-service img {
+  width:100%;
+  max-width: 700px;
+  height: auto;
+
+}

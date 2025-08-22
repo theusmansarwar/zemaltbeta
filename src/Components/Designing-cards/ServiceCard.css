@@ -32,13 +32,12 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
-
   justify-content: space-around;
   position: relative;
   margin-top: 80px;
   margin-bottom: 50px;
 }
-.designing-page-grid .designing-card h3{
+.designing-page-grid .designing-card h3 {
   font-size: var(--heading-four);
 }
 .designing-card ul {
@@ -77,4 +76,14 @@
 .designing-card-btn:hover {
   background-color: var(--main-color);
   color: var(--text-color4);
+}
+@media (max-width: 900px) {
+  .designing-page-grid {
+    padding: 20px var(--left-space);
+     gap: 0px;
+  }
+  .designing-card {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
 }

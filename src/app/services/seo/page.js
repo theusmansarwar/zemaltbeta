@@ -6,8 +6,10 @@ import DesigningCardFeatured from "@/Components/DesigningCardFeatured/ServicePag
 import RevenueCalculator from "@/Components/RevenueCalculator/RevenueCalculator";
 import BigIdea from "@/Components/BigIdea/BigIdea";
 import WhyDesign from "@/Components/WhyDesign/WhyDesign";
+import ImageInService from "@/Components/ImageInService/ImageInService";
+import Carousal from "@/Components/Carousal/Carousal";
 export default function Page() {
-  const webDesignFaqs = {
+  const seoFaqs = {
     title: "FAQs on web design services",
     description:
       "Zemalt are an experienced digital marketing team. We focus on clarity and quick results. We provide the resources and simple guidance that help you to gain knowledge and support.",
@@ -35,14 +37,14 @@ export default function Page() {
     ],
   };
   const featuredData = {
-    title: "CREATIVE",
+    title: "SEO",
     spanTitle: "SERVICES",
     description:
-      "You need a clear design that grows your brand. Zemalt creates sharp ideas that keep your style strong. You gain trust through smart detail and clean art. Each project shows focus and clear results.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. ",
   };
   const cardData = [
     {
-      title: "Branding & Identity Design",
+      title: "Lorem & Ipsum Seo",
       items: [
         "Logo Design",
         "Brand color set and font choice",
@@ -84,23 +86,16 @@ export default function Page() {
         "Sample pages and layouts",
       ],
     },
-    {
-      title: "Illustration & Creative Assets",
-      items: [
-        "Custom art pieces",
-        "Brand graphic assets",
-        "Digital art and icons",
-      ],
-    },
   ];
 
   return (
     <div className={styles.Home}>
       <DesigningCardFeatured data={featuredData} />
       <DesigningCard data={cardData} />
+      <Carousal />
+      <ImageInService />
       <TestimonialSlider />
-      <BigIdea />
-      <Faq faqs={webDesignFaqs} />
+      <Faq faqs={seoFaqs} />
       <RevenueCalculator />
       <WhyDesign />
     </div>

@@ -8,18 +8,34 @@
 .footer-container {
   display: flex;
   justify-content: space-between;
-  gap:40px;
+  gap: 40px;
   width: var(--default-width);
   padding: 50px var(--left-space);
 }
 
-.footer-section {
-  width: 18%;
-  align-items: center;
+/* Left Section */
+.footer-left {
+  width: 40%;
 }
-.footer-section:first-child {
-  width: 47%;
+
+/* Right Section (holds 3 columns) */
+.footer-right {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }
+
+.footer-right .footer-section {
+  flex: 1;
+}
+
+/* Last footer section (Contact) fixed width 25% */
+.footer-right .footer-section:last-child {
+  flex: none;
+  width: 45%;
+}
+
 
 .logo {
   font-weight: bold;
@@ -58,7 +74,7 @@
 
 .footer-section h4 {
   margin-bottom: 20px;
-  font-size:18px;
+  font-size: 18px;
   color: var(--headings-color);
 }
 
@@ -74,18 +90,17 @@
   width: fit-content;
 }
 .footer-section ul li:hover {
-  color: var(--headings-color);
+  color: var(--primary-color);
 }
 
 .footer-section .contact-info p {
   margin: 6px 0;
   font-size: var(--default-p-size);
   display: flex;
-  
   cursor: pointer;
 }
 .footer-section .contact-info p:hover {
-  color: var(--headings-color);
+  color: var(--primary-color);
 }
 .footer-section .contact-info p svg {
   color: var(--headings-color);
@@ -102,6 +117,7 @@
   color: var(--headings-color);
 }
 
+/* Top Banner */
 .footer-upper {
   height: 250px;
   width: var(--default-width);
@@ -109,7 +125,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-
   border-radius: var(--border-radius1);
   display: flex;
   align-items: center;
@@ -133,31 +148,34 @@
   border: 1px solid var(--text-color);
   border-radius: var(--border-radius1);
   color: var(--text-color);
-   font-size: var(--default-p-size);
-   cursor: pointer;
-   transition: 0.2s ease;
+  font-size: var(--default-p-size);
+  cursor: pointer;
+  transition: 0.2s ease;
 }
 .footer-upper button:hover {
   color: var(--text-color4);
   background-color: transparent;
   border: 1px solid var(--text-color4);
 }
+
+/* Responsive */
 @media (max-width: 900px) {
   .footer-container {
     flex-direction: column;
-
     padding-top: 20px;
+    gap: 0;
+  }
+  .footer-left,
+  .footer-right {
+    width: 100%;
+    flex-direction: column;
   }
   .footer-section {
     margin-top: 20px;
-    width: 100%;
-  }
-  .footer-section:first-child {
     width: 100%;
   }
   .footer-upper {
     height: 200px;
     flex-direction: column;
   }
-
 }

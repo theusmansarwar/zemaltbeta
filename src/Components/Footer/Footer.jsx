@@ -4,15 +4,14 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import "./Footer.css";
 import { RiFacebookFill } from "react-icons/ri";
-import { FaLinkedinIn, FaMapMarkerAlt } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
-import { IoCallOutline } from "react-icons/io5";
-import { IoLocationOutline } from "react-icons/io5";
-import { RiTiktokFill, RiTwitterXFill } from "react-icons/ri";
+import { IoCallOutline, IoLocationOutline } from "react-icons/io5";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaArrowRightLong } from "react-icons/fa6";
+
 const Footer = () => {
-  const router = useRouter(); // Use the router for client-side navigation
+  const router = useRouter();
   const [email, setEmail] = useState("");
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -32,6 +31,7 @@ const Footer = () => {
       setLoading(false);
     }
   };
+
   const menuItems = [
     { label: "Service", path: "/services" },
     { label: "Agency", path: "/" },
@@ -55,9 +55,10 @@ const Footer = () => {
           Get Started <FaArrowRightLong />
         </button>
       </div>
+
       <div className="footer-container">
-        {/* Logo & About */}
-        <div className="footer-section">
+        {/* Left Section */}
+        <div className="footer-left">
           <img src="/zemalt-logo.png" className="logo" />
           <p className="footer-description">
             Zemalt is a full-service digital marketing agency specializing in
@@ -95,53 +96,55 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Company Links */}
-        <div className="footer-section">
-          <h4>Navigation</h4>
-          <ul>
-            {menuItems.slice(0, 5).map((item) => (
-              <li key={item.label} onClick={() => handleNavClick(item)}>
-                {item.label}
-              </li>
-            ))}
-          </ul>
-        </div>
+        {/* Right Section */}
+        <div className="footer-right">
+          {/* Company Links */}
+          <div className="footer-section">
+            <h4>Navigation</h4>
+            <ul>
+              {menuItems.slice(0, 5).map((item) => (
+                <li key={item.label} onClick={() => handleNavClick(item)}>
+                  {item.label}
+                </li>
+              ))}
+            </ul>
+          </div>
 
-        {/* Other Links */}
-        <div className="footer-section">
-          <h4>Licence</h4>
-          <ul>
-            {menuItems.slice(5).map((item) => (
-              <li key={item.label} onClick={() => handleNavClick(item)}>
-                {item.label}
-              </li>
-            ))}
-          </ul>
-        </div>
+          {/* Other Links */}
+          <div className="footer-section">
+            <h4>Licence</h4>
+            <ul>
+              {menuItems.slice(5).map((item) => (
+                <li key={item.label} onClick={() => handleNavClick(item)}>
+                  {item.label}
+                </li>
+              ))}
+            </ul>
+          </div>
 
-        {/* Newsletter */}
-        <div className="footer-section">
-          <h4>Contact</h4>
-
-          <div className="contact-info">
-            <p>
-              <CiMail />{" "}
-              <a href="mailto:company@zemalt.com">company@zemalt.com</a>
-            </p>
-            <p>
-              <IoCallOutline />{" "}
-              <a href="tel:+923007044566">+92-(300)-7044-566</a>
-            </p>
-            <p>
-              <IoLocationOutline />{" "}
-              <a
-                href="https://maps.app.goo.gl/owK9zDzZBdNGzWrL7"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Plaza 119, Allama Iqbal Rd, Garhi Shahu, Lahore PK
-              </a>
-            </p>
+          {/* Contact */}
+          <div className="footer-section">
+            <h4>Contact</h4>
+            <div className="contact-info">
+              <p>
+                <CiMail />{" "}
+                <a href="mailto:company@zemalt.com">company@zemalt.com</a>
+              </p>
+              <p>
+                <IoCallOutline />{" "}
+                <a href="tel:+923007044566">+92-(300)-7044-566</a>
+              </p>
+              <p>
+                <IoLocationOutline />{" "}
+                <a
+                  href="https://maps.app.goo.gl/owK9zDzZBdNGzWrL7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Plaza 119, Allama Iqbal Rd, Garhi Shahu, Lahore PK
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </div>

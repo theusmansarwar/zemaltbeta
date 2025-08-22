@@ -68,8 +68,8 @@
   border: 1px solid var(--text-color);
   border-radius: var(--border-radius1);
   color: var(--text-color4);
-  cursor:pointer;
-  transition:0.2s ease;
+  cursor: pointer;
+  transition: 0.2s ease;
 }
 .servicecard .overlay2 .btn-showmore:hover {
   color: var(--text-color);
@@ -79,7 +79,6 @@
   width: 90px;
   height: 90px;
   border: 10px solid var(--text-color4);
-
   border-radius: 50%;
   position: absolute;
   bottom: -15px;

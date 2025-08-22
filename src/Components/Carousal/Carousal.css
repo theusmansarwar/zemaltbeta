@@ -1,0 +1,21 @@
+.carousal {
+  height: 250px;
+  width: var(--default-width);
+  border-radius: var(--border-radius1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+}
+.carousal h2 {
+  font-size: var(--heading-one);
+  color: var(--text-color4);
+}
+.carousal h2 span {
+  color: var(--primary-color);
+}
+@media (max-width: 900px) {
+  .carousal {
+    height: 180px;
+  }
+}
