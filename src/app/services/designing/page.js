@@ -92,13 +92,22 @@ export default function Service() {
       "Bright minds shape clear paths and act fast. Fresh ideas spark growth. True freedom drives success.",
     image: "/bigidea.png",
   };
-
+  const whyService = {
+    title: "Why Good Design Shapes Every Brand",
+    description: [
+      "Zemalt is a leading digital agency trusted by brands. You get proven methods that raise search rank fast. Our team builds strategies that push results higher.",
+      "Team Zemalt acts as a partners for your business goals. You gain access to tailored plans that secure a stronger reach. Our focus stays on driving measurable success. We deliver solutions that keep your audience connected.",
+      "Give you tools that make progress steady. Our approach targets practical outcomes that strengthen presence. Clients rely on us to achieve consistent gains. Results bring better awareness that leads to sustainable growth.",
+    ],
+    image: "/why-designing.png",
+  };
   return (
     <ServicePage
       featuredData={featuredData}
       cardData={cardData}
       imageData={imageData}
       Faqs={faqs}
+      whyService={whyService}
     />
   );
 }
