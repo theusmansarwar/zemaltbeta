@@ -1,13 +1,7 @@
-import styles from "./page.module.css";
-import TestimonialSlider from "@/Components/TestimonialSlider/TestimonialSlider";
-import Faq from "@/Components/FAQ/Faq";
-import DesigningCard from "@/Components/Designing-cards/ServiceCard";
-import DesigningCardFeatured from "@/Components/ServicePageFeatured/ServicePageFeatured";
-import RevenueCalculator from "@/Components/RevenueCalculator/RevenueCalculator";
-import BigIdea from "@/Components/BigIdea/BigIdea";
-import WhyDesign from "@/Components/WhyDesign/WhyDesign";
-export default function Page() {
-  const webDesignFaqs = {
+
+import ServicePage from "@/Components/SERVICEPAGE/ServicePage";
+export default function Service() {
+  const faqs = {
     title: "FAQs on web design services",
     description:
       "Zemalt are an experienced digital marketing team. We focus on clarity and quick results. We provide the resources and simple guidance that help you to gain knowledge and support.",
@@ -93,16 +87,18 @@ export default function Page() {
       ],
     },
   ];
+  const imageData = {
+    heading:
+      "Bright minds shape clear paths and act fast. Fresh ideas spark growth. True freedom drives success.",
+    image: "/bigidea.png",
+  };
 
   return (
-    <div className={styles.Home}>
-      <DesigningCardFeatured data={featuredData} />
-      <DesigningCard data={cardData} />
-      <TestimonialSlider />
-      <BigIdea />
-      <Faq faqs={webDesignFaqs} />
-      <RevenueCalculator />
-      <WhyDesign />
-    </div>
+    <ServicePage
+      featuredData={featuredData}
+      cardData={cardData}
+      imageData={imageData}
+      Faqs={faqs}
+    />
   );
 }

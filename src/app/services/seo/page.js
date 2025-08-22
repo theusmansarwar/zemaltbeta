@@ -1,14 +1,8 @@
-import styles from "./page.module.css";
-import TestimonialSlider from "@/Components/TestimonialSlider/TestimonialSlider";
-import Faq from "@/Components/FAQ/Faq";
-import DesigningCard from "@/Components/Designing-cards/ServiceCard";
-import RevenueCalculator from "@/Components/RevenueCalculator/RevenueCalculator";
-import WhyDesign from "@/Components/WhyDesign/WhyDesign";
-import ImageInService from "@/Components/ImageInService/ImageInService";
-import Carousal from "@/Components/Carousal/Carousal";
-import ServicePageFeatured from "@/Components/ServicePageFeatured/ServicePageFeatured";
-export default function Page() {
-  const seoFaqs = {
+
+
+import ServicePage from "@/Components/SERVICEPAGE/ServicePage";
+export default function Service() {
+  const faqs = {
     title: "FAQs on web design services",
     description:
       "Zemalt are an experienced digital marketing team. We focus on clarity and quick results. We provide the resources and simple guidance that help you to gain knowledge and support.",
@@ -39,11 +33,11 @@ export default function Page() {
     title: "SEO",
     spanTitle: "SERVICES",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. ",
+      "You need a clear design that grows your brand. Zemalt creates sharp ideas that keep your style strong. You gain trust through smart detail and clean art. Each project shows focus and clear results.",
   };
   const cardData = [
     {
-      title: "Lorem & Ipsum Seo",
+      title: "Branding & Identity Design",
       items: [
         "Logo Design",
         "Brand color set and font choice",
@@ -85,18 +79,20 @@ export default function Page() {
         "Sample pages and layouts",
       ],
     },
+    {
+      title: "Illustration & Creative Assets",
+      items: [
+        "Custom art pieces",
+        "Brand graphic assets",
+        "Digital art and icons",
+      ],
+    },
   ];
+   const imageData = {
+    heading:
+      "Bright minds shape clear paths and act fast. Fresh ideas spark growth. True freedom drives success.",
+    image: "/bigidea.png",
+  };
 
-  return (
-    <div className={styles.Home}>
-      <ServicePageFeatured data={featuredData} />
-      <DesigningCard data={cardData} />
-      <Carousal />
-      <ImageInService />
-      <TestimonialSlider />
-      <Faq faqs={seoFaqs} />
-      <RevenueCalculator />
-      <WhyDesign />
-    </div>
-  );
+  return <ServicePage featuredData={featuredData} cardData={cardData} Faqs={faqs}  imageData={imageData} />;
 }

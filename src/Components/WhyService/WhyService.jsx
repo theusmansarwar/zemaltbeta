@@ -1,7 +1,7 @@
 import React from "react";
-import "./WhyDesign.css";
+import "./WhyService.css";
 import "../BlogSection/BlogSection.css";
-const WhyDesign = () => {
+const WhyService = () => {
   return (
     <div className="WhyDesign">
       <div className="left">
@@ -29,4 +29,4 @@ const WhyDesign = () => {
   );
 };
 
-export default WhyDesign;
+export default WhyService;

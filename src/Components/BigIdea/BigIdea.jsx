@@ -1,13 +1,10 @@
 import React from "react";
 import "./BigIdea.css";
-const BigIdea = () => {
+const BigIdea = ({ data }) => {
   return (
     <div className="BigIdea">
-      <h2>
-        Bright minds shape clear paths and act fast. Fresh ideas spark growth.
-        True freedom drives success.
-      </h2>
-      <img src="/8c30e7ef474b9304eecd99aab2ade547f23f2f0d.png" />
+      <h2>{data.heading}</h2>
+      <img src={data.image} />
     </div>
   );
 };
