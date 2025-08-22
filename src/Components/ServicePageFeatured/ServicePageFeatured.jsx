@@ -1,6 +1,6 @@
 import React from "react";
 import "./ServicePageFeatured.css";
-const DesigningCardFeatured = ({ data }) => {
+const ServicePageFeatured = ({ data }) => {
   return (
     <div className="DesigningCardFeatured">
       <h1>
@@ -11,4 +11,4 @@ const DesigningCardFeatured = ({ data }) => {
   );
 };
 
-export default DesigningCardFeatured;
+export default ServicePageFeatured;

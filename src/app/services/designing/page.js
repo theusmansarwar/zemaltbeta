@@ -2,7 +2,7 @@ import styles from "./page.module.css";
 import TestimonialSlider from "@/Components/TestimonialSlider/TestimonialSlider";
 import Faq from "@/Components/FAQ/Faq";
 import DesigningCard from "@/Components/Designing-cards/ServiceCard";
-import DesigningCardFeatured from "@/Components/DesigningCardFeatured/ServicePageFeatured";
+import DesigningCardFeatured from "@/Components/ServicePageFeatured/ServicePageFeatured";
 import RevenueCalculator from "@/Components/RevenueCalculator/RevenueCalculator";
 import BigIdea from "@/Components/BigIdea/BigIdea";
 import WhyDesign from "@/Components/WhyDesign/WhyDesign";

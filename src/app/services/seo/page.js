@@ -2,12 +2,11 @@ import styles from "./page.module.css";
 import TestimonialSlider from "@/Components/TestimonialSlider/TestimonialSlider";
 import Faq from "@/Components/FAQ/Faq";
 import DesigningCard from "@/Components/Designing-cards/ServiceCard";
-import DesigningCardFeatured from "@/Components/DesigningCardFeatured/ServicePageFeatured";
 import RevenueCalculator from "@/Components/RevenueCalculator/RevenueCalculator";
-import BigIdea from "@/Components/BigIdea/BigIdea";
 import WhyDesign from "@/Components/WhyDesign/WhyDesign";
 import ImageInService from "@/Components/ImageInService/ImageInService";
 import Carousal from "@/Components/Carousal/Carousal";
+import ServicePageFeatured from "@/Components/ServicePageFeatured/ServicePageFeatured";
 export default function Page() {
   const seoFaqs = {
     title: "FAQs on web design services",
@@ -90,7 +89,7 @@ export default function Page() {
 
   return (
     <div className={styles.Home}>
-      <DesigningCardFeatured data={featuredData} />
+      <ServicePageFeatured data={featuredData} />
       <DesigningCard data={cardData} />
       <Carousal />
       <ImageInService />
