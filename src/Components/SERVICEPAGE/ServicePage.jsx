@@ -11,7 +11,6 @@ import "./page.css";
 export default function ServicePage({ featuredData, cardData, imageData, Faqs,whyService }) {
   return (
     <div className="homebg">
-      {console.log(imageData)}
       <ServicePageFeatured data={featuredData} />
       <ServiceCard data={cardData} />
       <TestimonialSlider />
