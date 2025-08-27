@@ -1,0 +1,94 @@
+.maindropdown {
+  width: 80%;
+  height: 400px;
+  display: flex;
+  justify-self: center;
+  overflow: hidden;
+  background-color: var(--text-color4);
+  box-shadow: var(--default-box-shadow);
+}
+.maindropdown .left {
+  width: calc(25% - 80px);
+  height: 100%;
+  padding: 10px 40px;
+  border-right: 1px solid gainsboro;
+}
+
+.maindropdown .center {
+  width: calc(40% - 80px);
+  height: 100%;
+  padding: 10px 40px;
+  background-color: var(--background);
+}
+.maindropdown .right {
+  width: 35%;
+  height: 100%;
+  background-color: #2c2c2c;
+}
+.maindropdown .left ul {
+  list-style: none;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.maindropdown .right ul {
+  list-style: none;
+}
+.maindropdown .left ul li {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  border-radius: var(--border-radius2);
+}
+.maindropdown .center ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.maindropdown .left ul li .offer {
+  background: var(--gradient-three);
+  padding: 5px;
+  color: var(--background);
+  margin-right: 5px;
+  font-size: var(--default-p-size);
+}
+.maindropdown .left ul li:hover {
+  background: var(--primary-color);
+  color: var(--text-color4);
+}
+.dropdown-heading {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0px;
+  font-weight: 600;
+  color: var(--litle-fade);
+}
+.maindropdown .right {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.maindropdown .right .view-all-btn {
+  width: fit-content;
+  padding: 10px 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: var(--text-color4);
+  margin-bottom: 20px;
+  border-radius: var(--border-radius1);
+}
+
+li.active {
+  background: var(--gradient-three);
+  color: var(--background);
+}
