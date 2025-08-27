@@ -1,68 +1,63 @@
 .Portfolio-card-area {
   display: flex;
-  width: 100%;
-  flex-wrap: wrap;
-  padding-top: 50px;
-  overflow-x: scroll;
-  gap: 20px;
+  flex-direction: column;
+  width: 90%;
+  padding:50px 5%;
+  padding-bottom: 0px;
+  gap: 30px;
   scrollbar-width: none;
   margin-bottom: 50px;
   background-color: var(--text-color4);
   justify-content: center;
 }
 .Portfolio-card-area .Portfolio-card-div {
-  height: 370px;
-  width: calc(33% - 20px);
-  background-image: url("/how-we-Portfolio-card.png");
+  height: 300px;
+  padding: 20px;
+  width: calc(100% - 40px);
+  background-color: var(  --background2);
+  display: flex;
+  align-items: center;
+gap: 20px;
+border-radius: var(--border-radius1);
+box-shadow: var(--default-box-shadow2);
+}
+
+.Portfolio-card-area .Portfolio-card-div .project-thumbnail {
+ width: 30%;
+  height: 100%;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  border-radius: var(--border-radius1);
 
-  cursor: pointer;
 }
-/* .Portfolio-card-area .Portfolio-card-div:hover {
-  border-radius: 50%;
+.visit-project-btn{
+  background-color: black;
+  color: white;
+  border-radius: var( --border-radius1);
+  width: fit-content;
+  height: fit-content;
+  padding: 10px 15px;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
 }
-.Portfolio-card-area .Portfolio-card-div .detail-btn {
-  display: none;
-}
-.Portfolio-card-area .Portfolio-card-div:hover .detail-btn {
-  display: block;
-  height: 150px;
-  width: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--primary-color);
-  border-radius: 50%;
-    
-
-} */
-.Portfolio-card-area .Portfolio-card-div .Portfolio-card-overlay {
+.Project-mid{
   height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  width: 50%;
 }
-.Portfolio-card-area .Portfolio-card-div .Portfolio-card-overlay p {
-  display: flex;
-  align-items: center;
-  width: var(--default-width);
-  gap: 5px;
-  color: var(--text-color4);
-  margin-top: 20px;
-  margin-bottom: 20px;
+.Project-mid p{
+  color: black;
+ 
 }
-.Portfolio-card-area .Portfolio-card-div .Portfolio-card-overlay p span {
-  width: 10%;
-  height: 2px;
-  background-color: var(--text-color4);
+.Project-mid p:first-child{
+  color: black;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
-.Portfolio-card-area .Portfolio-card-div:hover .Portfolio-card-overlay p {
-  display: none;
-}
-.Portfolio-card-area .Portfolio-card-div:hover .Portfolio-card-overlay {
-  justify-content: center;
+.portfolio-btn-area{
+width:20%;
+display: flex;
+justify-content: center;
 }

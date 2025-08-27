@@ -1,19 +1,14 @@
+import ProjectPage from "@/Components/SERVICEPAGE/ProjectPage";
 
-import ServicePageFeatured from "@/Components/ServicePageFeatured/ServicePageFeatured";
-import Cards2 from "@/Components/portfolioCards/Cards2";
-
-import PortfolioCards from "@/Components/portfolioCards/PortfolioCards";
 export default function Page() {
+
+  
   const featuredData = {
-    title: "SEO",
+    title: "DESIGNING",
     spanTitle: "SERVICES",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. ",
   };
-  return (
-    <div>
-      <ServicePageFeatured data={featuredData} />
-      <Cards2 />
-    </div>
-  );
+
+  return <ProjectPage featuredData={featuredData} />;
 }

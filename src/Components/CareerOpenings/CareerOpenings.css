@@ -1,0 +1,91 @@
+.career-container {
+  text-align: center;
+  padding: 50px 20px;
+  font-family: "Arial", sans-serif;
+}
+
+.subtitle {
+  color: #555;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #0a2540;
+}
+
+.description {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.career-layout {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Categories */
+.career-categories {
+  flex: 1;
+  text-align: left;
+}
+
+.category {
+  font-size: 14px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  color: #333;
+}
+
+.category.active {
+  font-weight: bold;
+  color: #0a66c2;
+}
+
+/* Jobs */
+.career-jobs {
+  flex: 3;
+}
+
+.job-card {
+  background: white;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+}
+
+.job-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0a2540;
+}
+
+.job-info {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 14px;
+  color: #333;
+}
+
+.job-info strong {
+  font-size: 12px;
+  color: #888;
+}
+
+.arrow {
+  font-size: 20px;
+  font-weight: bold;
+  color: #aaa;
+}

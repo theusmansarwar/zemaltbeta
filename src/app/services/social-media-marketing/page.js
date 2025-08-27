@@ -1,7 +1,7 @@
 
 import ServicePage from "@/Components/SERVICEPAGE/ServicePage";
 export const metadata = {
-  title: "Creative Services | Zemalt",
+  title: "SMM Services | Zemalt",
   description:
     "Discover Zemalt's creative services including branding, advertising design, packaging, UI/UX, and more. We deliver clear designs that strengthen your brand identity.",
 };
@@ -37,7 +37,7 @@ export default function Service() {
 
   
   const featuredData = {
-    title: "Designing",
+    title: "SMM",
     spanTitle: "SERVICES",
     description:
       "You need a clear design that grows your brand. Zemalt creates sharp ideas that keep your style strong. You gain trust through smart detail and clean art. Each project shows focus and clear results.",

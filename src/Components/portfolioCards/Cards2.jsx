@@ -74,10 +74,8 @@ const Cards2 = () => {
   ];
 
   React.useEffect(() => {
-    // detect last row cards after render
     const wrappers = document.querySelectorAll(".card-wrapper");
     if (wrappers.length) {
-      // get offsetTop of last card
       const lastRowTop = wrappers[wrappers.length - 1].offsetTop;
       const ids = [];
       wrappers.forEach((el, i) => {

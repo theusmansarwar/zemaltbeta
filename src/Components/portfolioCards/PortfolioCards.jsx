@@ -1,5 +1,6 @@
 import React from 'react'
 import './PortfolioCards.css'
+import { FaArrowRightLong } from 'react-icons/fa6';
 const PortfolioCards = () => {
     const projectsToShow = [
   { name: "Number of Pages", description: "Select the number of pages your website will include.", image :"/how-we-work.png"},
@@ -24,11 +25,14 @@ const PortfolioCards = () => {
 
            <div className="Portfolio-card-area">
         {projectsToShow.map((project, index) => (
-          <div className="Portfolio-card-div" key={index} style={{ backgroundImage: `url(${project.image})` }}>
-            <div className="Portfolio-card-overlay">
-              <p><span/>{project.name}</p>
+          <div className="Portfolio-card-div" key={index} >
+            <div className="project-thumbnail" style={{ backgroundImage: `url(${project.image})` }} />
+            <div className="Project-mid">
+              <p>{project.name}</p>
               <p>{project.description}</p>
             </div>
+            <div className="portfolio-btn-area">
+            <div className="visit-project-btn">Visit Website <FaArrowRightLong /></div></div>
           </div>
         ))}
       </div>

@@ -1,7 +1,14 @@
+
 import ServicePage from "@/Components/SERVICEPAGE/ServicePage";
+export const metadata = {
+  title: "Search Engine Optimization | Zemalt",
+  description:
+    "Discover Zemalt's creative services including branding, advertising design, packaging, UI/UX, and more. We deliver clear designs that strengthen your brand identity.",
+};
+
 export default function Service() {
   const faqs = {
-    title: "FAQs on web design services",
+    title: "FAQs on content writing services",
     description:
       "Zemalt are an experienced digital marketing team. We focus on clarity and quick results. We provide the resources and simple guidance that help you to gain knowledge and support.",
     questions: [
@@ -27,65 +34,74 @@ export default function Service() {
       },
     ],
   };
+
+  
   const featuredData = {
     title: "SEO",
     spanTitle: "SERVICES",
     description:
       "You need a clear design that grows your brand. Zemalt creates sharp ideas that keep your style strong. You gain trust through smart detail and clean art. Each project shows focus and clear results.",
   };
-  const cardData = [
-    {
-      title: "Branding & Identity Design",
-      items: [
-        "Logo Design",
-        "Brand color set and font choice",
-        "Style guide manual",
-        "Office cards, letter papers and envelopes",
-      ],
-    },
-    {
-      title: "Marketing & Advertising Design",
-      items: [
-        "Social posts, banners, online ads",
-        "Leaflets and posters",
-        "Brochures and catalogs",
-        "Outdoor ads and boards",
-      ],
-    },
-    {
-      title: "Packaging & Label Design",
-      items: [
-        "Product box art",
-        "Bottle and jar tags",
-        "Food, beauty tech pack art",
-        "3D box sample",
-      ],
-    },
-    {
-      title: "Print Media Design",
-      items: [
-        "Books and magazine covers",
-        "Newsprint and flyer pages",
-        "Reports and company brochures",
-      ],
-    },
-    {
-      title: "UI/UX Designing",
-      items: [
-        "Website UI plan",
-        "Mobile app page plan",
-        "Sample pages and layouts",
-      ],
-    },
-    {
-      title: "Illustration & Creative Assets",
-      items: [
-        "Custom art pieces",
-        "Brand graphic assets",
-        "Digital art and icons",
-      ],
-    },
-  ];
+const cardData = [
+  {
+    title: "Branding & Identity Design",
+    slug: "branding-identity-design",
+    items: [
+      "Logo Design",
+      "Brand color set and font choice",
+      "Style guide manual",
+      "Office cards, letter papers and envelopes",
+    ],
+  },
+  {
+    title: "Marketing & Advertising Design",
+    slug: "marketing-advertising-design",
+    items: [
+      "Social posts, banners, online ads",
+      "Leaflets and posters",
+      "Brochures and catalogs",
+      "Outdoor ads and boards",
+    ],
+  },
+  {
+    title: "Packaging & Label Design",
+    slug: "packaging-label-design",
+    items: [
+      "Product box art",
+      "Bottle and jar tags",
+      "Food, beauty tech pack art",
+      "3D box sample",
+    ],
+  },
+  {
+    title: "Print Media Design",
+    slug: "print-media-design",
+    items: [
+      "Books and magazine covers",
+      "Newsprint and flyer pages",
+      "Reports and company brochures",
+    ],
+  },
+  {
+    title: "UI/UX Designing",
+    slug: "ui-ux-designing",
+    items: [
+      "Website UI plan",
+      "Mobile app page plan",
+      "Sample pages and layouts",
+    ],
+  },
+  {
+    title: "Illustration & Creative Assets",
+    slug: "illustration-creative-assets",
+    items: [
+      "Custom art pieces",
+      "Brand graphic assets",
+      "Digital art and icons",
+    ],
+  },
+];
+
   const imageData = {
     heading:
       "Bright minds shape clear paths and act fast. Fresh ideas spark growth. True freedom drives success.",
@@ -104,8 +120,8 @@ export default function Service() {
     <ServicePage
       featuredData={featuredData}
       cardData={cardData}
-      Faqs={faqs}
       imageData={imageData}
+      Faqs={faqs}
       whyService={whyService}
     />
   );
