@@ -3,6 +3,7 @@ import "./Featured.css";
 import { FaArrowRightLong, FaArrowTrendUp, FaPlus } from "react-icons/fa6";
 const Featured = () => {
   return (
+    
     <div className="Featured">
       <div className="left">
         <h1>
@@ -64,6 +65,7 @@ const Featured = () => {
         </div>
       </div>
     </div>
+    
   );
 };
 

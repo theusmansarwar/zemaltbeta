@@ -12,7 +12,7 @@ const Header = () => {
     setShowDropdown(false);
   };
   return (
-    <>
+    <div className="main-wrapper-fixed-width">
       <div className="header-area">
         <img src="/zemalt-logo.png" />
 
@@ -40,7 +40,7 @@ const Header = () => {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

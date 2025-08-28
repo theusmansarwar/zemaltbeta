@@ -5,6 +5,7 @@
   width: var(--default-width);
   margin-left: var(--left-space);
   justify-content: space-between;
+  
 }
 
 .header-area img {

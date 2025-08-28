@@ -48,6 +48,7 @@ const Footer = () => {
   };
 
   return (
+    <div className="main-wrapper-fixed-width">
     <footer className="footer">
       <div className="footer-upper">
         <h2>Ready to work with us?</h2>
@@ -149,6 +150,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+    </div>
   );
 };
 

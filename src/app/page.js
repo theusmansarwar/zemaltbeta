@@ -46,10 +46,13 @@ export default function Home() {
   };
   return (
     <div className={styles.Home}>
-      {/* <BlogsCard/>
+      {/*
+      <BlogsCard/>
       <LatestBlogs />
       <GrowingTipsBlogs/>
-      <TrendingBlogs /> */}
+      <TrendingBlogs /> 
+      */}  
+
       <Featured />
       <OutBox />
       <Realworld />
