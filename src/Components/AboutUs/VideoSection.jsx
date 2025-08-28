@@ -43,6 +43,7 @@ const VideoSection = () => {
             width="100%"
             height="100%"
             allowFullScreen
+            frameBorder={0}
           ></iframe>
         </div>
       )}

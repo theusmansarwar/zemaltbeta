@@ -34,12 +34,13 @@
 }
 .about-hero .right {
   width: 50%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 }
 .about-hero .right .box {
-  height: 100px;
+  height: 180px;
+  width: 180px;
   background-color: #f9f9f9;
   display: flex;
   flex-direction: column;
@@ -47,16 +48,28 @@
   justify-content: center;
   padding: 10px;
   gap: 10px;
+  transition: 0.3s ease;
 }
-.about-hero .right .box:first-child {
-  background-color: var(--text-color4);
+.about-hero .right .box:hover {
   box-shadow: 0 4px 2px rgba(0, 0, 0, 0.15), 0 2px 6px rgba(0, 0, 0, 0.15);
+  background-color: var(--text-color4);
+}
+.about-hero .right .box:hover strong{
+  transform: scale(1.06);
+}
+.about-hero .right .box:hover span{
+  transform: scale(1.06);
 }
 .about-hero .right .box strong {
   font-size: var(--heading-two);
+  display: flex;
+  align-items: center;
+  transition: 0.3s ease;
 }
-.about-hero .right .box span {
+.about-hero .right .box p span {
   text-align: center;
+  display: block;
+   transition: 0.3s ease;
 }
 @media (max-width: 900px) {
   .about-hero {
@@ -72,5 +85,9 @@
   }
   .about-hero .right {
     width: 100%;
+  }
+  .about-hero .right .box {
+    height: 150px;
+    width: 150px;
   }
 }

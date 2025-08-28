@@ -1,4 +1,5 @@
 import AboutUsHero from "@/Components/AboutUs/AboutUsHero";
+import FourthSection from "@/Components/AboutUs/FourthSection";
 import MeetTeam from "@/Components/AboutUs/MeetTeam";
 import SecondSection from "@/Components/AboutUs/SecondSection";
 import VideoSection from "@/Components/AboutUs/VideoSection";
@@ -40,6 +41,7 @@ const page = () => {
       <AboutUsHero />
       <SecondSection />
       <MeetTeam />
+      <FourthSection/>
       <Faq faqs={aboutPageFaqs} />
       <VideoSection/>
     </div>

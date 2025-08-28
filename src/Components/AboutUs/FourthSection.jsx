@@ -1,8 +1,9 @@
 import React from "react";
-import "./SecondSection.css";
-const SecondSection = () => {
+import "./FourthSection.css";
+import { FaArrowRightLong } from "react-icons/fa6";
+const FourthSection = () => {
   return (
-    <div className="second-section">
+    <div className="fourth-section">
       <div className="left">
         <h2>HEADING HERE</h2>
         <p>
@@ -39,47 +40,16 @@ const SecondSection = () => {
           aliquid ea fugit debitis. quasi tempore quo nisi voluptate odio! Vel
           est ratione deserunt, aliquid ea fugit debitis.
         </p>
-      </div>
-      <div className="right">
-        <div className="top-parent">
-          <div className="top">
-            <div className="content">
-              <strong>230 <img src="/plus-icon.svg" alt="Add Icon" /></strong>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Officiis soluta
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Aperiam omnis nostrum vitae sit
-              </p>
-            </div>
-            <div className="img-section">
-              <div
-                className="box1"
-                style={{
-                  backgroundImage: `url(/blog-thumbnail.jpg)`,
-                  backgroundPosition: "center",
-                  backgroundSize: "cover",
-                  backgroundRepeat: "no-repeat",
-                }}
-              ></div>
-              <div
-                className="box2"
-                style={{
-                  backgroundImage: `url(/blog-thumbnail.jpg)`,
-                  backgroundPosition: "center",
-                  backgroundSize: "cover",
-                  backgroundRepeat: "no-repeat",
-                }}
-              ></div>
-            </div>
-          </div>
+        <div className="buttons-area">
+          <button>
+            Schedules a call <FaArrowRightLong />
+          </button>
+          <p>View Sample Work</p>
         </div>
-        <button className="proposal-btn">Get Proposal</button>
       </div>
+      <div className="right"></div>
     </div>
   );
 };
 
-export default SecondSection;
+export default FourthSection;

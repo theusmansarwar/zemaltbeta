@@ -1,5 +1,6 @@
 import React from "react";
 import "./AboutUsHero.css";
+import { FaPlus } from "react-icons/fa6";
 const AboutUsHero = () => {
   return (
     <div className="about-hero">
@@ -21,20 +22,38 @@ const AboutUsHero = () => {
       </div>
       <div className="right">
         <div className="box">
-          <strong>1000 +</strong>
-          <span>Completed Projects</span>
+          <strong>
+            1000 <img src="/plus-icon.svg" alt="Add Icon" />
+          </strong>
+          <p>
+            <span>Completed </span>
+            <span>Projects</span>
+          </p>
         </div>
         <div className="box">
-          <strong>250 +</strong>
-          <span>On Going Projects</span>
+          <strong>
+            250 <img src="/plus-icon.svg" alt="Add Icon" />
+          </strong>
+          <p>
+            <span>On Going</span>
+            <span>Projects</span>
+          </p>
         </div>
         <div className="box">
-          <strong>500 +</strong>
-          <span>Happy Clients</span>
+          <strong>
+            500 <img src="/plus-icon.svg" alt="Add Icon" />
+          </strong>
+          <p>
+            <span>Happy</span>
+            <span>Clients</span>
+          </p>
         </div>
         <div className="box">
           <strong>#1</strong>
-          <span>Talented Team</span>
+          <p>
+            <span>Talented</span>
+            <span>Team</span>
+          </p>
         </div>
       </div>
     </div>
