@@ -225,6 +225,18 @@
   .Featured .left {
     width: 100%;
   }
+  .Featured .left .buttons-area {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+}
+.Featured .left .buttons-area p {
+  text-decoration: underline;
+  font-size: var(--default-p-size);
+  transition: 0.3s ease;
+  cursor: pointer;
+  margin-left: 22px;
+}
   .Featured .right .top .left {
     width: 49%;
     height: 185px;

@@ -63,7 +63,6 @@
   padding: 18px 40px;
   font-size: 28px;
   transition: all 0.5s ease;
-  
   margin-bottom: -5px;
 }
 .check-now-button:hover {
@@ -88,12 +87,31 @@
     height: 200px;
     gap: 10px;
   }
+  .testimonial-content p {
+    font-size: 14px;
+  }
   .testimonial-card {
     width: calc(100% - 40px);
     margin-top: 20px;
     gap: 5px;
   }
   .testimonial-logo {
-    width: 150px;
+    width: 100px;
   }
+  .check-now-button {
+    width: 60px;
+    height: 200px;
+  }
+
+  .arrow-btn {
+    padding: 8px 20px;
+    margin-bottom: -5px;
+  }
+  .check-now-button:hover .arrow-btn {
+  bottom: 50%;
+  transform: translateY(-190%);
+  background-color: transparent;
+  border: none;
+  color: var(--main-color);
+}
 }

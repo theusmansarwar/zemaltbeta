@@ -8,29 +8,34 @@ export const metadata = {
 
 export default function Service() {
   const faqs = {
-    title: "FAQs on content writing services",
+    title: "FAQs on seo services",
     description:
-      "Zemalt are an experienced digital marketing team. We focus on clarity and quick results. We provide the resources and simple guidance that help you to gain knowledge and support.",
+      "Zemalt answers common questions about SEO services. You learn why SEO matters and how it helps your business grow. Each answer gives you clear guidance backed by proven strategies. The goal is to help you understand SEO and use it as a tool for real success.",
     questions: [
       {
-        question: "What is the point of digital marketing for my business?",
+        question: "How can we improve your website rankings?",
         answer:
-          "Digital marketing helps your brand reach more people. It drives traffic, generates leads, and builds your image. Every step is guided by data to make campaigns stronger.",
+          "Zemalt boosts your website step by step. We optimize pages, fix technical issues, and target the right keywords. Our team builds authority through quality backlinks. You get stronger search visibility and more traffic from people looking for your services.",
       },
       {
-        question: "How can digital marketing raise my website’s visibility?",
+        question: "What makes Zemalt different from other SEO agencies?",
         answer:
-          "Digital marketing pushes your site higher in search results. SEO moves your pages to the top. Paid ads bring quick visitors. Social platforms send new users. Strong content keeps people engaged. You build authority and appear more often.",
+          "Zemalt focuses on results that matter. Many agencies chase numbers, but we chase growth. You get strategies designed to bring customers, not just visitors. Our reporting stays clear, so you always know what we do for your business.",
       },
       {
-        question: "How long does digital marketing take?",
+        question: "Will SEO from Zemalt bring me more customers?",
         answer:
-          "Digital marketing shows results in weeks or months. SEO takes time but lasts longer. Social media builds trust. Email keeps users connected. All efforts work together. You need consistency to see returns.",
+          "Yes. Our SEO campaigns target buyers, not random clicks. We choose keywords that attract people ready to act. Your content earns trust, and your website converts visitors into clients. You gain growth that lasts.",
       },
       {
-        question: "How do you measure digital marketing performance?",
+        question: "How long does it take to see results from SEO?",
         answer:
-          "Zemalt measure success through numbers. Traffic shows reach. Leads show demand. Conversions show growth. ROI shows profit. Reports highlight progress.",
+          "You start noticing progress in the first few weeks. Major results build within three to six months. Our approach focuses on steady improvement. You see updates and clear reports as your rankings climb.",
+      },
+      {
+        question: "Does Zemalt provide local SEO for businesses?",
+        answer:
+          "Yes. Zemalt helps you dominate local searches. We optimize your Google Business Profile and strengthen local citations. Your business shows up when nearby customers search. You stand ahead of local competitors and gain more direct calls and visits.",
       },
     ],
   };
@@ -40,12 +45,12 @@ export default function Service() {
     title: "SEO",
     spanTitle: "SERVICES",
     description:
-      "You need a clear design that grows your brand. Zemalt creates sharp ideas that keep your style strong. You gain trust through smart detail and clean art. Each project shows focus and clear results.",
+      "We bring you services that help you grow fast and stand out from the competition. Every service is built to give you real results, not just promises. You get trusted solutions that improve performance, increase visibility, and build long-term success. We do more than just offer help. We give you strategies that save time and boost efficiency. Our services guide you at every step so you can reach your goals with confidence. When you choose us, you invest in quality and value that keeps paying back.",
   };
 const cardData = [
   {
-    title: "Branding & Identity Design",
-    slug: "branding-identity-design",
+    title: "SEO Audit",
+    slug: "seo-audit",
     items: [
       "Logo Design",
       "Brand color set and font choice",
@@ -54,8 +59,8 @@ const cardData = [
     ],
   },
   {
-    title: "Marketing & Advertising Design",
-    slug: "marketing-advertising-design",
+    title: "Local SEO",
+    slug: "local-seo",
     items: [
       "Social posts, banners, online ads",
       "Leaflets and posters",

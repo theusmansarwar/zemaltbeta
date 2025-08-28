@@ -19,3 +19,7 @@
   opacity: 0.06;
   z-index: -1;
 }
+.homebg h2{
+  font-size: var(--heading-two);
+  text-align: center;
+}

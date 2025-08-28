@@ -5,7 +5,7 @@ import { TiSpiral } from "react-icons/ti";
 import { PiSpiralLight } from "react-icons/pi";
 const Whyus = () => {
   return (
-    <section class="why-us-section">
+    <section className="why-us-section">
       <div className="blog-header">
         <div className="header-left2">
           <h2>
@@ -26,11 +26,11 @@ const Whyus = () => {
         <div className="why-usleft">
           <img src="/left.png" />
           <div className="outer-area1">
-            <div class="card">
-              <div class="icon-area">
+            <div className="card">
+              <div className="icon-area">
                 <PiSpiralLight />
               </div>
-              <div class="card-body">
+              <div className="card-body">
                 <h4>Proven Expertise</h4>
                 <p>
                   Our experts have years of industry experience. They apply
@@ -41,11 +41,11 @@ const Whyus = () => {
             </div>
           </div>
           <div className="outer-area1">
-            <div class="card">
-              <div class="icon-area">
+            <div className="card">
+              <div className="icon-area">
                 <PiSpiralLight />
               </div>
-              <div class="card-body">
+              <div className="card-body">
                 <h4>Tailored Strategies</h4>
                 <p>
                   Zemalt designs every plan around your goals. Each step matches
@@ -59,11 +59,11 @@ const Whyus = () => {
         <div className="why-usright">
           <img src="/right.png" />
           <div className="outer-area1">
-            <div class="card">
-              <div class="icon-area">
+            <div className="card">
+              <div className="icon-area">
                 <PiSpiralLight />
               </div>
-              <div class="card-body">
+              <div className="card-body">
                 <h4>Full-Service Support</h4>
                 <p>
                   Zemalt covers SEO, Google Ads, Social Media Marketing, Content
@@ -74,11 +74,11 @@ const Whyus = () => {
             </div>
           </div>
           <div className="outer-area1">
-            <div class="card">
-              <div class="icon-area">
+            <div className="card">
+              <div className="icon-area">
               <PiSpiralLight />
               </div>
-              <div class="card-body">
+              <div className="card-body">
                 <h4>Transparent Reporting</h4>
                 <p>
                   We share clear reports on your progress. You see the impact of

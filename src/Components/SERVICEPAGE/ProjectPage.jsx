@@ -17,7 +17,7 @@ const ProjectPage = ({ featuredData }) => {
   return (
     <div className="homebg">
       <ServicePageFeatured data={featuredData} title={formattedTitle} />
-      <h1>{formattedTitle}</h1>
+      <h2>{formattedTitle}</h2>
       <PortfolioCards />
     </div>
   );

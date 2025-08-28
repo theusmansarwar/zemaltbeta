@@ -36,7 +36,6 @@
   width: 45%;
 }
 
-
 .logo {
   font-weight: bold;
   margin-bottom: 15px;
@@ -170,12 +169,24 @@
     width: 100%;
     flex-direction: column;
   }
-  .footer-section {
+  .footer-section:first-child {
     margin-top: 20px;
+  }
+  .footer-section {
+    margin-top: 00px;
     width: 100%;
+  }
+  .footer-right .footer-section:last-child {
+    width: 100%;
+  }
+  .footer-section h4 {
+    margin-bottom: 10px;
   }
   .footer-upper {
     height: 200px;
     flex-direction: column;
+  }
+  .footer-upper h2 {
+    font-size: var(--heading-three);
   }
 }
