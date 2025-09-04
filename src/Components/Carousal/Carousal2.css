@@ -1,0 +1,41 @@
+.carousal2 {
+  height: 250px;
+  width: var(--default-width);
+  background-image: url("/drive-card-img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: var(--border-radius1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  gap: 50px;
+}
+.carousal2 h2 {
+  font-size: var(--heading-one);
+  color: var(--text-color4);
+  width: 50%;
+  text-align: center;
+}
+
+.carousal2 button {
+  border: none;
+  padding: 10px 20px;
+  background-color: var(--text-color4);
+  display: flex;
+  align-items: flex-end;
+  min-width: 180px;
+  justify-content: space-between;
+  border: 1px solid var(--text-color);
+  border-radius: var(--border-radius1);
+  color: var(--text-color);
+  font-size: var(--default-p-size);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.carousal2 button:hover {
+  color: var(--text-color4);
+  background-color: transparent;
+  border: 1px solid var(--text-color4);
+}

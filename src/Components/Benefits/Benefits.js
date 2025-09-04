@@ -4,23 +4,23 @@ import "./Benefits.css";
 const benefits = [
   {
     icon: "👥",
-    title: "Team work",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.",
+    title: "Team Work",
+    desc: "You become part of a team that values every voice. Everyone contributes to achieving shared goals. Team members guide, support, and motivate one another. The knowledge received is shared, problems get solved, and experts are celebrated together. Strong teamwork makes tasks simple and results stronger. You feel valued and included at every step.",
   },
   {
     icon: "💼",
     title: "Secured Future",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.",
+    desc: "You gain career stability and clear direction. Growth stays consistent, and opportunities keep coming. Our focus remains on long-term development and job security. You build confidence when you know your future is supported. A strong base gives you space to achieve both career and personal goals. You feel secure as your path grows stronger each year.",
   },
   {
     icon: "🎓",
     title: "Learning Opportunity",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.",
+    desc: "You receive chances to learn every single day. Training, mentoring, and real projects prepare you for bigger challenges. Each experience adds knowledge, skills, and confidence to your role. You see your growth in action and feel the difference. Daily learning keeps you moving forward and closer to success. You enjoy progress with each new skill mastered.",
   },
   {
     icon: "📈",
     title: "Upgrade Skills",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.",
+    desc: "You get support to strengthen your skills at every step. Tools, resources, and proper guidance stay within your reach. Each skill upgrade gives you more career options and stronger roles. You move closer to promotions and better opportunities. Growth in your skills leads to growth in your confidence. Your success expands as your abilities rise higher.",
   },
 ];
 
@@ -29,11 +29,9 @@ const Benefits = () => {
     <section className="benefits">
       <div className="benefits-left">
         <p className="benefits-subtitle">BENEFITS</p>
-        <h2 className="benefits-title">Why you Should Join Our Awesome Team</h2>
+        <h2 className="benefits-title">Why You Should Join Our Team</h2>
         <p className="benefits-text">
-          we want to feel like home when you are working at Zemalt & for that we
-          have curated a great set of benefits for you it all starts with the
-          free lunch!
+          You deserve respect in your workplace. You also deserve a career that helps you grow. At our company, you find more than a job. You step into a path that builds skills, offers stability, and supports balance in life. The team works together, stands strong, and celebrates every success. You gain access to programs that improve your skills and open new doors. Each step pushes you closer to your goals and your future.
         </p>
       </div>
 

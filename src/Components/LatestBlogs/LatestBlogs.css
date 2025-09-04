@@ -1,6 +1,7 @@
 .latest-blogs {
-  width: var(--default-width);
-  margin-left: var(--left-space);
+   width: calc(100% - (var(--left-space) * 2));
+  padding: 20px var(--left-space);
+  background-color: var(--text-color4);
 }
 .latest-blogs .latest-heading {
   font-size: var(--heading-two);

@@ -1,9 +1,11 @@
+"use client";
 import React from "react";
 import "./Featured.css";
 import { FaArrowRightLong, FaArrowTrendUp, FaPlus } from "react-icons/fa6";
+import { useRouter } from "next/navigation";
 const Featured = () => {
+  const router = useRouter();
   return (
-    
     <div className="Featured">
       <div className="left">
         <h1>
@@ -15,10 +17,20 @@ const Featured = () => {
           with your goals.
         </p>
         <div className="buttons-area">
-          <button>
+          <button
+            onClick={() => {
+              router.push("/contact-us");
+            }}
+          >
             Schedules a call <FaArrowRightLong />
           </button>
-          <p>View Case Study</p>
+          <p
+            onClick={() => {
+              router.push("/");
+            }}
+          >
+            View Case Study
+          </p>
         </div>
         <div className="trusted">
           <p>Trusted by top global brands</p>{" "}
@@ -65,7 +77,6 @@ const Featured = () => {
         </div>
       </div>
     </div>
-    
   );
 };
 

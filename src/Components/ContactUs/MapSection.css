@@ -1,0 +1,73 @@
+.map-section {
+  width: calc(100% - 10%);
+  padding: 40px 5%;
+  background-color: var(--text-color4);
+  display: flex;
+}
+
+.map-section .left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.map-section .right {
+  width: 50%;
+  height: 400px;
+}
+.map-section .right img {
+  width: 100%;
+  height: 100%;
+}
+
+.map-section .left .map-section-heading {
+  font-size: var(--heading-two);
+  color: var(--headings-color);
+  text-align: left;
+}
+.map-section .left p {
+  text-align: left;
+}
+
+/* ✅ Collapse list smoothly */
+.map-section .left .collapsible {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.map-section .left .collapsible.expanded {
+  max-height: 400px; /* enough height to show full content */
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+/* Buttons */
+.map-section .left .read-more-btn {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-top: 10px;
+  text-align: left;
+}
+
+@media (max-width: 900px) {
+  .map-section {
+    width: calc(100% - 40px);
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .map-section .left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .map-section .right {
+    width: 100%;
+    height: 300px;
+  }
+}

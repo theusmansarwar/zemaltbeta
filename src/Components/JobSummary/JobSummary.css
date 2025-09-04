@@ -4,13 +4,13 @@
   padding: 20px;
   background: var(--background2);
   border-radius: 12px;
-height: fit-content;
+  height: fit-content;
   text-align: center;
   font-family: Arial, sans-serif;
 }
 
 .apply-btn {
-  background: #2563eb;
+  background: var(--primary-color);
   color: #fff;
   border: none;
   padding: 10px 18px;
@@ -50,7 +50,7 @@ height: fit-content;
 .view-jobs {
   display: inline-block;
   margin-top: 10px;
-  color: #2563eb;
+  color: var(--primary-color);
   font-weight: bold;
   text-decoration: none;
 }
@@ -69,6 +69,6 @@ height: fit-content;
 }
 
 .social-icons svg:hover {
-  color: #2563eb;
+  color: var(--primary-color);
   cursor: pointer;
 }

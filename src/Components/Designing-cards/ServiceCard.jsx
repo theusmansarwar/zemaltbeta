@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React from "react";
 import "./ServiceCard.css";
 import { FaArrowRightLong } from "react-icons/fa6";
@@ -14,16 +14,27 @@ const ServiceCard = ({ data }) => {
       <img className="leftimage" src="/left.png" alt="left decoration" />
 
       {data.map((card, index) => (
-        <div className="designing-card" key={index} onClick={()=>{router.push(`${currentpath}/${card.slug}`)}}>
+        <div
+          className="designing-card"
+          key={index}
+          onClick={() => {
+            router.push(`${currentpath}/${card.slug}`);
+          }}
+        >
           <div className="icon-area-for-des">
             <img src="/hands.png" alt="icon" />
           </div>
           <h3>{card.title}</h3>
-          <ul>
-            {card.items.map((item, i) => (
-              <li key={i}>{item}</li>
-            ))}
-          </ul>
+          {card.type === "para" ? (
+            <p>{card.items[0]}</p>
+          ) : (
+            <ul>
+              {card.items.map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
+            </ul>
+          )}
+
           <div className="designing-card-btn">
             View Portfolio <FaArrowRightLong />
           </div>

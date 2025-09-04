@@ -8,7 +8,14 @@ import WhyService from "../WhyService/WhyService";
 
 import "./page.css";
 
-export default function ServicePage({ featuredData, cardData, imageData, Faqs,whyService }) {
+export default function ServicePage({
+  featuredData,
+  cardData,
+  imageData,
+  Faqs,
+  CalulaterBottom,
+  whyService,
+}) {
   return (
     <div className="homebg">
       <ServicePageFeatured data={featuredData} />
@@ -16,7 +23,7 @@ export default function ServicePage({ featuredData, cardData, imageData, Faqs,wh
       <TestimonialSlider />
       <BigIdea data={imageData} />
       <Faq faqs={Faqs} />
-      <RevenueCalculator />
+      <RevenueCalculator data={CalulaterBottom}/>
       <WhyService data={whyService} />
     </div>
   );

@@ -4,6 +4,7 @@
   background-color: var(--text-color4);
   display: flex;
   gap: 100px;
+  margin-top:100px;
 }
 .about-hero .left {
   width: 50%;
@@ -85,9 +86,11 @@
   }
   .about-hero .right {
     width: 100%;
+    align-items: center;
+    justify-content: center;
   }
   .about-hero .right .box {
-    height: 150px;
-    width: 150px;
+    height: 120px;
+    width:40%;
   }
 }

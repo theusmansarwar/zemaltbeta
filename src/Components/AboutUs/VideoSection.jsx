@@ -11,14 +11,10 @@ const VideoSection = () => {
   };
   return (
     <div className="video-section">
-      <h2>HEADING HERE</h2>
+      <img className="smoke-bg" src="/smoke-bg.jpg" alt="background image" />
+      <h2>How can I get started with Zemalt?</h2>
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-        porro quaerat est a cum dolorem, similique, molestiae natus dignissimos,
-        eligendi ut commodi quae ipsam. Obcaecati necessitatibus deserunt sed
-        magni esse. Odit corporis similique, excepturi quia praesentium dolores
-        exercitationem dolorum in quod distinctio cum, vero sed quisquam velit
-        quae consequatur voluptatem.
+        Getting started is simple. Contact us through our website, and our team will set up a consultation. We’ll learn about your goals, discuss your challenges, and create a digital marketing plan that fits your budget and objectives.
       </p>
       {!isPlaying ? (
         <div
@@ -30,9 +26,8 @@ const VideoSection = () => {
             backgroundPosition: "center",
           }}
         >
-         
-            <FaPlay  className="play-icon" onClick={handlePlayClick}/>
-        
+          <FaPlay className="play-icon" onClick={handlePlayClick} />
+          <h3 className="thumbnail-text">WHO WE ARE</h3>
         </div>
       ) : (
         <div className="thumbnail-container">

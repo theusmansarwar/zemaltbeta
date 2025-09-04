@@ -1,11 +1,16 @@
 .header-area {
   display: flex;
   align-items: center;
-  height: 70px;
-  width: var(--default-width);
+  width: calc(var(--default-width) - 40px);
   margin-left: var(--left-space);
+  padding: 30px 20px;
   justify-content: space-between;
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  background: #ffffffc9;
+  backdrop-filter: blur(8px);
 }
 
 .header-area img {
@@ -14,12 +19,15 @@
 }
 .header-area ul {
   display: flex;
-  width: 40%;
-  justify-content: space-between;
+  width: fit-content;
+  gap: 20px;
   list-style: none;
 }
 .header-area ul li {
   cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
 }
 .header-area ul li:hover {
   color: var(--main-color);
@@ -42,23 +50,26 @@
 }
 .maindropdown-area {
   width: 100%;
-  position: absolute;
-  top: 70px;
-  z-index: 3;
+  position: fixed;
+  top: 60px;
+  z-index: 60;
+  overflow: hidden;
+  max-width: 1440px;
 }
 .maindropdown-area-flex {
   display: flex;
+  overflow: hidden;
+  width: 100%;
 }
 .maindropdown-area .left,
 .maindropdown-area .right {
-  width: 5%;
+  width: 10%;
   height: calc(90vh - 111px);
 }
 .maindropdown-area .center {
-  width: 90%;
+  width: 80%;
   height: calc(90vh - 111px);
-  padding-top: 10px;
-  margin-top: -10px;
+  padding-top: 40px;
 }
 @media (max-width: 900px) {
   .header-area ul {

@@ -1,0 +1,21 @@
+.sub-service-second {
+  width: 100% - (var(--left-space) * 2);
+  padding: 40px var(--left-space);
+  background-color: #f9f9f9;
+}
+.sub-service-second h2{
+    font-size: var(--heading-two);
+    margin-bottom: 10px;
+}
+.sub-service-second p span{
+    display: block;
+    margin-bottom: 2px;
+}
+.sub-service-second p{
+    text-align: justify;
+}
+.sub-service-second img{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 40px;
+}

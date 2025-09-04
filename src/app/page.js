@@ -8,10 +8,10 @@ import TestimonialSlider from "@/Components/TestimonialSlider/TestimonialSlider"
 import BlogSection from "@/Components/BlogSection/BlogSection";
 import Whyus from "@/Components/why-us-section/Whyus";
 import TestimonialSection from "@/Components/Testimonial/TestimonialSection";
-import BlogsCard from "@/Components/BlogCards/BlogCards";
-import LatestBlogs from "@/Components/LatestBlogs/LatestBlogs";
-import GrowingTipsBlogs from "@/Components/GrowingTipsBlogs/GrowingTipsBlogs";
-import TrendingBlogs from "@/Components/TrendingBlogs/TrendingBlogs";
+import SeoSection from "@/Components/SeoSection/SeoSection";
+import MeetTeam from "@/Components/AboutUs/MeetTeam";
+import TestimonialSlider2 from "@/Components/TestimonialSlider/TestimonialSlider2";
+import Carousal2 from "@/Components/Carousal/Carousal2";
 
 export default function Home() {
   const Homepagefaqs = {
@@ -20,47 +20,57 @@ export default function Home() {
       "Zemalt is a leading digital marketing agency. We provide clear answers and practical guidance. Our clients receive dedicated support backed by proven expertise.",
     questions: [
       {
-        question: "Why is digital marketing important for my business?",
+        question:
+          "What services do we provide to support your business growth?",
         answer:
-          "Digital marketing is used to reach more people. It helps generate leads. It drives traffic. It improves brand visibility. You can measure the results. It is important to track performance.",
+          "Zemalt provides all digital marketing solutions in one place. Our services include SEO, PPC ads, social media management, content writing, web design, and branding. Each service is built to improve visibility and bring in more customers.",
       },
       {
-        question:
-          "How can digital marketing help improve my website’s visibility?",
+        question: "Why is SEO audit important before starting campaigns?",
         answer:
-          "Digital marketing uses clear methods to increase reach. Search tools show your site more often through a strong keyword focus.",
+          "An SEO audit shows what holds a website back. Zemalt checks site speed, broken links, mobile use, and keyword gaps. You get a clear plan with fixes that boost performance. Strong audits lead to higher rankings and more traffic.",
       },
       {
-        question:
-          "How long does it take to see results from digital marketing efforts?",
+        question: "How can Zemalt help e-commerce stores grow sales?",
         answer:
-          "Results from digital marketing take time to build. Most brands notice progress within a few weeks through steady action.",
+          "We optimize product pages, categories, and content to rank higher. Customers find your store faster and buy with ease. Zemalt improves visibility, increases conversions, and drives steady growth. Online shops achieve long-term success through our strategies.",
       },
       {
-        question:
-          "How do you measure the success of digital marketing campaigns?",
+        question: "How do we measure digital marketing success?",
         answer:
-          "Success depends on real numbers and clear outcomes. Teams track growth through traffic, leads, and customer actions.",
+          "We track every step with data. Reports show rankings, traffic, leads, and sales clearly. You always know what works and where growth comes from. Zemalt uses transparent reporting so you can trust the results.",
+      },
+      {
+        question: "How fast can Zemalt deliver results?",
+        answer:
+          "Some services, like ads, bring traffic and leads within days. SEO builds long-term success and usually shows results within weeks. Zemalt focuses on both quick wins and steady growth. Businesses see progress faster with our proven methods.",
+      },
+      {
+        question: "Why invest in digital marketing?",
+        answer:
+          "The competition online grows every day. Waiting gives rivals more space to take customers. Zemalt helps brands secure visibility, build authority, and gain trust today. Early action brings long-term growth and lasting market advantage.",
       },
     ],
   };
+  const blogHeaderData = {
+    heading:
+      "Digital Marketing & SEO Services That Grow Traffic & Increase Revenue",
+    description:
+      "Zemalt is a top digital marketing agency. Our team supports brands with complete service solutions. Clients see higher search rankings through expert guidance. More visitors reach their websites through clear strategies and focused action.",
+  };
   return (
     <div className={styles.Home}>
-      {/*
-      <BlogsCard/>
-      <LatestBlogs />
-      <GrowingTipsBlogs/>
-      <TrendingBlogs /> 
-      */}  
-
       <Featured />
       <OutBox />
       <Realworld />
-      <TestimonialSlider />
+      <TestimonialSlider2 />
       <Whyus />
       <TestimonialSection />
+      <MeetTeam />
       <Faq faqs={Homepagefaqs} />
-      <BlogSection />
+      <BlogSection data={blogHeaderData} />
+      <SeoSection />
+      {/* <Carousal2 heading="Ready to work with us?" link={"/"}/> */}
     </div>
   );
 }

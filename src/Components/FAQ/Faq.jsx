@@ -1,8 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import "./Faq.css";
+import { useRouter } from "next/navigation";
 
 const Faq = ({ faqs }) => {
+  const router = useRouter;
   const [openIndex, setOpenIndex] = useState(0);
 
   const toggle = (index) => {
@@ -15,8 +17,20 @@ const Faq = ({ faqs }) => {
         <h2>{faqs?.title}</h2>
         <p>{faqs?.description}</p>
         <div className="faq-buttons">
-          <button>More Questions</button>
-          <span>Contact Us</span>
+          <button
+            onClick={() => {
+              router.push("/contact-us");
+            }}
+          >
+            More Questions
+          </button>
+          <span
+            onClick={() => {
+              router.push("/contact-us");
+            }}
+          >
+            Contact Us
+          </span>
         </div>
         <img src="/Question.png" alt="FAQs" />
       </div>

@@ -14,8 +14,8 @@ const Whyus = () => {
         </div>
         <div className="header-right2">
           <p>
-            We are a top digital marketing agency for brand-focused firms. Offer
-            comprehensive services to enhance search rankings. Our expert
+            Zemalt is a top digital marketing agency for brand-focused firms.
+            Offer comprehensive services to enhance search rankings. Our expert
             support drives more traffic to client websites.
           </p>
           <button className="see-more">See more</button>
@@ -33,7 +33,7 @@ const Whyus = () => {
               <div className="card-body">
                 <h4>Proven Expertise</h4>
                 <p>
-                  Our experts have years of industry experience. They apply
+                  Zemalt’s experts have years of industry experience. They apply
                   tested methods and fresh ideas to deliver consistent results.
                   You benefit from skills that drive success.
                 </p>
@@ -76,7 +76,7 @@ const Whyus = () => {
           <div className="outer-area1">
             <div className="card">
               <div className="icon-area">
-              <PiSpiralLight />
+                <PiSpiralLight />
               </div>
               <div className="card-body">
                 <h4>Transparent Reporting</h4>

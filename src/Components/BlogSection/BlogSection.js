@@ -35,22 +35,15 @@ function truncateByWords(text, wordLimit) {
 }
 const colors = ["#ff4d4d", "#4caf50", "#2196f3", "#ff9800", "#9c27b0"];
 
-const BlogSection = () => {
+const BlogSection = ({ data }) => {
   return (
     <div className="blog-section">
       <div className="blog-header2">
         <div className="header-left">
-          <h2>
-            Digital Marketing & SEO Services That Boost Reach & Increase Sales
-          </h2>
+          <h2>{data.heading}</h2>
         </div>
         <div className="header-right">
-          <p>
-            Zemalt is a top digital marketing agency. Our team supports brands
-            with complete service solutions. Clients see higher search rankings
-            through expert guidance. More visitors reach their websites through
-            clear strategies and focused action.
-          </p>
+          <p>{data.description}</p>
           <button className="see-more">See more</button>
         </div>
       </div>

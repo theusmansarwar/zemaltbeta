@@ -43,6 +43,17 @@
 .second-section .right .top-parent .top .content p {
   font-size: 14px;
 }
+.progress-area {
+  width: 100%;
+  background-color: gainsboro;
+  height: 5px;
+  margin-top: 20px;
+}
+.progress-area .progress-left {
+  width: 70%;
+  background-color: var(--main-color);
+  height: 5px;
+}
 .second-section .right .top-parent .top .img-section {
   width: 50%;
   display: flex;

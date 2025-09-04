@@ -1,4 +1,3 @@
-
 import ServicePage from "@/Components/SERVICEPAGE/ServicePage";
 export const metadata = {
   title: "Search Engine Optimization | Zemalt",
@@ -40,72 +39,71 @@ export default function Service() {
     ],
   };
 
-  
   const featuredData = {
     title: "SEO",
     spanTitle: "SERVICES",
     description:
       "We bring you services that help you grow fast and stand out from the competition. Every service is built to give you real results, not just promises. You get trusted solutions that improve performance, increase visibility, and build long-term success. We do more than just offer help. We give you strategies that save time and boost efficiency. Our services guide you at every step so you can reach your goals with confidence. When you choose us, you invest in quality and value that keeps paying back.",
   };
-const cardData = [
-  {
-    title: "SEO Audit",
-    slug: "seo-audit",
-    items: [
-      "Logo Design",
-      "Brand color set and font choice",
-      "Style guide manual",
-      "Office cards, letter papers and envelopes",
-    ],
-  },
-  {
-    title: "Local SEO",
-    slug: "local-seo",
-    items: [
-      "Social posts, banners, online ads",
-      "Leaflets and posters",
-      "Brochures and catalogs",
-      "Outdoor ads and boards",
-    ],
-  },
-  {
-    title: "Packaging & Label Design",
-    slug: "packaging-label-design",
-    items: [
-      "Product box art",
-      "Bottle and jar tags",
-      "Food, beauty tech pack art",
-      "3D box sample",
-    ],
-  },
-  {
-    title: "Print Media Design",
-    slug: "print-media-design",
-    items: [
-      "Books and magazine covers",
-      "Newsprint and flyer pages",
-      "Reports and company brochures",
-    ],
-  },
-  {
-    title: "UI/UX Designing",
-    slug: "ui-ux-designing",
-    items: [
-      "Website UI plan",
-      "Mobile app page plan",
-      "Sample pages and layouts",
-    ],
-  },
-  {
-    title: "Illustration & Creative Assets",
-    slug: "illustration-creative-assets",
-    items: [
-      "Custom art pieces",
-      "Brand graphic assets",
-      "Digital art and icons",
-    ],
-  },
-];
+  const cardData = [
+    {
+      title: "SEO Services",
+      slug: "seo-services",
+      type: "para",
+      items: [
+        "Strong SEO is the foundation of online success. We create strategies that target the right keywords, build high-quality backlinks, and optimize every page for visibility. We focus on traffic that converts, not just numbers. From content planning to authority building, every step strengthens your digital presence. Our SEO services give you long-term growth and consistent results.",
+      ],
+    },
+    {
+      title: "Local SEO",
+      slug: "local-seo",
+      type: "para",
+      items: [
+        "Local searches drive customers who are ready to buy. Zemalt optimizes your Google Business Profile, maps listings, and local citations. We make sure your business appears in near me searches and stands out in your area. Strong reviews, accurate info, and local keywords increase trust. With Zemalt, your local SEO turns searches into store visits and calls.",
+      ],
+    },
+    {
+      title: "SEO Audit",
+      slug: "seo-audit",
+      type: "para",
+      items: [
+        "Your website looks fine, but small hidden issues may be stopping it from growing. Zemalt uncovers those problems with a complete SEO audit. We test speed, mobile use, broken links, and keyword performance. Our experts also scan technical SEO, on-page setup, and competitor gaps. You get a clear plan that lifts your rankings and traffic. Zemalt’s SEO audit helps you turn visitors into real customers.",
+      ],
+    },
+
+    {
+      title: "E-commerce SEO",
+      slug: "ecommerce-seo",
+      type: "para",
+      items: [
+        "Online stores compete in crowded markets. Zemalt improves your product listings, category pages, and site navigation to make them search engine-friendly. Better rankings mean more shoppers, higher sales, and repeat buyers. We also focus on user experience to keep customers engaged.",
+      ],
+    },
+    {
+      title: "Digital Marketing",
+      slug: "digital-marketing",
+      type: "para",
+      items: [
+        "We build complete digital marketing strategies using social media, paid ads, and content marketing. We connect your business with the right audience at the right time. Creative campaigns increase visibility, generate leads, and give engagement. Zemalt’s digital marketing approach blends strategy with results to grow your brand faster.",
+      ],
+    },
+    {
+      title: "SEO Reporting",
+      slug: "seo-reporting",
+      type: "para",
+      items: [
+        "Numbers tell the truth about growth. Zemalt prepares detailed SEO reports that show rankings, traffic sources, conversions, and ROI. You’ll see exactly how your campaigns are performing. Clear insights highlight strengths and reveal new opportunities",
+      ],
+    },
+    {
+      title: "Brand Building",
+      slug: "brand-building",
+      type: "para",
+      items: [
+        "Zemalt helps you shape an identity that builds trust and authority online. From content creation to reputation management, every effort makes your brand recognizable and reliable. Customers remember brands that stand out with clarity and confidence. Zemalt’s brand-building services turn your business into a trusted name.",
+      ],
+    },
+  ];
 
   const imageData = {
     heading:
@@ -121,12 +119,18 @@ const cardData = [
     ],
     image: "/why-designing.png",
   };
+  const calculaterBottomData = {
+    heading: "Why Choose Zemalt for Professional Writing Services?",
+    description:
+      "Zemalt delivers content that speaks directly to your audience. Every project is handled with care, clarity, and creativity. From website copy to blogs, our writing team ensures that your message stands out and drives action. You get words that reflect your brand and bring real results. Get powerful content written by Zemalt experts. Make your brand voice stronger",
+  };
   return (
     <ServicePage
       featuredData={featuredData}
       cardData={cardData}
       imageData={imageData}
       Faqs={faqs}
+      CalulaterBottom={calculaterBottomData}
       whyService={whyService}
     />
   );

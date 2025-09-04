@@ -14,6 +14,10 @@
   color: var(--primary-color);
   margin-bottom: 10px;
 }
+.fourth-section .left ul li{
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
 .fourth-section .left .buttons-area {
   display: flex;
   align-items: center;

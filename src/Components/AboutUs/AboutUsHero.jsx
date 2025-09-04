@@ -7,10 +7,7 @@ const AboutUsHero = () => {
       <div className="left">
         <h1>ABOUT US</h1>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt,
-          laboriosam! Explicabo deserunt magnam magni repellat dolorem
-          assumenda. Est ab quasi cum vitae reiciendis odit deleniti, assumenda
-          ut numquam, adipisci ipsam!
+         Zemalt is a digital agency that cares about results. It offers SEO, Google Ads, content writing, social media marketing, web development, and UI/UX design. It helps you grow and win online. The goal is to increase your visibility and provide real value. The team uses data, clear ideas, and full focus on clients. It creates work that fits your brand and builds trust. You can rely on honest support and strong skills. Every project is shaped to help you succeed.
         </p>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt,

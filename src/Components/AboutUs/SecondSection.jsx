@@ -4,55 +4,50 @@ const SecondSection = () => {
   return (
     <div className="second-section">
       <div className="left">
-        <h2>HEADING HERE</h2>
+        <h2>Grow Your Brand Online</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio
-          temporibus reiciendis laboriosam aliquid dolore in nemo eaque pariatur
-          fugiat sequi autem quibusdam veniam, eveniet expedita nam, suscipit
-          consequuntur dolorem repellendus impedit. Quibusdam maxime provident
-          commodi at libero, quod est magnam. consequuntur dolorem repellendus
-          impedit. Quibusdam maxime provident commodi at libero, quod est
-          magnam.
+          Your business needs clear steps to grow. A strong online presence
+          gives you reach and trust. People look for brands that show value and
+          stay easy to find. It is hard to stand out if your message looks weak.
+          You need design that looks sharp and words that connect.
         </p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-          voluptatibus dolore aperiam perspiciatis dolor, explicabo distinctio
-          similique amet, nam cupiditate itaque maxime eaque voluptatem iste
-          porro quisquam culpa, esse sed veniam provident quos illum nobis ipsum
-          officiis! Repellat, reiciendis ut. porro quisquam culpa, esse sed
-          veniam provident quos illum nobis ipsum officiis! Repellat ut.
+          Our work stays simple and clear. Each project aims to give you results
+          that last. Our team studies your market and shapes a plan that fits.
+          You get designs that guide users. You get content that speaks in a
+          human tone.
         </p>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Reprehenderit alias maxime asperiores aliquam omnis. Impedit
-          repellendus saepe quisquam ipsa odio quidem non ipsum at, nihil
-          architecto voluptatum ratione sapiente corporis quas similique autem
-          incidunt earum possimus quia magni natus. Quis? architecto voluptatum
-          ratione sapiente corporis quas similique autem incidunt earum possimus
-          quia magni natus. Quis?
+          Each step keeps focus on results. We create pages that guide users
+          from start to goal. The aim is to keep every click smooth and simple.
+          Your site gets more reach when users stay longer. Search engines also
+          notice and reward your brand.
         </p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nam
-          iusto itaque voluptatem cumque recusandae molestias eos veritatis
-          laborum quia dicta facere voluptates, cupiditate provident beatae
-          quasi tempore quo nisi voluptate odio! Vel est ratione deserunt,
-          aliquid ea fugit debitis. quasi tempore quo nisi voluptate odio! Vel
-          est ratione deserunt, aliquid ea fugit debitis.
+          A fresh brand look builds trust fast. Your clients see that your work
+          is authentic. Your online presence feels solid and ready. Our team
+          provides expertise in design, SEO, and ads. Your growth remains steady
+          when every part works together. You can move your brand forward today.
+          A smart plan will put you ahead.
         </p>
       </div>
       <div className="right">
         <div className="top-parent">
           <div className="top">
             <div className="content">
-              <strong>230 <img src="/plus-icon.svg" alt="Add Icon" /></strong>
+              <strong>
+                230 <img src="/plus-icon.svg" alt="Add Icon" />
+              </strong>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Officiis soluta
+                We have worked on many projects. Our work is always focused on
+                results. Clients trust us because we care for each detail. Every
+                task holds value. You get work that feels clear and true. Your
+                project gets the same effort and focus.
               </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Aperiam omnis nostrum vitae sit
-              </p>
+
+              <div className="progress-area">
+                <div className="progress-left"></div>
+              </div>
             </div>
             <div className="img-section">
               <div

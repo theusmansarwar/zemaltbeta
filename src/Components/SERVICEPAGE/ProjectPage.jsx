@@ -4,9 +4,11 @@ import PortfolioCards from "../portfolioCards/PortfolioCards";
 import ServicePageFeatured from "../ServicePageFeatured/ServicePageFeatured";
 import "./page.css";
 import { useParams } from "next/navigation";
+import SubServiceFirst from "../SubServiceInfo/SubServiceFirst";
+import SubServiceSecond from "../SubServiceInfo/SubServiceSecond";
 
-const ProjectPage = ({ featuredData }) => {
-  const { slug } = useParams(); 
+const ProjectPage = ({ featuredData, subServiceData }) => {
+  const { slug } = useParams();
   // slug comes from the dynamic route: /services/designing/[slug]
 
   const formattedTitle = slug
@@ -17,8 +19,9 @@ const ProjectPage = ({ featuredData }) => {
   return (
     <div className="homebg">
       <ServicePageFeatured data={featuredData} title={formattedTitle} />
-      <h2>{formattedTitle}</h2>
-      <PortfolioCards />
+      <SubServiceFirst data={subServiceData} />
+      <SubServiceSecond />
+      <PortfolioCards title={formattedTitle} />
     </div>
   );
 };

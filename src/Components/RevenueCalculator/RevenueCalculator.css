@@ -111,4 +111,17 @@ select {
   .form-row {
     flex-direction: column;
   }
+  .calculator-area .blog-header{
+    flex-direction: column;
+  }
+  .calculator-area .blog-header .header-left {
+  width: 100%;
+}
+.calculator-area .blog-header .header-left h2 {
+  font-size: var(--heading-two);
+  max-width: 500px;
+}
+.calculator-area .blog-header .header-right {
+  width: 100%;
+}
 }

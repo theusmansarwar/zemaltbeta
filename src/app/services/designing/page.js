@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function Service() {
   const faqs = {
-    title: "FAQs on content writing services",
+    title: "FAQs on web design services",
     description:
       "Zemalt is an experienced digital marketing team. We focus on clarity and quick results. We provide the resources and simple guidance that help you to gain knowledge and support.",
     questions: [
@@ -17,7 +17,8 @@ export default function Service() {
           "Zemalt Digital marketing helps your brand reach more people. It drives traffic, generates leads, and builds your image. Every step is guided by data to make campaigns stronger.",
       },
       {
-        question: "How can Zemalt digital marketing raise my website’s visibility?",
+        question:
+          "How can Zemalt digital marketing raise my website’s visibility?",
         answer:
           "Digital marketing pushes your site higher in search results. SEO moves your pages to the top. Paid ads bring quick visitors. Social platforms send new users. Strong content keeps people engaged. You build authority and appear more often",
       },
@@ -27,7 +28,8 @@ export default function Service() {
           "Digital marketing shows results in weeks or months. SEO takes time but lasts longer. Social media builds trust. Email keeps users connected. All efforts work together. You need consistency to see returns.",
       },
       {
-        question: "How do you measure digital marketing performance with Zemalt?",
+        question:
+          "How do you measure digital marketing performance with Zemalt?",
         answer:
           "Zemalt measures success through numbers. Traffic shows reach. Leads show demand. Conversions show growth. ROI shows profit. Reports highlight progress.",
       },
@@ -44,6 +46,7 @@ export default function Service() {
     {
       title: "Branding & Identity Design",
       slug: "branding-identity-design",
+      type:"list",
       items: [
         "Logo Design",
         "Brand color set and font choice",
@@ -54,6 +57,7 @@ export default function Service() {
     {
       title: "Marketing & Advertising Design",
       slug: "marketing-advertising-design",
+      type:"list",
       items: [
         "Social posts, banners, online ads",
         "Leaflets and posters",
@@ -64,6 +68,7 @@ export default function Service() {
     {
       title: "Packaging & Label Design",
       slug: "packaging-label-design",
+      type:"list",
       items: [
         "Product box art",
         "Bottle and jar tags",
@@ -74,6 +79,7 @@ export default function Service() {
     {
       title: "Print Media Design",
       slug: "print-media-design",
+      type:"list",
       items: [
         "Books and magazine covers",
         "Newsprint and flyer pages",
@@ -83,6 +89,7 @@ export default function Service() {
     {
       title: "UI/UX Designing",
       slug: "ui-ux-designing",
+      type:"list",
       items: [
         "Website UI plan",
         "Mobile app page plan",
@@ -92,6 +99,7 @@ export default function Service() {
     {
       title: "Illustration & Creative Assets",
       slug: "illustration-creative-assets",
+      type:"list",
       items: [
         "Custom art pieces",
         "Brand graphic assets",
@@ -114,12 +122,18 @@ export default function Service() {
     ],
     image: "/why-designing.png",
   };
+  const calculaterBottomData = {
+    heading: "Why Choose Zemalt for Professional Writing Services?",
+    description:
+      "Zemalt delivers content that speaks directly to your audience. Every project is handled with care, clarity, and creativity. From website copy to blogs, our writing team ensures that your message stands out and drives action. You get words that reflect your brand and bring real results. Get powerful content written by Zemalt experts. Make your brand voice stronger",
+  };
   return (
     <ServicePage
       featuredData={featuredData}
       cardData={cardData}
       imageData={imageData}
       Faqs={faqs}
+      CalulaterBottom={calculaterBottomData}
       whyService={whyService}
     />
   );

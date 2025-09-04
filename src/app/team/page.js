@@ -1,3 +1,4 @@
+import Carousal2 from "@/Components/Carousal/Carousal2";
 import ServicePageFeatured from "@/Components/ServicePageFeatured/ServicePageFeatured";
 import TeamCard from "@/Components/TeamCard/TeamCard";
 
@@ -12,6 +13,7 @@ const page = () => {
     <div className="PageBg">
       <ServicePageFeatured data={featuredData} />
       <TeamCard />
+      <Carousal2 heading="READY TO BECOME A TEAM MEMBER?" link={"/careers/apply"}/>
     </div>
   );
 };

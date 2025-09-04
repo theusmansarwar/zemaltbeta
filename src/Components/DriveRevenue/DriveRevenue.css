@@ -1,0 +1,84 @@
+.drive-revenue {
+  width: 100% - (var(--left-space) * 2);
+  padding: 40px var(--left-space);
+  background-color: var(--text-color4);
+}
+.drive-revenue h2 {
+  font-size: var(--heading-two);
+  text-align: center;
+}
+.drive-revenue h2 p span {
+  color: var(--primary-color);
+}
+.drive-revenue .card-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 0;
+}
+.drive-revenue .each-card {
+  width: calc(300px - 40px);
+  padding: 20px;
+  background-color: var(--text-color4);
+}
+.drive-revenue .each-card .card-logo {
+  width: 150px;
+  margin-bottom: 20px;
+}
+.drive-revenue .each-card:first-child {
+  width: calc(300px - 40px);
+  padding: 20px;
+  background-color: #edf9f8;
+  border-radius: var(--border-radius1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.186);
+}
+.drive-revenue .each-card h3 {
+  font-size: var(--heading-four);
+  margin-bottom: 20px;
+}
+.drive-revenue .each-card ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.drive-revenue .each-card ul li .check-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #d4efe2;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.drive-revenue .each-card ul li .close-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fcdbdc;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.drive-revenue .each-card ul li .check-icon svg {
+  color: #5ec593;
+  flex-shrink: 0;
+  font-size: 12px;
+}
+.drive-revenue .each-card ul li .close-icon svg {
+  color: #d6464b;
+  flex-shrink: 0;
+  font-size: 12px;
+}
+@media (max-width: 900px) {
+  .drive-revenue h2 p {
+    display: inline;
+  }
+}

@@ -1,0 +1,75 @@
+.grow-brand {
+  width: 90%;
+  padding: 40px 5%;
+  background-color: #f9f9f9;
+  height: fit-content;
+}
+
+.grow-brand h2 {
+  font-size: var(--heading-two);
+  color: var(--primary-color);
+}
+.grow-brand h2 span {
+  color: var(--main-color);
+}
+.grow-brand .service-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px 0;
+}
+.grow-brand .service-list .card {
+  background-color: var(--primary-color);
+  border-radius: var(--border-radius2);
+  width: 23%;
+  height: 280px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.grow-brand .service-list .card:hover {
+  background: linear-gradient(135deg, var(--primary-color), var(--main-color));
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+}
+.grow-brand .service-list .card .top {
+  background-color: gainsboro;
+  padding: 10px;
+  text-align: center;
+  border-top-left-radius: var(--border-radius2);
+  border-top-right-radius: var(--border-radius2);
+}
+.grow-brand .service-list .card .top h3 {
+  font-size: 18px;
+}
+.grow-brand .service-list .card .bottom {
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.grow-brand .service-list .card .bottom ul li {
+  text-decoration: underline;
+  text-underline-offset: 4px; /* ✅ pushes underline down */
+  color: var(--text-color4);
+  margin-bottom: 10px;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 220px;
+  background-color: var(--primary-color);
+}
+@media (max-width: 900px) {
+  .grow-brand .service-list .card {
+    width: 100%;
+  }
+  .vertical-line {
+    width: 80%;
+    margin: 0 auto;
+    height: 1px;
+    background-color: var(--primary-color);
+  }
+}

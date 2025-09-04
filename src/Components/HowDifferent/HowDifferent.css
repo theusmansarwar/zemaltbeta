@@ -1,0 +1,27 @@
+.how-different {
+  width: 100%;
+  padding: 60px 0;
+  background-color: var(--text-color4);
+}
+.how-different .card {
+  width: calc(90% - 80px);
+  padding: 20px 40px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-left: 20px solid var(--primary-color);
+}
+.how-different .card h2 {
+  font-size: var(--heading-two);
+  margin-bottom: 15px;
+}
+.how-different .card ul li {
+  margin-bottom: 10px;
+  text-align: justify;
+}
+@media(max-width:900px){
+    .how-different .card {
+  width: calc(90% - 40px);
+  padding: 20px ;
+  border-left: 10px solid var(--primary-color);
+}
+}

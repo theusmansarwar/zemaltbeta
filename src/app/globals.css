@@ -73,7 +73,7 @@ body {
   padding: 50px 5%;
   justify-content: space-between;
 }
-.main-wrapper-fixed-width{
+.main-wrapper-fixed-width {
   max-width: 1440px;
   margin: 0px auto;
 }

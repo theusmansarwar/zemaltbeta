@@ -1,6 +1,7 @@
 .blog-cards-container {
-  width: var(--default-width);
-  margin-left: var(--left-space);
+  width: calc(100% - (var(--left-space) * 2));
+  padding: 20px var(--left-space);
+  background-color: var(--text-color4);
 }
 .blog-cards-container .header {
   width: 100%;
@@ -113,7 +114,7 @@
   .blog-cards-container .header .right {
     width: 100%;
   }
-  
+
   .blog-cards-container .header .left h2 span {
     display: inline;
   }

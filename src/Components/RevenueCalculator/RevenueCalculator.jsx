@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import "./RevenueCalculator.css";
 
-const RevenueCalculator = () => {
+const RevenueCalculator = ({data}) => {
   const [formData, setFormData] = useState({
     pages: "",
     responsiveDesign: "",
@@ -121,14 +121,11 @@ const RevenueCalculator = () => {
       </div>
       <div className="blog-header">
         <div className="header-left">
-          <h2>Why Choose Zemalt for Expert Digital Marketing Solutions</h2>
+          <h2>{data.heading}</h2>
         </div>
         <div className="header-right">
           <p>
-            We are a full-service digital marketing and web design agency. Our
-            goal is to help you rank higher in search results and bring more
-            traffic to your site. From design to SEO, we cover it all so your
-            business can succeed online.
+            {data.description}
           </p>
           <button className="see-more">See more</button>
         </div>

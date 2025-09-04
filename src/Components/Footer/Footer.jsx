@@ -1,157 +1,202 @@
-"use client"; // Ensure the component is a Client Component
-
-import React, { useState } from "react";
-import { useRouter } from "next/navigation";
+import { FaLocationDot } from "react-icons/fa6";
 import "./Footer.css";
-import { RiFacebookFill } from "react-icons/ri";
-import { FaLinkedinIn } from "react-icons/fa";
-import { CiMail } from "react-icons/ci";
-import { IoCallOutline, IoLocationOutline } from "react-icons/io5";
-import { AiFillInstagram } from "react-icons/ai";
-import { FaArrowRightLong } from "react-icons/fa6";
 
-const Footer = () => {
-  const router = useRouter();
-  const [email, setEmail] = useState("");
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(false);
-
-  const handleSubscribe = async () => {
-    setLoading(true);
-    setError(null);
-
-    const response = await Subscribe({ email: email });
-
-    if (response.status === 201) {
-      setEmail("");
-      setLoading(false);
-      toast.success(response?.message || "Subscribed successfully");
-    } else {
-      setError(response.message || "Subscription failed.");
-      setLoading(false);
-    }
-  };
-
-  const menuItems = [
-    { label: "Service", path: "/services" },
-    { label: "Agency", path: "/" },
-    { label: "Case Study", path: "/" },
-    { label: "Resource", path: "/" },
-    { label: "Contact", path: "/contact" },
-    { label: "Privacy Policy", path: "/privacy-policy" },
-    { label: "Copyright", path: "/" },
-    { label: "Email Address", path: "/" },
-  ];
-
-  const handleNavClick = (item) => {
-    router.push(item.path);
-  };
-
+export default function Footer() {
   return (
-    <div className="main-wrapper-fixed-width">
-    <footer className="footer">
-      <div className="footer-upper">
-        <h2>Ready to work with us?</h2>
-        <button>
-          Get Started <FaArrowRightLong />
-        </button>
+    <footer className="footer-container">
+      {/* Header Section */}
+      <div className="footer-header">
+        <div className="header-content">
+          <div className="header-left">
+            <h2 className="get-in-touch">
+              GET IN <span className="touch-blue">TOUCH</span>
+            </h2>
+            <p className="tagline">
+              We are the top digital marketing agency for branding corp.
+            </p>
+          </div>
+          <div className="header-right">
+            <div className="zemalt-logo">
+              <img src="/zemalt-logo.png" alt="Zemalt.com" />
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div className="footer-container">
-        {/* Left Section */}
-        <div className="footer-left">
-          <img src="/zemalt-logo.png" className="logo" />
-          <p className="footer-description">
-            Zemalt is a full-service digital marketing agency specializing in
-            SEO, social media marketing, content writing, PPC, and web solutions
-            to help brands grow and strengthen their online presence.
-          </p>
-          <div className="social-icons">
-            <a
-              href="https://www.facebook.com/zemaltpvtltd"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="icon">
-                <RiFacebookFill />
+      {/* Main Footer Content */}
+      <div className="footer-main">
+        <div className="footer-content">
+          {/* Office/Assistance Column */}
+          <div className="footer-column">
+            <h3 className="column-title">OFFICE / ASSISTANCE</h3>
+            <div className="contact-info">
+              <div className="contact-item">
+                <span className="contact-icon">📞</span>
+                <span>+92 300 1110365</span>
               </div>
-            </a>
-            <a
-              href="https://www.linkedin.com/company/zemalt/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="icon">
-                <FaLinkedinIn />
+              <div className="contact-item">
+                <span className="contact-icon">📞</span>
+                <span>+971 45 7B 7003 (UAE)</span>
               </div>
-            </a>
-            <a
-              href="https://www.instagram.com/zemaltpvtltd/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="icon">
-                <AiFillInstagram />
+              <div className="contact-item">
+                <span className="contact-icon">✉️</span>
+                <span>info@connect-sol.com</span>
               </div>
-            </a>
+              <div className="contact-item">
+                <span className="contact-icon"><FaLocationDot /></span>
+                <span>
+                  Pakistan: Advance Connect Solutions Private Limited 90A, Abu
+                  Bakar Block Johar Town, Lahore
+                </span>
+              </div>
+              <div className="contact-item">
+                <span className="contact-icon">📍</span>
+                <span>
+                  UAE: Office #1904, Metroplex Tower Business Bay Dubai.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Company Profile Column */}
+          <div className="footer-column">
+            <h3 className="column-title">COMPANY PROFILE</h3>
+            <ul className="footer-links">
+              <li>
+                <a href="#">About Us</a>
+              </li>
+              <li>
+                <a href="#">Staff Augmentation</a>
+              </li>
+              <li>
+                <a href="#">Contact Us</a>
+              </li>
+              <li>
+                <a href="#">Blogs</a>
+              </li>
+              <li>
+                <a href="#">FAQs</a>
+              </li>
+              <li>
+                <a href="#">Our Partners</a>
+              </li>
+              <li>
+                <a href="#">Sitemap</a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Products Column */}
+          <div className="footer-column">
+            <h3 className="column-title">PRODUCTS</h3>
+            <ul className="footer-links">
+              <li>
+                <a href="#">Enterprise Resource Planning</a>
+              </li>
+              <li>
+                <a href="#">Financial Management System</a>
+              </li>
+              <li>
+                <a href="#">Human Resource Management</a>
+              </li>
+              <li>
+                <a href="#">Help Desk</a>
+              </li>
+              <li>
+                <a href="#">Visitor Management System</a>
+              </li>
+              <li>
+                <a href="#">Property Management System</a>
+              </li>
+              <li>
+                <a href="#">Point of Sale POS</a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Our Services Column */}
+          <div className="footer-column">
+            <h3 className="column-title">OUR SERVICES</h3>
+            <ul className="footer-links">
+              <li>
+                <a href="#">App Development</a>
+              </li>
+              <li>
+                <a href="#">Web Development</a>
+              </li>
+              <li>
+                <a href="#">Search Engine Optimization</a>
+              </li>
+              <li>
+                <a href="#">Social Media Marketing</a>
+              </li>
+              <li>
+                <a href="#">Database Optimization</a>
+              </li>
+              <li>
+                <a href="#">Application Re-Engineering</a>
+              </li>
+              <li>
+                <a href="#">Testing & Quality Assurance</a>
+              </li>
+              <li>
+                <a href="#">Analytics & Reporting</a>
+              </li>
+            </ul>
           </div>
         </div>
 
-        {/* Right Section */}
-        <div className="footer-right">
-          {/* Company Links */}
-          <div className="footer-section">
-            <h4>Navigation</h4>
-            <ul>
-              {menuItems.slice(0, 5).map((item) => (
-                <li key={item.label} onClick={() => handleNavClick(item)}>
-                  {item.label}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Other Links */}
-          <div className="footer-section">
-            <h4>Licence</h4>
-            <ul>
-              {menuItems.slice(5).map((item) => (
-                <li key={item.label} onClick={() => handleNavClick(item)}>
-                  {item.label}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div className="footer-section">
-            <h4>Contact</h4>
-            <div className="contact-info">
-              <p>
-                <CiMail />{" "}
-                <a href="mailto:company@zemalt.com">company@zemalt.com</a>
-              </p>
-              <p>
-                <IoCallOutline />{" "}
-                <a href="tel:+923007044566">+92-(300)-7044-566</a>
-              </p>
-              <p>
-                <IoLocationOutline />{" "}
-                <a
-                  href="https://maps.app.goo.gl/owK9zDzZBdNGzWrL7"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Plaza 119, Allama Iqbal Rd, Garhi Shahu, Lahore PK
+        {/* Footer Bottom */}
+        <div className="footer-bottom">
+          <div className="footer-bottom-content">
+            <div className="footer-bottom-left">
+              <span className="copyright">
+                © 2025 Advance Connect Solutions Private Limited | All Rights
+                Reserved.
+              </span>
+            </div>
+            <div className="footer-bottom-center">
+              <a href="#" className="footer-bottom-link">
+                Get in Touch
+              </a>
+              <a href="#" className="footer-bottom-link">
+                Offices
+              </a>
+              <a href="#" className="footer-bottom-link">
+                Careers
+              </a>
+              <a href="#" className="footer-bottom-link">
+                Legal
+              </a>
+              <a href="#" className="footer-bottom-link">
+                Privacy Policy
+              </a>
+            </div>
+            <div className="footer-bottom-right">
+              <div className="social-icons">
+                <a href="#" className="social-icon facebook">
+                  f
                 </a>
-              </p>
+                <a href="#" className="social-icon twitter">
+                  𝕏
+                </a>
+                <a href="#" className="social-icon instagram">
+                  📷
+                </a>
+                <a href="#" className="social-icon linkedin">
+                  in
+                </a>
+                <a href="#" className="social-icon pinterest">
+                  P
+                </a>
+                <a href="#" className="social-icon tiktok">
+                  ♪
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </footer>
-    </div>
   );
-};
-
-export default Footer;
+}
