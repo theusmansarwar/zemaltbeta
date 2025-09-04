@@ -1,5 +1,6 @@
-import { FaLocationDot } from "react-icons/fa6";
+import { FaAngleRight, FaFacebookF, FaInstagram, FaLinkedinIn, FaLocationDot, FaTiktok, FaXTwitter } from "react-icons/fa6";
 import "./Footer.css";
+import { IoCall, IoMail } from "react-icons/io5";
 
 export default function Footer() {
   return (
@@ -31,28 +32,38 @@ export default function Footer() {
             <h3 className="column-title">OFFICE / ASSISTANCE</h3>
             <div className="contact-info">
               <div className="contact-item">
-                <span className="contact-icon">📞</span>
-                <span>+92 300 1110365</span>
+                <span className="contact-icon">
+                  <IoCall />
+                </span>
+                <span>+92 123456789</span>
               </div>
               <div className="contact-item">
-                <span className="contact-icon">📞</span>
-                <span>+971 45 7B 7003 (UAE)</span>
+                <span className="contact-icon">
+                  <IoCall />
+                </span>
+                <span>+92 123456789 (USA)</span>
               </div>
               <div className="contact-item">
-                <span className="contact-icon">✉️</span>
-                <span>info@connect-sol.com</span>
+                <span className="contact-icon">
+                  <IoMail />
+                </span>
+                <span>info@dummy.com</span>
               </div>
               <div className="contact-item">
-                <span className="contact-icon"><FaLocationDot /></span>
+                <span className="contact-icon">
+                  <FaLocationDot />
+                </span>
                 <span>
-                  Pakistan: Advance Connect Solutions Private Limited 90A, Abu
-                  Bakar Block Johar Town, Lahore
+                  Pakistan: Lorem ipsum dolor sit amet consectetur adipisicing
+                  elit.
                 </span>
               </div>
               <div className="contact-item">
-                <span className="contact-icon">📍</span>
+                <span className="contact-icon">
+                  <FaLocationDot />
+                </span>
                 <span>
-                  UAE: Office #1904, Metroplex Tower Business Bay Dubai.
+                  UAE: Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </span>
               </div>
             </div>
@@ -63,25 +74,25 @@ export default function Footer() {
             <h3 className="column-title">COMPANY PROFILE</h3>
             <ul className="footer-links">
               <li>
-                <a href="#">About Us</a>
+                <FaAngleRight /> <a href="#">About Us</a>
               </li>
               <li>
-                <a href="#">Staff Augmentation</a>
+                <FaAngleRight /> <a href="#">Staff Augmentation</a>
               </li>
               <li>
-                <a href="#">Contact Us</a>
+                <FaAngleRight /> <a href="#">Contact Us</a>
               </li>
               <li>
-                <a href="#">Blogs</a>
+                <FaAngleRight /> <a href="#">Blogs</a>
               </li>
               <li>
-                <a href="#">FAQs</a>
+                <FaAngleRight /> <a href="#">FAQs</a>
               </li>
               <li>
-                <a href="#">Our Partners</a>
+                <FaAngleRight /> <a href="#">Our Partners</a>
               </li>
               <li>
-                <a href="#">Sitemap</a>
+                <FaAngleRight /> <a href="#">Sitemap</a>
               </li>
             </ul>
           </div>
@@ -91,25 +102,25 @@ export default function Footer() {
             <h3 className="column-title">PRODUCTS</h3>
             <ul className="footer-links">
               <li>
-                <a href="#">Enterprise Resource Planning</a>
+                <FaAngleRight /> <a href="#">Enterprise Resource Planning</a>
               </li>
               <li>
-                <a href="#">Financial Management System</a>
+                <FaAngleRight /> <a href="#">Financial Management System</a>
               </li>
               <li>
-                <a href="#">Human Resource Management</a>
+                <FaAngleRight /> <a href="#">Human Resource Management</a>
               </li>
               <li>
-                <a href="#">Help Desk</a>
+                <FaAngleRight /> <a href="#">Help Desk</a>
               </li>
               <li>
-                <a href="#">Visitor Management System</a>
+                <FaAngleRight /> <a href="#">Visitor Management System</a>
               </li>
               <li>
-                <a href="#">Property Management System</a>
+                <FaAngleRight /> <a href="#">Property Management System</a>
               </li>
               <li>
-                <a href="#">Point of Sale POS</a>
+                <FaAngleRight /> <a href="#">Point of Sale POS</a>
               </li>
             </ul>
           </div>
@@ -119,28 +130,28 @@ export default function Footer() {
             <h3 className="column-title">OUR SERVICES</h3>
             <ul className="footer-links">
               <li>
-                <a href="#">App Development</a>
+                <FaAngleRight /> <a href="#">App Development</a>
               </li>
               <li>
-                <a href="#">Web Development</a>
+                <FaAngleRight /> <a href="#">Web Development</a>
               </li>
               <li>
-                <a href="#">Search Engine Optimization</a>
+                <FaAngleRight /> <a href="#">Search Engine Optimization</a>
               </li>
               <li>
-                <a href="#">Social Media Marketing</a>
+                <FaAngleRight /> <a href="#">Social Media Marketing</a>
               </li>
               <li>
-                <a href="#">Database Optimization</a>
+                <FaAngleRight /> <a href="#">Database Optimization</a>
               </li>
               <li>
-                <a href="#">Application Re-Engineering</a>
+                <FaAngleRight /> <a href="#">Application Re-Engineering</a>
               </li>
               <li>
-                <a href="#">Testing & Quality Assurance</a>
+                <FaAngleRight /> <a href="#">Testing & Quality Assurance</a>
               </li>
               <li>
-                <a href="#">Analytics & Reporting</a>
+                <FaAngleRight /> <a href="#">Analytics & Reporting</a>
               </li>
             </ul>
           </div>
@@ -148,14 +159,9 @@ export default function Footer() {
 
         {/* Footer Bottom */}
         <div className="footer-bottom">
-          <div className="footer-bottom-content">
-            <div className="footer-bottom-left">
-              <span className="copyright">
-                © 2025 Advance Connect Solutions Private Limited | All Rights
-                Reserved.
-              </span>
-            </div>
-            <div className="footer-bottom-center">
+          <div className="top">
+            {" "}
+            <div className="top-left">
               <a href="#" className="footer-bottom-link">
                 Get in Touch
               </a>
@@ -165,6 +171,8 @@ export default function Footer() {
               <a href="#" className="footer-bottom-link">
                 Careers
               </a>
+            </div>
+            <div className="top-right">
               <a href="#" className="footer-bottom-link">
                 Legal
               </a>
@@ -172,25 +180,29 @@ export default function Footer() {
                 Privacy Policy
               </a>
             </div>
-            <div className="footer-bottom-right">
+          </div>
+          <div className="bottom">
+            <div className="bottom-left">
+              <span className="copyright">
+                © 2025 Zemalt PVT LTD | All Rights Reserved.
+              </span>
+            </div>
+            <div className="-bottom-right">
               <div className="social-icons">
                 <a href="#" className="social-icon facebook">
-                  f
+                  <FaFacebookF />
                 </a>
                 <a href="#" className="social-icon twitter">
-                  𝕏
+                  <FaXTwitter />
                 </a>
                 <a href="#" className="social-icon instagram">
-                  📷
+                  <FaInstagram />
                 </a>
                 <a href="#" className="social-icon linkedin">
-                  in
-                </a>
-                <a href="#" className="social-icon pinterest">
-                  P
+                 <FaLinkedinIn />
                 </a>
                 <a href="#" className="social-icon tiktok">
-                  ♪
+                 <FaTiktok />
                 </a>
               </div>
             </div>
