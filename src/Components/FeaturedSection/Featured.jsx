@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import "./Featured.css";
-import { FaArrowRightLong, FaArrowTrendUp, FaPlus } from "react-icons/fa6";
+import { FaArrowRight, FaArrowRightLong, FaArrowTrendUp, FaPlus } from "react-icons/fa6";
 import { useRouter } from "next/navigation";
 const Featured = () => {
   const router = useRouter();
@@ -11,7 +11,7 @@ const Featured = () => {
         <h1>
           Zemalt- <br /> Where Strategy Meets Success
         </h1>
-        <p>
+        <p className="desc">
           You will find a top-rated SEO agency. It has expert teams in digital
           marketing, design and web development. Each service aligns clearly
           with your goals.
@@ -22,24 +22,24 @@ const Featured = () => {
               router.push("/contact-us");
             }}
           >
-            Schedules a call <FaArrowRightLong />
+            Schedules a call <FaArrowRight />
           </button>
           <p
             onClick={() => {
-              router.push("/");
+              router.push("/case-study");
             }}
           >
             View Case Study
           </p>
         </div>
         <div className="trusted">
-          <p>Trusted by top global brands</p>{" "}
+          <p className="trusted-p">Trusted by top global brands</p>{" "}
           <div className="personarea">
             <div className="trusted-circle"></div>
             <div className="trusted-circle"></div>
             <div className="trusted-circle"></div>
             <div className="trusted-circle"></div>
-            <FaPlus />
+            <span>+</span>
           </div>{" "}
         </div>
       </div>

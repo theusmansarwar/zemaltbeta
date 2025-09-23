@@ -1,10 +1,11 @@
 import React from "react";
 import "./SeventhSection.css";
+import { FaArrowRight } from "react-icons/fa6";
 const SeventhSection = () => {
   return (
     <div className="seventh-section">
       <img className="watermark" src="/zemalt-watermark.svg" alt="Zemalt" />
-      <h2>About Us</h2>
+      <h2>Transforming Your Businesses Through Strategy and Technology</h2>
       <div className="bottom-content">
         <div className="left">
           <p>
@@ -48,6 +49,7 @@ const SeventhSection = () => {
           </p>
         </div>
       </div>
+      <button className="proposal-btn">Get Proposal<FaArrowRight /></button>
     </div>
   );
 };

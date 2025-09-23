@@ -5,7 +5,7 @@ export default function Page() {
     title: "WEB DESIGN",
     spanTitle: "PORTFOLIO",
     description:
-      "Explore our latest web design projects showcasing creativity, functionality, and modern aesthetics. Each project demonstrates careful planning, innovative solutions, and attention to detail. Discover how our team brings concepts to life, combining style and performance to deliver engaging digital experiences that impress and convert visitors",
+      "We invite you to explore our latest web design projects. Each project shows how we mix creativity with smart design to build websites that look modern and work well. Our work is not only about design. We make sure every website is easy to use, fast, and fits your brand style. You will see how ideas turn into real results. We design websites to attract visitors and guide them to take action. The style and performance come together in every project we create.",
   };
   const subServiceFirstData = [
     {
@@ -17,31 +17,35 @@ export default function Page() {
       number: "01",
       title: "Audit Your Existing Social Media Ads & Data",
       description:
-        "The first thing we do when we partner with a new client is audit their existing efforts with social media ads. Even if you’ve run ads in the past that generated zero results, that information and data is still helpful for us to have. If you’ve never run any ads before, we still like to look at any customer data you have because we like to let data inform our decisions as opposed to hunches.",
+        "We start by auditing your current social media ads and data. If you already run ads, we review performance to find what’s working and what needs improvement. If you have never run ads before, we use customer insights and market data to build the right foundation. Our approach relies on data-driven decisions, not guesswork.",
     },
     {
       type: "step",
       number: "02",
       title: "Research Your Competitors & Target Market",
       description:
-        "Next, we do the research necessary to understand everything there is to know about your competitors and ideal customer base. What are your competitors doing well vs what are they doing poorly? What is your shared target audience responding well to vs not? All of this information helps us understand what motivates your audience to buy in relation to your product or service.",
+        "Understanding your competitors and audience is the next step. We analyze your competitor strategies, audience behavior, and customer pain points. This helps us identify opportunities that your brand can use to get ahead. We study what motivates your audience and craft strategies that capture their attention.",
     },
     {
       type: "step",
       number: "03",
       title: "Create Advertisements that Drive Leads and Sales",
       description:
-        "With over 6,000 different paid social media ads made for our clients, we know how to create ads that convert. We A/B test different ads and audiences for each client to ensure we drive maximum results for your business at the lowest cost per result. That’s why businesses experience a higher ROI with our social media advertising services.",
+        "Our team designs ads that convert. Using creative visuals and strong messaging, we make campaigns that attract clicks and generate sales. We test multiple versions of ads (A/B testing) to ensure maximum ROI at the lowest cost. Each ad campaign is tailored to your business, helping you build leads that are ready to buy.",
     },
     {
       type: "step",
       number: "04",
       title: "Monthly Reporting",
       description:
-        "We send easy-to-read monthly reports that outline what we did over the last 30 days, what the results of those ads were and what we’re changing for the upcoming month. In between reports, you have access to our team via weekly or bi-weekly meetings and 24/7 access to your campaign analytics.",
+        "Transparency is at the heart of our service. We highlight results, explain adjustments, and share what’s planned for the next period. You also get 24/7 access to your campaign insights, so you always know how your investment is working for you.",
     },
   ];
 
-
-  return <ProjectPage featuredData={featuredData} subServiceData = {subServiceFirstData}/>;
+  return (
+    <ProjectPage
+      featuredData={featuredData}
+      subServiceData={subServiceFirstData}
+    />
+  );
 }

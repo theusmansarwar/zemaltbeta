@@ -27,7 +27,7 @@
 }
 .second-section .right .top-parent .top .content {
   width: calc(50% - 40px);
-  background-color: #f9f9f9;
+  background-color:var(--background2);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -88,6 +88,10 @@
   cursor: pointer;
   transition: 0.3s ease;
   border: 2px solid var(--primary-color);
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 .second-section .right .proposal-btn:hover {
   background-color: transparent;

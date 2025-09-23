@@ -45,7 +45,8 @@ const ContactForm = () => {
     <div className="contact-form">
       <div className="left">
         <h2>
-          <span>DIGITIZING</span> YOUR <br />BUSSINESS <span>GROWTH</span>
+          <span>DIGITIZING</span> YOUR <br />
+          BUSSINESS <span>GROWTH</span>
         </h2>
         <div className="info-container">
           <div className="each-info">
@@ -96,21 +97,20 @@ const ContactForm = () => {
 
           <div className="fromgrouprow">
             <div className="formgroupform2">
-              <PhoneInput
-                name="phone"
-                value={formData.phone}
-                onChange={handlePhoneChange}
-                countryCodeEditable={false}
-              />
-            </div>
-
-            <div className="formgroupform2">
               <input
                 type="email"
                 name="email"
                 placeholder="Enter Your Email"
                 value={formData.email}
                 onChange={handleChange}
+              />
+            </div>
+            <div className="formgroupform2">
+              <PhoneInput
+                name="phone"
+                value={formData.phone}
+                onChange={handlePhoneChange}
+                countryCodeEditable={false}
               />
             </div>
           </div>
@@ -122,7 +122,9 @@ const ContactForm = () => {
             onChange={handleChange}
           ></textarea>
 
-          <button className="submit-btn" type="submit">Submit <FaArrowRight /></button>
+          <button className="submit-btn" type="submit">
+            Submit <FaArrowRight />
+          </button>
         </form>
       </div>
     </div>

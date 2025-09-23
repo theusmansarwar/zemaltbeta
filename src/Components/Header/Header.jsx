@@ -2,86 +2,160 @@
 import React, { useState } from "react";
 import "./Header.css";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { FaAngleDown, FaChevronDown } from "react-icons/fa6";
+import { FaAngleDown, FaTimes } from "react-icons/fa";
 import ServicesDropDown from "../DropDowns/ServicesDropDown";
 import { useRouter } from "next/navigation";
+
+const services = [
+  {
+    name: "SEO",
+    slug: "seo",
+    items: [
+      { name: "On/Off-Page SEO", slug: "on-off-page-seo" },
+      { name: "Technical SEO", slug: "technical-seo" },
+      { name: "Local SEO", slug: "local-seo" },
+      { name: "E-commerce SEO", slug: "ecommerce-seo" },
+      { name: "Brand Building & Digital Marketing", slug: "digital-marketing" },
+      { name: "SEO Audit", slug: "seo-audit" },
+    ],
+  },
+  {
+    name: "Content Writing",
+    slug: "content-writing",
+    items: [
+      { name: "SEO Loaded Articles", slug: "seo-loaded-articles" },
+      { name: "Content Writing", slug: "content-writing" },
+      { name: "Copywriting", slug: "copywriting" },
+      { name: "Product Descriptions", slug: "product-descriptions" },
+      { name: "E-Commerce Content", slug: "ecommerce-content" },
+      { name: "Website Design Structure Content", slug: "structure-content" },
+    ],
+  },
+  {
+    name: "UI UX Designing",
+    slug: "designing",
+    items: [
+      { name: "UI/UX Design", slug: "ui-ux-design" },
+      { name: "Infographic Design", slug: "infographic-design" },
+      {
+        name: "Advertising & Marketing Graphics",
+        slug: "advertising-marketing-graphics",
+      },
+      { name: "Packaging Designs", slug: "packaging-designs" },
+      {
+        name: "Catalogue, Stationery & Gifts Design",
+        slug: "catalogue-stationery-gifts-design",
+      },
+      {
+        name: "Creative Assets & Custom Art",
+        slug: "creative-assets-custom-art",
+      },
+    ],
+  },
+  {
+    name: "Web Development",
+    slug: "web-development",
+    items: [
+      { name: "E-Commerce Development", slug: "ecommerce-development" },
+      { name: "CMS Development", slug: "cms-development" },
+      { name: "Shopify Store Development", slug: "shopify-store-development" },
+      {
+        name: "Personal Brand Development",
+        slug: "personal-brand-development",
+      },
+      {
+        name: "Customized Stores Development",
+        slug: "customized-stores-development",
+      },
+      {
+        name: "Rebuild the Website Development",
+        slug: "rebuild-website-development",
+      },
+    ],
+  },
+  {
+    name: "Social Media Marketing",
+    slug: "social-media-marketing",
+    items: [
+      { name: "Paid Social", slug: "paid-social" },
+      { name: "Meta Ads", slug: "meta-ads" },
+      { name: "Managing Accounts", slug: "managing-accounts" },
+      {
+        name: "Managing Social Advertising",
+        slug: "managing-social-advertising",
+      },
+      { name: "Advertising Creation", slug: "advertising-creation" },
+      { name: "Creative Add-ons", slug: "creative-add-ons" },
+    ],
+  },
+  {
+    name: "Google Ads Management",
+    slug: "google-ads-management",
+    items: [
+      { name: "Search Ads", slug: "search-ads" },
+      { name: "Display Ads", slug: "display-ads" },
+      { name: "Video Ads", slug: "video-ads" },
+      { name: "Shopping Ads", slug: "shopping-ads" },
+      { name: "App Campaigns", slug: "app-compaigns" },
+      { name: "Local Campaigns", slug: "local-compaigns" },
+    ],
+  },
+];
 const Header = () => {
   const router = useRouter();
-  const [showDropdown, setShowDropdown] = useState(false);
-  const visibleDropdown = () => {
-    setShowDropdown(true);
-  };
-  const hidedropdown = () => {
-    setShowDropdown(false);
-  };
+  const [showDropdown, setShowDropdown] = useState(false); // desktop dropdown
+  const [mobileMenu, setMobileMenu] = useState(false); // mobile nav
+  const [mobileServices, setMobileServices] = useState(false); // services in mobile
+  // Add these states
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [activeService, setActiveService] = useState(null);
+
+  const visibleDropdown = () => setShowDropdown(true);
+  const hidedropdown = () => setShowDropdown(false);
+
   return (
     <div className="main-wrapper-fixed-width">
       <div className="header-area">
         <img
           src="/zemalt-logo.png"
-          onClick={() => {
-            router.push("/");
-          }}
+          onClick={() => router.push("/")}
+          alt="Logo"
         />
 
+        {/* Desktop Nav */}
         <ul>
           <li
-            onClick={() => {
-              router.push("/services");
-            }}
+            onClick={() => router.push("/services")}
             onMouseEnter={visibleDropdown}
             onMouseLeave={hidedropdown}
           >
             Services <FaAngleDown />
           </li>
-          <li
-            onClick={() => {
-              router.push("/services/seo");
-            }}
-          >
-            SEO
+          <li onClick={() => router.push("/services/seo")}>SEO</li>
+          <li onClick={() => router.push("/services/designing")}>UI/UX</li>
+          <li onClick={() => router.push("/case-study")}>Case Study</li>
+          <li onClick={() => router.push("/industries")}>
+            Industries We Serve
           </li>
-          <li
-            onClick={() => {
-              router.push("/services/designing");
-            }}
-          >
-            UI/UX
-          </li>
-          <li>Case Study</li>
-          <li>Industries We Serve</li>
-          <li
-            onClick={() => {
-              router.push("/blogs");
-            }}
-          >
-            Content Library
-          </li>
-          <li
-            onClick={() => {
-              router.push("/about-us");
-            }}
-          >
-            About Us
-          </li>
-          <li
-            onClick={() => {
-              router.push("/contact-us");
-            }}
-          >
-            Contact
-          </li>
+          <li onClick={() => router.push("/blogs")}>Content Library</li>
+          <li onClick={() => router.push("/about-us")}>About Us</li>
+          <li onClick={() => router.push("/contact-us")}>Contact</li>
         </ul>
 
-        <button
-          onClick={() => {
-            router.push("/contact-us");
-          }}
-        >
-          Get Started
-        </button>
-        <GiHamburgerMenu className="menu-icon" />
+        <button onClick={() => router.push("/contact-us")}>Get Started</button>
+
+        {/* Hamburger / Cross */}
+        {mobileMenu ? (
+          <FaTimes className="menu-icon" onClick={() => setMobileMenu(false)} />
+        ) : (
+          <GiHamburgerMenu
+            className="menu-icon"
+            onClick={() => setMobileMenu(true)}
+          />
+        )}
       </div>
+
+      {/* Desktop Services Dropdown */}
       {showDropdown && (
         <div className="maindropdown-area">
           <div className="maindropdown-area-flex ">
@@ -93,6 +167,61 @@ const Header = () => {
           </div>
         </div>
       )}
+
+      {/* Mobile Nav */}
+      <div className={`mobile-menu ${mobileMenu ? "open" : ""}`}>
+        <ul>
+          <li>
+            <div
+              className="mobile-services"
+              onClick={() => setIsServicesOpen(!isServicesOpen)}
+            >
+              Services <FaAngleDown />
+            </div>
+
+            {isServicesOpen && (
+              <ul className="mobile-submenu">
+                {services.map((service, idx) => (
+                  <li key={idx}>
+                    <div
+                      className="mobile-services"
+                      onClick={() =>
+                        setActiveService((prev) =>
+                          prev === service.slug ? null : service.slug
+                        )
+                      }
+                    >
+                      {service.name} <FaAngleDown />
+                    </div>
+
+                    {/* Subservices */}
+                    {activeService === service.slug && (
+                      <ul className="mobile-submenu">
+                        {service.items.map((sub, subIdx) => (
+                          <li
+                            key={subIdx}
+                            onClick={() => router.push(`/services/${sub.slug}`)}
+                          >
+                            {sub.name}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+
+          <li onClick={() => router.push("/case-study")}>Case Study</li>
+          <li onClick={() => router.push("/industries")}>
+            Industries We Serve
+          </li>
+          <li onClick={() => router.push("/blogs")}>Content Library</li>
+          <li onClick={() => router.push("/about-us")}>About Us</li>
+          <li onClick={() => router.push("/contact-us")}>Contact</li>
+        </ul>
+      </div>
     </div>
   );
 };

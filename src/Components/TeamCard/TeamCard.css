@@ -2,6 +2,7 @@
   width: 100%;
   background-color: var(--text-color4);
   padding: 5px 0;
+  margin-bottom:100px ;
 }
 .team-section h2 {
   font-size: var(--heading-two);

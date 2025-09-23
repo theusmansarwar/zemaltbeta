@@ -9,10 +9,10 @@ const TestimonialSection = () => {
         <h2>What Our Clients Say About Results</h2>
 
         <p>
-          Zemalt is the premier digital marketing agency for brand-focused
-          companies. We offer a full range of services to help clients grow
-          search visibility. More traffic reaches their websites through smart
-          SEO work.
+          Zemalt is a premier digital marketing agency for brand-focused
+          companies. We offer a full range of services to help clients increase
+          their search visibility, and through smart SEO strategies, we drive
+          more traffic to their websites.
         </p>
       </div>
 

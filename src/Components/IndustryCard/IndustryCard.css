@@ -1,0 +1,102 @@
+.industry-grid {
+  width: calc(100% - (var(--left-space) * 2));
+  padding: 40px var(--left-space);
+  background-color: var(--text-color4);
+}
+.industry-grid .industry-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 80px;
+}
+.industry-grid .industry-card:last-child {
+  margin-bottom: 40px;
+}
+
+.industry-grid .industry-card.reverse {
+  flex-direction: row-reverse;
+}
+
+.industry-grid .industry-card .left {
+  width: 30%;
+}
+.industry-grid .industry-card .left img {
+  height: 300px;
+}
+.industry-grid .industry-card .right {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.industry-grid .industry-card .right .buttons-area {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.industry-grid .industry-card .right .buttons-area p {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-size: var(--default-p-size);
+  transition: 0.3s ease;
+  cursor: pointer;
+  color: var(--text-color);
+}
+.industry-grid .industry-card .right .buttons-area p:hover {
+  color: rgb(109, 106, 106);
+}
+.industry-grid .industry-card .right .buttons-area button {
+  border: none;
+  padding: 12px 20px;
+  background-color: var(--text-color);
+  display: flex;
+  align-items: flex-end;
+  gap: 50px;
+  border: 1px solid var(--text-color);
+  border-radius: 25px;
+  color: var(--text-color4);
+  font-size: var(--default-p-size);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.industry-grid .industry-card .right .buttons-area button:hover {
+  color: var(--text-color);
+  background-color: transparent;
+}
+
+@media (max-width: 900px) {
+  .industry-grid {
+    padding: 20px var(--left-space);
+  }
+  .industry-grid .industry-card {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  .industry-grid .industry-card.reverse {
+    flex-direction: column;
+  }
+  .industry-grid .industry-card .left {
+    width: 100%;
+  }
+  .industry-grid .industry-card .left img {
+    height: 200px;
+  }
+  .industry-grid .industry-card .right {
+    width: 100%;
+  
+    gap: 10px;
+  }
+  .industry-grid .industry-card .right .buttons-area {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .industry-grid .industry-card .right .buttons-area p {
+    text-decoration: underline;
+    font-size: var(--default-p-size);
+    transition: 0.3s ease;
+    cursor: pointer;
+    margin-left: 22px;
+  }
+}

@@ -49,8 +49,6 @@ body {
   width: 100%;
   z-index: 1;
   min-height: 100vh;
-  max-width: 1440px;
-  margin: 0 auto;
 }
 
 .PageBg::before {
@@ -73,10 +71,7 @@ body {
   padding: 50px 5%;
   justify-content: space-between;
 }
-.main-wrapper-fixed-width {
-  max-width: 1440px;
-  margin: 0px auto;
-}
+
 @media (max-width: 900px) {
   :root {
     --default-width: 90%;
@@ -86,5 +81,6 @@ body {
     --heading-two: 28px;
     --heading-three: 24px;
     --heading-four: 18px;
+    --default-p-size: 14px;
   }
 }

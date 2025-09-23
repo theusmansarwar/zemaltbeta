@@ -1,9 +1,9 @@
 .header-area {
+  height: 90px;
+  width: calc(100% - (var(--left-space) * 2));
+  padding: 0 var(--left-space);
   display: flex;
   align-items: center;
-  width: calc(var(--default-width) - 40px);
-  margin-left: var(--left-space);
-  padding: 30px 20px;
   justify-content: space-between;
   position: fixed;
   top: 0;
@@ -11,6 +11,7 @@
   z-index: 50;
   background: #ffffffc9;
   backdrop-filter: blur(8px);
+  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.03);
 }
 
 .header-area img {
@@ -28,9 +29,10 @@
   display: flex;
   align-items: flex-end;
   gap: 5px;
+  color: var(--text-color);
 }
 .header-area ul li:hover {
-  color: var(--main-color);
+  color: var(--text-color);
 }
 .header-area button {
   border: none;
@@ -42,7 +44,7 @@
 }
 .header-area button:hover {
   cursor: pointer;
-  background-color: var(--main-color);
+  background-color: var(--text-color);
   color: var(--text-color4);
 }
 .menu-icon {
@@ -51,10 +53,9 @@
 .maindropdown-area {
   width: 100%;
   position: fixed;
-  top: 60px;
+  top: 50px;
   z-index: 60;
   overflow: hidden;
-  max-width: 1440px;
 }
 .maindropdown-area-flex {
   display: flex;
@@ -63,20 +64,99 @@
 }
 .maindropdown-area .left,
 .maindropdown-area .right {
-  width: 10%;
+  width: 20%;
   height: calc(90vh - 111px);
 }
 .maindropdown-area .center {
-  width: 80%;
+  width: 60%;
   height: calc(90vh - 111px);
   padding-top: 40px;
 }
+/* mobile menu */
+/* existing styles remain */
+
+/* Mobile Menu Styles */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: calc(100% - 40px);
+  height: 100%;
+  background: #fff;
+  transition: right 0.3s ease;
+  padding: 80px 20px 20px;
+  z-index: 30;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu ul li {
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+/* Mobile Services Dropdown */
+.mobile-services {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Submenu container */
+.mobile-submenu {
+  padding-left: 15px;
+  margin-top: 5px;
+}
+
+/* Apply indentation to list items inside any submenu */
+.mobile-submenu > li {
+  padding: 8px 0;
+  border-bottom: none;
+  font-size: 14px;
+  padding-left: 15px; /* 👈 pushes subservices right */
+}
+.mobile-submenu > li:last-child {
+  border-bottom: none;
+}
+
+/* If you want nested submenu (sub-sub) indented even more */
+.mobile-submenu .mobile-submenu > li {
+  padding-left: 25px; /* 👈 deeper level */
+}
+
+/* ensure hamburger/cross visible */
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 30;
+}
+
 @media (max-width: 900px) {
+  .header-area {
+    height: 70px;
+  }
+  .header-area img {
+  height: 20px;
+}
   .header-area ul {
     display: none;
   }
   .menu-icon {
     display: block;
+    font-size: 20px;
+    flex-shrink: 0;
   }
   .header-area button {
     display: none;

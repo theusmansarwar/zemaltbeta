@@ -7,6 +7,12 @@ import SeventhSection from "@/Components/AboutUs/SeventhSection";
 import VideoSection from "@/Components/AboutUs/VideoSection";
 import Faq from "@/Components/FAQ/Faq";
 
+
+export const metadata = {
+  title: "About Us | Zemalt",
+  description:
+    "Get smart SEO and marketing solutions with Zemalt that increase search traffic, improve brand reach, and turn visitors into loyal customers.",
+};
 const aboutPageFaqs = {
   title: "FAQs about Zemalt",
   description:

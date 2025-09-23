@@ -3,8 +3,6 @@
   width: 100%;
   z-index: 1;
   min-height: 100vh;
-  max-width: 1440px;
-  margin: 0px auto;
 }
 
 .Home::before {

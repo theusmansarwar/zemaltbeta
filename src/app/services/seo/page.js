@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function Service() {
   const faqs = {
-    title: "FAQs on seo services",
+    title: "FAQs about Seo Services",
     description:
       "Zemalt answers common questions about SEO services. You learn why SEO matters and how it helps your business grow. Each answer gives you clear guidance backed by proven strategies. The goal is to help you understand SEO and use it as a tool for real success.",
     questions: [
@@ -47,60 +47,77 @@ export default function Service() {
   };
   const cardData = [
     {
-      title: "SEO Services",
-      slug: "seo-services",
-      type: "para",
+      title: "On/Off-Page SEO",
+      slug: "on-off-page-seo",
+
       items: [
-        "Strong SEO is the foundation of online success. We create strategies that target the right keywords, build high-quality backlinks, and optimize every page for visibility. We focus on traffic that converts, not just numbers. From content planning to authority building, every step strengthens your digital presence. Our SEO services give you long-term growth and consistent results.",
+        "Keyword research",
+        "Meta tags and titles",
+        "Page speed and structure",
+        "Internal links and site map",
+        "Guest posts and backlinks",
+        "Profile listings and outreach",
+        "Forum mentions and blog links",
+      ],
+    },
+    {
+      title: "Technical SEO",
+      slug: "technical-seo",
+
+      items: [
+        "Site audit and fixes",
+        "Crawl errors and broken links",
+        "Mobile and SSL checks",
+        "Core web vitals repair",
       ],
     },
     {
       title: "Local SEO",
       slug: "local-seo",
-      type: "para",
+
       items: [
-        "Local searches drive customers who are ready to buy. Zemalt optimizes your Google Business Profile, maps listings, and local citations. We make sure your business appears in near me searches and stands out in your area. Strong reviews, accurate info, and local keywords increase trust. With Zemalt, your local SEO turns searches into store visits and calls.",
-      ],
-    },
-    {
-      title: "SEO Audit",
-      slug: "seo-audit",
-      type: "para",
-      items: [
-        "Your website looks fine, but small hidden issues may be stopping it from growing. Zemalt uncovers those problems with a complete SEO audit. We test speed, mobile use, broken links, and keyword performance. Our experts also scan technical SEO, on-page setup, and competitor gaps. You get a clear plan that lifts your rankings and traffic. Zemalt’s SEO audit helps you turn visitors into real customers.",
+        "Google map setup",
+        "Local keywords and city pages",
+        "NAP check and clean",
+        "Local directory links",
       ],
     },
 
     {
       title: "E-commerce SEO",
       slug: "ecommerce-seo",
-      type: "para",
+
       items: [
-        "Online stores compete in crowded markets. Zemalt improves your product listings, category pages, and site navigation to make them search engine-friendly. Better rankings mean more shoppers, higher sales, and repeat buyers. We also focus on user experience to keep customers engaged.",
+        "Product page rank",
+        "Category page setup",
+        "Schema tags and reviews",
+        "Store SEO check",
       ],
     },
     {
-      title: "Digital Marketing",
+      title: "Brand Building & Digital Marketing",
       slug: "digital-marketing",
-      type: "para",
+
       items: [
-        "We build complete digital marketing strategies using social media, paid ads, and content marketing. We connect your business with the right audience at the right time. Creative campaigns increase visibility, generate leads, and give engagement. Zemalt’s digital marketing approach blends strategy with results to grow your brand faster.",
+        "Authority growth",
+        "Content and backlink strategy",
+        "Visibility improvements",
+        "Reputation management",
+        "Social media integration",
+        "Paid campaign support",
+        "Content marketing strategies",
+        "Traffic growth planning",
       ],
     },
     {
-      title: "SEO Reporting",
-      slug: "seo-reporting",
-      type: "para",
+      title: "SEO Audit",
+      slug: "seo-audit",
+
       items: [
-        "Numbers tell the truth about growth. Zemalt prepares detailed SEO reports that show rankings, traffic sources, conversions, and ROI. You’ll see exactly how your campaigns are performing. Clear insights highlight strengths and reveal new opportunities",
-      ],
-    },
-    {
-      title: "Brand Building",
-      slug: "brand-building",
-      type: "para",
-      items: [
-        "Zemalt helps you shape an identity that builds trust and authority online. From content creation to reputation management, every effort makes your brand recognizable and reliable. Customers remember brands that stand out with clarity and confidence. Zemalt’s brand-building services turn your business into a trusted name.",
+        "Full website analysis",
+        "Identify gaps and issues",
+        "Prioritize fixes and updates",
+        "Report with actionable steps",
       ],
     },
   ];
@@ -111,18 +128,19 @@ export default function Service() {
     image: "/bigidea.png",
   };
   const whyService = {
-    title: "Why Good Design Shapes Every Brand",
+    title: "Boost Your Brand with Expert SEO",
     description: [
-      "Zemalt is a leading digital agency trusted by brands. You get proven methods that raise search rank fast. Our team builds strategies that push results higher.",
-      "Team Zemalt acts as a partners for your business goals. You gain access to tailored plans that secure a stronger reach. Our focus stays on driving measurable success. We deliver solutions that keep your audience connected.",
-      "Give you tools that make progress steady. Our approach targets practical outcomes that strengthen presence. Clients rely on us to achieve consistent gains. Results bring better awareness that leads to sustainable growth.",
+      "We are a leading SEO team trusted by businesses worldwide. You gain tested methods that push your site higher in search results quickly. Our experts create clear steps that guide steady growth and increase visibility across key markets.",
+      "We act as partners in achieving your goals. You get structured plans that expand reach, attract consistent traffic, and build authority. Each action focuses on strong results and measurable progress. Our work ensures gains continue over time and strengthen your brand.",
+      "We provide tools that protect rank and monitor performance closely. Strategies use direct actions to improve content, technical structure, and backlinks. Clients rely on us to maintain lasting rank, generate more leads, and increase brand reach. Every step adds measurable value, higher traffic, and long-term growth.",
     ],
     image: "/why-designing.png",
   };
   const calculaterBottomData = {
-    heading: "Why Choose Zemalt for Professional Writing Services?",
+    heading:
+      "Why Choose Zemalt as Your Trusted SEO Partner for Rankings and Online Success?",
     description:
-      "Zemalt delivers content that speaks directly to your audience. Every project is handled with care, clarity, and creativity. From website copy to blogs, our writing team ensures that your message stands out and drives action. You get words that reflect your brand and bring real results. Get powerful content written by Zemalt experts. Make your brand voice stronger",
+      "We are a trusted SEO agency that drives fast and steady growth for brands. You get complete SEO plans that improve your site’s ranking, attract consistent traffic, and generate real value for your business. Each step focuses on visibility, authority, and long-term results that last.  ",
   };
   return (
     <ServicePage

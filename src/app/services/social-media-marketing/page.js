@@ -7,40 +7,49 @@ export const metadata = {
 
 export default function Service() {
   const faqs = {
-    title: "FAQs on social & paid services",
+    title: "FAQs about Social Media Marketing Services",
     description:
-      "At Zemalt, we understand that businesses want more than just generic information. You want clear answers about how our team will support your growth and manage your campaigns. We explain what we do for you, how we deliver results, and why partnering with Zemalt gives your brand a competitive edge.",
+      "Zemalt is a global social media team that builds a strong presence for your brand. We focus on clear posts and fast reach. You get sharp ads, tested ideas, and fair plans that boost your growth online.",
     questions: [
       {
-        question:
-          "How will we create the right social media ad campaign for my business?",
+        question: "What makes Zemalt strong in social media marketing?",
         answer:
-          "Zemalt studies your market, audience, and competitors before creating campaigns. Our team builds ads that highlight your unique value. We select the best platforms and formats to reach your target customers. You get campaigns designed to generate sales, not just clicks.",
+          "Zemalt builds campaigns that focus on real growth. You get posts that match your brand voice and connect with your audience. Ads target the right groups and drive both reach and conversions. Content stays clear and consistent, which makes your brand stand out. Growth comes from tested ideas, strong visuals, and smart timing.",
       },
       {
-        question: "What does Zemalt do if I already run social media ads?",
+        question: "How does social media improve business growth?",
         answer:
-          "We audit your existing ads and remove wasted spend. Zemalt refines targeting, improves ad creatives, and fixes poor placements. You get optimized campaigns that convert better and deliver measurable ROI",
+          "Social platforms open direct contact with your audience. Posts drive clicks, shares, and conversations. Ads push your message to the right users at the right time. You gain leads, trust, and loyal buyers when your content adds value. A strong presence also builds authority in your field.",
       },
       {
-        question: "How will we guide you in choosing the right plan?",
+        question: "How long does social media take to show results?",
         answer:
-          "You don’t have to worry about choosing blindly. Zemalt reviews your goals, budget, and industry first. We then recommend the exact plan that suits your business. You get a clear path with no confusion.",
+          "Paid ads often deliver reach within days. Organic growth builds slowly but becomes steady over weeks. Pages gain traction as more users engage and share content. Growth compounds when posts, ads, and strategies align. You should expect both early gains and lasting progress.",
       },
       {
-        question: "What kind of reports will Zemalt share with me?",
+        question: "Why should businesses start social media marketing now?",
         answer:
-          "We provide reports that show campaign reach, engagement, and conversions. Zemalt makes data simple so you know exactly how your money works. You see growth backed by numbers, not guesses.",
+          "Your rivals are already reaching users on social platforms. Waiting means lost chances for growth. Quick action helps you stay visible and keep pace with the market. Social media creates trust, builds awareness, and drives sales. A strong start now secures a stable place in your audience’s mind.",
       },
       {
-        question: "Can you handle both ad design and account management?",
+        question: "What types of content perform best on social media?",
         answer:
-          "Yes. Zemalt creates ad copies, visuals, and videos tailored to your audience. We also manage bidding, placements, and scaling. You don’t just get ads — you get full campaign management under one roof.",
+          "Short videos capture attention and boost reach fast. Posts with clear images engage viewers and gain more shares. Articles and stories build authority and add depth to your brand. Each format plays a role in connecting your business to users.",
       },
       {
-        question: "How does one scale campaigns once they succeed?",
+        question: "How do ads support social media success?",
         answer:
-          "We expand campaigns step by step. Zemalt tests new audiences, increases ad budgets, and launches campaigns across more platforms. You get growth that’s steady, controlled, and profitable.",
+          "Ads put your message in front of the right users fast. Careful targeting reduces wasted spend and raises returns. Strong ad text and visuals improve clicks and conversions. Paid ads create steady growth when paired with strong organic content.",
+      },
+      {
+        question: "How is social media success measured?",
+        answer:
+          "Success is tracked through reach, clicks, and engagement. You see how many users interact with your posts and ads. Leads, conversions, and sales prove direct business impact. Reports highlight growth trends and audience behavior. Numbers guide decisions and improve the next steps in strategy.",
+      },
+      {
+        question: "How does Zemalt ensure lasting value in social media?",
+        answer:
+          "Zemalt builds plans that connect short-term wins with long-term goals. You gain posts that reflect your brand and keep users engaged. Campaigns adapt to trends and audience needs over time. Clear reports help you see both growth and return on spend. Zemalt ensures that your presence keeps building trust and sales across every platform.",
       },
     ],
   };
@@ -49,47 +58,79 @@ export default function Service() {
     title: "Social & Paid Media",
     spanTitle: "SERVICES",
     description:
-      "Social and paid media give your brand fast reach and real results. Zemalt builds campaigns that connect you with the right people. Our ads grab attention and turn clicks into sales. You get full account management from our team. We post content, reply to your audience, and track results. Your brand stays consistent while you focus on business growth. Our approach stays simple and clear. You see more traffic, stronger engagement, and better conversions. Zemalt helps your brand grow faster through social ads that truly work",
+      "Grow your brand fast with Zemalt’s social media marketing solutions. You get posts that reflect your brand voice and capture attention. You increase clicks, build trust, and gain loyal followers. Each campaign delivers clear results and steady growth. Boost reach, create impact, and convert views into sales. You strengthen your online presence and expand your audience. Explore Zemalt’s social media marketing services today and elevate your brand on every platform.",
   };
   const cardData = [
     {
-      title: "Social Media Advertising",
-      slug: "social-media-advertising",
-      type:"para",
+      title: "Paid Social",
+      slug: "paid-social",
+      
       items: [
-        "Your customers spend hours every day on social platforms. Zemalt helps you reach them through targeted social media advertising that sparks action. Our experts plan ad campaigns that highlight your brand and turn views into sales. You gain wider reach, stronger engagement, and steady growth. We use paid advertising strategies that help you connect with the right audience and improve brand recognition.",
+        "Cross-platform ad setup",
+        "Targeted audience reach",
+        "Retargeting campaigns",
+        "Ad spend control",
+        "Performance reports",
       ],
     },
     {
       title: "Meta Ads",
       slug: "meta-ads",
-      type:"para",
+      
       items: [
-        "Facebook and Instagram hold the largest audiences online. Zemalt builds meta ads that connect you with potential buyers who matter most. We focus on increasing visibility, growing followers, and improving ad performance. Every campaign is data-driven to cut wasted spend and raise conversions. Our paid ads management ensures you get better ROI and stronger results from every campaign.",
+        "Facebook ads setup",
+        "Instagram ads setup",
+        "Carousel and story ads",
+        "Interest-based targeting",
+        "Conversion tracking",
       ],
     },
     {
       title: "Managing Accounts",
       slug: "managing-accounts",
-      type:"para",
+      
       items: [
-        "Running social accounts alone takes time and energy. Zemalt manages your social profiles with care so your brand stays consistent. We post content, reply to customers, and monitor performance. Our social media management services keep your audience engaged while you focus on business. You get a reliable partner who grows your presence and maintains trust with your customers.",
+        "Page optimization",
+        "Profile branding",
+        "Content calendar",
+        "Daily post updates",
+        "Engagement replies",
       ],
     },
     {
-      title: "Social Advertising",
-      slug: "social-advertising",
-      type:"para",
+      title: "Managing Social Advertising",
+      slug: "managing-social-advertising",
+      
       items: [
-        "Social advertising gives your brand faster growth than any other channel. Zemalt designs campaigns that match your business goals. You get more sales, more leads, and more awareness across platforms. Our paid social media campaigns help your brand stand out and deliver measurable results. Every strategy is built to scale your online growth and create long-term impact.",
+        "Multi-platform ad control",
+        "Budget management",
+        "Campaign monitoring",
+        "Audience analysis",
+        "Monthly reporting",
       ],
     },
     {
       title: "Advertising Creation",
       slug: "advertising-creation",
-      type:"para",
+      
       items: [
-        "Great ads create action, not just impressions. Zemalt produces ad content that speaks to your target audience and drives clicks. We combine visuals, clear words, and tested formats that motivate customers to respond. Our creative ad design services make your brand memorable and boost conversions. You gain lasting growth through ads built to connect and perform.",
+        "Ad copywriting",
+        "Graphic visuals",
+        "Short video ads",
+        "Banner and story ads",
+        "Call-to-action design",
+      ],
+    },
+    {
+      title: "Creative Add-ons",
+      slug: "creative-add-ons",
+      
+      items: [
+        "Influencer ad setup",
+        "Trend-based campaigns",
+        "Seasonal promotions",
+        "Brand consistency checks",
+        "Custom design support",
       ],
     },
   ];
@@ -99,18 +140,18 @@ export default function Service() {
     image: "/bigidea.png",
   };
   const whyService = {
-    title: "Why Good Design Shapes Every Brand",
+    title: "Grow Your Brand Through Social Media",
     description: [
-      "Zemalt is a leading digital agency trusted by brands. You get proven methods that raise search rank fast. Our team builds strategies that push results higher.",
-      "Team Zemalt acts as a partners for your business goals. You gain access to tailored plans that secure a stronger reach. Our focus stays on driving measurable success. We deliver solutions that keep your audience connected.",
-      "Give you tools that make progress steady. Our approach targets practical outcomes that strengthen presence. Clients rely on us to achieve consistent gains. Results bring better awareness that leads to sustainable growth.",
+      "We are a recognized agency trusted by businesses worldwide. You gain proven strategies that grow fans quickly and attract the right audience. Our team creates posts that guide users, engage followers, and deliver measurable results.",
+      "We act as partners in achieving your goals. You get clear steps that build trust and maintain steady growth. Each post focuses on outcomes that strengthen your brand and support lasting sales. Our approach ensures growth continues week after week.",
+      "We provide tools that track reach and performance. Plans include precise actions and clear goals to maximize engagement. Clients rely on us to maintain steady reach, gain clicks, and generate strong leads. Every effort contributes to consistent growth and long-term brand authority.",
     ],
     image: "/why-designing.png",
   };
   const calculaterBottomData = {
-    heading: "Why Choose Us for Web Design and Social Media",
+    heading: "Partner with Zemalt to Expand Reach, Earn Trust, and Drive Lasting Growth",
     description:
-      "Your website creates the first impression. Your social media extends that impact. We design sites that load fast, look sharp, and keep visitors engaged. We align those designs with social platforms so your brand stays consistent everywhere. Our team builds strategies that reach the right people and spark real conversations. You get creative design, clear messaging, and campaigns that drive measurable results. Each element works together to turn visitors into loyal customers",
+      "We are a trusted team that builds reach and impact across every platform. You get smart plans that grow your fans, increase leads, and strengthen trust. Each step supports steady growth and keeps your brand active, visible, and connected to the right audience.",
   };
   return (
     <ServicePage

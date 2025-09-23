@@ -7,29 +7,49 @@ export const metadata = {
 
 export default function Service() {
   const faqs = {
-    title: "FAQs on content writing services",
+    title: "FAQs about Web Development Services",
     description:
-      "Zemalt are an experienced digital marketing team. We focus on clarity and quick results. We provide the resources and simple guidance that help you to gain knowledge and support.",
+      "Our skilled web team creates platforms that shape growth and trust for your brand. We focus on clear design and strong code. You get sites that expand reach, engage users, and support lasting success.",
     questions: [
       {
-        question: "What is the point of digital marketing for my business?",
+        question: "What makes your web service different?",
         answer:
-          "Digital marketing helps your brand reach more people. It drives traffic, generates leads, and builds your image. Every step is guided by data to make campaigns stronger.",
+          "You get websites that combine strong design with reliable function. Each project reflects your brand and adapts to every device. Sites stay fast, secure, and easy to use. Pages are built to guide users and support clear goals. Zemalt adds proven methods that make each site ready for growth and scale.",
       },
       {
-        question: "How can digital marketing raise my website’s visibility?",
+        question: "How do you help my business grow online?",
         answer:
-          "Digital marketing pushes your site higher in search results. SEO moves your pages to the top. Paid ads bring quick visitors. Social platforms send new users. Strong content keeps people engaged. You build authority and appear more often.",
+          "Your website becomes a tool that attracts users and turns visits into sales. Pages use clear structure, simple navigation, and smart calls to action. Search-friendly text raises visibility in results. Features like forms and product pages create new leads and steady revenue. Over time, your site becomes a stable source of trust and growth.",
       },
       {
-        question: "How long does digital marketing take?",
+        question: "How long does a website take to build?",
         answer:
-          "Digital marketing shows results in weeks or months. SEO takes time but lasts longer. Social media builds trust. Email keeps users connected. All efforts work together. You need consistency to see returns.",
+          "Small websites are ready within weeks. Larger projects, such as online stores, need several months. Each stage follows a clear timeline and delivers visible progress. You stay updated at every step and see results as the site takes shape. A careful process ensures quality, speed, and long-term stability.",
       },
       {
-        question: "How do you measure digital marketing performance?",
+        question: "Do you provide help after launch?",
         answer:
-          "Zemalt measure success through numbers. Traffic shows reach. Leads show demand. Conversions show growth. ROI shows profit. Reports highlight progress.",
+          "Yes, full support continues after your site goes live. Pages stay updated, secure, and fast. Bugs get fixed without delay. Regular upgrades add new features when needed. You always get a responsive team that keeps your site in strong shape. Reliable support makes your business run without risk.",
+      },
+      {
+        question: "How do you keep websites safe from threats?",
+        answer:
+          "Websites face risks from malware, spam, and attacks. Security tools, updates, and backups reduce those risks. Access controls and encryption protect sensitive data. Ongoing checks spot weak points before they grow into issues. You gain confidence that your site runs safely every day.",
+      },
+      {
+        question: "What makes design so important for a website?",
+        answer:
+          "Design shapes the way users trust and engage with your brand. A clean layout guides people to the right action. Strong visuals support your message and build recall. Mobile-friendly pages improve reach and user experience. Zemalt combines design with usability so your site looks good and works well.",
+      },
+      {
+        question: "How do you measure success after building a site?",
+        answer:
+          "Success is tracked through visits, time spent on pages, and leads created. Sales, sign-ups, and inquiries show direct value. Reports highlight user behavior and point out areas for improvement. Numbers help refine the site as your business grows. Clear tracking connects design choices with business results.",
+      },
+      {
+        question: "Why should I choose Zemalt for web development?",
+        answer:
+          "Zemalt creates websites that focus on long-term growth. You get a mix of style, function, and strategy that supports business goals. Each project is built with care, speed, and tested tools. Clear updates keep you involved in every stage. In the end, you get a site that performs well today and adapts to tomorrow.",
       },
     ],
   };
@@ -38,64 +58,79 @@ export default function Service() {
     title: "Web Development",
     spanTitle: "SERVICES",
     description:
-      "You need a clear design that grows your brand. Zemalt creates sharp ideas that keep your style strong. You gain trust through smart detail and clean art. Each project shows focus and clear results.",
+      "Transform your online presence with Zemalt’s web development solutions. You get websites that look modern and perform flawlessly. You build trust through clean design and secure coding. Each page delivers clear results and long-term value. Enhance user experience, boost engagement, and drive business growth. You create a platform that supports your brand and goals. Discover Zemalt’s web development services today and enhance your digital presence.",
   };
   const cardData = [
     {
-      title: "Branding & Identity Design",
-      slug: "branding-identity-design",
+      title: "E-Commerce Development",
+      slug: "ecommerce-development",
       items: [
-        "Logo Design",
-        "Brand color set and font choice",
-        "Style guide manual",
-        "Office cards, letter papers and envelopes",
+        "Custom online store setup",
+        "Product and category pages",
+        "Cart and checkout process",
+        "Secure payment gateways",
+        "Inventory and order tracking",
+        "Mobile-friendly shop design",
       ],
     },
     {
-      title: "Marketing & Advertising Design",
-      slug: "marketing-advertising-design",
+      title: "CMS Development",
+      slug: "cms-development",
       items: [
-        "Social posts, banners, online ads",
-        "Leaflets and posters",
-        "Brochures and catalogs",
-        "Outdoor ads and boards",
+        "WordPress and CMS setup",
+        "Custom themes and layouts",
+        "Plugin integration",
+        "Content updates made easy",
+        "SEO-friendly structures",
+        "Scalable CMS solutions",
       ],
     },
     {
-      title: "Packaging & Label Design",
-      slug: "packaging-label-design",
+      title: "Shopify Store Development",
+      slug: "shopify-store-development",
       items: [
-        "Product box art",
-        "Bottle and jar tags",
-        "Food, beauty tech pack art",
-        "3D box sample",
+        "Shopify store design",
+        "Product listing and setup",
+        "Payment and shipping setup",
+        "Shopify apps integration",
+        "Conversion-focused layout",
+        "Store speed optimization",
       ],
     },
     {
-      title: "Print Media Design",
-      slug: "print-media-design",
+      title: "Personal Brand Development",
+      slug: "personal-brand-development",
       items: [
-        "Books and magazine covers",
-        "Newsprint and flyer pages",
-        "Reports and company brochures",
+        "Portfolio website design",
+        "Blog and content setup",
+        "Personal landing pages",
+        "Social media integration",
+        "Contact and booking forms",
+        "SEO for personal branding",
       ],
     },
     {
-      title: "UI/UX Designing",
-      slug: "ui-ux-designing",
+      title: "Customized Stores Development",
+      slug: "customized-stores-development",
       items: [
-        "Website UI plan",
-        "Mobile app page plan",
-        "Sample pages and layouts",
+        "Tailor-made e-commerce solutions",
+        "Unique store layouts",
+        "Custom checkout flows",
+        "Third-party API integration",
+        "User experience optimization",
+        "Advanced store features",
       ],
     },
     {
-      title: "Illustration & Creative Assets",
-      slug: "illustration-creative-assets",
+      title: "Rebuild the Website Development",
+      slug: "rebuild-website-development",
       items: [
-        "Custom art pieces",
-        "Brand graphic assets",
-        "Digital art and icons",
+        "Full website redesign",
+        "Speed and performance boost",
+        "Modern responsive layouts",
+        "UX/UI improvements",
+        "SEO and code cleanup",
+        "Security and backup setup",
       ],
     },
   ];
@@ -106,18 +141,18 @@ export default function Service() {
     image: "/bigidea.png",
   };
   const whyService = {
-    title: "Why Good Design Shapes Every Brand",
+    title: "Build Your Brand with a Strong Website",
     description: [
-      "Zemalt is a leading digital agency trusted by brands. You get proven methods that raise search rank fast. Our team builds strategies that push results higher.",
-      "Team Zemalt acts as a partners for your business goals. You gain access to tailored plans that secure a stronger reach. Our focus stays on driving measurable success. We deliver solutions that keep your audience connected.",
-      "Give you tools that make progress steady. Our approach targets practical outcomes that strengthen presence. Clients rely on us to achieve consistent gains. Results bring better awareness that leads to sustainable growth.",
+      "We are a leading team trusted by global businesses. You gain proven steps that attract users quickly and guide them toward action. Our websites focus on clarity, usability, and steady growth that adds long-term value",
+      "We act as partners in achieving your goals. You get tools that expand reach, increase sales, and strengthen brand presence. Each site is designed to deliver measurable results and maintain performance over time. Our approach ensures every project contributes to lasting growth.",
+      "We provide support that keeps sites fast, safe, and reliable. Plans include clear steps, progress tracking, and updates that protect your investment. Clients rely on us to build websites that last, drive traffic, and generate real value. Every site adds visibility, authority, and measurable growth.",
     ],
     image: "/why-designing.png",
   };
   const calculaterBottomData = {
-    heading: "Why Choose Zemalt for Professional Writing Services?",
+    heading: "Why Choose Us for Web Development For Your Business?",
     description:
-      "Zemalt delivers content that speaks directly to your audience. Every project is handled with care, clarity, and creativity. From website copy to blogs, our writing team ensures that your message stands out and drives action. You get words that reflect your brand and bring real results. Get powerful content written by Zemalt experts. Make your brand voice stronger",
+      "We are a trusted team that builds strong websites for every business need. You get full plans that raise online reach, attract loyal users, and convert visits into real results. Each step adds growth and gives your brand a clear edge in the market.",
   };
   return (
     <ServicePage

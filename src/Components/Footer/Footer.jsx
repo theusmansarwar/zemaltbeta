@@ -1,10 +1,20 @@
-import { FaAngleRight, FaFacebookF, FaInstagram, FaLinkedinIn, FaLocationDot, FaTiktok, FaXTwitter } from "react-icons/fa6";
+import {
+  FaAngleRight,
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaLocationDot,
+  FaTiktok,
+  FaXTwitter,
+} from "react-icons/fa6";
 import "./Footer.css";
 import { IoCall, IoMail } from "react-icons/io5";
 
 export default function Footer() {
   return (
     <footer className="footer-container">
+      {/* Footer Overlay */}
+      <div className="footer-overlay"></div>
       {/* Header Section */}
       <div className="footer-header">
         <div className="header-content">
@@ -199,10 +209,10 @@ export default function Footer() {
                   <FaInstagram />
                 </a>
                 <a href="#" className="social-icon linkedin">
-                 <FaLinkedinIn />
+                  <FaLinkedinIn />
                 </a>
                 <a href="#" className="social-icon tiktok">
-                 <FaTiktok />
+                  <FaTiktok />
                 </a>
               </div>
             </div>

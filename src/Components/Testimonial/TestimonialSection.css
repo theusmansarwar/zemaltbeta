@@ -23,6 +23,7 @@
 .Testimonial-header p {
   width: 40%;
   color: var(--text-color4);
+  font-size: var(--default-p-size);
 }
 .testimonial-icon {
   position: absolute;
@@ -36,6 +37,7 @@
   }
   .Testimonial-header h2 {
     width: 100%;
+    margin-bottom: 10px;
   }
   .Testimonial-header p {
     width: 100%;
@@ -46,6 +48,6 @@
     z-index: 1;
     right: 10px;
     top: 300px;
-     opacity: 0.4;
+    opacity: 0.4;
   }
 }

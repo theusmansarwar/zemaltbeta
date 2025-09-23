@@ -7,31 +7,29 @@ export const metadata = {
 
 export default function Service() {
   const faqs = {
-    title: "FAQs on web design services",
+    title: "FAQs about Web Design Services",
     description:
-      "Zemalt is an experienced digital marketing team. We focus on clarity and quick results. We provide the resources and simple guidance that help you to gain knowledge and support.",
+      "We are an experienced digital marketing team. We focus on clarity and quick results. We provide resources and simple guidance that help you gain knowledge and support.",
     questions: [
       {
         question: "What is the point of digital marketing for my business?",
         answer:
-          "Zemalt Digital marketing helps your brand reach more people. It drives traffic, generates leads, and builds your image. Every step is guided by data to make campaigns stronger.",
+          "Digital marketing helps your brand reach more people. It drives traffic, generates leads, and builds your image. Every step is guided by data to make campaigns stronger.",
       },
       {
-        question:
-          "How can Zemalt digital marketing raise my website’s visibility?",
+        question: "How can digital marketing raise my website’s visibility?",
         answer:
-          "Digital marketing pushes your site higher in search results. SEO moves your pages to the top. Paid ads bring quick visitors. Social platforms send new users. Strong content keeps people engaged. You build authority and appear more often",
+          "Digital marketing pushes your site higher in search results. SEO moves your pages to the top. Paid ads bring quick visitors. Social platforms send new users. Strong content keeps people engaged. You build authority and appear more often.",
       },
       {
-        question: "How long does digital marketing take?",
+        question: "How long does Zemalt digital marketing take?",
         answer:
           "Digital marketing shows results in weeks or months. SEO takes time but lasts longer. Social media builds trust. Email keeps users connected. All efforts work together. You need consistency to see returns.",
       },
       {
-        question:
-          "How do you measure digital marketing performance with Zemalt?",
+        question: "How do you measure Zemalt's digital marketing performance?",
         answer:
-          "Zemalt measures success through numbers. Traffic shows reach. Leads show demand. Conversions show growth. ROI shows profit. Reports highlight progress.",
+          "We measure success through numbers. Traffic shows reach. Leads show demand. Conversions show growth. Clicks and shares track interest. ROI shows profit. Reports highlight progress.",
       },
     ],
   };
@@ -40,70 +38,87 @@ export default function Service() {
     title: "CREATIVE",
     spanTitle: "SERVICES",
     description:
-      "You need a clear design that grows your brand. Zemalt creates sharp ideas that keep your style strong. You gain trust through smart detail and clean art. Each project shows focus and clear results.",
+      "Elevate your brand with Zemalt’s creative solutions. You get designs that reflect your identity and drive growth. You build trust through clean visuals and smart details. Each project delivers focused results and lasting impact. Enhance brand recognition, engage your audience, and leave a strong impression. You create work that stands out and supports your goals. Explore Zemalt’s creative services today and make your brand unforgettable.",
   };
   const cardData = [
     {
-      title: "Branding & Identity Design",
-      slug: "branding-identity-design",
-      type:"list",
+      title: "UI/UX Design",
+      slug: "ui-ux-design",
+      
       items: [
-        "Logo Design",
-        "Brand color set and font choice",
-        "Style guide manual",
-        "Office cards, letter papers and envelopes",
+        "Web Design",
+        "Website Redesign",
+        "Mobile App Design",
+        "Landing Page Design",
+        "Sample Pages and Layouts",
+        "UX Planning",
       ],
     },
     {
-      title: "Marketing & Advertising Design",
-      slug: "marketing-advertising-design",
-      type:"list",
+      title: "Infographic Design",
+      slug: "infographic-design",
+      
       items: [
-        "Social posts, banners, online ads",
-        "Leaflets and posters",
-        "Brochures and catalogs",
-        "Outdoor ads and boards",
+        "Book Cover Designs",
+        "Custom Infographics",
+        "Data Visualization",
+        "Marketing Illustrations",
+        "Presentation Graphics",
+        "Visual Storytelling",
       ],
     },
     {
-      title: "Packaging & Label Design",
-      slug: "packaging-label-design",
-      type:"list",
+      title: "Advertising & Marketing Graphics",
+      slug: "advertising-marketing-graphics",
+      
       items: [
-        "Product box art",
-        "Bottle and jar tags",
-        "Food, beauty tech pack art",
-        "3D box sample",
+        "Ad Banner Designs",
+        "Poster Banner Designs",
+        "YouTube Thumbnails Designing",
+        "Social Media Ads",
+        "Display Banner Ads",
+        "Online Campaign Graphics",
+        "Retargeting Ads Visuals",
       ],
     },
     {
-      title: "Print Media Design",
-      slug: "print-media-design",
-      type:"list",
+      title: "Packaging Designs",
+      slug: "packaging-designs",
+      
       items: [
-        "Books and magazine covers",
-        "Newsprint and flyer pages",
-        "Reports and company brochures",
+        "Product Picture Designing",
+        "Product Box Art",
+        "Bottle and Jar Tags",
+        "Food & Beauty Packaging",
+        "Tech Pack Designs",
+        "3D Packaging Mockups",
       ],
     },
     {
-      title: "UI/UX Designing",
-      slug: "ui-ux-designing",
-      type:"list",
+      title: "Catalogue, Stationery & Gifts Design",
+      slug: "catalogue-stationery-gifts-design",
+      
       items: [
-        "Website UI plan",
-        "Mobile app page plan",
-        "Sample pages and layouts",
+        "Office Stationery Design",
+        "Catalogues and Brochures",
+        "Corporate Gifts Design",
+        "Event Stationery",
+        "Flyers and Leaflets",
+        "Brand Material Design",
       ],
     },
     {
-      title: "Illustration & Creative Assets",
-      slug: "illustration-creative-assets",
-      type:"list",
+      title: "Creative Assets & Custom Art",
+      slug: "creative-assets-custom-art",
+      
       items: [
-        "Custom art pieces",
-        "Brand graphic assets",
-        "Digital art and icons",
+        "Get Innovative Designs",
+        "Custom Art Pieces",
+        "Digital Icons and Graphics",
+        "Brand Graphic Assets",
+        "Creative Templates",
+        "Campaign Concept Designs",
+        "Unique Visual Assets",
       ],
     },
   ];
@@ -123,9 +138,9 @@ export default function Service() {
     image: "/why-designing.png",
   };
   const calculaterBottomData = {
-    heading: "Why Choose Zemalt for Professional Writing Services?",
+    heading: "Why Choose Zemalt for Expert Digital Marketing Solutions?",
     description:
-      "Zemalt delivers content that speaks directly to your audience. Every project is handled with care, clarity, and creativity. From website copy to blogs, our writing team ensures that your message stands out and drives action. You get words that reflect your brand and bring real results. Get powerful content written by Zemalt experts. Make your brand voice stronger",
+      "We are a full-service digital marketing and web design agency. Our goal is to help you rank higher in search results and bring more traffic to your site. From design to SEO, we cover it all so your business can succeed online.",
   };
   return (
     <ServicePage

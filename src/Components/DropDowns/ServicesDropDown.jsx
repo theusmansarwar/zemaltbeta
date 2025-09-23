@@ -10,13 +10,12 @@ const services = [
     name: "SEO",
     slug: "seo",
     items: [
-      { name: "SEO Services", slug: "seo-services" },
+      { name: "On/Off-Page SEO", slug: "on-off-page-seo" },
+      { name: "Technical SEO", slug: "technical-seo" },
       { name: "Local SEO", slug: "local-seo" },
-      { name: "SEO AUDIT", slug: "seo-audit" },
       { name: "E-commerce SEO", slug: "ecommerce-seo" },
-      { name: "Digital Marketing", slug: "digital-marketing" },
-      { name: "SEO Reporting", slug: "seo-reporting" },
-      { name: "Brand Building", slug: "brand-building" },
+      { name: "Brand Building & Digital Marketing", slug: "digital-marketing" },
+      { name: "SEO Audit", slug: "seo-audit" },
     ],
   },
   {
@@ -24,9 +23,10 @@ const services = [
     slug: "content-writing",
     items: [
       { name: "SEO Loaded Articles", slug: "seo-loaded-articles" },
+      { name: "Content Writing", slug: "content-writing" },
       { name: "Copywriting", slug: "copywriting" },
       { name: "Product Descriptions", slug: "product-descriptions" },
-      { name: "Thin Content", slug: "thin-content" },
+      { name: "E-Commerce Content", slug: "ecommerce-content" },
       { name: "Website Design Structure Content", slug: "structure-content" },
     ],
   },
@@ -34,17 +34,20 @@ const services = [
     name: "UI UX Designing",
     slug: "designing",
     items: [
-      { name: "Branding & Identity Design", slug: "branding-identity-design" },
+      { name: "UI/UX Design", slug: "ui-ux-design" },
+      { name: "Infographic Design", slug: "infographic-design" },
       {
-        name: "Marketing & Advertising Design",
-        slug: "marketing-advertising-design",
+        name: "Advertising & Marketing Graphics",
+        slug: "advertising-marketing-graphics",
       },
-      { name: "Packaging & Label Design", slug: "packaging-label-design" },
-      { name: "Print Media Design", slug: "print-media-design" },
-      { name: "UI/UX Designing", slug: "ui-ux-designing" },
+      { name: "Packaging Designs", slug: "packaging-designs" },
       {
-        name: "Illustration & Creative Assets",
-        slug: "illustration-creative-assets",
+        name: "Catalogue, Stationery & Gifts Design",
+        slug: "catalogue-stationery-gifts-design",
+      },
+      {
+        name: "Creative Assets & Custom Art",
+        slug: "creative-assets-custom-art",
       },
     ],
   },
@@ -52,42 +55,61 @@ const services = [
     name: "Web Development",
     slug: "web-development",
     items: [
-      { name: "Web Development", slug: "web-development" },
-      { name: "Mobile App Development", slug: "mobile-app-development" },
       { name: "E-Commerce Development", slug: "ecommerce-development" },
+      { name: "CMS Development", slug: "cms-development" },
+      { name: "Shopify Store Development", slug: "shopify-store-development" },
+      {
+        name: "Personal Brand Development",
+        slug: "personal-brand-development",
+      },
+      {
+        name: "Customized Stores Development",
+        slug: "customized-stores-development",
+      },
+      {
+        name: "Rebuild the Website Development",
+        slug: "rebuild-website-development",
+      },
     ],
   },
   {
     name: "Social Media Marketing",
     slug: "social-media-marketing",
     items: [
-      { name: "Social Media Advertising", slug: "social-media-advertising" },
+      { name: "Paid Social", slug: "paid-social" },
       { name: "Meta Ads", slug: "meta-ads" },
       { name: "Managing Accounts", slug: "managing-accounts" },
-      { name: "Social Advertising", slug: "social-advertising" },
+      {
+        name: "Managing Social Advertising",
+        slug: "managing-social-advertising",
+      },
       { name: "Advertising Creation", slug: "advertising-creation" },
+      { name: "Creative Add-ons", slug: "creative-add-ons" },
     ],
   },
   {
     name: "Google Ads Management",
     slug: "google-ads-management",
     items: [
+      { name: "Search Ads", slug: "search-ads" },
       { name: "Display Ads", slug: "display-ads" },
       { name: "Video Ads", slug: "video-ads" },
+      { name: "Shopping Ads", slug: "shopping-ads" },
       { name: "App Campaigns", slug: "app-compaigns" },
       { name: "Local Campaigns", slug: "local-compaigns" },
     ],
   },
 ];
-// ✅ Service taglines mapping
+// Service taglines mapping
 const serviceTaglines = {
-  SEO: "Rank Higher. Grow Faster.",
-  Writing: "Content That Converts.",
-  Designing: "Designs That Inspire.",
-  Development: "Smart Code. Smooth Performance.",
-  Marketing: "Strategies That Sell.",
-  Cybersecurity: "Security That Protects.",
+  "SEO": "Rank Higher. Grow Faster.",
+  "Content Writing": "Content That Converts.",
+  "UI UX Designing": "Designs That Inspire.",
+  "Web Development": "Smart Code. Smooth Performance.",
+  "Social Media Marketing": "Strategies That Sell.",
+  "Google Ads Management": "Ads That Drive Results.",
 };
+
 const ServicesDropDown = () => {
   const router = useRouter();
 
@@ -109,9 +131,7 @@ const ServicesDropDown = () => {
             {services.map((service, index) => (
               <li
                 onClick={() => {
-                  router.push(
-                    `/services/${services[selectedIndex].slug}`
-                  );
+                  router.push(`/services/${services[selectedIndex].slug}`);
                 }}
                 key={index}
                 onMouseEnter={() => setSelectedIndex(index)}

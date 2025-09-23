@@ -1,4 +1,6 @@
 import BigIdea from "../BigIdea/BigIdea";
+import Carousal from "../Carousal/Carousal";
+import Carousal2 from "../Carousal/Carousal2";
 import ServiceCard from "../Designing-cards/ServiceCard";
 import Faq from "../FAQ/Faq";
 import RevenueCalculator from "../RevenueCalculator/RevenueCalculator";
@@ -20,10 +22,10 @@ export default function ServicePage({
     <div className="homebg">
       <ServicePageFeatured data={featuredData} />
       <ServiceCard data={cardData} />
-      <TestimonialSlider />
+      <Carousal />
       <BigIdea data={imageData} />
       <Faq faqs={Faqs} />
-      <RevenueCalculator data={CalulaterBottom}/>
+      <RevenueCalculator data={CalulaterBottom} />
       <WhyService data={whyService} />
     </div>
   );

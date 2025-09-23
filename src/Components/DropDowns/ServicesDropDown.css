@@ -1,13 +1,13 @@
 .maindropdown {
   width: 100%;
-  height: 380px;
+  height: fit-content;
   margin: 0 auto;
   overflow: hidden;
   background-color: var(--text-color4);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.193);
 }
 .maindropdown .top {
-  background-color: #f9f9f9;
+  background-color: rgb(223, 221, 221);
   display: flex;
   gap: 10px;
   padding: 20px;
@@ -25,9 +25,9 @@
   width: 100%;
 }
 .maindropdown .bottom .left {
-  width: calc(30% - 80px);
+  width: calc(40% - 80px);
   height: 100%;
-  padding: 10px 40px;
+  padding: 10px;
   border-right: 1px solid gainsboro;
 }
 
@@ -73,18 +73,18 @@
 }
 
 .maindropdown .bottom .right {
-  width: 35%;
+  width: 25%;
   height: calc(100% - 40px);
   padding: 20px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 10px;
 }
 .maindropdown .bottom .right img {
-  width: 65%;
-  height: auto;
+  width: 100%;
+  height: 240px
 }
 
 .maindropdown .bottom .right .view-all-btn {
@@ -97,7 +97,6 @@
   background-color: var(--primary-color);
   border: 1px solid var(--primary-color);
   color: var(--text-color4);
-  margin-bottom: 20px;
   border-radius: var(--border-radius1);
   cursor: pointer;
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import "./SecondSection.css";
+import { FaArrowRight } from "react-icons/fa6";
 const SecondSection = () => {
   return (
     <div className="second-section">
@@ -71,7 +72,7 @@ const SecondSection = () => {
             </div>
           </div>
         </div>
-        <button className="proposal-btn">Get Proposal</button>
+        <button className="proposal-btn">Get Proposal <FaArrowRight /></button>
       </div>
     </div>
   );

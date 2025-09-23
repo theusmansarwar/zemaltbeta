@@ -1,9 +1,11 @@
+"use client";
 import React from "react";
 import "./Whyus.css";
 import "../BlogSection/BlogSection.css";
-import { TiSpiral } from "react-icons/ti";
 import { PiSpiralLight } from "react-icons/pi";
+import { useRouter } from "next/navigation";
 const Whyus = () => {
+  const router = useRouter();
   return (
     <section className="why-us-section">
       <div className="blog-header">
@@ -14,11 +16,18 @@ const Whyus = () => {
         </div>
         <div className="header-right2">
           <p>
-            Zemalt is a top digital marketing agency for brand-focused firms.
-            Offer comprehensive services to enhance search rankings. Our expert
-            support drives more traffic to client websites.
+            Zemalt is a top digital marketing agency for brand-focused firms,
+            offering comprehensive services to enhance search rankings. Our
+            expert support helps drive more traffic to client websites.
           </p>
-          <button className="see-more">See more</button>
+          <button
+            className="see-more"
+            onClick={() => {
+              router.push("/contact-us");
+            }}
+          >
+            Schedules a call
+          </button>
         </div>
       </div>
 

@@ -11,8 +11,12 @@ import TestimonialSection from "@/Components/Testimonial/TestimonialSection";
 import SeoSection from "@/Components/SeoSection/SeoSection";
 import MeetTeam from "@/Components/AboutUs/MeetTeam";
 import TestimonialSlider2 from "@/Components/TestimonialSlider/TestimonialSlider2";
-import Carousal2 from "@/Components/Carousal/Carousal2";
 
+export const metadata = {
+  title: "Zemalt",
+  description:
+    "Get smart SEO and marketing solutions with Zemalt that increase search traffic, improve brand reach, and turn visitors into loyal customers.",
+};
 export default function Home() {
   const Homepagefaqs = {
     title: "FAQs",
@@ -54,9 +58,9 @@ export default function Home() {
   };
   const blogHeaderData = {
     heading:
-      "Digital Marketing & SEO Services That Grow Traffic & Increase Revenue",
+      "Digital Marketing & SEO Services That Drive Traffic and Increase Revenue",
     description:
-      "Zemalt is a top digital marketing agency. Our team supports brands with complete service solutions. Clients see higher search rankings through expert guidance. More visitors reach their websites through clear strategies and focused action.",
+      "Zemalt is a top digital marketing agency. Our team supports brands with comprehensive service solutions, helping clients achieve higher search rankings through expert guidance. With clear strategies and focused actions, we drive more visitors to their websites.",
   };
   return (
     <div className={styles.Home}>
@@ -70,7 +74,6 @@ export default function Home() {
       <Faq faqs={Homepagefaqs} />
       <BlogSection data={blogHeaderData} />
       <SeoSection />
-      {/* <Carousal2 heading="Ready to work with us?" link={"/"}/> */}
     </div>
   );
 }

@@ -10,6 +10,9 @@
   color: var(--primary-color);
   margin-bottom: 10px;
 }
+.meet-team p{
+ text-align: justify;
+}
 
 .team-cards-container {
   flex: 1;
@@ -127,6 +130,7 @@
   right: -100px;
 }
 @media (max-width: 900px) {
+  
   .team-cards-container {
     flex-wrap: wrap; /* allow wrapping */
     justify-content: center; /* center cards */

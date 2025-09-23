@@ -4,7 +4,7 @@ import "./Faq.css";
 import { useRouter } from "next/navigation";
 
 const Faq = ({ faqs }) => {
-  const router = useRouter;
+  const router = useRouter();
   const [openIndex, setOpenIndex] = useState(0);
 
   const toggle = (index) => {
@@ -14,7 +14,7 @@ const Faq = ({ faqs }) => {
   return (
     <div className="faq-container">
       <div className="faq-left">
-        <h2>{faqs?.title}</h2>
+        <h2 className="faq-heading">{faqs?.title}</h2>
         <p>{faqs?.description}</p>
         <div className="faq-buttons">
           <button
@@ -25,9 +25,7 @@ const Faq = ({ faqs }) => {
             More Questions
           </button>
           <span
-            onClick={() => {
-              router.push("/contact-us");
-            }}
+            onClick={()=>{router.push("/contact-us")}}
           >
             Contact Us
           </span>

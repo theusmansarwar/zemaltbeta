@@ -34,14 +34,36 @@
   margin-bottom: 15px;
 }
 
-select {
-  flex: 1;
-  padding: 12px;
-  border-radius: 8px;
-  border: none;
-  background: var(--text-color4);
-  font-size: var(--default-p-size);
+.custom-select {
+  position: relative;
+  width: 100%;
 }
+
+.custom-select select {
+  width: 100%;
+  padding: 10px;
+  appearance: none; /* hide default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  background: #fff;
+  cursor: pointer;
+  outline: none;
+}
+
+.custom-select .select-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* so clicks still work on select */
+  font-size: 32px;
+  color: gray;
+  flex-shrink: 0;
+}
+
 
 .calculate-btn {
   background-color: #5b7ce1;
@@ -72,7 +94,8 @@ select {
 }
 .calculator-area .blog-header .header-left h2 {
   font-size: var(--heading-two);
-  max-width: 500px;
+  max-width: 650px;
+  text-align: left;
 }
 .calculator-area .blog-header .header-right {
   width: 43%;

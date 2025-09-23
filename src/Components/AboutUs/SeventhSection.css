@@ -14,6 +14,8 @@
   font-size: var(--heading-two);
   margin-bottom: 30px;
   text-align: center;
+  width: 70%;
+  margin: 0 auto 20px;
 }
 .seventh-section .bottom-content {
   display: flex;
@@ -29,11 +31,36 @@
 .seventh-section .bottom-content .right p {
   margin-bottom: 10px;
 }
+.seventh-section .proposal-btn {
+  width: 40%;
+  margin-left: 30%;
+  margin-top: 50px;
+  background-color: var(--primary-color);
+  outline: none;
+  padding: 12px 24px;
+  border-radius: var(--border-radius1);
+  color: var(--text-color4);
+  border-style: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: 2px solid var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.seventh-section .proposal-btn:hover {
+  background-color: transparent;
+  color: var(--main-color);
+}
 
 @media (max-width: 900px) {
   .seventh-section .watermark {
     opacity: 0.3;
   }
+  .seventh-section h2 {
+  width: 100%;
+}
   .seventh-section .bottom-content {
     display: flex;
     align-items: center;
@@ -45,5 +72,10 @@
   }
   .seventh-section .bottom-content .right {
     width: 100%;
+  }
+  .seo-section .proposal-btn {
+    width: 100%;
+    margin-left: 0%;
+    margin-top: 20px;
   }
 }

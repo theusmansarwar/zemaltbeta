@@ -14,7 +14,10 @@ const VideoSection = () => {
       <img className="smoke-bg" src="/smoke-bg.jpg" alt="background image" />
       <h2>How can I get started with Zemalt?</h2>
       <p>
-        Getting started is simple. Contact us through our website, and our team will set up a consultation. We’ll learn about your goals, discuss your challenges, and create a digital marketing plan that fits your budget and objectives.
+        Getting started is simple. Contact us through our website, and our team
+        will set up a consultation. We’ll learn about your goals, discuss your
+        challenges, and create a digital marketing plan that fits your budget
+        and objectives.
       </p>
       {!isPlaying ? (
         <div

@@ -26,6 +26,7 @@
 .OutBox .top p {
   width: 40%;
   color: var(--text-color3);
+   font-size: var(--default-p-size);
 }
 .OutBox .bottom .left {
   height: 350px;
@@ -34,13 +35,12 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
-
   border-radius: var(--border-radius1);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 50px;
+  gap: 80px;
 }
 .ltop {
   width: 80%;
@@ -63,9 +63,8 @@
   background-image: url("/how-we-work.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: center;
   border-radius: var(--border-radius1);
-
   position: relative;
   display: flex;
   align-items: center;
@@ -74,6 +73,7 @@
 .OutBox .bottom .right p {
   color: var(--text-color4);
   font-size: var(--heading-one);
+  word-spacing: 20px;
 }
 .OutBox .bottom .right .play-box {
   height: 130px;
@@ -100,23 +100,25 @@
   align-items: center;
   width: 80%;
   gap: 2%;
-  
 }
-.circleimg-area svg {
+.circleimg-area .plus {
   color: var(--text-color4);
-  font-size: 32px;
+  font-size: 78px;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 .circleimg {
-  height: 60px;
-  width: 60px;
+  height: 70px;
+  width: 70px;
   border-radius: 50%;
   background-color: var(--text-color3);
+  flex-shrink: 0;
 }
 @media (max-width: 900px) {
   .OutBox .top {
     flex-direction: column;
     gap: 10px;
-     align-items: flex-start;
+    align-items: flex-start;
   }
 
   .OutBox .top h2 {
@@ -133,6 +135,7 @@
   .OutBox .bottom .left {
     height: 185px;
     width: 50%;
+    gap: 40px;
   }
   .ltop {
     width: var(--default-width);
@@ -146,9 +149,10 @@
     display: flex;
     align-items: center;
   }
-  .ltop h3 span svg {
+  .ltop h3 span {
     color: var(--primary-color);
     font-size: 32px;
+    margin-bottom: 10px;
   }
   .OutBox .bottom .right {
     height: 185px;
@@ -157,16 +161,20 @@
   .OutBox .bottom .right p {
     text-align: center;
   }
+  .circleimg-area .plus {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
   .OutBox .bottom .right .play-box {
     height: 50px;
     width: 50px;
     margin-right: -10px;
     margin-bottom: -10px;
   }
-
-  .OutBox .bottom .right .play-box svg {
-    font-size: 16px;
+  .OutBox .bottom .right .play-box svg{
+  font-size: 24px;
   }
+
   .circleimg-area {
     display: flex;
     align-items: center;

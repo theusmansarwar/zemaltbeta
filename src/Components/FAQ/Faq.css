@@ -12,14 +12,16 @@
 .faq-left {
   width: 40%;
 }
-.faq-left h2 {
+.faq-left .faq-heading {
   font-size: var(--heading-two);
   margin-bottom: 10px;
+  text-align: left;
 }
 .faq-left p {
   font-size: 16px;
   margin-bottom: 20px;
   line-height: 1.5;
+  text-align: justify;
 }
 .faq-buttons {
   display: flex;
@@ -44,6 +46,7 @@
 }
 .faq-buttons span {
   text-decoration: underline;
+  text-underline-offset: 2px;
   color: var(--main-color);
   cursor: pointer;
   transition: 0.2s ease;
@@ -65,6 +68,9 @@
   border-top: 1px solid #ccc;
   padding: 26px 0;
 }
+.faq-item:first-child{
+  border-top: none;
+}
 
 .faq-question {
   display: flex;
@@ -77,6 +83,7 @@
   margin-top: 10px;
   font-size: var(--default-p-size);
   color: var(--text-color2);
+   text-align: justify;
 }
 .faq-item:last-child {
   border-bottom: 1px solid #ccc;

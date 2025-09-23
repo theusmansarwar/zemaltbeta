@@ -4,6 +4,11 @@ import Carousal2 from "@/Components/Carousal/Carousal2";
 import ServicePageFeatured from "@/Components/ServicePageFeatured/ServicePageFeatured";
 import React from "react";
 
+export const metadata = {
+  title: "Careers | Zemalt",
+  description:
+    "Get smart SEO and marketing solutions with Zemalt that increase search traffic, improve brand reach, and turn visitors into loyal customers.",
+};
 const page = () => {
   const featuredData = {
     title: "JOIN",
