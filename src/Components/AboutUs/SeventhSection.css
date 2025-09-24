@@ -30,6 +30,8 @@
 .seventh-section .bottom-content .left p,
 .seventh-section .bottom-content .right p {
   margin-bottom: 10px;
+  font-size: var(--default-p-size);
+  line-height: var(--p-line-height);
 }
 .seventh-section .proposal-btn {
   width: 40%;
@@ -59,8 +61,8 @@
     opacity: 0.3;
   }
   .seventh-section h2 {
-  width: 100%;
-}
+    width: 100%;
+  }
   .seventh-section .bottom-content {
     display: flex;
     align-items: center;

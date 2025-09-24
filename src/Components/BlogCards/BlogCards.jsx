@@ -8,7 +8,12 @@ import "./BlogCards.css";
 import { CiCircleChevLeft, CiCircleChevRight } from "react-icons/ci";
 import truncateTextByWords from "@/utils/TruncateByWords";
 import { PaginationItem } from "@mui/material";
+import { fetchBlogCategories, fetchallBloglist } from "@/DAL/Fetch";
+import { baseUrl } from "@/config/Config";
+import BCard from "../SkeletonLoaders/BCard";
+import { formatDate } from "@/utils/FormatDate";
 
+// ✅ Dummy Data (fallback if API fails)
 const blogData = [
   {
     _id: 1,
@@ -32,27 +37,7 @@ const blogData = [
   },
   {
     _id: 3,
-    slug: "mongodb-scaling",
-    title: "Scaling MongoDB",
-    author: "Mike Johnson",
-    createdAt: "2025-07-15",
-    thumbnail: "/blog-thumbnail.jpg",
-    description: "A guide on scaling MongoDB for high traffic applications.",
-    category: "Modern",
-  },
-  {
-    _id: 4,
-    slug: "mongodb-scaling",
-    title: "Scaling MongoDB",
-    author: "Mike Johnson",
-    createdAt: "2025-07-15",
-    thumbnail: "/blog-thumbnail.jpg",
-    description: "A guide on scaling MongoDB for high traffic applications.",
-    category: "Art Moderne",
-  },
-  {
-    _id: 5,
-    slug: "mongodb-scaling",
+    slug: "mongodb-scaling-1",
     title: "Scaling MongoDB",
     author: "Mike Johnson",
     createdAt: "2025-07-15",
@@ -61,113 +46,84 @@ const blogData = [
     category: "Industrial",
   },
   {
-    _id: 6,
-    slug: "mongodb-scaling",
-    title: "Scaling MongoDB",
+    _id: 4,
+    slug: "mongodb-scaling-2",
+    title: "Scaling MongoDB Again",
     author: "Mike Johnson",
-    createdAt: "2025-07-15",
+    createdAt: "2025-07-16",
     thumbnail: "/blog-thumbnail.jpg",
-    description: "A guide on scaling MongoDB for high traffic applications.",
-    category: "Technology",
-  },
-  {
-    _id: 7,
-    slug: "mongodb-scaling",
-    title: "Scaling MongoDB",
-    author: "Mike Johnson",
-    createdAt: "2025-07-15",
-    thumbnail: "/blog-thumbnail.jpg",
-    description: "A guide on scaling MongoDB for high traffic applications.",
-    category: "Designs",
-  },
-  {
-    _id: 8,
-    slug: "mongodb-scaling",
-    title: "Scaling MongoDB",
-    author: "Mike Johnson",
-    createdAt: "2025-07-15",
-    thumbnail: "/blog-thumbnail.jpg",
-    description: "A guide on scaling MongoDB for high traffic applications.",
-    category: "Designs",
-  },
-  {
-    _id: 9,
-    slug: "mongodb-scaling",
-    title: "Scaling MongoDB",
-    author: "Mike Johnson",
-    createdAt: "2025-07-15",
-    thumbnail: "/blog-thumbnail.jpg",
-    description: "A guide on scaling MongoDB for high traffic applications.",
+    description: "Another MongoDB scaling approach.",
     category: "Minimalist",
   },
-  {
-    _id: 10,
-    slug: "mongodb-scaling",
-    title: "Scaling MongoDB",
-    author: "Mike Johnson",
-    createdAt: "2025-07-15",
-    thumbnail: "/blog-thumbnail.jpg",
-    description: "A guide on scaling MongoDB for high traffic applications.",
-    category: "Minimalist",
-  },
-];
-
-const links = [
-  "All",
-  "Modern",
-  "Industrial",
-  "Art Moderne",
-  "Technology",
-  "Designs",
-  "Minimalist",
-  "Minimalist",
-  "Minimalist",
-  "Minimalist",
 ];
 
 const BlogCards = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const initialPage = parseInt(searchParams.get("page")) || 1;
+
   const [page, setPage] = useState(initialPage);
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [totalPages, setTotalPages] = useState(1);
-  const [activeLink, setActiveLink] = useState(0);
+  const [totalItems, setTotalItems] = useState(0);
+
   const ulRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
+  const [activeLink, setActiveLink] = useState(0);
 
-  const itemsPerPage = 9;
+  const [rowsPerPage, setRowsPerPage] = useState(9);
+  const [categories, setCategories] = useState([{ _id: "all", name: "All" }]);
+  const [activeCategory, setActiveCategory] = useState("all");
 
+  // ✅ Fetch categories
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const res = await fetchBlogCategories();
+        const data = res.categories || [];
+
+        setCategories([{ _id: "all", name: "All" }, ...data]);
+      } catch (error) {
+        console.error("Error fetching categories:", error);
+      }
+    };
+    fetchCategories();
+  }, []);
+
+  // ✅ Fetch blogs when filters change
   useEffect(() => {
     fetchData();
-  }, [page, activeLink]);
-  useEffect(() => {
-    checkScrollButtons(); // check scroll status on mount & when links change
-  }, [links]);
+  }, [page, rowsPerPage, activeCategory]);
 
-  const fetchData = () => {
+  const fetchData = async () => {
     setLoading(true);
+    try {
+      const categoryId = activeCategory === "all" ? "" : activeCategory;
+      const res = await fetchallBloglist(categoryId, page, rowsPerPage, "");
 
-    // ✅ Filter blogs by category
-    let filteredBlogs =
-      activeLink === 0
-        ? blogData
-        : blogData.filter((blog) => blog.category === links[activeLink]);
-
-    // ✅ Slice blogs for current page
-    const startIndex = (page - 1) * itemsPerPage;
-    const endIndex = startIndex + itemsPerPage;
-
-    const paginatedBlogs = filteredBlogs.slice(startIndex, endIndex);
-    setBlogs(paginatedBlogs);
-
-    setTotalPages(Math.ceil(filteredBlogs.length / itemsPerPage));
-    setLoading(false);
+      if (res?.blogs?.length > 0) {
+        setBlogs(res.blogs);
+        setTotalPages(res.totalPages || 1);
+        setTotalItems(res.totalBlogs || res.blogs.length);
+      } else {
+        // ✅ fallback to dummy data
+        setBlogs(blogData);
+        setTotalPages(1);
+        setTotalItems(blogData.length);
+      }
+    } catch (error) {
+      console.error("Error fetching blogs:", error);
+      setBlogs(blogData); // fallback
+      setTotalPages(1);
+      setTotalItems(blogData.length);
+    } finally {
+      setLoading(false);
+    }
   };
 
-  const handleChange = (event, value) => {
+  const handleChangePage = (event, value) => {
     setPage(value);
     router.push(`?page=${value}`);
   };
@@ -175,6 +131,7 @@ const BlogCards = () => {
   const handleClick = (slug) => {
     router.push(`/blogs/${slug}`);
   };
+
   const scrollLeft = () => {
     if (ulRef.current) {
       ulRef.current.scrollBy({ left: -200, behavior: "smooth" });
@@ -193,13 +150,16 @@ const BlogCards = () => {
     if (!ulRef.current) return;
 
     const { scrollLeft, scrollWidth, clientWidth } = ulRef.current;
-
     setCanScrollLeft(scrollLeft > 0);
     setCanScrollRight(scrollLeft + clientWidth < scrollWidth - 1);
   };
 
+  const start = totalItems > 0 ? (page - 1) * rowsPerPage + 1 : 0;
+  const end = Math.min(page * rowsPerPage, totalItems);
+
   return (
     <div className="blog-cards-container">
+      {/* ---------- Header with categories ---------- */}
       <div className="header">
         <div className="left">
           <h2>
@@ -213,16 +173,17 @@ const BlogCards = () => {
             className={`scroll-btn ${!canScrollLeft ? "disabled" : ""}`}
           />
           <ul ref={ulRef} onScroll={checkScrollButtons}>
-            {links.map((tab, index) => (
+            {categories.map((cat, index) => (
               <li
-                key={index}
-                className={activeLink === index ? "active" : ""}
+                key={cat._id || `cat-${index}`}
+                className={activeCategory === cat._id ? "active" : ""}
                 onClick={() => {
+                  setActiveCategory(cat._id);
                   setActiveLink(index);
-                  setPage(1); // reset to page 1 on tab change
+                  setPage(1);
                 }}
               >
-                {tab}
+                {cat.name}
               </li>
             ))}
           </ul>
@@ -233,49 +194,56 @@ const BlogCards = () => {
         </div>
       </div>
 
+      {/* ---------- Blog Grid ---------- */}
       <div className="blog-grid">
-        {blogs?.map((post) => (
-          <div
-            key={post._id}
-            className="blog-post-card"
-            onClick={() => handleClick(post.slug)}
-          >
+        {loading ? (
+          <BCard />
+        ) : blogs.length > 0 ? (
+          blogs.map((post, index) => (
             <div
-              className="post-image"
-              style={{
-                backgroundImage: `url(${post.thumbnail})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                width: "100%",
-              }}
-            />
-            <div className="post-content">
-              <span className="date">{post.createdAt}</span>
-              <h2 className="post-title">
-                {truncateTextByWords(post.title, 10)}
-              </h2>
+              key={post._id || `blog-${index}`}
+              className="blog-post-card"
+              onClick={() => handleClick(post.slug)}
+            >
+              <div
+                className="post-image"
+                style={{
+                  backgroundImage: `url(${baseUrl + post.thumbnail})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  width: "100%",
+                }}
+              />
+              <div className="post-content">
+                <span className="date">{formatDate(post.createdAt)}</span>
+                <h2 className="post-title">
+                  {truncateTextByWords(post.title, 10)}
+                </h2>
+              </div>
             </div>
-          </div>
-        ))}
+          ))
+        ) : (
+          <p>No blogs found.</p>
+        )}
       </div>
 
+      {/* ---------- Pagination ---------- */}
       <Stack spacing={2} sx={{ alignItems: "center", mb: "30px" }}>
         <Pagination
           siblingCount={1}
           boundaryCount={2}
           count={totalPages}
           page={page}
-          onChange={handleChange}
+          onChange={handleChangePage}
           shape="rounded"
           renderItem={(item) => (
             <PaginationItem
               {...item}
-              components={{
+              slots={{
                 previous: () => <span>Previous</span>,
                 next: () => <span>Next</span>,
               }}
               sx={{
-                // ✅ For numbers
                 ...(item.type === "page" && {
                   color: "var(--text-color4)",
                   border: "none",
@@ -289,11 +257,9 @@ const BlogCards = () => {
                     color: "var(--main-color)",
                     border: "none",
                     boxShadow: "0px 2px 2px rgba(0, 0, 0, 0.5)",
-                    "&:hover": { backgroundColor: "var(--text-color4)" }, // 🚫 No hover change
+                    "&:hover": { backgroundColor: "var(--text-color4)" },
                   },
                 }),
-
-                // ✅ For "Previous"
                 ...(item.type === "previous" && {
                   backgroundColor: "var(--text-color4)",
                   color: "var(--main-color)",
@@ -305,13 +271,7 @@ const BlogCards = () => {
                   fontSize: "0.75rem",
                   letterSpacing: "0.05em",
                   boxShadow: "0px 2px 2px rgba(0, 0, 0, 0.5)",
-                  "&:hover": {
-                    backgroundColor: "#f6efefff",
-                    color: "var(--main-color)",
-                  },
                 }),
-
-                // ✅ For "Next"
                 ...(item.type === "next" && {
                   backgroundColor: "var(--main-color)",
                   color: "var(--text-color4)",
@@ -323,10 +283,6 @@ const BlogCards = () => {
                   fontSize: "0.75rem",
                   letterSpacing: "0.05em",
                   boxShadow: "0px 2px 2px rgba(0, 0, 0, 0.5)",
-                  "&:hover": {
-                    backgroundColor: "#222",
-                    color: "var(--text-color4)",
-                  },
                 }),
               }}
             />

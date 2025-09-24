@@ -3,8 +3,8 @@ import "./SeoSection.css";
 import { FaArrowRight } from "react-icons/fa6";
 const SeoSection = () => {
   return (
-    <div className="seo-section">
-      <div className="content-container">
+    <div className="seo-section" id="seo-marketing-services">
+      <div className="seo-content-container">
         <div className="left">
           <h2>
             <span>Turn Search Into a Revenue Driver</span>
@@ -47,14 +47,16 @@ const SeoSection = () => {
         <div className="right">
           <strong>Table of Contents</strong>
           <ul>
-            <li>Lorem Ipsum</li>
-            <li>Lorem Ipsum</li>
-            <li>Lorem Ipsum</li>
-            <li>Lorem Ipsum</li>
-            <li>Lorem Ipsum</li>
-            <li>Lorem Ipsum</li>
-            <li>Lorem Ipsum</li>
-            <li>Lorem Ipsum</li>
+            <li><a href="#zemalt">Zemalt</a></li>
+            <li><a href="#unique-ideas">Unique Ideas</a></li>
+            <li><a href="#marketing-objectives">Marketing Objectives</a></li>
+            <li><a href="#revenue-impact">Revenue Impact</a></li>
+            <li><a href="#why-choose-zemalt">Why Choose Zemalt</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#faqs">Faqs</a></li>
+            <li><a href="#increase-revenue">Increase Revenue</a></li>
+            <li><a href="#seo-marketing-services">SEO marketing services</a></li>
           </ul>
         </div>
       </div>

@@ -62,13 +62,24 @@
   display: flex;
   flex-direction: column;
 }
+.formgroupform2 label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 15px;
+  color: var(--main-color);
+}
+
+.formgroupform2.full-width {
+  width: 100%;
+}
+
 .formgroupform2 .react-international-phone-input-container {
   width: calc(100% - 16px) !important;
   border-bottom: 1px solid var(--main-color) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  margin-top: 15px !important;
 }
 .formgroupform2 .react-international-phone-input-container:focus-within {
   border-bottom: 1px solid var(--primary-color) !important;
@@ -76,13 +87,13 @@
 
 .formgroupform2 .react-international-phone-country-selector-button {
   margin-top: 0px !important;
-  height: 48px !important;
+  height: 34px !important;
   background-color: transparent !important;
   border: none !important;
 }
 .formgroupform2 .react-international-phone-input {
   width: calc(100% - 16px) !important;
-  height: 48px !important;
+  height: 34px !important;
   font-size: var(--default-p-size) !important;
   margin: 0% !important;
   border: 0px !important;
@@ -113,9 +124,8 @@
 .contact-form .right .fromgrouprow .formgroupform2 input,
 .contact-form .right textarea {
   width: calc(100% - 32px);
-  padding: 16px;
+  padding: 8px 16px;
   padding-left: 0;
-  margin-top: 15px;
   border: none;
   outline: none;
   border-bottom: 1px solid var(--main-color);
@@ -127,8 +137,38 @@
   outline: none;
   border-bottom: 1px solid var(--primary-color);
 }
+
+/* Checkbox Grid */
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.checkbox-item input {
+  accent-color: var(--primary-color);
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+}
+
+.formgroupform2 .checkbox-label {
+  margin-top: 0 !important;
+  cursor: pointer;
+  user-select: none;
+}
+
 .contact-form .right textarea {
-  height: 100px;
+  height: 60px;
   resize: none;
   margin-bottom: 5px;
 }
@@ -155,6 +195,14 @@
 .contact-form .right .submit-btn:hover {
   background-color: transparent;
   color: var(--primary-color);
+}
+
+.error-msg {
+  display: block;
+  margin-top: 3px;
+  margin-bottom: 5px;
+  color: red;
+  font-size: 10px;
 }
 /* Responsive */
 @media (max-width: 900px) {
@@ -204,8 +252,11 @@
   }
   .contact-form .right .fromgrouprow .formgroupform2 {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  }
+  .formgroupform2 .react-international-phone-country-selector-button {
+    height: 38px !important;
+  }
+  .formgroupform2 .react-international-phone-input {
+    height: 38px !important;
   }
 }

@@ -24,6 +24,7 @@
   width: 40%;
   color: var(--text-color4);
   font-size: var(--default-p-size);
+  line-height: var(--p-line-height);
 }
 .testimonial-icon {
   position: absolute;

@@ -25,7 +25,7 @@
 .why-us-section .blog-header .header-right2 p {
   color: #555;
   font-size: var(--default-p-size);
-  line-height: 1.6;
+   line-height: var(--p-line-height);
 }
 .why-us-section .blog-header .header-right2 {
   padding: 10px 0;
@@ -196,6 +196,7 @@
 
 .card p {
   font-size: var(--default-p-size);
+   line-height: var(--p-line-height);
   color: #555;
 }
 

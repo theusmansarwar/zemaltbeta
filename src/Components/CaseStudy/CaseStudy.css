@@ -35,6 +35,13 @@
   flex-direction: column;
   gap: 20px;
 }
+.case-study-grid .study-card .right h2 {
+  font-size: var(--heading-three);
+}
+.case-study-grid .study-card .right p {
+  font-size: var(--default-p-size);
+  line-height: var(--p-line-height);
+}
 
 .case-study-grid .study-card .right .study-btn {
   border: none;
@@ -88,5 +95,10 @@
     align-items: flex-start;
     flex-direction: column;
     gap: 10px;
+  }
+  .case-study-grid .study-card .right .study-btn {
+    padding: 8px 16px;
+    gap: 10px;
+    font-size: 12px;
   }
 }

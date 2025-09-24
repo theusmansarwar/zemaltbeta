@@ -2,9 +2,8 @@ export const dynamic = "force-dynamic";
 import styles from "./page.module.css";
 import React from "react";
 import BlogCards from "@/Components/BlogCards/BlogCards";
-import LatestBlogs from "@/Components/LatestBlogs/LatestBlogs";
-import GrowingTipsBlogs from "@/Components/GrowingTipsBlogs/GrowingTipsBlogs";
 import TrendingBlogs from "@/Components/TrendingBlogs/TrendingBlogs";
+import FeaturedBlogs from "@/Components/FeaturedBlogs/FeaturedBlogs";
 import ServicePageFeatured from "@/Components/ServicePageFeatured/ServicePageFeatured";
 export const metadata = {
   title: "Blogs | Zemalt ",
@@ -22,9 +21,8 @@ const page = () => {
     <div className={styles.Home}>
       <ServicePageFeatured data={featuredData} />
       <BlogCards />
-      <LatestBlogs />
-      <GrowingTipsBlogs />
       <TrendingBlogs />
+      <FeaturedBlogs />
     </div>
   );
 };

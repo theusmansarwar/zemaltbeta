@@ -1,0 +1,80 @@
+.latest-blog-card.skeleton {
+  display: flex;
+  gap: 10px;
+  overflow: hidden;
+  margin: 20px auto;
+}
+
+.latest-blog-card.skeleton .blog-card-img {
+  width: 200px;
+  height: 180px;
+  border-radius: 4px;
+  background: #e5e7eb;
+}
+
+/* ✅ Make content expand like real card */
+.latest-blog-card.skeleton .blog-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  min-width: 300px;
+}
+
+.skeleton-box {
+  display: block;
+  background: linear-gradient(90deg, #e5e7eb 25%, #f3f4f6 37%, #e5e7eb 63%);
+  background-size: 400% 100%;
+  border-radius: 4px;
+  animation: shimmer 1.4s ease infinite;
+}
+
+.skeleton-box.small {
+  width: 40%;
+  height: 14px;
+}
+
+.skeleton-box.medium {
+  width: 70%;
+  height: 18px;
+}
+
+.skeleton-box.large {
+  width: 100%;
+  height: 40px;
+}
+
+.skeleton-box.tiny {
+  width: 30%;
+  height: 12px;
+}
+
+.skeleton-circle {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  animation: shimmer 1.4s ease infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -400px 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .latest-blog-card.skeleton {
+    flex-direction: column;
+  }
+
+  .latest-blog-card.skeleton .blog-card-img {
+    width: 100%;
+    height: 180px;
+  }
+ 
+}

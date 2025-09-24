@@ -7,7 +7,7 @@
   width: calc(90% - 80px);
   padding: 20px 40px;
   margin: 0 auto;
-  background-color: #f9f9f9;
+  background-color: #e9e9e9;
   border-left: 20px solid var(--primary-color);
 }
 .how-different .card h2 {
@@ -16,12 +16,13 @@
 }
 .how-different .card ul li {
   margin-bottom: 10px;
-  text-align: justify;
+  line-height: var(--p-line-height);
+  font-size: var(--default-p-size);
 }
-@media(max-width:900px){
-    .how-different .card {
-  width: calc(90% - 40px);
-  padding: 20px ;
-  border-left: 10px solid var(--primary-color);
-}
+@media (max-width: 900px) {
+  .how-different .card {
+    width: calc(90% - 40px);
+    padding: 20px;
+    border-left: 10px solid var(--primary-color);
+  }
 }

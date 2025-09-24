@@ -21,7 +21,7 @@ const services = [
   },
   {
     name: "Content Writing",
-    slug: "content-writing",
+    slug: "seo-writing",
     items: [
       { name: "SEO Loaded Articles", slug: "seo-loaded-articles" },
       { name: "Content Writing", slug: "content-writing" },
@@ -33,7 +33,7 @@ const services = [
   },
   {
     name: "UI UX Designing",
-    slug: "designing",
+    slug: "ui-ux",
     items: [
       { name: "UI/UX Design", slug: "ui-ux-design" },
       { name: "Infographic Design", slug: "infographic-design" },
@@ -90,7 +90,7 @@ const services = [
   },
   {
     name: "Google Ads Management",
-    slug: "google-ads-management",
+    slug: "google-ads",
     items: [
       { name: "Search Ads", slug: "search-ads" },
       { name: "Display Ads", slug: "display-ads" },
@@ -105,7 +105,6 @@ const Header = () => {
   const router = useRouter();
   const [showDropdown, setShowDropdown] = useState(false); // desktop dropdown
   const [mobileMenu, setMobileMenu] = useState(false); // mobile nav
-  const [mobileServices, setMobileServices] = useState(false); // services in mobile
   // Add these states
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [activeService, setActiveService] = useState(null);
@@ -131,18 +130,16 @@ const Header = () => {
           >
             Services <FaAngleDown />
           </li>
-          <li onClick={() => router.push("/services/seo")}>SEO</li>
-          <li onClick={() => router.push("/services/designing")}>UI/UX</li>
           <li onClick={() => router.push("/case-study")}>Case Study</li>
           <li onClick={() => router.push("/industries")}>
             Industries We Serve
           </li>
-          <li onClick={() => router.push("/blogs")}>Content Library</li>
+          <li onClick={() => router.push("/blog")}>Content Library</li>
           <li onClick={() => router.push("/about-us")}>About Us</li>
-          <li onClick={() => router.push("/contact-us")}>Contact</li>
+          <li onClick={() => router.push("/contact")}>Contact</li>
         </ul>
 
-        <button onClick={() => router.push("/contact-us")}>Get Started</button>
+        <button onClick={() => router.push("/contact")}>Get Started</button>
 
         {/* Hamburger / Cross */}
         {mobileMenu ? (
@@ -157,8 +154,8 @@ const Header = () => {
 
       {/* Desktop Services Dropdown */}
       {showDropdown && (
-        <div className="maindropdown-area">
-          <div className="maindropdown-area-flex ">
+        <div className="maindropdown-area"  >
+          <div className="maindropdown-area-flex " onMouseLeave={hidedropdown}>
             <div className="left" onMouseEnter={hidedropdown}></div>
             <div className="center" onMouseEnter={visibleDropdown}>
               <ServicesDropDown />
@@ -171,27 +168,46 @@ const Header = () => {
       {/* Mobile Nav */}
       <div className={`mobile-menu ${mobileMenu ? "open" : ""}`}>
         <ul>
+          {/* Main Services */}
           <li>
-            <div
-              className="mobile-services"
-              onClick={() => setIsServicesOpen(!isServicesOpen)}
-            >
-              Services <FaAngleDown />
+            <div className="mobile-services-row">
+              <span
+                className="mobile-link"
+                onClick={() => {
+                  router.push("/services");
+                  setMobileMenu(false); // close menu after navigation
+                }}
+              >
+                Services
+              </span>
+              <FaAngleDown
+                className="expand-icon"
+                onClick={() => setIsServicesOpen(!isServicesOpen)}
+              />
             </div>
 
             {isServicesOpen && (
               <ul className="mobile-submenu">
                 {services.map((service, idx) => (
                   <li key={idx}>
-                    <div
-                      className="mobile-services"
-                      onClick={() =>
-                        setActiveService((prev) =>
-                          prev === service.slug ? null : service.slug
-                        )
-                      }
-                    >
-                      {service.name} <FaAngleDown />
+                    <div className="mobile-services-row">
+                      <span
+                        className="mobile-link"
+                        onClick={() => {
+                          router.push(`/services/${service.slug}`);
+                          setMobileMenu(false); // close after navigation
+                        }}
+                      >
+                        {service.name}
+                      </span>
+                      <FaAngleDown
+                        className="expand-icon"
+                        onClick={() =>
+                          setActiveService((prev) =>
+                            prev === service.slug ? null : service.slug
+                          )
+                        }
+                      />
                     </div>
 
                     {/* Subservices */}
@@ -200,7 +216,12 @@ const Header = () => {
                         {service.items.map((sub, subIdx) => (
                           <li
                             key={subIdx}
-                            onClick={() => router.push(`/services/${sub.slug}`)}
+                            onClick={() => {
+                              router.push(
+                                `/services/${service.slug}/${sub.slug}`
+                              );
+                              setMobileMenu(false);
+                            }}
                           >
                             {sub.name}
                           </li>
@@ -213,13 +234,47 @@ const Header = () => {
             )}
           </li>
 
-          <li onClick={() => router.push("/case-study")}>Case Study</li>
-          <li onClick={() => router.push("/industries")}>
+          {/* Other menu items */}
+          <li
+            onClick={() => {
+              router.push("/case-study");
+              setMobileMenu(false);
+            }}
+          >
+            Case Study
+          </li>
+          <li
+            onClick={() => {
+              router.push("/industries");
+              setMobileMenu(false);
+            }}
+          >
             Industries We Serve
           </li>
-          <li onClick={() => router.push("/blogs")}>Content Library</li>
-          <li onClick={() => router.push("/about-us")}>About Us</li>
-          <li onClick={() => router.push("/contact-us")}>Contact</li>
+          <li
+            onClick={() => {
+              router.push("/blog");
+              setMobileMenu(false);
+            }}
+          >
+            Content Library
+          </li>
+          <li
+            onClick={() => {
+              router.push("/about-us");
+              setMobileMenu(false);
+            }}
+          >
+            About Us
+          </li>
+          <li
+            onClick={() => {
+              router.push("/contact");
+              setMobileMenu(false);
+            }}
+          >
+            Contact
+          </li>
         </ul>
       </div>
     </div>

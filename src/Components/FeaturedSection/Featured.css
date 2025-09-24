@@ -8,7 +8,7 @@
   background-color: var(--text-color4);
 }
 .Featured .left {
-  width: 40%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -22,6 +22,7 @@
   width: 35%;
   color: var(--text-color);
   font-size: var(--default-p-size);
+  line-height: var(--p-line-height);
 }
 .trusted .personarea {
   width: 65%;
@@ -54,6 +55,7 @@
 .Featured .left .desc {
   font-size: var(--default-p-size);
   color: var(--text-color3);
+  line-height: var(--p-line-height);
 }
 .Featured .left .buttons-area {
   display: flex;
@@ -114,7 +116,7 @@
   background-position: center;
 }
 
-.Featured .right .top .left .icon {
+.Featured .right .top .left .up-icon {
   height: 100px;
   width: 100px;
   border-radius: 50%;
@@ -126,6 +128,7 @@
   justify-content: center;
   font-size: 50px;
   color: var(--primary-color);
+  
 }
 .Featured .right .top .right {
   width: calc(49% - 40px);
@@ -211,6 +214,7 @@
 }
 .Featured .right .top .right p {
   font-size: var(--default-p-size);
+  line-height: var(--p-line-height);
 }
 
 .Featured .right .top .right p:first-child {

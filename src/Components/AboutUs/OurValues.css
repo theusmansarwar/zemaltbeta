@@ -23,6 +23,10 @@
   color: var(--primary-color);
   margin-bottom: 10px;
 }
+.our-values p {
+  font-size: var(--default-p-size);
+  line-height: var(--p-line-height);
+}
 .our-values .values-img {
   width: 50%;
   margin-left: 25%;

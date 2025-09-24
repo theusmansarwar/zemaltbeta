@@ -1,7 +1,6 @@
 import CaseStudy from "@/Components/CaseStudy/CaseStudy";
 import ServicePageFeatured from "@/Components/ServicePageFeatured/ServicePageFeatured";
 
-
 export const metadata = {
   title: "Case Study | Zemalt",
   description:

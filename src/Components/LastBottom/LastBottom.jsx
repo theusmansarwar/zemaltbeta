@@ -5,7 +5,7 @@ export default function LastBottom() {
   return (
     <section className="lastbottom">
       <div className="lastbottom-left">
-        <h1>Smart Solutions for Your Brand</h1>
+        <h2>Smart Solutions for Your Brand</h2>
         <p>
          We focus on strategies that bring real growth, not just numbers. Our approach ensures better reach, stronger connections, and long-term success. You get solutions designed to adapt to changing trends.
         </p>

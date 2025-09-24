@@ -107,6 +107,8 @@
   align-items: center;
   justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.20);
+  border-radius: 12px;
+   transition: 0.2s ease;
 }
 .work-area .work-div .work-overlay p {
   display: flex;
@@ -131,6 +133,8 @@
 }
 .work-area .work-div:hover .work-overlay {
   justify-content: center;
+  border-radius: 50%;
+  
 }
 @media (max-width: 900px) {
   .realworld {

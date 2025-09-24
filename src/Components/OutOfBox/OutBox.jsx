@@ -3,7 +3,7 @@ import "./OutBox.css";
 import { FaPlay } from "react-icons/fa";
 const OutBox = () => {
   return (
-    <div className="OutBox">
+    <div className="OutBox" id="unique-ideas">
       <div className="top">
         <h2>Delivering the Best Services with Unique Ideas</h2>
         <p>

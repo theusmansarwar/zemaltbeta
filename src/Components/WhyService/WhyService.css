@@ -3,6 +3,7 @@
   width: var(--default-width);
   padding: 50px var(--left-space);
   justify-content: space-between;
+  margin-bottom: 100px;
 }
 .WhyDesign .left {
   width: 40%;
@@ -18,8 +19,8 @@
 }
 .WhyDesign .left p {
   font-size: var(--default-p-size);
-  color: var(--text-color3);
-  line-height: 2;
+  color: var(--main-color);
+  line-height: 1.7;
 }
 @media (max-width: 900px) {
   .WhyDesign {

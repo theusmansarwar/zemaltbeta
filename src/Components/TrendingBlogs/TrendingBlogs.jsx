@@ -1,52 +1,97 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import "./TrendingBlogs.css";
 import truncateTextByWords from "@/utils/TruncateByWords";
-const trendingBlogs = [
-  {
-    id: 1,
-    date: "28 Jun 2021",
-    title: "Richard Norton photorealistic rendering as real photos",
-    image: "/blog-thumbnail.jpg",
-  },
-  {
-    id: 2,
-    date: "28 Jun 2021",
-    title: "Richard Norton photorealistic rendering as real photos",
-    image: "/blog-thumbnail.jpg",
-  },
-  {
-    id: 3,
-    date: "28 Jun 2021",
-    title: "Richard Norton photorealistic rendering as real photos",
-    image: "/blog-thumbnail.jpg",
-  },
-  {
-    id: 4,
-    date: "28 Jun 2021",
-    title: "Richard Norton photorealistic rendering as real photos",
-    image: "/blog-thumbnail.jpg",
-  },
-  {
-    id: 5,
-    date: "23 Jun 2021",
-    title: "Richard Norton photorealistic rendering as real photos",
-    image: "/blog-thumbnail.jpg",
-  },
-];
+import { AiFillInstagram } from "react-icons/ai";
+import { FaLinkedinIn } from "react-icons/fa6";
+import { RiFacebookFill } from "react-icons/ri";
+import { formatDate } from "@/utils/FormatDate";
+import { fetchPopularBlogs } from "@/DAL/Fetch";
+import { baseUrl } from "@/config/Config";
+import TrendingBlogsSkeleton from "../SkeletonLoaders/TrendingBlogsSkeleton";
+
 const TrendingBlogs = () => {
+  const [trendingBlogs, setTrendingBlogs] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const loadTrending = async () => {
+      try {
+        const res = await fetchPopularBlogs(6);
+        setTrendingBlogs(res?.blogs || []);
+      } catch (error) {
+        console.error("Error fetching trending blogs:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadTrending();
+  }, []);
+
+  if (loading) {
+    return <TrendingBlogsSkeleton count={6} />;
+  }
+
   return (
-    <div className="trending-blogs">
-      <h2 className="trending-heading">Trending</h2>
-      <div className="gallery-grid">
-        {trendingBlogs.map((item) => (
-          <div key={item.id} className="gallery-card">
-            <img src={item.image} alt={item.title} />
-            <div className="gallery-overlay">
-              <p className="gallery-date">{item.date}</p>
-              <h3 className="gallery-title">{truncateTextByWords(item.title,6)}</h3>
+    <div className="latest-blogs">
+      <h2 className="latest-heading">Trending Blogs</h2>
+      <div className="latest-blog-grid">
+        {trendingBlogs.map((post) => (
+          <div className="latest-blog-card" key={post._id}>
+            {/* Blog Image */}
+            <div className="blog-card-img">
+              <img src={baseUrl + post.thumbnail} alt={post.title} />
+            </div>
+
+            {/* Blog Content */}
+            <div className="blog-card-content">
+              <span className="blog-category">{post.category.name}</span>
+              <h3 className="blog-title">
+                {truncateTextByWords(post.title, 8)}
+              </h3>
+              <p className="blog-description">
+                {truncateTextByWords(post.description, 20)}
+              </p>
+              <p className="blog-meta">0 Comments – 6 Min Read</p>
+              <hr />
+              <div className="blog-footer">
+                <span className="blog-date">{formatDate(post.createdAt)}</span>
+                <div className="icons-container">
+                  <a
+                    href="https://www.facebook.com/zemaltpvtltd"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="icon">
+                      <RiFacebookFill />
+                    </div>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/zemalt/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="icon">
+                      <FaLinkedinIn />
+                    </div>
+                  </a>
+                  <a
+                    href="https://www.instagram.com/zemaltpvtltd/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="icon">
+                      <AiFillInstagram />
+                    </div>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         ))}
+
+        {trendingBlogs.length === 0 && <p>No blogs found.</p>}
       </div>
     </div>
   );

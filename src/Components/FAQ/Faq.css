@@ -18,10 +18,9 @@
   text-align: left;
 }
 .faq-left p {
-  font-size: 16px;
+  font-size: var(--default-p-size);
   margin-bottom: 20px;
-  line-height: 1.5;
-  text-align: justify;
+  line-height: var(--p-line-height);
 }
 .faq-buttons {
   display: flex;
@@ -68,7 +67,7 @@
   border-top: 1px solid #ccc;
   padding: 26px 0;
 }
-.faq-item:first-child{
+.faq-item:first-child {
   border-top: none;
 }
 
@@ -83,7 +82,7 @@
   margin-top: 10px;
   font-size: var(--default-p-size);
   color: var(--text-color2);
-   text-align: justify;
+  line-height: var(--p-line-height);
 }
 .faq-item:last-child {
   border-bottom: 1px solid #ccc;

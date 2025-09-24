@@ -64,7 +64,7 @@ const IndustryCard = () => {
 
           {/* Right Side (Content) */}
           <div className="right">
-            <h2>{item.title}</h2>
+            <h2 >{item.title}</h2>
             {item.paragraphs.map((p, i) => (
               <p key={i}>{p}</p>
             ))}

@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
-  margin-top: 100px;
+  margin-top: 90px;
 }
 .DesigningCardFeatured h1 {
   font-size: var(--heading-one);
@@ -21,4 +21,10 @@
   font-size: var(--default-p-size);
   text-align: center;
   width: var(--default-width);
+  line-height: var(--p-line-height);
+}
+@media(max-width:900px){
+  .DesigningCardFeatured {
+    margin-top: 70px;
+  }
 }

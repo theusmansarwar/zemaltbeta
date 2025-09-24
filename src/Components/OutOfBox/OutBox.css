@@ -26,7 +26,8 @@
 .OutBox .top p {
   width: 40%;
   color: var(--text-color3);
-   font-size: var(--default-p-size);
+  font-size: var(--default-p-size);
+  line-height: var(--p-line-height);
 }
 .OutBox .bottom .left {
   height: 350px;
@@ -171,8 +172,8 @@
     margin-right: -10px;
     margin-bottom: -10px;
   }
-  .OutBox .bottom .right .play-box svg{
-  font-size: 24px;
+  .OutBox .bottom .right .play-box svg {
+    font-size: 24px;
   }
 
   .circleimg-area {

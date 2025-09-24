@@ -17,6 +17,10 @@
 .about-hero .left h1 {
   font-size: var(--heading-two);
 }
+.about-hero .left p {
+  font-size: var(--default-p-size);
+  line-height: var(--p-line-height);
+}
 .about-hero .left .work-btn {
   width: fit-content;
   background-color: var(--primary-color);

@@ -48,6 +48,11 @@
   width: calc(100% - 40px);
   padding: 20px;
 }
+.designing-card ul li {
+ font-size: var(--default-p-size);
+ line-height: 1.8;
+ color: #868686;
+}
 .icon-area-for-des {
   background-color: var(--main-color);
   height: 70px;

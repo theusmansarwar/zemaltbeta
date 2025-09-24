@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: flex-start;
   padding: 50px 80px;
- background-color: white;
+  background-color: white;
 }
 
 .benefits-left {
@@ -26,8 +26,8 @@
 }
 
 .benefits-text {
-  font-size: 14px;
-  line-height: 1.6;
+  font-size: var(--default-p-size);
+  line-height: var(--p-line-height);
   color: #555;
 }
 
@@ -39,12 +39,10 @@
 }
 
 .benefit-card {
-
   padding: 20px;
   border-radius: 12px;
   text-align: left;
 }
-
 
 .benefit-icon {
   font-size: 30px;

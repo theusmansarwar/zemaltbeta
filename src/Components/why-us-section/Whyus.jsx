@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 const Whyus = () => {
   const router = useRouter();
   return (
-    <section className="why-us-section">
+    <section className="why-us-section" id="why-choose-zemalt">
       <div className="blog-header">
         <div className="header-left2">
           <h2>

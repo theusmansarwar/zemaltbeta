@@ -3,19 +3,21 @@
   padding: 40px var(--left-space);
   background-color: #f9f9f9;
 }
-.sub-service-second h2{
-    font-size: var(--heading-two);
-    margin-bottom: 10px;
+.sub-service-second h2 {
+  font-size: var(--heading-two);
+  margin-bottom: 10px;
 }
-.sub-service-second p span{
-    display: block;
-    margin-bottom: 2px;
+.sub-service-second p span {
+  display: block;
+  margin-bottom: 2px;
 }
-.sub-service-second p{
-    text-align: justify;
+.sub-service-second p {
+  line-height: var(--p-line-height);
+
+  font-size: var(--default-p-size);
 }
-.sub-service-second img{
-    width: 80%;
-    margin-left: 10%;
-    margin-top: 40px;
+.sub-service-second img {
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 40px;
 }

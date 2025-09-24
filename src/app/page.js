@@ -1,23 +1,21 @@
-import Image from "next/image";
+
 import styles from "./page.module.css";
 import Featured from "@/Components/FeaturedSection/Featured";
 import OutBox from "@/Components/OutOfBox/OutBox";
 import Realworld from "@/Components/Realworld/Realworld";
 import Faq from "@/Components/FAQ/Faq";
-import TestimonialSlider from "@/Components/TestimonialSlider/TestimonialSlider";
-import BlogSection from "@/Components/BlogSection/BlogSection";
 import Whyus from "@/Components/why-us-section/Whyus";
 import TestimonialSection from "@/Components/Testimonial/TestimonialSection";
 import SeoSection from "@/Components/SeoSection/SeoSection";
 import MeetTeam from "@/Components/AboutUs/MeetTeam";
 import TestimonialSlider2 from "@/Components/TestimonialSlider/TestimonialSlider2";
+import BlogSection from "@/Components/BlogSection/BlogSection";
 
 export const metadata = {
   title: "Zemalt",
   description:
     "Get smart SEO and marketing solutions with Zemalt that increase search traffic, improve brand reach, and turn visitors into loyal customers.",
 };
-export default function Home() {
   const Homepagefaqs = {
     title: "FAQs",
     description:
@@ -62,6 +60,8 @@ export default function Home() {
     description:
       "Zemalt is a top digital marketing agency. Our team supports brands with comprehensive service solutions, helping clients achieve higher search rankings through expert guidance. With clear strategies and focused actions, we drive more visitors to their websites.",
   };
+export default function Home() {
+
   return (
     <div className={styles.Home}>
       <Featured />

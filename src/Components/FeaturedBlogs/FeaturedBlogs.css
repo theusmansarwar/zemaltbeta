@@ -1,5 +1,5 @@
 .b2b-blogs {
-    width: calc(100% - (var(--left-space) * 2));
+  width: calc(100% - (var(--left-space) * 2));
   padding: 20px var(--left-space);
   background-color: var(--text-color4);
 }
@@ -14,15 +14,14 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px;
   margin-bottom: 30px;
   user-select: none;
 }
 .b2b-blogs .b2b-blog-grid .b2b-blog-card {
   display: flex;
   overflow: hidden;
-  margin: 20px auto;
-  width: 300px;
+  width: 32%;
 }
 
 .b2b-blogs .b2b-blog-grid .b2b-blog-card .blog-card-img img {
@@ -92,8 +91,7 @@
   .blog-footer
   .icons-container {
   display: flex;
-  gap: 0px;
-  color: #374151;
+  gap: 2px;
 }
 
 .b2b-blogs
@@ -102,11 +100,13 @@
   .blog-card-content
   .blog-footer
   .icons-container
+  a
   .icon {
   cursor: pointer;
   transition: color 0.2s ease;
-  font-size: 18px;
+  font-size: 14px;
   flex-shrink: 0;
+  color: var(--main-color);
 }
 
 .b2b-blogs
@@ -115,6 +115,7 @@
   .blog-card-content
   .blog-footer
   .icons-container
+  a
   .icon:hover {
   color: var(--primary-color);
 }

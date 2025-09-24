@@ -1,0 +1,98 @@
+/* Scoped only to blog card skeleton */
+.blog-skeleton-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  animation: blog-skeleton-pulse 1.5s infinite ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Top row (dot + read time placeholder) */
+.blog-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blog-skeleton-dot,
+.blog-skeleton-readtime,
+.blog-skeleton-title,
+.blog-skeleton-desc,
+.blog-skeleton-btn {
+  background: #e0e0e0;
+  border-radius: 4px;
+}
+
+/* Dot */
+.blog-skeleton-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+/* Readtime */
+.blog-skeleton-readtime {
+  width: 80px;
+  height: 14px;
+}
+
+/* Titles */
+.blog-card-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.blog-skeleton-title {
+  width: 70%;
+  height: 18px;
+}
+.blog-skeleton-title.short {
+  width: 50%;
+}
+
+/* Desc + Button row */
+.blog-skeleton-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.desc-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.blog-skeleton-desc {
+  width: 90%;
+  height: 14px;
+}
+
+
+/* Button placeholder */
+.blog-skeleton-btn {
+  padding: 10px 20px;
+  width: 40px;
+  height: 15px;
+  border-radius: 20px;
+}
+
+/* Pulse animation */
+@keyframes blog-skeleton-pulse {
+  0% {
+    background-color: #f0f0f0;
+  }
+  50% {
+    background-color: #e6e6e6;
+  }
+  100% {
+    background-color: #f0f0f0;
+  }
+}

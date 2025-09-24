@@ -14,9 +14,11 @@
   color: var(--primary-color);
   margin-bottom: 10px;
 }
-.fourth-section .left ul li{
+.fourth-section .left ul li {
   margin-bottom: 10px;
   margin-left: 20px;
+  font-size: var(--default-p-size);
+  line-height: var(--p-line-height);
 }
 .fourth-section .left .buttons-area {
   display: flex;
@@ -57,12 +59,12 @@
   .fourth-section .left {
     width: 100%;
   }
-  .fourth-section .left  .buttons-area {
+  .fourth-section .left .buttons-area {
     align-items: flex-start;
     flex-direction: column;
     gap: 10px;
   }
-  .fourth-section .left  .buttons-area p {
+  .fourth-section .left .buttons-area p {
     text-decoration: underline;
     font-size: var(--default-p-size);
     transition: 0.3s ease;

@@ -19,6 +19,7 @@
   --heading-three: 32px;
   --heading-four: 24px;
   --default-p-size: 16px;
+  --p-line-height: 1.4;
 }
 * {
   padding: 0%;
@@ -42,6 +43,10 @@ textarea {
 }
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
 }
 
 .PageBg {

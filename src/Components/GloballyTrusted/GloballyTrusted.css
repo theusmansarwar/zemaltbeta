@@ -21,6 +21,8 @@
 }
 .globally-trusted .content-parent p {
   text-align: center;
+   line-height: var(--p-line-height);
+   font-size: var(--default-p-size);
 }
 .globally-trusted .content-parent .content-container {
   display: flex;

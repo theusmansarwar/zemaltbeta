@@ -29,6 +29,14 @@
   flex-direction: column;
   gap: 20px;
 }
+.industry-grid .industry-card .right h2{
+  font-size: var(--heading-three);
+
+}
+.industry-grid .industry-card .right p{
+  font-size: var(--default-p-size);
+  line-height: var(--p-line-height);
+}
 
 .industry-grid .industry-card .right .buttons-area {
   display: flex;
@@ -84,19 +92,19 @@
   }
   .industry-grid .industry-card .right {
     width: 100%;
-  
+
     gap: 10px;
   }
   .industry-grid .industry-card .right .buttons-area {
-    align-items: flex-start;
-    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .industry-grid .industry-card .right .buttons-area button {
+    padding: 8px 16px;
+    font-size:12px;
     gap: 10px;
   }
   .industry-grid .industry-card .right .buttons-area p {
-    text-decoration: underline;
-    font-size: var(--default-p-size);
-    transition: 0.3s ease;
-    cursor: pointer;
-    margin-left: 22px;
+    font-size: 12px;
   }
 }

@@ -3,7 +3,7 @@ import "./TestimonialSection.css";
 import Cards from "./Cards";
 const TestimonialSection = () => {
   return (
-    <div className="TestimonialSection">
+    <div className="TestimonialSection" id="reviews">
       <img src="/Vector.png" className="testimonial-icon" />
       <div className="Testimonial-header">
         <h2>What Our Clients Say About Results</h2>

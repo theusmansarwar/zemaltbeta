@@ -1,5 +1,5 @@
 .calculator-area {
-  width: var(--default-width);
+  width: calc(100% - 10%);
   padding: 10px 5%;
   background-color: var(--text-color4);
 }
@@ -10,8 +10,8 @@
   background-size: cover;
   padding: 50px 10%;
   border-radius: 15px;
-  width: 70%;
-  margin: 50px 5%;
+  width: calc(100% - 20%);
+  margin: 50px 0;
   text-align: center;
   color: var(--text-color4);
   min-height: 500px;
@@ -82,9 +82,8 @@
 
 
 .calculator-area .blog-header {
-  width: var(--default-width);
-  padding: 0px var(--left-space);
-  margin: 0 auto 3rem;
+  width: 100%;
+  margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;

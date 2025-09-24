@@ -20,7 +20,7 @@ const services = [
   },
   {
     name: "Content Writing",
-    slug: "content-writing",
+    slug: "seo-writing",
     items: [
       { name: "SEO Loaded Articles", slug: "seo-loaded-articles" },
       { name: "Content Writing", slug: "content-writing" },
@@ -32,7 +32,7 @@ const services = [
   },
   {
     name: "UI UX Designing",
-    slug: "designing",
+    slug: "ui-ux",
     items: [
       { name: "UI/UX Design", slug: "ui-ux-design" },
       { name: "Infographic Design", slug: "infographic-design" },
@@ -89,7 +89,7 @@ const services = [
   },
   {
     name: "Google Ads Management",
-    slug: "google-ads-management",
+    slug: "google-ads",
     items: [
       { name: "Search Ads", slug: "search-ads" },
       { name: "Display Ads", slug: "display-ads" },

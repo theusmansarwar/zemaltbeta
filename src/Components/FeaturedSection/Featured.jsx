@@ -1,20 +1,33 @@
 "use client";
 import React from "react";
 import "./Featured.css";
-import { FaArrowRight, FaArrowRightLong, FaArrowTrendUp, FaPlus } from "react-icons/fa6";
+import {
+  FaArrowRight,
+  FaArrowRightLong,
+  FaArrowTrendUp,
+  FaPlus,
+} from "react-icons/fa6";
 import { useRouter } from "next/navigation";
 const Featured = () => {
   const router = useRouter();
   return (
-    <div className="Featured">
+    <div className="Featured" id="zemalt">
       <div className="left">
         <h1>
-          Zemalt- <br /> Where Strategy Meets Success
+          Zemalt- <br /> Smart Moves, Big Wins
         </h1>
         <p className="desc">
           You will find a top-rated SEO agency. It has expert teams in digital
           marketing, design and web development. Each service aligns clearly
-          with your goals.
+          with your goals. You will find a top-rated SEO agency. It has expert
+          teams in digital marketing, design and web development.
+        </p>
+        <p className="desc">
+          You will find a top-rated SEO agency. It has expert teams in digital
+          marketing, design and web development. Each service aligns clearly
+          with your goals. You will find a top-rated SEO agency. It has expert
+          teams in digital marketing, design and web development. Each service
+          aligns clearly with your goals.
         </p>
         <div className="buttons-area">
           <button
@@ -46,7 +59,7 @@ const Featured = () => {
       <div className="right">
         <div className="top">
           <div className="left">
-            <div className="icon">
+            <div className="up-icon">
               <FaArrowTrendUp />
             </div>
           </div>

@@ -12,7 +12,7 @@ const Faq = ({ faqs }) => {
   };
 
   return (
-    <div className="faq-container">
+    <div className="faq-container" id="faqs">
       <div className="faq-left">
         <h2 className="faq-heading">{faqs?.title}</h2>
         <p>{faqs?.description}</p>
@@ -24,11 +24,6 @@ const Faq = ({ faqs }) => {
           >
             More Questions
           </button>
-          <span
-            onClick={()=>{router.push("/contact-us")}}
-          >
-            Contact Us
-          </span>
         </div>
         <img src="/Question.png" alt="FAQs" />
       </div>

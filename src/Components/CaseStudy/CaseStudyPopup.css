@@ -1,6 +1,6 @@
 .study-popup-parent {
   position: fixed;
-  top: 0;
+  top: 40px;
   left: 0;
   width: 100%;
   height: 100vh;
@@ -15,7 +15,7 @@
   margin: 0 auto;
   background-color: var(--text-color4);
   padding: 10px;
-  height: 600px;
+  height: 560px;
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: var(--primary-color) transparent;
@@ -24,6 +24,8 @@
   color: var(--primary-color);
   font-size: 28px;
   cursor: pointer;
+  position: sticky;
+  top: 0;
 }
 /* Top */
 .study-popup .top {
@@ -52,10 +54,16 @@
   display: block;
   text-align: left;
 }
+.study-popup .bottom p {
+  font-size: var(--default-p-size);
+  line-height: var(--p-line-height);
+}
 .study-popup .bottom ul li {
   margin-left: 20px;
   margin-bottom: 10px;
   font-weight: 600;
+  font-size: var(--default-p-size);
+  line-height: var(--p-line-height);
 }
 
 .study-popup .bottom .proposal-btn {

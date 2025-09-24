@@ -14,6 +14,10 @@
 .second-section .left h2 {
   font-size: var(--heading-two);
 }
+.second-section .left p {
+  font-size: var(--default-p-size);
+  line-height: var(--p-line-height);
+}
 .second-section .right {
   width: 30%;
 }

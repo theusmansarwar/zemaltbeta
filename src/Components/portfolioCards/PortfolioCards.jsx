@@ -22,79 +22,8 @@ const projectsToShow = [
       "Pick a style that matches your brand’s identityLorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, dolorum. Corporis impedit explicabo, reiciendis molestias, totam vitae placeat rerum qui quam itaque necessitatibus. Ipsa voluptate architecto eligendi harum non iusto illum quam at enim recusandae et, sunt dicta temporibus excepturi Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, at Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, dolorum. Corporis impedit explicabo, reiciendis molestias, totam vitae placeat rerum qui quam itaque necessitatibus. Ipsa voluptate architecto eligendi harum non iusto illum quam at enim recusandae et, sunt dicta temporibus excepturi Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, at.",
     image: "/how-we-work.png",
   },
-  {
-    name: "Database Integration",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, dolorum. Corporis impedit explicabo, reiciendis molestias, totam vitae placeat rerum qui quam itaque necessitatibus. Ipsa voluptate architecto eligendi harum non iusto illum quam at enim recusandae et, sunt dicta temporibus excepturi Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, at Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, dolorum. Corporis impedit explicabo, reiciendis molestias, totam vitae placeat rerum qui quam itaque necessitatibus. Ipsa voluptate architecto eligendi harum non iusto illum quam at enim recusandae et, sunt dicta temporibus excepturi Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, at.",
-    image: "/how-we-work.png",
-  },
-  {
-    name: "Copywriting # of Pages",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, dolorum. Corporis impedit explicabo, reiciendis molestias, totam vitae placeat rerum qui quam itaque necessitatibus. Ipsa voluptate architecto eligendi harum non iusto illum quam at enim recusandae et, sunt dicta temporibus excepturi Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, at Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, dolorum. Corporis impedit explicabo, reiciendis molestias, totam vitae placeat rerum qui quam itaque necessitatibus. Ipsa voluptate architecto eligendi harum non iusto illum quam at enim recusandae et, sunt dicta temporibus excepturi Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, at.",
-    image: "/how-we-work.png",
-  },
-  {
-    name: "E-Commerce Functionality",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, dolorum. Corporis impedit explicabo, reiciendis molestias, totam vitae placeat rerum qui quam itaque necessitatibus. Ipsa voluptate architecto eligendi harum non iusto illum quam at enim recusandae et, sunt dicta temporibus excepturi Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, at Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, dolorum. Corporis impedit explicabo, reiciendis molestias, totam vitae placeat rerum qui quam itaque necessitatibus. Ipsa voluptate architecto eligendi harum non iusto illum quam at enim recusandae et, sunt dicta temporibus excepturi Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, at.",
-    image: "/how-we-work.png",
-  },
-  {
-    name: "SEO with Placement Guarantee",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, dolorum. Corporis impedit explicabo, reiciendis molestias, totam vitae placeat rerum qui quam itaque necessitatibus. Ipsa voluptate architecto eligendi harum non iusto illum quam at enim recusandae et, sunt dicta temporibus excepturi Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, at Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, dolorum. Corporis impedit explicabo, reiciendis molestias, totam vitae placeat rerum qui quam itaque necessitatibus. Ipsa voluptate architecto eligendi harum non iusto illum quam at enim recusandae et, sunt dicta temporibus excepturi Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, at.",
-    image: "/how-we-work.png",
-  },
-  {
-    name: "CMS",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, dolorum. Corporis impedit explicabo, reiciendis molestias, totam vitae placeat rerum qui quam itaque necessitatibus. Ipsa voluptate architecto eligendi harum non iusto illum quam at enim recusandae et, sunt dicta temporibus excepturi Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, at Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, dolorum. Corporis impedit explicabo, reiciendis molestias, totam vitae placeat rerum qui quam itaque necessitatibus. Ipsa voluptate architecto eligendi harum non iusto illum quam at enim recusandae et, sunt dicta temporibus excepturi Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, at.",
-    image: "/how-we-work.png",
-  },
-  {
-    name: "Logo Design",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, dolorum. Corporis impedit explicabo, reiciendis molestias, totam vitae placeat rerum qui quam itaque necessitatibus. Ipsa voluptate architecto eligendi harum non iusto illum quam at enim recusandae et, sunt dicta temporibus excepturi Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, at Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, dolorum. Corporis impedit explicabo, reiciendis molestias, totam vitae placeat rerum qui quam itaque necessitatibus. Ipsa voluptate architecto eligendi harum non iusto illum quam at enim recusandae et, sunt dicta temporibus excepturi Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, at.",
-    image: "/how-we-work.png",
-  },
-  {
-    name: "Custom Illustrations",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, dolorum. Corporis impedit explicabo, reiciendis molestias, totam vitae placeat rerum qui quam itaque necessitatibus. Ipsa voluptate architecto eligendi harum non iusto illum quam at enim recusandae et, sunt dicta temporibus excepturi Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, at Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, dolorum. Corporis impedit explicabo, reiciendis molestias, totam vitae placeat rerum qui quam itaque necessitatibus. Ipsa voluptate architecto eligendi harum non iusto illum quam at enim recusandae et, sunt dicta temporibus excepturi Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, at.",
-    image: "/how-we-work.png",
-  },
-  {
-    name: "Blog Setup",
-    description:
-      "ILorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, dolorum. Corporis impedit explicabo, reiciendis molestias, totam vitae placeat rerum qui quam itaque necessitatibus. Ipsa voluptate architecto eligendi harum non iusto illum quam at enim recusandae et, sunt dicta temporibus excepturi Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, at Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, dolorum. Corporis impedit explicabo, reiciendis molestias, totam vitae placeat rerum qui quam itaque necessitatibus. Ipsa voluptate architecto eligendi harum non iusto illum quam at enim recusandae et, sunt dicta temporibus excepturi Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, at.",
-    image: "/how-we-work.png",
-  },
-  {
-    name: "Social Media Integration",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, dolorum. Corporis impedit explicabo, reiciendis molestias, totam vitae placeat rerum qui quam itaque necessitatibus. Ipsa voluptate architecto eligendi harum non iusto illum quam at enim recusandae et, sunt dicta temporibus excepturi Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, at Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, dolorum. Corporis impedit explicabo, reiciendis molestias, totam vitae placeat rerum qui quam itaque necessitatibus. Ipsa voluptate architecto eligendi harum non iusto illum quam at enim recusandae et, sunt dicta temporibus excepturi Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, at.",
-    image: "/how-we-work.png",
-  },
-  {
-    name: "Email Newsletter Setup",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, dolorum. Corporis impedit explicabo, reiciendis molestias, totam vitae placeat rerum qui quam itaque necessitatibus. Ipsa voluptate architecto eligendi harum non iusto illum quam at enim recusandae et, sunt dicta temporibus excepturi Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, at Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, dolorum. Corporis impedit explicabo, reiciendis molestias, totam vitae placeat rerum qui quam itaque necessitatibus. Ipsa voluptate architecto eligendi harum non iusto illum quam at enim recusandae et, sunt dicta temporibus excepturi Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, at.",
-    image: "/how-we-work.png",
-  },
-  {
-    name: "Analytics Setup",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, dolorum. Corporis impedit explicabo, reiciendis molestias, totam vitae placeat rerum qui quam itaque necessitatibus. Ipsa voluptate architecto eligendi harum non iusto illum quam at enim recusandae et, sunt dicta temporibus excepturi Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, at Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, dolorum. Corporis impedit explicabo, reiciendis molestias, totam vitae placeat rerum qui quam itaque necessitatibus. Ipsa voluptate architecto eligendi harum non iusto illum quam at enim recusandae et, sunt dicta temporibus excepturi Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, at.",
-    image: "/how-we-work.png",
-  },
-  {
-    name: "Security Features",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, dolorum. Corporis impedit explicabo, reiciendis molestias, totam vitae placeat rerum qui quam itaque necessitatibus. Ipsa voluptate architecto eligendi harum non iusto illum quam at enim recusandae et, sunt dicta temporibus excepturi Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, at Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, dolorum. Corporis impedit explicabo, reiciendis molestias, totam vitae placeat rerum qui quam itaque necessitatibus. Ipsa voluptate architecto eligendi harum non iusto illum quam at enim recusandae et, sunt dicta temporibus excepturi Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, at.",
-    image: "/how-we-work.png",
-  },
 ];
+
 const PortfolioCards = ({title}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);

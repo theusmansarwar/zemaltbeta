@@ -6,7 +6,7 @@
   padding-bottom: 0px;
   gap: 30px;
   scrollbar-width: none;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   background-color: var(--text-color4);
   justify-content: center;
 }
@@ -62,6 +62,8 @@
   color: var(--main-color);
   margin-bottom: 10px;
   text-align: justify;
+  line-height: var(--p-line-height);
+  font-size: var(--default-p-size);
 }
 .portfolio-btn-area {
   display: flex;

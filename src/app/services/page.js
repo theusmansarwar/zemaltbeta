@@ -1,6 +1,5 @@
 import styles from "./page.module.css";
 import Realworld from "@/Components/Realworld/Realworld";
-import BlogSection from "@/Components/BlogSection/BlogSection";
 import Servicefeatured from "@/Components/ServiceFeatured/Servicefeatured";
 import Services from "@/Components/services/Services";
 import LastBottom from "@/Components/LastBottom/LastBottom";
@@ -8,6 +7,7 @@ import DriveRevenue from "@/Components/DriveRevenue/DriveRevenue";
 import TestimonialSlider2 from "@/Components/TestimonialSlider/TestimonialSlider2";
 import GloballyTrusted from "@/Components/GloballyTrusted/GloballyTrusted";
 import HowDifferent from "@/Components/HowDifferent/HowDifferent";
+import BlogSection from "@/Components/BlogSection/BlogSection";
 export const metadata = {
   title: "Services | Zemalt",
   description:

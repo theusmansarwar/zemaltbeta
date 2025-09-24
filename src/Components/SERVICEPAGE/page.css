@@ -3,7 +3,7 @@
   width: 100%;
   z-index: 1;
   min-height: 100vh;
- margin-top: 100px;
+  margin-top: 90px;
 }
 
 .homebg::before {
@@ -19,7 +19,12 @@
   opacity: 0.06;
   z-index: -1;
 }
-.homebg h2{
+.homebg h2 {
   font-size: var(--heading-two);
   text-align: center;
+}
+@media (max-width: 900px) {
+  .homebg {
+    margin-top: 70px;
+  }
 }

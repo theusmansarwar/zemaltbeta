@@ -3,24 +3,21 @@ import React, { useState } from "react";
 import "./MapSection.css";
 
 const mapSectionData = {
-  heading: "Lorem ipsum, dolor sit amet consectetur",
-  description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, repudiandae eius consequatur excepturi voluptatibus exercitationem, accusamus cumque, sint perspiciatis temporibus odit distinctio laudantium quisquam illo a dolorum. Nisi itaque deserunt voluptas quia ex perspiciatis molestiae. Praesentium odit consequuntur quos. Possimus aspernatur culpa, quaerat mollitia voluptates?",
+  heading: "Contact Us",
   list: [
-    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam officiis vel et neque libero qui nam veniam eveniet sed ipsum.",
-    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam officiis vel et neque libero qui nam veniam eveniet sed ipsum.",
-    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam officiis vel et neque libero qui nam veniam eveniet sed ipsum.",
-    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam officiis vel et neque libero qui nam veniam eveniet sed ipsum.",
-    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam officiis vel et neque libero qui nam veniam eveniet sed ipsum.",
-    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam officiis vel et neque libero qui nam veniam eveniet sed ipsum.",
+    "Get in touch with Zemalt and take the first step toward digital growth. Our contact page gives you direct access to our team and services. You can easily share your goals, ask questions, or request details about how we can support your business.",
+    "Our experts are ready to guide you on SEO services, social media marketing, paid advertising, and graphic design. Every query matters to us, and we provide quick responses with clear solutions. Businesses choose Zemalt agency because we listen, understand, and create plans that drive real growth.",
+    "Contact us today and start your journey with a trusted digital marketing partner. Tell us what you need, and we will build a strategy that fits your brand and delivers results. Your success is our priority, and our team is here to help you take the next step.",
+    "You can use this page to request a free consultation or ask for a custom plan. Our process is simple, and we make sure you get the right answers without delay. We value every message and reply with the details that match your needs.",
+    "Zemalt believes in long-term partnerships. We are here to support your business not only today but also in the future. By contacting us, you take the first step toward better visibility, stronger online presence, and consistent digital growth.",
   ],
 };
 const MapSection = () => {
-  const [expanded, setExpanded] = useState(false);
+  // const [expanded, setExpanded] = useState(false);
 
-  const toggleReadMore = () => {
-    setExpanded(!expanded);
-  };
+  // const toggleReadMore = () => {
+  //   setExpanded(!expanded);
+  // };
   return (
     <div className="map-section">
       <div className="left">
@@ -30,9 +27,9 @@ const MapSection = () => {
           <p key={index}>{item}</p>
         ))}
 
-        <div className="read-more-btn" onClick={toggleReadMore}>
+        {/* <div className="read-more-btn" onClick={toggleReadMore}>
           {expanded ? "Read Less -" : "Read More +"}
-        </div>
+        </div> */}
       </div>
 
       <div className="right">

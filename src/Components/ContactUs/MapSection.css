@@ -28,6 +28,8 @@
 }
 .map-section .left p {
   text-align: left;
+  font-size: var(--default-p-size);
+  line-height: var(--p-line-height);
 }
 
 /* ✅ Collapse list smoothly */

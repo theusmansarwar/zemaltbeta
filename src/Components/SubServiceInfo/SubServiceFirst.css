@@ -18,13 +18,14 @@
   font-size: var(--heading-two);
   color: var(--primary-color);
   display: inline-block;
-  min-width: 50px; 
-  text-align: right; 
+  min-width: 50px;
+  text-align: right;
 }
 
 .sub-service-first .content-box p {
   margin-bottom: 15px;
-  text-align: justify;
+  line-height: var(--p-line-height);
+  font-size: var(--default-p-size);
 }
 .sub-service-first .content-box p span {
   display: block;
@@ -38,5 +39,8 @@
   }
   .sub-service-first .content-box p span {
     font-size: 14px;
+  }
+  .sub-service-first .content-box strong {
+    text-align: left;
   }
 }

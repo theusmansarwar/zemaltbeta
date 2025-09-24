@@ -53,7 +53,7 @@ const TestimonialSlider2 = () => {
   };
 
   return (
-    <div className="testimonial-slider2">
+    <div className="testimonial-slider2" id="revenue-impact">
       <h2>Real Revenue Impact for Our Clients</h2>
 
       <div className="slider-wrapper">

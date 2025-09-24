@@ -52,6 +52,7 @@
 }
 .maindropdown-area {
   width: 100%;
+  height: 450px;
   position: fixed;
   top: 50px;
   z-index: 60;
@@ -61,6 +62,7 @@
   display: flex;
   overflow: hidden;
   width: 100%;
+  height: 450px;
 }
 .maindropdown-area .left,
 .maindropdown-area .right {
@@ -106,7 +108,7 @@
 }
 
 /* Mobile Services Dropdown */
-.mobile-services {
+.mobile-services-row {
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -42,7 +42,7 @@ const teamMembers = [
 const MeetTeam = () => {
   const [hoveredId, setHoveredId] = useState();
   return (
-    <div className="meet-team">
+    <div className="meet-team" id="team">
       <h2>Meet the team</h2>
       <p>
         Great work begins with the right people and institutions. Zemalt brings
