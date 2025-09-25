@@ -15,7 +15,7 @@
   font-size: var(--default-p-size);
 }
 
-.team-cards-container {
+.meet-team-container {
   flex: 1;
   display: flex;
   align-items: center;
@@ -24,7 +24,7 @@
   padding: 40px 0;
 }
 
-.team-card {
+.meet-team-card {
   position: relative;
   width: 130px;
   height: 280px;
@@ -36,14 +36,14 @@
   background-color: var(--background);
 }
 
-.team-card.expanded {
+.meet-team-card.expanded {
   width: 280px;
   height: 280px;
   z-index: 10;
   opacity: 1;
 }
 
-.team-card.collapsed {
+.meet-team-card.collapsed {
   opacity: 1;
 }
 
@@ -64,7 +64,7 @@
   filter: grayscale(100%);
 }
 
-.team-card.expanded .card-img {
+.meet-team-card.expanded .card-img {
   object-fit: cover;
   filter: grayscale(0);
 }
@@ -83,11 +83,11 @@
   flex-direction: column;
 }
 
-.team-card.expanded .card-content {
+.meet-team-card.expanded .card-content {
   opacity: 1;
   transform: translateY(0);
 }
-.team-card.expanded .card-content {
+.meet-team-card.expanded .card-content {
   background: linear-gradient(to top, var(--main-color), transparent);
 }
 .card-name {
@@ -131,12 +131,12 @@
   right: -100px;
 }
 @media (max-width: 900px) {
-  .team-cards-container {
+  .meet-team-container {
     flex-wrap: wrap; /* allow wrapping */
     justify-content: center; /* center cards */
   }
 
-  .team-card {
+  .meet-team-card {
     width: 100%; /* take full width */
     max-width: 300px; /* optional: prevent being too large */
     height: auto; /* adjust height */
@@ -144,8 +144,8 @@
   }
 
   /* Force expanded state always */
-  .team-card,
-  .team-card.expanded {
+  .meet-team-card,
+  .meet-team-card.expanded {
     width: 100%;
     max-width: 300px;
     height: auto;
@@ -154,12 +154,12 @@
   }
 
   /* Image always full color */
-  .team-card .card-img {
+  .meet-team-card .card-img {
     filter: grayscale(0);
   }
 
   /* Show content by default */
-  .team-card .card-content {
+  .meet-team-card .card-content {
     opacity: 1;
     transform: translateY(0);
     background: linear-gradient(to top, var(--main-color), transparent);

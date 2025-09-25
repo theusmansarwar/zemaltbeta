@@ -6,6 +6,7 @@ import { FaLinkedinIn } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
 import { fetchAllTeam } from "@/DAL/Fetch";
 import { baseUrl } from "@/config/Config";
+import TeamCardSkeleton from "../SkeletonLoaders/TeamCardSkeleton";
 
 const TeamCard = () => {
   const [categories, setCategories] = useState([]);
@@ -68,9 +69,9 @@ const TeamCard = () => {
     </div>
   );
 
-  if (loading) {
-    return <p className="loading-text">Loading team...</p>;
-  }
+ if (loading) {
+  return <TeamCardSkeleton />;
+}
 
   return (
     <div className="team-section">

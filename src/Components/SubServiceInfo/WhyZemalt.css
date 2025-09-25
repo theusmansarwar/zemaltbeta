@@ -1,0 +1,29 @@
+.why-zemalt {
+  height: fit-content;
+  width: (100% - 10%);
+  padding: 40px 5%;
+  background-color: var(--text-color4);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.why-zemalt h2 {
+  font-size: var(--heading-two);
+  text-align: left;
+}
+.why-zemalt p {
+  font-size: var(--default-p-size);
+  line-height: var(--p-line-height);
+}
+.why-zemalt ul li {
+  font-size: var(--default-p-size);
+  line-height: var(--p-line-height);
+  margin-bottom: 5px;
+  margin-left: 20px;
+}
+@media (max-width: 900px) {
+  .why-zemalt {
+    gap: 10px;
+    padding: 20px 5%;
+  }
+}

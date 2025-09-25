@@ -23,7 +23,7 @@ const Whyus = () => {
           <button
             className="see-more"
             onClick={() => {
-              router.push("/contact-us");
+              router.push("/contact");
             }}
           >
             Schedules a call

@@ -94,13 +94,31 @@ export const fetchServicesSlugs = async () => {
   return invokeApi(reqObj);
 };
 
-export const fetchAllTeam= async () => {
+export const fetchAllTeam = async () => {
   const reqObj = {
     path: `/team/live`,
     method: "GET",
-    headers: {
-    
-    },
+    headers: {},
+
+    postData: {},
+  };
+  return invokeApi(reqObj);
+};
+export const fetchFeaturedTeam = async () => {
+  const reqObj = {
+    path: `/team/featured`,
+    method: "GET",
+    headers: {},
+
+    postData: {},
+  };
+  return invokeApi(reqObj);
+};
+export const fetchTestimonial = async () => {
+  const reqObj = {
+    path: `/testimonial/live`,
+    method: "GET",
+    headers: {},
 
     postData: {},
   };

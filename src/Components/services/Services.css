@@ -28,10 +28,10 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/Backgroundservice.jpg");
+  background-image: url("/distortion-img.png");
   background-size: cover;
   background-position: center;
-  opacity: 0.2; /* Change this value for more or less transparency */
+  opacity: 0.08; /* Change this value for more or less transparency */
 }
 .servicecard .overlay2 {
   width: 100%;

@@ -19,7 +19,7 @@ const Faq = ({ faqs }) => {
         <div className="faq-buttons">
           <button
             onClick={() => {
-              router.push("/contact-us");
+              router.push("/contact");
             }}
           >
             More Questions

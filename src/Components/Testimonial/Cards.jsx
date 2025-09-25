@@ -37,7 +37,7 @@ const Cards = () => {
       </div>
       <div className="testimonial-card">
         <div className="testimonial-content">
-          <img className="testimonial-logo" src="/clutch.png" />
+          <img className="testimonial-logo" src="/clutch-logo.png" />
           <p>
             We are the top digital marketing agency for branding corp. We offer
             a full rang engine ....

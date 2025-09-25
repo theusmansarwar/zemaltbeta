@@ -1,0 +1,49 @@
+.proven-steps {
+  width: 100% - (var(--left-space) * 2);
+  padding: 40px var(--left-space);
+  background-color: var(--text-color4);
+}
+.proven-steps h2 {
+  font-size: var(--heading-two);
+  margin-bottom: 30px;
+}
+
+.proven-steps .content-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.proven-steps .content-box strong {
+  font-size: var(--heading-two);
+  color: var(--primary-color);
+  display: inline-block;
+  min-width: 50px;
+  text-align: right;
+}
+
+.proven-steps .content-box p {
+  margin-bottom: 15px;
+  line-height: var(--p-line-height);
+  font-size: var(--default-p-size);
+}
+.proven-steps .content-box p span {
+  display: block;
+  margin-bottom: 2px;
+}
+
+@media (max-width: 900px) {
+  .proven-steps {
+  padding: 20px var(--left-space);
+}
+  .proven-steps .content-box {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .proven-steps .content-box p span {
+    font-size: 14px;
+  }
+  .proven-steps .content-box strong {
+    text-align: left;
+  }
+}

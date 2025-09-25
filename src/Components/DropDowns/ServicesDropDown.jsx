@@ -133,6 +133,7 @@ const ServicesDropDown = () => {
                 onClick={() => {
                   router.push(`/services/${services[selectedIndex].slug}`);
                 }}
+                
                 key={index}
                 onMouseEnter={() => setSelectedIndex(index)}
                 className={selectedIndex === index ? "active" : ""}
@@ -166,7 +167,7 @@ const ServicesDropDown = () => {
         {/* Right Section with Background Image */}
         <div className="right">
           <img src="/dropdown-img.svg" alt="" />
-          <p className="view-all-btn">
+          <p className="view-all-btn" onClick={()=>{router.push("/case-study")}}>
             Check Examples <FiArrowRight />
           </p>
         </div>

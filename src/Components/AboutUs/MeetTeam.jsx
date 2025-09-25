@@ -1,46 +1,31 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./MeetTeam.css";
-const teamMembers = [
-  {
-    id: 1,
-    name: "Sarah Johnson",
-    role: "CEO & Founder",
-    image: "/member.jpg",
-  },
-  {
-    id: 2,
-    name: "Prabh Nair",
-    role: "Program Director",
-    image: "/member.jpg",
-  },
-  {
-    id: 3,
-    name: "Emily Chen",
-    role: "Head of Operations",
-    image: "/member.jpg",
-  },
-  {
-    id: 4,
-    name: "Emily Chen",
-    role: "Head of Operations",
-    image: "/member.jpg",
-  },
-  {
-    id: 5,
-    name: "Emily Chen",
-    role: "Head of Operations",
-    image: "/member.jpg",
-  },
-  {
-    id: 6,
-    name: "Emily Chen",
-    role: "Head of Operations",
-    image: "/member.jpg",
-  },
-];
+import { fetchFeaturedTeam } from "@/DAL/Fetch";
+import { baseUrl } from "@/config/Config";
+import MeetTeamSkeleton from "../SkeletonLoaders/MeetTeamSkeleton";
+
 const MeetTeam = () => {
-  const [hoveredId, setHoveredId] = useState();
+  const [hoveredId, setHoveredId] = useState(null);
+  const [teamData, setTeamData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchTeam = async () => {
+      try {
+        const res = await fetchFeaturedTeam();
+        setTeamData(res?.Members || []);
+      } catch (err) {
+        console.error("Error fetching team:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchTeam();
+  }, []);
+
+  if (loading) return <MeetTeamSkeleton />;
+  
   return (
     <div className="meet-team" id="team">
       <h2>Meet the team</h2>
@@ -56,32 +41,39 @@ const MeetTeam = () => {
         industry. Zemalt gains a group of professionals who care about your
         growth as much as you do.
       </p>
+
       <div className="top-circle1"></div>
       <div className="top-circle2"></div>
-      <div className="team-cards-container">
-        {teamMembers.map((member) => (
+
+      <div className="meet-team-container">
+        {teamData.map((member) => (
           <div
-            key={member.id}
-            className={`team-card ${
-              hoveredId === member.id ? "expanded" : "collapsed"
+            key={member._id || member.id}
+            className={`meet-team-card ${
+              hoveredId === (member._id || member.id) ? "expanded" : "collapsed"
             }`}
-            onMouseEnter={() => setHoveredId(member.id)}
+            onMouseEnter={() => setHoveredId(member._id || member.id)}
             onMouseLeave={() => setHoveredId(null)}
           >
             <div className="card-image">
               <img
-                src={member.image || "/placeholder.svg"}
+                src={
+                  member.image
+                    ? `${baseUrl}${member.image}`
+                    : "/placeholder.svg"
+                }
                 alt={member.name}
                 className="card-img"
               />
             </div>
             <div className="card-content">
               <h4 className="card-name">{member.name}</h4>
-              <p className="card-role">{member.role}</p>
+              <p className="card-role">{member.role?.name || member.role}</p>
             </div>
           </div>
         ))}
       </div>
+
       <div className="bottom-circle"></div>
     </div>
   );

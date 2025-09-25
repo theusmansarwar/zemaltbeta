@@ -1,23 +1,33 @@
-.sub-service-second {
+.sub-service-fourth {
   width: 100% - (var(--left-space) * 2);
   padding: 40px var(--left-space);
   background-color: #f9f9f9;
 }
-.sub-service-second h2 {
+.sub-service-fourth h2 {
   font-size: var(--heading-two);
   margin-bottom: 10px;
 }
-.sub-service-second p span {
+.sub-service-fourth p span {
   display: block;
   margin-bottom: 2px;
 }
-.sub-service-second p {
+.sub-service-fourth p {
   line-height: var(--p-line-height);
 
   font-size: var(--default-p-size);
 }
-.sub-service-second img {
+.sub-service-fourth img {
   width: 60%;
   margin-left: 20%;
   margin-top: 40px;
+}
+
+@media (max-width: 900px) {
+  .sub-service-fourth {
+    padding: 20px var(--left-space);
+  }
+  .sub-service-fourth img {
+    width: 100%;
+    margin: 20px 0;
+  }
 }

@@ -1,8 +1,8 @@
 import React from "react";
-import "./SubServiceSecond.css";
-const SubServiceSecond = () => {
+import "./SubServiceFourth.css";
+const SubServiceFourth = () => {
   return (
-    <div className="sub-service-second">
+    <div className="sub-service-fourth">
       <h2>
         dolor gravida nec hendrerit odio vitae elit nisl. nisl. hendrerit
         gravida
@@ -21,4 +21,4 @@ const SubServiceSecond = () => {
   );
 };
 
-export default SubServiceSecond;
+export default SubServiceFourth;

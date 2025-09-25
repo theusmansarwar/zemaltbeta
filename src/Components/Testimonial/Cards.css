@@ -79,6 +79,16 @@
   border: none;
   color: var(--main-color);
 }
+@media (max-width: 1280px) {
+  .cards-area-testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+   .testimonial-card {
+    width: calc(48% - 40px);
+  }
+}
 @media (max-width: 900px) {
   .cards-area-testimonials {
     flex-direction: column;
@@ -108,10 +118,10 @@
     margin-bottom: -5px;
   }
   .check-now-button:hover .arrow-btn {
-  bottom: 50%;
-  transform: translateY(-190%);
-  background-color: transparent;
-  border: none;
-  color: var(--main-color);
-}
+    bottom: 50%;
+    transform: translateY(-190%);
+    background-color: transparent;
+    border: none;
+    color: var(--main-color);
+  }
 }

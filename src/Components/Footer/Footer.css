@@ -4,7 +4,7 @@
   padding-top: 60px;
   margin-top: 60px;
   height: fit-content;
-  z-index: 1; /* keep content above overlay */
+  z-index: auto; /* keep content above overlay */
   background-image: url(/footer-bg.webp);
   background-size: cover;
   background-position: center;
@@ -30,7 +30,7 @@
   position: absolute;
   top: -60px;
   left: 5%;
-  z-index: 10;
+  z-index: auto;
 }
 
 .header-content {
@@ -72,13 +72,25 @@
   font-weight: 400;
 }
 
-.zemalt-logo {
+.header-right .contact-btn {
+  background-color: var(--primary-color);
+  color: var(--text-color4);
+  border-radius: var(--border-radius1);
+  width: fit-content;
+  height: fit-content;
+  padding: 10px 15px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  white-space: nowrap;
   gap: 10px;
+  border: 1px solid var(--primary-color);
+  cursor: pointer;
+  transition: 0.3s ease;
 }
-.zemalt-logo img {
-  width: 150px;
+.header-right .contact-btn:hover {
+  background-color: transparent;
+  color: var(--main-color);
 }
 
 .footer-main {
@@ -263,12 +275,12 @@
     gap: 10px;
   }
 
-  .zemalt-logo {
-    justify-content: center;
+  .header-right .contact-btn {
+    font-size: 12px;
   }
   .get-in-touch::after {
-  width:80px; 
-}
+    width: 80px;
+  }
   .tagline {
     font-size: 14px;
   }

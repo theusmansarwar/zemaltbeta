@@ -75,7 +75,7 @@ const BlogSection = ({ data }) => {
                   </p>
                   <button
                     className="read-button"
-                    onClick={() => router.push(`/blogs/${blog.slug}`)}
+                    onClick={() => router.push(`/blog/${blog.slug}`)}
                   >
                     <FaArrowRight />
                   </button>

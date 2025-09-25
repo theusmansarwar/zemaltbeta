@@ -1,12 +1,7 @@
 "use client";
 import React from "react";
 import "./Featured.css";
-import {
-  FaArrowRight,
-  FaArrowRightLong,
-  FaArrowTrendUp,
-  FaPlus,
-} from "react-icons/fa6";
+import { FaArrowRight, FaArrowTrendUp } from "react-icons/fa6";
 import { useRouter } from "next/navigation";
 const Featured = () => {
   const router = useRouter();
@@ -17,22 +12,17 @@ const Featured = () => {
           Zemalt- <br /> Smart Moves, Big Wins
         </h1>
         <p className="desc">
-          You will find a top-rated SEO agency. It has expert teams in digital
-          marketing, design and web development. Each service aligns clearly
-          with your goals. You will find a top-rated SEO agency. It has expert
-          teams in digital marketing, design and web development.
+          You will find a top-rated SEO agency. It has expert teams in digital marketing, design, and web development. Each service aligns clearly with your goals
         </p>
         <p className="desc">
-          You will find a top-rated SEO agency. It has expert teams in digital
-          marketing, design and web development. Each service aligns clearly
-          with your goals. You will find a top-rated SEO agency. It has expert
-          teams in digital marketing, design and web development. Each service
-          aligns clearly with your goals.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum sit
+          quas Dolorum sit quas maiores consequuntur! Reprehenderit reiciendis
+          nihil consectetur et
         </p>
         <div className="buttons-area">
           <button
             onClick={() => {
-              router.push("/contact-us");
+              router.push("/contact");
             }}
           >
             Schedules a call <FaArrowRight />

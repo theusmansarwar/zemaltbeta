@@ -4,9 +4,10 @@
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
-background-color: white;
-padding: 50px 5%;
-padding-bottom: 0px;}
+  background-color: white;
+  padding: 50px 5%;
+  padding-bottom: 0px;
+}
 
 .card-wrapper {
   /* flex: 0 0 32%; 3 per row */
@@ -22,7 +23,7 @@ padding-bottom: 0px;}
   background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
- padding: 30px;
+  padding: 30px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   position: relative;
@@ -30,14 +31,14 @@ padding-bottom: 0px;}
   border-radius: var(--border-radius1);
   box-shadow: var(--default-box-shadow2);
 }
-.cardstyle h2{
-color:black
+.cardstyle h2 {
+  color: black;
 }
-.cardstyle h3{
-color:rgb(0, 116, 205)
+.cardstyle h3 {
+  color: rgb(0, 116, 205);
 }
-.cardstyle p{
-color:rgb(29, 29, 29)
+.cardstyle p {
+  color: rgb(29, 29, 29);
 }
 /* Expanded card overlays its row */
 .cardstyle.active {
@@ -50,42 +51,41 @@ color:rgb(29, 29, 29)
 
 /* If it's a last row card, expand upwards instead of downwards */
 .cardstyle.active.last-row {
-  top: auto;      /* reset */
-  bottom: 0;      /* expand upwards */
+  top: auto; /* reset */
+  bottom: 0; /* expand upwards */
 }
-.cardstyle-btn{
-    background-color: transparent;
-    color: rgb(0, 0, 0);
-    padding: 10px 0px;
-    width: 100%;
-     border-radius: var(--border-radius2);
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     gap: 10px;
-     border: 1px solid black;
-    
+.cardstyle-btn {
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  padding: 10px 0px;
+  width: 100%;
+  border-radius: var(--border-radius2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid black;
 }
-.cardstyle-btn:hover{
-    background-color: black;
-    color: white;
-    padding: 10px 0px;
-    width: 100%;
-     border-radius: var(--border-radius2);
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     gap: 10px;
+.cardstyle-btn:hover {
+  background-color: black;
+  color: white;
+  padding: 10px 0px;
+  width: 100%;
+  border-radius: var(--border-radius2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
-.cardstyle-btn span{
-    line-height: 1;
+.cardstyle-btn span {
+  line-height: 1;
 }
 @media (max-width: 900px) {
-    .card-wrapper {
-  /* flex: 0 0 32%; 3 per row */
-  width: 32%;
-  min-width: 350px;
-  position: relative; /* so absolute children stay within this slot */
-  height: fit-content;
-}
+  .card-wrapper {
+    /* flex: 0 0 32%; 3 per row */
+    width: 32%;
+    min-width: 350px;
+    position: relative; /* so absolute children stay within this slot */
+    height: fit-content;
+  }
 }

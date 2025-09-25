@@ -32,6 +32,7 @@
   z-index: 1;
   right: 100px;
 }
+
 @media (max-width: 900px) {
   .Testimonial-header {
     flex-direction: column;

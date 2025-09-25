@@ -1,0 +1,98 @@
+/* Testimonial Slider 2 specific skeleton styles with unique prefix to avoid conflicts */
+
+/* Base skeleton shimmer animation */
+.ts2-skeleton-shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: ts2-skeleton-loading 1.5s infinite;
+}
+
+@keyframes ts2-skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Dark mode skeleton colors */
+.dark .ts2-skeleton-shimmer {
+  background: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
+  background-size: 200% 100%;
+}
+
+/* Logo skeleton */
+.ts2-skeleton-logo {
+  width: 150px;
+  height: 50px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+/* Description skeleton */
+.ts2-skeleton-description {
+  width: 80%;
+  height: 18px;
+  border-radius: 4px;
+}
+.ts2-skeleton-description2 {
+  width: 60%;
+  height: 18px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+/* Star skeletons */
+.ts2-skeleton-star {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+}
+
+/* Review text skeletons */
+.ts2-skeleton-review-line {
+  width: 100%;
+  height: 16px;
+  border-radius: 4px;
+  margin: 8px 40px;
+}
+
+.ts2-skeleton-review-line-short {
+  width: 70%;
+  height: 16px;
+  border-radius: 4px;
+  margin: 8px 40px;
+}
+
+/* Boost information skeletons */
+.ts2-skeleton-boost-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  align-self: flex-start;
+}
+
+.ts2-skeleton-boost-number {
+  width: 40px;
+  height: 24px;
+  border-radius: 4px;
+}
+
+.ts2-skeleton-boost-text {
+  width: 200px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 900px) {
+  .ts2-skeleton-review-line,
+  .ts2-skeleton-review-line-short {
+    margin: 8px 10px;
+  }
+
+  .ts2-skeleton-boost-container {
+    align-self: center;
+  }
+}

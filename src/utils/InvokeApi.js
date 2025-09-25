@@ -34,7 +34,6 @@ export async function invokeApi({
 
   try {
     results = await axios(reqObj);
-
     return results.data;
   } catch (error) {
     if (error.response) {

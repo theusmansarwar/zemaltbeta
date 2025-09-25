@@ -129,7 +129,7 @@ const BlogCards = () => {
   };
 
   const handleClick = (slug) => {
-    router.push(`/blogs/${slug}`);
+    router.push(`/blog/${slug}`);
   };
 
   const scrollLeft = () => {

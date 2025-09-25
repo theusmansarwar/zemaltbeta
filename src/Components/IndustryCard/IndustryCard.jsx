@@ -71,7 +71,7 @@ const IndustryCard = () => {
             <div className="buttons-area">
               <button
                 onClick={() => {
-                  router.push("/contact-us");
+                  router.push("/contact");
                 }}
               >
                 Schedule a call <FaArrowRightLong />

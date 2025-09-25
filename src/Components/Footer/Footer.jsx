@@ -1,5 +1,7 @@
+"use client";
 import {
   FaAngleRight,
+  FaArrowRightLong,
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
@@ -9,8 +11,10 @@ import {
 } from "react-icons/fa6";
 import "./Footer.css";
 import { IoCall, IoMail } from "react-icons/io5";
+import { useRouter } from "next/navigation";
 
 export default function Footer() {
+  const router = useRouter();
   return (
     <footer className="footer-container">
       {/* Footer Overlay */}
@@ -27,8 +31,13 @@ export default function Footer() {
             </p>
           </div>
           <div className="header-right">
-            <div className="zemalt-logo">
-              <img src="/zemalt-logo.png" alt="Zemalt.com" />
+            <div
+              className="contact-btn"
+              onClick={() => {
+                router.push("/contact");
+              }}
+            >
+              Contact Us <FaArrowRightLong />
             </div>
           </div>
         </div>

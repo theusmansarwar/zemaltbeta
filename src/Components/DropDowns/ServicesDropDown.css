@@ -100,6 +100,9 @@
   border-radius: var(--border-radius1);
   cursor: pointer;
 }
+.maindropdown .bottom .right .view-all-btn:hover{
+  opacity: 0.9;
+}
 
 li.active {
   background: var(--gradient-three);

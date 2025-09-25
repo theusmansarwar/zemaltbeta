@@ -54,7 +54,7 @@ export default function RecentBlogs() {
             categories.map((cat) => (
               <li
                 key={cat._id}
-                onClick={() => router.push(`/blogs/category/${cat.slug}`)}
+                onClick={() => router.push(`/blog/category/${cat.slug}`)}
               >
                 {cat.name}
               </li>
@@ -76,7 +76,7 @@ export default function RecentBlogs() {
               <React.Fragment key={post._id}>
                 <div
                   className="post-item"
-                  onClick={() => router.push(`/blogs/${post.slug}`)}
+                  onClick={() => router.push(`/blog/${post.slug}`)}
                 >
                   <div
                     className="post-image"

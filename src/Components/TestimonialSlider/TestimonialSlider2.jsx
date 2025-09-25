@@ -1,56 +1,42 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaStar } from "react-icons/fa";
-import "./TestimonialSlider2.css";
 import { FaCircleChevronLeft, FaCircleChevronRight } from "react-icons/fa6";
-
-const testimonials = [
-  {
-    id: 1,
-    logo: "/zemalt-logo.png",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut cumque tenetur rem deserunt laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut cumque tenetur rem deserunt laborum.",
-    review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis facere voluptates architecto ratione laboriosam ducimus animi quod sint nesciunt necessitatibus.",
-    stars: 5,
-    impact: "2X Increase in website traffic",
-  },
-  {
-    id: 2,
-    logo: "/zemalt-logo.png",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut cumque tenetur rem deserunt laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut cumque tenetur rem deserunt laborum.",
-    review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis facere voluptates architecto ratione laboriosam ducimus animi quod sint nesciunt necessitatibus.",
-    stars: 4,
-    impact: "3X Growth in leads",
-  },
-  {
-    id: 3,
-    logo: "/zemalt-logo.png",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut cumque tenetur rem deserunt laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut cumque tenetur rem deserunt laborum.",
-    review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis facere voluptates architecto ratione laboriosam ducimus animi quod sint nesciunt necessitatibus.",
-    stars: 4.5,
-    impact: "5X ROI in campaigns",
-  },
-];
+import "./TestimonialSlider2.css";
+import { fetchTestimonial } from "@/DAL/Fetch";
+import TestimonialSliderSkeleton from "../SkeletonLoaders/TestimonialSliderSkeleton";
 
 const TestimonialSlider2 = () => {
+  const [testimonials, setTestimonials] = useState([]);
   const [current, setCurrent] = useState(0);
+  const [loading, setLoading] = useState(true);
+
+  // Fetch testimonials on mount
+  useEffect(() => {
+    const loadTestimonials = async () => {
+      try {
+        const res = await fetchTestimonial();
+        if (res?.testimonials) {
+          setTestimonials(res.testimonials);
+        }
+      } catch (error) {
+        console.error("Failed to fetch testimonials:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    loadTestimonials();
+  }, []);
 
   const prevSlide = () => {
-    if (current > 0) {
-      setCurrent(current - 1);
-    }
+    if (current > 0) setCurrent(current - 1);
   };
 
   const nextSlide = () => {
-    if (current < testimonials.length - 1) {
-      setCurrent(current + 1);
-    }
+    if (current < testimonials.length - 1) setCurrent(current + 1);
   };
+
+  if (loading) return <TestimonialSliderSkeleton />;
 
   return (
     <div className="testimonial-slider2" id="revenue-impact">
@@ -67,28 +53,29 @@ const TestimonialSlider2 = () => {
         <div className="testimonial-list">
           <div
             className="testimonial-track"
-            style={{ transform: `translateX(-${current * 100 }%)` }}
+            style={{ transform: `translateX(-${current * 100}%)` }}
           >
-            {testimonials.map((testimonial) => (
-              <div key={testimonial.id} className="testimonial2-card">
-                <img src={testimonial.logo} alt="client logo" />
-                <p className="description">{testimonial.description}</p>
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="testimonial2-card">
+                {testimonial.logo && (
+                  <img src={testimonial.logo} alt="client logo" />
+                )}
+                <p className="description">{testimonial.whatwedid}</p>
 
                 <div className="review-container">
                   {/* Stars */}
                   <div className="stars">
-                    {Array.from({ length: Math.floor(testimonial.stars) }).map(
-                      (_, i) => (
-                        <FaStar key={i} className="star" />
-                      )
-                    )}
+                    {Array.from({
+                      length: Math.floor(testimonial.rating || 0),
+                    }).map((_, i) => (
+                      <FaStar key={i} className="star" />
+                    ))}
                   </div>
-                  <p>{testimonial.review}</p>
+                  <p>{testimonial.clientsays}</p>
                 </div>
 
                 <strong>
-                  <span>{testimonial.impact.split(" ")[0]}</span>{" "}
-                  {testimonial.impact.replace(/^\S+\s/, "")}
+                  <span>{testimonial.boost}</span> {testimonial.boosttext}
                 </strong>
               </div>
             ))}
