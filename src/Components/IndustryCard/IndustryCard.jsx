@@ -1,73 +1,58 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./IndustryCard.css";
 import { useRouter } from "next/navigation";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { fetchIndustries } from "@/DAL/Fetch";
+import { baseUrl } from "@/config/Config";
+import truncateTextByWords from "@/utils/TruncateByWords";
+import IndustryCardSkeleton from "../SkeletonLoaders/IndustryCardSkeleton";
 
 const IndustryCard = () => {
   const router = useRouter();
+  const [industries, setIndustries] = useState([]);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const getIndustries = async () => {
+      try {
+        const res = await fetchIndustries();
+        setIndustries(res.industries);
+      } catch (err) {
+        console.error("Error fetching industries:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  const industries = [
-    {
-      id: 1,
-      title: "Cyber Security",
-      image: "/industry1.png",
-      paragraphs: [
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nihil est laborum laboriosam facilis repellendus similique architecto tenetur veniam dicta.",
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nihil est laborum laboriosam facilis repellendus similique architecto tenetur veniam dicta.",
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nihil est laborum laboriosam facilis repellendus similique architecto tenetur veniam dicta.",
-      ],
-    },
-    {
-      id: 2,
-      title: "Artificial Intelligence",
-      image: "/industry2.png",
-      paragraphs: [
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nihil est laborum laboriosam facilis repellendus similique architecto tenetur veniam dicta.",
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nihil est laborum laboriosam facilis repellendus similique architecto tenetur veniam dicta.",
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nihil est laborum laboriosam facilis repellendus similique architecto tenetur veniam dicta.",
-      ],
-    },
-    {
-      id: 3,
-      title: "Cyber Security",
-      image: "/industry1.png",
-      paragraphs: [
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nihil est laborum laboriosam facilis repellendus similique architecto tenetur veniam dicta.",
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nihil est laborum laboriosam facilis repellendus similique architecto tenetur veniam dicta.",
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nihil est laborum laboriosam facilis repellendus similique architecto tenetur veniam dicta.",
-      ],
-    },
-    {
-      id: 4,
-      title: "Artificial Intelligence",
-      image: "/industry2.png",
-      paragraphs: [
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nihil est laborum laboriosam facilis repellendus similique architecto tenetur veniam dicta.",
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nihil est laborum laboriosam facilis repellendus similique architecto tenetur veniam dicta.",
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nihil est laborum laboriosam facilis repellendus similique architecto tenetur veniam dicta.",
-      ],
-    },
-  ];
+    getIndustries();
+  }, []);
+
+  if (loading) {
+    return <IndustryCardSkeleton/>;
+  }
 
   return (
     <div className="industry-grid">
       {industries.map((item, index) => (
         <div
-          key={item.id}
+          key={item._id || index}
           className={`industry-card ${index % 2 === 1 ? "reverse" : ""}`}
         >
           {/* Left Side (Image) */}
           <div className="left">
-            <img src={item.image} alt={item.title} />
+            <img src={baseUrl + item.image} alt={item.name} />
           </div>
 
           {/* Right Side (Content) */}
           <div className="right">
-            <h2 >{item.title}</h2>
-            {item.paragraphs.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
+            <h2>{item.name}</h2>
+            {item.description && (
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: truncateTextByWords(item.description, 300),
+                }}
+              />
+            )}
             <div className="buttons-area">
               <button
                 onClick={() => {
@@ -76,13 +61,6 @@ const IndustryCard = () => {
               >
                 Schedule a call <FaArrowRightLong />
               </button>
-              <p
-                onClick={() => {
-                  router.push("/");
-                }}
-              >
-                View Case Study
-              </p>
             </div>
           </div>
         </div>

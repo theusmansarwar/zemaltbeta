@@ -10,6 +10,9 @@
   background-color: var(--text-color4);
   justify-content: center;
 }
+.Portfolio-card-area .portfolio-card-title {
+  font-size: var(--heading-two);
+}
 .Portfolio-card-area .Portfolio-card-div {
   height: 250px;
   padding: 20px;
@@ -44,6 +47,7 @@
   border: 1px solid var(--primary-color);
   cursor: pointer;
   transition: 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
 }
 .visit-project-btn:hover {
   background-color: transparent;
@@ -88,6 +92,9 @@
 @media (max-width: 900px) {
   .Portfolio-card-area {
     padding: 20px 5%;
+  }
+  .Portfolio-card-area .portfolio-card-title {
+    text-align: left;
   }
   .Portfolio-card-area .Portfolio-card-div {
     flex-direction: column;

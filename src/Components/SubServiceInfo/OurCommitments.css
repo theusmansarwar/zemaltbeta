@@ -60,8 +60,14 @@
   }
 }
 @media (max-width: 900px) {
+  .our-commitments .commitment-title {
+    width: 100%;
+    text-align: left;
+  }
+
   .our-commitments .commitment-desc {
     width: 100%;
+    text-align: left;
   }
   .our-commitments .commitment-cards-contianer .commitment-card {
     width: calc(100% - 60px);

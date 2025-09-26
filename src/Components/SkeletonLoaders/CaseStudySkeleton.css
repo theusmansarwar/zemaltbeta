@@ -1,0 +1,50 @@
+/* Skeleton base */
+.skeleton {
+  background: linear-gradient(90deg, #e0e0e0 25%, #f3f3f3 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+  border-radius: 4px;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Custom sizes */
+.skeleton-title {
+  width: 40%;
+  height: 30px;
+}
+
+.skeleton-text {
+  width: 90%;
+  height: 20px;
+}
+
+
+.skeleton-btn {
+  width: 120px;
+  height: 36px;
+  border-radius: 25px;
+}
+
+/* Circle image skeleton */
+.skeleton-circle {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #e0e0e0 25%, #f3f3f3 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+  border: none !important;   /* ✅ remove the solid border */
+}
+
+
+.skeleton-study-card .skeleton {
+  opacity: 0.8;
+}

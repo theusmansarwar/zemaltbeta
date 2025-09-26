@@ -68,8 +68,8 @@ const services = [
         slug: "customized-stores-development",
       },
       {
-        name: "Rebuild the Website Development",
-        slug: "rebuild-website-development",
+        name: "Rebuild Website",
+        slug: "rebuild-website",
       },
     ],
   },
@@ -130,11 +130,11 @@ const Header = () => {
           >
             Services <FaAngleDown />
           </li>
-          <li onClick={() => router.push("/case-study")}>Case Study</li>
+          <li onClick={() => router.push("/case-study")}>Case Studies</li>
           <li onClick={() => router.push("/industries")}>
             Industries We Serve
           </li>
-          <li onClick={() => router.push("/blog")}>Content Library</li>
+          <li onClick={() => router.push("/blog")}>Blogs</li>
           <li onClick={() => router.push("/about-us")}>About Us</li>
           <li onClick={() => router.push("/contact")}>Contact</li>
         </ul>
@@ -241,7 +241,7 @@ const Header = () => {
               setMobileMenu(false);
             }}
           >
-            Case Study
+            Case Studies
           </li>
           <li
             onClick={() => {
@@ -257,7 +257,7 @@ const Header = () => {
               setMobileMenu(false);
             }}
           >
-            Content Library
+            Blogs
           </li>
           <li
             onClick={() => {

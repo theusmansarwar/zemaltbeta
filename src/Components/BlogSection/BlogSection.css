@@ -40,6 +40,7 @@
   cursor: pointer;
   width: fit-content;
   font-size: var(--default-p-size);
+  -webkit-tap-highlight-color: transparent;
 }
 .see-more:hover {
   cursor: pointer;
@@ -112,6 +113,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .read-button:hover {

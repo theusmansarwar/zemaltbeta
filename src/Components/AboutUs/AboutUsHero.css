@@ -32,6 +32,7 @@
   cursor: pointer;
   transition: 0.3s ease;
   border: 2px solid var(--primary-color);
+  -webkit-tap-highlight-color: transparent;
 }
 .about-hero .left .work-btn:hover {
   background-color: transparent;

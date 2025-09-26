@@ -50,6 +50,7 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
+  -webkit-tap-highlight-color: transparent;
 }
 .seventh-section .proposal-btn:hover {
   background-color: transparent;

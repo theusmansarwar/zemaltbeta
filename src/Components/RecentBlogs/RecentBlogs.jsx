@@ -67,7 +67,7 @@ export default function RecentBlogs() {
 
       {/* Recent Posts Section */}
       <div className="popular-posts-section">
-        <h2 className="section-title">Recent Blogs</h2>
+        <h2 className="section-title">Recent Posts</h2>
         <div className="posts-list">
           {loading ? (
             <p>Loading...</p>

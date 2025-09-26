@@ -22,6 +22,7 @@
   display: flex;
   overflow: hidden;
   width: 32%;
+  cursor: pointer;
 }
 
 .b2b-blogs .b2b-blog-grid .b2b-blog-card .blog-card-img img {

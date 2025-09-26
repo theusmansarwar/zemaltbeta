@@ -67,8 +67,8 @@ const services = [
         slug: "customized-stores-development",
       },
       {
-        name: "Rebuild the Website Development",
-        slug: "rebuild-website-development",
+        name: "Rebuild Website",
+        slug: "rebuild-website",
       },
     ],
   },

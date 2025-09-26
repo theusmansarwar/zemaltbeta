@@ -39,16 +39,14 @@
 }
 .seo-section .seo-content-container .right ul li {
   margin-bottom: 10px;
-  
-  
 }
-.seo-section .seo-content-container .right ul li a{
- text-decoration: none;
- cursor: pointer;
- transition: color 0.3s ease;
- color: var(--main-color);
+.seo-section .seo-content-container .right ul li a {
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  color: var(--main-color);
 }
-.seo-section .seo-content-container .right ul li a:hover{
+.seo-section .seo-content-container .right ul li a:hover {
   color: var(--primary-color);
 }
 
@@ -70,12 +68,14 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
+  -webkit-tap-highlight-color: transparent;
 }
 .seo-section .proposal-btn:hover {
   background-color: transparent;
   color: var(--main-color);
 }
 @media (max-width: 900px) {
+  
   .seo-section .seo-content-container {
     flex-direction: column;
     display: flex;
@@ -85,8 +85,11 @@
     width: 100%;
   }
   .seo-section .seo-content-container .right {
-    width: 100%;
-    padding: 20px 0;
+    width: calc(100% - 40px);
+    align-items: flex-start;
+  }
+  .seo-section .seo-content-container .right ul li {
+    margin-left: 10px;
   }
   .seo-section .proposal-btn {
     width: 100%;

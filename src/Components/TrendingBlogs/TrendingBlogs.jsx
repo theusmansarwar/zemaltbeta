@@ -9,8 +9,10 @@ import { formatDate } from "@/utils/FormatDate";
 import { fetchPopularBlogs } from "@/DAL/Fetch";
 import { baseUrl } from "@/config/Config";
 import TrendingBlogsSkeleton from "../SkeletonLoaders/TrendingBlogsSkeleton";
+import { useRouter } from "next/navigation";
 
 const TrendingBlogs = () => {
+  const router = useRouter();
   const [trendingBlogs, setTrendingBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -38,7 +40,13 @@ const TrendingBlogs = () => {
       <h2 className="latest-heading">Trending Blogs</h2>
       <div className="latest-blog-grid">
         {trendingBlogs.map((post) => (
-          <div className="latest-blog-card" key={post._id}>
+          <div
+            className="latest-blog-card"
+            key={post._id}
+            onClick={() => {
+              router.push(`/blog/${post.slug}`);
+            }}
+          >
             {/* Blog Image */}
             <div className="blog-card-img">
               <img src={baseUrl + post.thumbnail} alt={post.title} />
@@ -53,7 +61,7 @@ const TrendingBlogs = () => {
               <p className="blog-description">
                 {truncateTextByWords(post.description, 20)}
               </p>
-              <p className="blog-meta">0 Comments – 6 Min Read</p>
+              <p className="blog-meta">6 Min Read</p>
               <hr />
               <div className="blog-footer">
                 <span className="blog-date">{formatDate(post.createdAt)}</span>

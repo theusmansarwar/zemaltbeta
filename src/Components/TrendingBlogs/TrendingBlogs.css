@@ -20,6 +20,7 @@
   gap: 10px;
   overflow: hidden;
   margin: 20px auto;
+  cursor: pointer;
 }
 
 .latest-blogs .latest-blog-grid .latest-blog-card .blog-card-img img {

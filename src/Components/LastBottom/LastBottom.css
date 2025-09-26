@@ -38,6 +38,7 @@
   align-items: center;
   gap: 8px;
   transition: 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .lastbottom-btn:hover {

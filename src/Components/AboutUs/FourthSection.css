@@ -30,6 +30,7 @@
   font-size: var(--default-p-size);
   transition: 0.3s ease;
   cursor: pointer;
+  user-select: none;
 }
 .fourth-section .left .buttons-area p:hover {
   color: rgb(109, 106, 106);
@@ -47,6 +48,7 @@
   font-size: var(--default-p-size);
   cursor: pointer;
   transition: 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
 }
 .fourth-section .left .buttons-area button:hover {
   color: var(--text-color);

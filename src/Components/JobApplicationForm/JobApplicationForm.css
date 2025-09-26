@@ -61,6 +61,7 @@ textarea {
   border-radius: 6px;
   cursor: pointer;
   transition: 0.3s;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .submit-btn:hover {

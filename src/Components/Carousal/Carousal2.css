@@ -33,6 +33,7 @@
   font-size: var(--default-p-size);
   cursor: pointer;
   transition: 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
 }
 .carousal2 button:hover {
   color: var(--text-color4);

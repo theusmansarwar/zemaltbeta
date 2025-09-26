@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   padding-top: 60px;
-  margin-top: 60px;
+  margin-top: 90px;
   height: fit-content;
   z-index: auto; /* keep content above overlay */
   background-image: url(/footer-bg.webp);
@@ -67,7 +67,7 @@
 }
 
 .tagline {
-  font-size: 16px;
+  font-size: var(--default-p-size);
   margin: 0;
   font-weight: 400;
 }
@@ -142,11 +142,13 @@
   line-height: 1.5;
   color: var(--text-color4);
 }
-.contact-item span:last-child {
+.contact-item a{
   cursor: pointer;
   transition: color 0.3s ease;
+  text-decoration: none;
+  color: var(--text-color4);
 }
-.contact-item span:last-child:hover {
+.contact-item a:hover {
   color: var(--primary-color);
 }
 
@@ -171,15 +173,16 @@
   gap: 10px;
 }
 
-.footer-links a {
+.footer-links span{
   color: var(--text-color4);
   text-decoration: none;
   font-size: 14px;
   line-height: 1.4;
   transition: color 0.3s ease;
+  cursor: pointer;
 }
 
-.footer-links a:hover {
+.footer-links span:hover {
   color: var(--primary-color);
 }
 
@@ -227,6 +230,7 @@
   text-decoration: none;
   font-size: 14px;
   transition: color 0.3s ease;
+  cursor: pointer;
 }
 
 .footer-bottom-link:hover {
@@ -265,6 +269,9 @@
 }
 
 @media (max-width: 900px) {
+  .footer-container {
+    margin-top: 70px;
+  }
   .footer-header {
     width: calc(90% - 20px);
     padding: 20px 10px;
@@ -272,7 +279,7 @@
   .header-content {
     flex-direction: column;
     text-align: center;
-    gap: 10px;
+    gap: 12px;
   }
 
   .header-right .contact-btn {
@@ -282,7 +289,7 @@
     width: 80px;
   }
   .tagline {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .zemalt-logo img {

@@ -40,7 +40,7 @@ const PortfolioCards = ({title}) => {
   return (
     <div>
       <div className="Portfolio-card-area">
-        <h2>{title}</h2>
+        <h2 className="portfolio-card-title">{title}</h2>
         {projectsToShow.map((project, index) => (
           <div className="Portfolio-card-div" key={index}>
             <div

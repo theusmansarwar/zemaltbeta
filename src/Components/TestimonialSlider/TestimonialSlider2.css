@@ -135,7 +135,6 @@
   .testimonial-slider2 {
     width: calc(100% - (var(--left-space) * 2));
     padding: 40px var(--left-space);
-    padding-top: 0;
   }
   .slider-wrapper {
     flex-direction: column;

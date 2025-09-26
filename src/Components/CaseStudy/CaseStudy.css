@@ -57,6 +57,7 @@
   cursor: pointer;
   transition: 0.3s ease;
   width: fit-content;
+  -webkit-tap-highlight-color: transparent;
 }
 .case-study-grid .study-card .right .study-btn:hover {
   color: var(--text-color);

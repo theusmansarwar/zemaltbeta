@@ -5,7 +5,7 @@
 }
 .drive-revenue h2 {
   font-size: var(--heading-two);
-  text-align: center;
+  text-align: left;
 }
 .drive-revenue h2 p span {
   color: var(--primary-color);

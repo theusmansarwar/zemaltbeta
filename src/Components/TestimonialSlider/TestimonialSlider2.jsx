@@ -28,6 +28,17 @@ const TestimonialSlider2 = () => {
     loadTestimonials();
   }, []);
 
+  // Auto-slide effect
+  useEffect(() => {
+    if (testimonials.length === 0) return;
+
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
+    }, 3000); // slide every 4s
+
+    return () => clearInterval(interval);
+  }, [testimonials]);
+
   const prevSlide = () => {
     if (current > 0) setCurrent(current - 1);
   };

@@ -13,6 +13,25 @@ import "./Footer.css";
 import { IoCall, IoMail } from "react-icons/io5";
 import { useRouter } from "next/navigation";
 
+const companyLinks = [
+  { slug: "/", label: "Home" },
+  { slug: "/about-us", label: "About" },
+  { slug: "/contact", label: "Contact" },
+  { slug: "/blog", label: "Blog" },
+  { slug: "/team", label: "Team" },
+  { slug: "/career", label: "Career" },
+  { slug: "/write-for-us", label: "Write for us" },
+];
+
+const whatWeDoBest = [
+  { slug: "seo", label: "SEO ( Search Engine )" },
+  { slug: "social-media-marketing", label: "Social Media Marketing" },
+  { slug: "web-development", label: "Web Development" },
+  { slug: "ui-ux", label: "Graphic Design" },
+  { slug: "google-ads", label: "Google Ads" },
+  { slug: "seo-writing", label: "Content Writing" },
+];
+
 export default function Footer() {
   const router = useRouter();
   return (
@@ -54,124 +73,103 @@ export default function Footer() {
                 <span className="contact-icon">
                   <IoCall />
                 </span>
-                <span>+92 123456789</span>
+                <a href="tel:+923007044566">+92 3007044566</a>
               </div>
+
               <div className="contact-item">
                 <span className="contact-icon">
                   <IoCall />
                 </span>
-                <span>+92 123456789 (USA)</span>
+                <a href="tel:+92123456789">+92 123456789 (USA)</a>
               </div>
+
               <div className="contact-item">
                 <span className="contact-icon">
                   <IoMail />
                 </span>
-                <span>info@dummy.com</span>
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=company@zemalt.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  company@zemalt.com
+                </a>
               </div>
+
               <div className="contact-item">
                 <span className="contact-icon">
                   <FaLocationDot />
                 </span>
-                <span>
-                  Pakistan: Lorem ipsum dolor sit amet consectetur adipisicing
-                  elit.
-                </span>
+                <a
+                  href="https://maps.app.goo.gl/owK9zDzZBdNGzWrL7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Pakistan: Plaza 119, Allama Iqbal Rd, Garhi Shahu, Lahore PK
+                </a>
               </div>
+
               <div className="contact-item">
                 <span className="contact-icon">
                   <FaLocationDot />
                 </span>
-                <span>
-                  UAE: Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </span>
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  USA: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </a>
               </div>
             </div>
           </div>
 
           {/* Company Profile Column */}
           <div className="footer-column">
-            <h3 className="column-title">COMPANY PROFILE</h3>
+            <h3 className="column-title">Our Company</h3>
             <ul className="footer-links">
-              <li>
-                <FaAngleRight /> <a href="#">About Us</a>
-              </li>
-              <li>
-                <FaAngleRight /> <a href="#">Staff Augmentation</a>
-              </li>
-              <li>
-                <FaAngleRight /> <a href="#">Contact Us</a>
-              </li>
-              <li>
-                <FaAngleRight /> <a href="#">Blogs</a>
-              </li>
-              <li>
-                <FaAngleRight /> <a href="#">FAQs</a>
-              </li>
-              <li>
-                <FaAngleRight /> <a href="#">Our Partners</a>
-              </li>
-              <li>
-                <FaAngleRight /> <a href="#">Sitemap</a>
-              </li>
+              {companyLinks.map((link, index) => (
+                <li key={index} onClick={() => router.push(link.slug)}>
+                  <FaAngleRight /> <span>{link.label}</span>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Products Column */}
           <div className="footer-column">
-            <h3 className="column-title">PRODUCTS</h3>
+            <h3 className="column-title">Industries We Serve</h3>
             <ul className="footer-links">
               <li>
-                <FaAngleRight /> <a href="#">Enterprise Resource Planning</a>
+                <FaAngleRight /> <span>E-Commerce & Retail</span>
               </li>
               <li>
-                <FaAngleRight /> <a href="#">Financial Management System</a>
+                <FaAngleRight /> <span>Real Estate & Property</span>
               </li>
               <li>
-                <FaAngleRight /> <a href="#">Human Resource Management</a>
+                <FaAngleRight />
+                <span>Healthcare & Wellness</span>
               </li>
               <li>
-                <FaAngleRight /> <a href="#">Help Desk</a>
+                <FaAngleRight /> <span>Finance & Fintech</span>
               </li>
               <li>
-                <FaAngleRight /> <a href="#">Visitor Management System</a>
+                <FaAngleRight /> <span>Travel & Hospitality</span>
               </li>
               <li>
-                <FaAngleRight /> <a href="#">Property Management System</a>
+                <FaAngleRight /> <span>Technology & Startups</span>
               </li>
               <li>
-                <FaAngleRight /> <a href="#">Point of Sale POS</a>
+                <FaAngleRight /> <span>Food & Restaurants</span>
               </li>
             </ul>
           </div>
 
           {/* Our Services Column */}
           <div className="footer-column">
-            <h3 className="column-title">OUR SERVICES</h3>
+            <h3 className="column-title">What We Do Best</h3>
             <ul className="footer-links">
-              <li>
-                <FaAngleRight /> <a href="#">App Development</a>
-              </li>
-              <li>
-                <FaAngleRight /> <a href="#">Web Development</a>
-              </li>
-              <li>
-                <FaAngleRight /> <a href="#">Search Engine Optimization</a>
-              </li>
-              <li>
-                <FaAngleRight /> <a href="#">Social Media Marketing</a>
-              </li>
-              <li>
-                <FaAngleRight /> <a href="#">Database Optimization</a>
-              </li>
-              <li>
-                <FaAngleRight /> <a href="#">Application Re-Engineering</a>
-              </li>
-              <li>
-                <FaAngleRight /> <a href="#">Testing & Quality Assurance</a>
-              </li>
-              <li>
-                <FaAngleRight /> <a href="#">Analytics & Reporting</a>
-              </li>
+              {whatWeDoBest.map((service, index) => (
+                <li key={index} onClick={() => router.push(`/services/${service.slug}`)}>
+                  <FaAngleRight /> <span>{service.label}</span>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -181,15 +179,30 @@ export default function Footer() {
           <div className="top">
             {" "}
             <div className="top-left">
-              <a href="#" className="footer-bottom-link">
+              <span
+                onClick={() => {
+                  router.push("/contact");
+                }}
+                className="footer-bottom-link"
+              >
                 Get in Touch
-              </a>
-              <a href="#" className="footer-bottom-link">
+              </span>
+              <span
+                onClick={() => {
+                  router.push("/contact");
+                }}
+                className="footer-bottom-link"
+              >
                 Offices
-              </a>
-              <a href="#" className="footer-bottom-link">
+              </span>
+              <span
+                onClick={() => {
+                  router.push("/career");
+                }}
+                className="footer-bottom-link"
+              >
                 Careers
-              </a>
+              </span>
             </div>
             <div className="top-right">
               <a href="#" className="footer-bottom-link">
@@ -208,16 +221,25 @@ export default function Footer() {
             </div>
             <div className="-bottom-right">
               <div className="social-icons">
-                <a href="#" className="social-icon facebook">
+                <a
+                  href="https://www.facebook.com/zemaltpvtltd"
+                  className="social-icon facebook"
+                >
                   <FaFacebookF />
                 </a>
                 <a href="#" className="social-icon twitter">
                   <FaXTwitter />
                 </a>
-                <a href="#" className="social-icon instagram">
+                <a
+                  href="https://www.instagram.com/zemaltpvtltd/"
+                  className="social-icon instagram"
+                >
                   <FaInstagram />
                 </a>
-                <a href="#" className="social-icon linkedin">
+                <a
+                  href="https://www.linkedin.com/company/zemalt/"
+                  className="social-icon linkedin"
+                >
                   <FaLinkedinIn />
                 </a>
                 <a href="#" className="social-icon tiktok">

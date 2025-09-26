@@ -26,6 +26,9 @@
   .sub-service-fourth {
     padding: 20px var(--left-space);
   }
+  .sub-service-fourth h2 {
+    text-align: left;
+  }
   .sub-service-fourth img {
     width: 100%;
     margin: 20px 0;

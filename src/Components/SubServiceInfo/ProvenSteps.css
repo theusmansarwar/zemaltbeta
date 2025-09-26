@@ -34,8 +34,11 @@
 
 @media (max-width: 900px) {
   .proven-steps {
-  padding: 20px var(--left-space);
-}
+    padding: 20px var(--left-space);
+  }
+  .proven-steps h2 {
+    text-align: left;
+  }
   .proven-steps .content-box {
     flex-direction: column;
     gap: 10px;

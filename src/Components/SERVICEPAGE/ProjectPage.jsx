@@ -65,9 +65,9 @@ const ProjectPage = ({ featuredData, subServiceData }) => {
       <SubServiceFirst />
       <WhyZemalt />
       <ProvenSteps data={subServiceData} />
+      <TalkToExpert />
       <SubServiceFourth />
       <Faq faqs={Homepagefaqs} />
-      <TalkToExpert />
       <OurCommitments />
       <PortfolioCards title={formattedTitle} />
     </div>

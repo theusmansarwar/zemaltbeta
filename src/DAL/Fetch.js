@@ -124,3 +124,35 @@ export const fetchTestimonial = async () => {
   };
   return invokeApi(reqObj);
 };
+export const fetchIndustries = async () => {
+  const reqObj = {
+    path: `/industry/live`,
+    method: "GET",
+    headers: {},
+
+    postData: {},
+  };
+  return invokeApi(reqObj);
+};
+export const fetchCaseStudies = async () => {
+  const reqObj = {
+    path: `/casestudy/live`,
+    method: "GET",
+    headers: {},
+
+    postData: {},
+  };
+  return invokeApi(reqObj);
+};
+export const getComments = async (data) => {
+  const reqObj = {
+    path: `/comment/approved-comment`,
+    method: "GET",
+    headers: {
+    
+    },
+
+    postData: {data},
+  };
+  return invokeApi(reqObj);
+};

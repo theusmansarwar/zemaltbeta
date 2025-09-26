@@ -9,8 +9,10 @@ import { formatDate } from "@/utils/FormatDate";
 import { fetchallBloglist } from "@/DAL/Fetch";
 import { baseUrl } from "@/config/Config";
 import FeaturedBlogsSkeleton from "../SkeletonLoaders/FeaturedBlogsSkeleton";
+import { useRouter } from "next/navigation";
 
 const FeaturedBlogs = () => {
+  const router = useRouter();
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -46,7 +48,13 @@ const FeaturedBlogs = () => {
           <FeaturedBlogsSkeleton count={6} />
         ) : (
           blogs.map((post) => (
-            <div className="b2b-blog-card" key={post._id}>
+            <div
+              className="b2b-blog-card"
+              key={post._id}
+              onClick={() => {
+                router.push(`/blog/${post.slug}`);
+              }}
+            >
               {/* Blog Image */}
               <div className="blog-card-img">
                 <img src={baseUrl + post.thumbnail} alt={post.title} />

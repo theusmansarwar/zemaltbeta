@@ -6,6 +6,8 @@ import BlogDeatilLoader from "../SkeletonLoaders/BlogDetailLoader";
 import LeftDetail from "./LeftDetail";
 import RecentBlogs from "../RecentBlogs/RecentBlogs";
 import { fetchBlogBySlug } from "@/DAL/Fetch";
+import Comment from "../Comment/Comment";
+import FeaturedBlogs from "../FeaturedBlogs/FeaturedBlogs";
 
 const BlogDetail = ({ slug }) => {
   const [blog, setBlog] = useState(null);
@@ -43,6 +45,8 @@ const BlogDetail = ({ slug }) => {
           <RecentBlogs />
         </div>
       </div>
+      <Comment blogId={blog?._id} comments={blog?.comments} />
+      <FeaturedBlogs />
     </div>
   );
 };
