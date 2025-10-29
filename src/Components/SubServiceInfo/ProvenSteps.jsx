@@ -2,22 +2,24 @@ import React from "react";
 import "./ProvenSteps.css";
 
 const ProvenSteps = ({ data }) => {
+  if (!data?.published) return null;
+
   return (
-    <div className="proven-steps">
-      {data.map((item, index) =>
-        item.type === "heading" ? (
-          <h2 key={index}>{item.text}</h2>
-        ) : (
+    <section className="proven-steps">
+      {/* Section Title */}
+      {data?.title && <h2 className="proven-title">{data.title}</h2>}
+
+      <div className="steps-container">
+        {data?.steps?.map((step, index) => (
           <div className="content-box" key={index}>
-            <strong>{item.number}</strong>
-            <p>
-              <span>{item.title}</span>
-              {item.description}
-            </p>
+            <strong className="step-number">
+              {(index + 1).toString().padStart(2, "0")}
+            </strong>
+            <p className="step-text">{step}</p>
           </div>
-        )
-      )}
-    </div>
+        ))}
+      </div>
+    </section>
   );
 };
 

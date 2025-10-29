@@ -7,13 +7,9 @@
   font-size: var(--heading-two);
   margin-bottom: 10px;
 }
-.sub-service-fourth p span {
-  display: block;
-  margin-bottom: 2px;
-}
-.sub-service-fourth p {
-  line-height: var(--p-line-height);
 
+.sub-service-fourth .description {
+  line-height: var(--p-line-height);
   font-size: var(--default-p-size);
 }
 .sub-service-fourth img {

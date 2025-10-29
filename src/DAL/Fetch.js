@@ -66,9 +66,9 @@ export const getblogSlugs = async () => {
   return invokeApi(reqObj);
 };
 
-export const fetchAllServices = async (page, rowsPerPages, search) => {
+export const fetchAllServices = async (page, rowsPerPages) => {
   const reqObj = {
-    path: `/service/list?${page}&limit=${rowsPerPages}&search=${search}`,
+    path: `/service/list?${page}&limit=${rowsPerPages}`,
     method: "GET",
     headers: {},
     body: {},
@@ -87,6 +87,15 @@ export const fetchServiceBySlug = async (slug) => {
 export const fetchServicesSlugs = async () => {
   const reqObj = {
     path: `/service/slugs`,
+    method: "GET",
+    headers: {},
+    body: {},
+  };
+  return invokeApi(reqObj);
+};
+export const fetchSubServiceBySlug = async (slug) => {
+  const reqObj = {
+    path: `/sub-service/view/${slug}`,
     method: "GET",
     headers: {},
     body: {},

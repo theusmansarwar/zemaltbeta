@@ -23,7 +23,7 @@
   font-size: var(--heading-two);
   text-align: left;
 }
-.sub-service-first .right p {
+.sub-service-first .right .desc {
   font-size: var(--default-p-size);
   line-height: var(--p-line-height);
 }

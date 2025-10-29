@@ -5,6 +5,7 @@ import { FaCircleChevronLeft, FaCircleChevronRight } from "react-icons/fa6";
 import "./TestimonialSlider2.css";
 import { fetchTestimonial } from "@/DAL/Fetch";
 import TestimonialSliderSkeleton from "../SkeletonLoaders/TestimonialSliderSkeleton";
+import { baseUrl } from "@/config/Config";
 
 const TestimonialSlider2 = () => {
   const [testimonials, setTestimonials] = useState([]);
@@ -68,8 +69,8 @@ const TestimonialSlider2 = () => {
           >
             {testimonials.map((testimonial, index) => (
               <div key={index} className="testimonial2-card">
-                {testimonial.logo && (
-                  <img src={testimonial.logo} alt="client logo" />
+                {testimonial.image && (
+                  <img src={baseUrl + testimonial.image} alt="client logo" />
                 )}
                 <p className="description">{testimonial.whatwedid}</p>
 

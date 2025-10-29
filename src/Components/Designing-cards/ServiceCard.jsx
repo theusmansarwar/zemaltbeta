@@ -19,13 +19,13 @@ const ServiceCard = ({ data }) => {
             <img src="/hands.png" alt="icon" />
           </div>
           <h3>{card.title}</h3>
-          {
-            <ul>
-              {card.items.map((item, i) => (
-                <li key={i}>{item}</li>
-              ))}
-            </ul>
-          }
+         {card.short_description && (
+            <div
+              dangerouslySetInnerHTML={{
+                __html: card.short_description,
+              }}
+            />
+          )}
 
           <div
             className="designing-card-btn"

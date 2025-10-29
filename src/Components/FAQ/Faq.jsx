@@ -28,7 +28,7 @@ const Faq = ({ faqs }) => {
         <img src="/Question.png" alt="FAQs" />
       </div>
       <div className="faq-right">
-        {faqs?.questions.map((item, index) => (
+        {faqs?.items?.map((item, index) => (
           <div key={index} className="faq-item">
             <div className="faq-question" onClick={() => toggle(index)}>
               <span>{item.question}</span>

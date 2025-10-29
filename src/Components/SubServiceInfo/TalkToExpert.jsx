@@ -1,14 +1,17 @@
+"use client"
 import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import "./TalkToExpert.css";
-const TalkToExpert = () => {
+import { useRouter } from "next/navigation";
+const TalkToExpert = ({ data }) => {
+  const router = useRouter();
   return (
     <div className="talk-to-expert">
-      <h2>Command Google’s First Page – With SEO Starting at $200</h2>
+      <h2>{data.title}</h2>
       <div className="expert-content">
         <div className="left">
-          <p>Expert-driven strategies crafted for lasting dominance.</p>
-          <button className="expert-btn">
+          <p>{data.description}</p>
+          <button className="expert-btn" onClick={() => { router.push("/contact") }}>
             Talk To Expert <FaArrowRight />
           </button>
         </div>

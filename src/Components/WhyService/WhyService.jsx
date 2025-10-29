@@ -1,6 +1,7 @@
 import React from "react";
 import "./WhyService.css";
 import "../BlogSection/BlogSection.css";
+import { baseUrl } from "@/config/Config";
 
 const WhyService = ({ data }) => {
   return (
@@ -13,7 +14,7 @@ const WhyService = ({ data }) => {
         ))}
       </div>
 
-      <img src={data.image} alt="Why Good Design" />
+      <img src={baseUrl + data.image} alt="Why Good Design" />
     </div>
   );
 };

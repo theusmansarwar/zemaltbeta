@@ -1,65 +1,63 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import "./PortfolioPopup.css";
 import { IoCloseCircleSharp } from "react-icons/io5";
+import { baseUrl } from "@/config/Config";
 
-const PortfolioPopup = ({ onClose }) => {
-  // ✅ Object array for data
-  const portfolioData = {
-    images: [
-      { src: "/blog-thumbnail.jpg", alt: "Main Image" },
-      { src: "/blog-thumbnail.jpg", alt: "Second Image" },
-      { src: "/blog-thumbnail.jpg", alt: "Third Image" },
-      { src: "/blog-thumbnail.jpg", alt: "Fourth Image" },
-    ],
-    title: ["SEO SUB", "SERVICE"],
-    description1:
-      "nec Praesent libero, placerat nec non dignissim, viverra Lorem tempor vitae elit. viverra turpis faucibus non. sit fringilla risus Nam ex nisl. fringilla Donec sit nisi nec Quisque Vestibulum maximus Nunc ex non. volutpat vitae at, tempor ac amet, viverra tincidunt facilisis Sed orci luctus Nam odio tincidunt urna. tincidunt sollicitudin. vel at orci elit tincidunt varius Donec orci dui in at, sapien orci tincidunt Morbi eget eu non. facilisis odio luctus Nullam Morbi non.",
-    listItems: [
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, corrupti.",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, corrupti.",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, corrupti.",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, corrupti.",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, corrupti.",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, corrupti.",
-    ],
-    description2:
-      "Nunc lacus, urna. faucibus vitae lacus dui. dui. eget lacus In faucibus non lobortis, odio sit efficitur. malesuada ex vitae eu placerat. faucibus quam massa sodales. viverra lobortis, quis nulla, non. amet, nibh cursus facilisis sit quam.",
-    description3:
-      "Nunc lacus, urna. faucibus vitae lacus dui. dui. eget lacus In faucibus non lobortis, odio sit efficitur. malesuada ex vitae eu placerat. faucibus quam massa sodales. viverra lobortis, quis nulla, non. amet, nibh cursus facilisis sit quam Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non libero distinctio recusandae repellendus similique aliquam odio. Ducimus, minima! Ipsum, nobis?",
-  };
+const PortfolioPopup = ({ project, onClose }) => {
+  if (!project) return null;
+
+  // Combine images + videos in one array
+  const media = [
+    ...(project.images || []).map((src) => ({ type: "image", src })),
+    ...(project.videos || []).map((src) => ({ type: "video", src })),
+  ];
+
+  const [selected, setSelected] = useState(media[0] || null);
 
   return (
     <div className="popup-parent">
       <div className="portfolio-popup">
         <IoCloseCircleSharp className="close-icon" onClick={onClose} />
 
-        {/* ✅ Top images */}
-        <div className="top">
-          {portfolioData.images.map((img, index) => (
-            <img key={index} src={img.src} alt={img.alt} />
-          ))}
+        {/*  Top Section (Gallery) */}
+        <div className="gallery">
+          {/* Left: Main preview */}
+          <div className="gallery-preview">
+            {selected?.type === "image" ? (
+              <img src={`${baseUrl}/${selected.src}`} alt="preview" />
+            ) : (
+              <video src={`${baseUrl}/${selected.src}`} controls />
+            )}
+          </div>
+
+          {/* Right: Thumbnails list */}
+          <div className="gallery-thumbnails">
+            {media.map((item, index) => (
+              <div
+                key={index}
+                className={`thumb ${
+                  item.src === selected?.src ? "active" : ""
+                }`}
+                onClick={() => setSelected(item)}
+              >
+                {item.type === "image" ? (
+                  <img src={`${baseUrl}${item.src}`} alt={`thumb-${index}`} />
+                ) : (
+                  <video src={`${baseUrl}${item.src}`} />
+                )}
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* ✅ Bottom Section */}
+        {/*  Bottom Section */}
         <div className="bottom">
-          <h2>
-            {portfolioData.title.map((word, i) => (
-              <span key={i}>{word} </span>
-            ))}
-          </h2>
-
-          <p>{portfolioData.description1}</p>
-
-          <ul>
-            {portfolioData.listItems.map((item, i) => (
-              <li key={i}>{item}</li>
-            ))}
-          </ul>
-
-          <p>{portfolioData.description2}</p>
-          <p>{portfolioData.description3}</p>
-
-          <button className="proposal-btn">Get Service</button>
+          <h2>{project.title}</h2>
+          <div
+            className="project-description"
+            dangerouslySetInnerHTML={{ __html: project.description || "" }}
+          />
         </div>
       </div>
     </div>
