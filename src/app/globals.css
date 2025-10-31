@@ -21,10 +21,12 @@
   --default-p-size: 16px;
   --p-line-height: 1.4;
 }
+
 * {
   padding: 0%;
   margin: 0%;
 }
+
 button,
 input,
 select,
@@ -41,9 +43,11 @@ textarea {
   align-items: center;
   justify-content: center;
 }
+
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
@@ -69,6 +73,7 @@ html {
   opacity: 0.06;
   z-index: -1;
 }
+
 .job-summary {
   display: flex;
   background-color: white;
@@ -76,6 +81,34 @@ html {
   padding: 50px 5%;
   justify-content: space-between;
 }
+
+
+.dangerously-set-data p {
+  margin-bottom: 10px;
+  font-size: var(--default-p-size);
+  line-height: var(--p-line-height);
+}
+
+
+/* List items */
+.dangerously-set-data li {
+  margin-bottom: 10px;
+  margin-left: 20px;
+  line-height: var(--p-line-height);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+
+/* Optional: links */
+.dangerously-set-data a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+
 
 @media (max-width: 900px) {
   :root {

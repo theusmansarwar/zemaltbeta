@@ -54,8 +54,7 @@ const PortfolioPopup = ({ project, onClose }) => {
         {/*  Bottom Section */}
         <div className="bottom">
           <h2>{project.title}</h2>
-          <div
-            className="project-description"
+          <div className="dangerously-set-data"
             dangerouslySetInnerHTML={{ __html: project.description || "" }}
           />
         </div>

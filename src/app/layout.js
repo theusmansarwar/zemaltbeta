@@ -4,6 +4,7 @@ import Header from "@/Components/Header/Header";
 import Footer from "@/Components/Footer/Footer";
 import { Providers } from "./Providers";
 import { ToastContainer } from "react-toastify";
+import ViewCounter from "@/Components/ViewCounter/ViewCounter";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,6 +41,7 @@ export default function RootLayout({ children }) {
           pauseOnHover={false}
           newestOnTop
         />
+        <ViewCounter />
           <Header />
           {children}
           <Footer />

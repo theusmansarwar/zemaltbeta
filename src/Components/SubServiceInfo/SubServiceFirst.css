@@ -13,8 +13,10 @@
 }
 
 .sub-service-first .left img {
-  width: 100%;
+  width: auto;
   height: 100%;
+  display: flex;
+  justify-self: center;
 }
 
 .sub-service-first .right {

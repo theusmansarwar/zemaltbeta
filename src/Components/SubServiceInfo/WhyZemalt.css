@@ -11,16 +11,7 @@
   font-size: var(--heading-two);
   text-align: left;
 }
-.why-zemalt p {
-  font-size: var(--default-p-size);
-  line-height: var(--p-line-height);
-}
-.why-zemalt ul li {
-  font-size: var(--default-p-size);
-  line-height: var(--p-line-height);
-  margin-bottom: 5px;
-  margin-left: 20px;
-}
+
 @media (max-width: 900px) {
   .why-zemalt {
     gap: 10px;

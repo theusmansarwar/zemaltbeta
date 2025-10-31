@@ -44,7 +44,7 @@ const CaseStudyPopup = ({ onClose, project }) => {
         <div className="bottom">
           <h2>{project.name}</h2>
           {project.detail && (
-            <div
+            <div className="dangerously-set-data"
               dangerouslySetInnerHTML={{
                 __html: project.detail,
               }}

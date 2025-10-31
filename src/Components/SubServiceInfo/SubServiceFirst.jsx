@@ -9,7 +9,7 @@ const SubServiceFirst = ({ data }) => {
       </div>
       <div className="right">
         <h2 className="sub-service-title">{data.title}</h2>
-        <div className="desc" dangerouslySetInnerHTML={{ __html: data?.description }} />
+        <div className="dangerously-set-data" dangerouslySetInnerHTML={{ __html: data?.description }} />
       </div>
     </div>
   );

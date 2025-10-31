@@ -10,6 +10,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .rw-popup {
   width: calc(60% - 20px);
   margin: 0 auto;
@@ -20,6 +21,7 @@
   scrollbar-width: thin;
   scrollbar-color: var(--primary-color) transparent;
 }
+
 .rw-popup-parent .rw-popup .close-icon {
   color: var(--primary-color);
   font-size: 28px;
@@ -27,21 +29,24 @@
   position: sticky;
   top: 0;
 }
+
 /* Top */
 .rw-popup .top {
   width: calc(80% - 120px);
-  padding: 60px;
+  padding: 40px;
   margin: 0 auto;
   border: 2px solid gainsboro;
-  max-height: 200px;
+  height: auto;
+
 }
 
 .rw-popup .top img {
-  width: 100%;
-  height:100%;
-  max-height: 180px;
+  width: auto;
+  height: 200px;
   object-fit: cover;
   object-position: center;
+  display: flex;
+  justify-self: center;
 }
 
 /* Bottom */
@@ -52,22 +57,13 @@
   gap: 20px;
   padding: 40px;
 }
+
 .rw-popup .bottom h2 {
   font-size: var(--heading-three);
   display: block;
   text-align: left;
 }
-.rw-popup .bottom p {
-  font-size: var(--default-p-size);
-  line-height: var(--p-line-height);
-}
-.rw-popup .bottom ul li {
-  margin-left: 20px;
-  margin-bottom: 10px;
-  font-weight: 600;
-  font-size: var(--default-p-size);
-  line-height: var(--p-line-height);
-}
+
 
 .rw-popup .bottom .proposal-btn {
   width: 60%;
@@ -88,19 +84,23 @@
   gap: 10px;
   -webkit-tap-highlight-color: transparent;
 }
+
 .rw-popup .bottom .proposal-btn span {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
 .rw-popup .bottom .proposal-btn:hover {
   background-color: transparent;
   color: var(--main-color);
 }
+
 @media (max-width: 900px) {
   .rw-popup {
     width: calc(95% - 20px);
     margin: 0 auto;
   }
+
   .rw-popup .top {
     width: calc(90% - 10%);
     padding: 20px 5%;
@@ -109,8 +109,10 @@
     justify-content: center;
     border: none;
   }
+
   .rw-popup .top img {
-    width: 60%;
+    width: auto;
+    height: 150px;
   }
 
   /* bottom */
@@ -118,11 +120,13 @@
     width: calc(100% - 20px);
     padding: 10px;
   }
+
   .rw-popup .bottom h2 span {
     font-size: var(--heading-two);
     display: inline;
     text-align: left;
   }
+
   .rw-popup .bottom .proposal-btn {
     width: 100%;
     margin-left: 0%;

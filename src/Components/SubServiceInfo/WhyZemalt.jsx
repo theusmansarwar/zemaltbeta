@@ -4,7 +4,7 @@ const WhyZemalt = ({ data }) => {
   return (
     <div className="why-zemalt">
       <h2>{data.title}</h2>
-      <div className="desc" dangerouslySetInnerHTML={{ __html: data?.description }} />
+      <div className="dangerously-set-data" dangerouslySetInnerHTML={{ __html: data?.description }} />
     </div>
   );
 };
