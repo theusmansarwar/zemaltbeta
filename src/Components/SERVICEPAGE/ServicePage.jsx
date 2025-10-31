@@ -19,13 +19,32 @@ export default function ServicePage({
 }) {
   return (
     <div className="homebg">
-      <ServicePageFeatured data={featuredData} />
-      <ServiceCard data={cardData} />
+      {/* Featured Section */}
+      {featuredData?.published !== false && (
+        <ServicePageFeatured data={featuredData} />
+      )}
+
+      {/* Sub Services */}
+      {cardData?.published && cardData.items?.length > 0 && (
+        <ServiceCard data={cardData.items} />
+      )}
+
+
+      {/* Carousal (always visible) */}
       <Carousal />
-      <BigIdea data={imageData} />
-      <Faq faqs={Faqs} />
+
+      {/* Image Section */}
+      {imageData?.published && <BigIdea data={imageData} />}
+
+      {/* FAQs Section */}
+      {Faqs?.published && <Faq faqs={Faqs?.faqs || Faqs} />}
+
+      {/* Revenue Calculator */}
+
       <RevenueCalculator data={CalulaterBottom} />
-      <WhyService data={whyService} />
+
+      {/* Why Service Section */}
+      {whyService?.published && <WhyService data={whyService} />}
     </div>
   );
 }

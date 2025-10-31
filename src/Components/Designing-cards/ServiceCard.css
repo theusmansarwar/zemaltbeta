@@ -23,7 +23,7 @@
 }
 .designing-card {
   width: calc(33% - 60px);
-  min-height: 423px;
+  min-height: 320px;
   min-width: 350px;
   background-color: #f9f9f9;
   border-radius: var(--border-radius1);
@@ -43,10 +43,11 @@
 }
 .designing-page-grid .designing-card h3 {
   font-size: var(--heading-four);
+  margin-top: 20px;
 }
 .designing-card ul {
   width: calc(100% - 40px);
-  padding: 20px;
+  padding:10px 20px ;
 }
 .designing-card ul li {
   font-size: var(--default-p-size);

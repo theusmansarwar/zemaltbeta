@@ -3,6 +3,7 @@ import React from "react";
 import "./ServiceCard.css";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { usePathname, useRouter } from "next/navigation";
+import { baseUrl } from "@/config/Config";
 
 const ServiceCard = ({ data }) => {
   const router = useRouter();
@@ -16,7 +17,7 @@ const ServiceCard = ({ data }) => {
       {data.map((card, index) => (
         <div className="designing-card" key={index}>
           <div className="icon-area-for-des">
-            <img src="/hands.png" alt="icon" />
+            <img src={baseUrl + card.icon} alt="icon" />
           </div>
           <h3>{card.title}</h3>
          {card.short_description && (
@@ -33,7 +34,7 @@ const ServiceCard = ({ data }) => {
               router.push(`${currentpath}/${card.slug}`);
             }}
           >
-            View Portfolio <FaArrowRightLong />
+            View Service <FaArrowRightLong />
           </div>
         </div>
       ))}

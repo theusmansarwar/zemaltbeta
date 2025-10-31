@@ -7,6 +7,8 @@ import { fetchServiceBySlug } from "@/DAL/Fetch";
 async function getService(slug) {
   try {
     const res = await fetchServiceBySlug(slug);
+    console.log({ servicedataaa: res });
+
     if (res?.service) return res.service;
 
     return null;
@@ -34,8 +36,7 @@ export async function generateMetadata({ params }) {
 
   return {
     title: service.metatitle,
-    description:
-      service.metaDescription ,
+    description: service.metaDescription,
     icons: { icon: "/favicon.svg" },
   };
 }
@@ -57,17 +58,22 @@ const Page = async ({ params }) => {
   const featuredData = {
     title: service.title || "Service",
     spanTitle: "SERVICES",
-    description: service.description || service.description || "",
+    description: service.description || "",
+    published: service.published, // optional if needed
   };
 
-  const cardData =
-    service.subServices?.items?.length > 0 ? service.subServices.items : [];
+  const cardData = {
+    published: service.subServices?.published ?? false,
+    items: service.subServices?.items?.length > 0 ? service.subServices.items : [],
+  };
+
 
   const imageData = {
     heading:
       service.imageSection?.title ||
       "Bright minds shape clear paths and act fast.",
     image: service.imageSection?.image || "/zemalt-logo.png",
+    published: service.imageSection?.published ?? false,
   };
 
   const whyService = {
@@ -76,9 +82,13 @@ const Page = async ({ params }) => {
       ? [service.lastSection.description]
       : [],
     image: service.lastSection?.image || "/why-designing.png",
+    published: service.lastSection?.published ?? false,
   };
 
-  const faqsData = service.faqs;
+  const faqsData = {
+    faqs: service.faqs || [],
+    published: service.faqsPublished ?? service.faqs?.published ?? false,
+  };
 
   const calculaterBottomData = {
     heading:
@@ -87,6 +97,7 @@ const Page = async ({ params }) => {
     description:
       service.CalulaterBottom?.description ||
       "We are a trusted ad agency that drives fast growth and real reach. You get clear campaigns built on sharp strategy and smart targeting. Each plan cuts waste, raises clicks, and delivers steady leads that add lasting value to your business.",
+
   };
 
   return (
