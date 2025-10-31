@@ -1,25 +1,57 @@
 import ProjectPage from "@/Components/SERVICEPAGE/ProjectPage";
 import { fetchSubServiceBySlug } from "@/DAL/Fetch";
 
-export async function generateMetadata({ params }) {
-  const { subserviceslug } = params;
+/** ---------------------------------------------------------------
+ * Fetch Subservice by slug
+ * --------------------------------------------------------------- */
+async function getSubService(slug) {
+  try {
+    const res = await fetchSubServiceBySlug(slug);
+    if (res?.service) return res.service;
 
-  const formattedTitle = subserviceslug
-    ?.split("-")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
+    return null;
+  } catch (error) {
+    console.error("Error fetching subservice:", error);
+    return null;
+  }
+}
+
+/** ---------------------------------------------------------------
+ * Dynamic <title> and <meta description>
+ * --------------------------------------------------------------- */
+export async function generateMetadata({ params }) {
+  const slug = params.subserviceslug;
+
+  const subService = await getSubService(slug);
+
+  if (!subService) {
+    return {
+      title: "Service Not Found",
+      description: "This service is currently unavailable.",
+      icons: { icon: "/favicon.svg" },
+    };
+  }
 
   return {
-    title: `${formattedTitle} | Zemalt`,
-    description: `Learn more about our ${formattedTitle} services tailored to your business needs.`,
+    title: subService.metatitle,
+    description:subService.metaDescription,
+    icons: { icon: "/favicon.svg" },
   };
 }
 
-export default async function Page({ params }) {
-  const { subserviceslug } = params;
+/** ---------------------------------------------------------------
+ * Page Component
+ * --------------------------------------------------------------- */
+const Page = async ({ params }) => {
+  const subService = await getSubService(params.subserviceslug);
 
-  const res = await fetchSubServiceBySlug(subserviceslug);
-  const subService = res?.service || {};
+  if (!subService) {
+    return (
+      <div style={{ padding: "20px 0" }}>
+        <h2>Service not found</h2>
+      </div>
+    );
+  }
 
   const featuredData = {
     title: subService.title || "Subservice",
@@ -39,4 +71,6 @@ export default async function Page({ params }) {
       cta={subService.cta || {}}
     />
   );
-}
+};
+
+export default Page;

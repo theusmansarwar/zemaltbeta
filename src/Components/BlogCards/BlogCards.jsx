@@ -215,7 +215,7 @@ const BlogCards = () => {
                 }}
               />
               <div className="post-content">
-                <span className="date">{formatDate(post.createdAt)}</span>
+                <span className="date">{formatDate(post.publishedDate)}</span>
                 <h2 className="post-title">
                   {truncateTextByWords(post.title, 10)}
                 </h2>

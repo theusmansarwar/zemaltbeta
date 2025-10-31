@@ -6,7 +6,7 @@ import { AiFillInstagram } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { RiFacebookFill } from "react-icons/ri";
 import { formatDate } from "@/utils/FormatDate";
-import { fetchallBloglist } from "@/DAL/Fetch";
+import { fetchallBloglist, fetchFeaturedBlog } from "@/DAL/Fetch";
 import { baseUrl } from "@/config/Config";
 import FeaturedBlogsSkeleton from "../SkeletonLoaders/FeaturedBlogsSkeleton";
 import { useRouter } from "next/navigation";
@@ -19,13 +19,8 @@ const FeaturedBlogs = () => {
   useEffect(() => {
     const loadFeaturedBlogs = async () => {
       try {
-        // Fetch first 10 blogs (adjust limit if needed)
-        const res = await fetchallBloglist("", 1, 10, "");
-        const allBlogs = res?.blogs || [];
-
-        // Filter blogs where featured === true
-        const featuredBlogs = allBlogs.filter((blog) => blog.featured);
-
+        const res = await fetchFeaturedBlog("", 1, 10, "");
+        const featuredBlogs = res?.blogs || [];
         setBlogs(featuredBlogs);
       } catch (error) {
         console.error("Error fetching featured blogs:", error);
@@ -73,7 +68,7 @@ const FeaturedBlogs = () => {
                 <hr />
                 <div className="blog-footer">
                   <span className="blog-date">
-                    {formatDate(post.createdAt)}
+                    {formatDate(post.publishedDate)}
                   </span>
                   <div className="icons-container">
                     <a

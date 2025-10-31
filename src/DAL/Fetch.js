@@ -66,6 +66,15 @@ export const getblogSlugs = async () => {
   return invokeApi(reqObj);
 };
 
+export const fetchDropDownServices = async () => {
+  const reqObj = {
+    path: `/service/menu`,
+    method: "GET",
+    headers: {},
+    body: {},
+  };
+  return invokeApi(reqObj);
+};
 export const fetchAllServices = async (page, rowsPerPages) => {
   const reqObj = {
     path: `/service/list?${page}&limit=${rowsPerPages}`,

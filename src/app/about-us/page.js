@@ -17,7 +17,7 @@ const aboutPageFaqs = {
   title: "FAQs about Zemalt",
   description:
     "At Zemalt, we believe in growth through trust and results. Many people ask about who we are and how we work.",
-  questions: [
+  items: [
     {
       question: "Why choose Zemalt digital marketing agency for my business?",
       answer:

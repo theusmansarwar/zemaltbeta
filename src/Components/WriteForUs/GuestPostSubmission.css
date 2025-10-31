@@ -1,0 +1,111 @@
+.gp-submission {
+  background-color: var(--text-color4);
+  width: calc(100% - (var(--left-space) * 2));
+  padding: 40px var(--left-space);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gp-eyebrow {
+  text-align: center;
+  font-weight: 600;
+  font-size: var(--default-p-size);
+}
+
+.gp-title {
+  font-size: var(--heading-two);
+  text-align: center;
+  line-height: var(--heading-line-height);
+}
+.gp-title span {
+  color: var(--primary-color);
+}
+.gp-intro {
+  text-align: center;
+  font-size: var(--default-p-size);
+  line-height: var(--p-line-height);
+}
+
+/* Steps */
+.gp-steps-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 30px;
+}
+.gp-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 23%;
+  gap: 10px;
+}
+.gp-badge {
+  width: 125px;
+  height: 113px;
+  background: var(--primary-color);
+  color: var(--text-color4);
+  font-weight: 900;
+  font-size: var(--heading-one);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 6px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+/* Small line under the number */
+.gp-badge::after {
+  content: "";
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 26%;
+  height: 3px;
+  background-color: var(--text-color4);
+  border-radius: 2px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+}
+
+.gp-step-caption {
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  color: #6c757d;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  margin-top: 15px;
+}
+
+.gp-step-text {
+  font-size: var(--default-p-size);
+  line-height: var(--p-line-height);
+  min-height: 140px;
+}
+
+@media (max-width: 900px) {
+  .gp-step {
+    width: 50%;
+    margin-top: 30px;
+  }
+  .gp-badge {
+    width: 110px;
+    height: 95px;
+  }
+}
+
+@media (max-width: 600px) {
+  .gp-step {
+    width: 100%;
+  }
+  .gp-step-text {
+  min-height: fit-content;
+}
+}

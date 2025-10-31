@@ -1,55 +1,91 @@
 import ServicePage from "@/Components/SERVICEPAGE/ServicePage";
 import { fetchServiceBySlug } from "@/DAL/Fetch";
 
+/** ---------------------------------------------------------------
+ * Fetch Service by slug
+ * --------------------------------------------------------------- */
+async function getService(slug) {
+  try {
+    const res = await fetchServiceBySlug(slug);
+    if (res?.service) return res.service;
+
+    return null;
+  } catch (error) {
+    console.error("Error fetching service:", error);
+    return null;
+  }
+}
+
+/** ---------------------------------------------------------------
+ * Dynamic <title> and <meta description>
+ * --------------------------------------------------------------- */
 export async function generateMetadata({ params }) {
-  const { serviceslug } = params;
+  const slug = params.serviceslug;
+
+  const service = await getService(slug);
+
+  if (!service) {
+    return {
+      title: "Service Not Found",
+      description: "This service is currently unavailable.",
+      icons: { icon: "/favicon.svg" },
+    };
+  }
 
   return {
-    title: `${serviceslug
-      .split("-")
-      .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-      .join(" ")} | Zemalt`,
-    description: "Explore detailed information about this service.",
+    title: service.metatitle,
+    description:
+      service.metaDescription ,
+    icons: { icon: "/favicon.svg" },
   };
 }
 
-export default async function Service({ params }) {
-  const { serviceslug } = params;
+/** ---------------------------------------------------------------
+ * Page Component
+ * --------------------------------------------------------------- */
+const Page = async ({ params }) => {
+  const service = await getService(params.serviceslug);
 
-  const response = await fetchServiceBySlug(serviceslug);
-  const serviceData = response?.service || {};
+  if (!service) {
+    return (
+      <div style={{ padding: "20px 0" }}>
+        <h2>Service not found</h2>
+      </div>
+    );
+  }
 
   const featuredData = {
-    title: serviceData.title || "Service",
+    title: service.title || "Service",
     spanTitle: "SERVICES",
-    description: serviceData.description || serviceData.short_description || "",
+    description: service.description || service.short_description || "",
   };
 
   const cardData =
-    serviceData.subServices?.items?.length > 0
-      ? serviceData.subServices.items
-      : [];
+    service.subServices?.items?.length > 0 ? service.subServices.items : [];
 
   const imageData = {
     heading:
-      serviceData.imageSection?.title ||
+      service.imageSection?.title ||
       "Bright minds shape clear paths and act fast.",
-    image: serviceData.imageSection?.image || "/zemalt-logo.png",
+    image: service.imageSection?.image || "/zemalt-logo.png",
   };
 
   const whyService = {
-    title: serviceData.lastSection?.title || "Why Choose Zemalt",
-    description: serviceData.lastSection?.description
-      ? [serviceData.lastSection.description]
+    title: service.lastSection?.title || "Why Choose Zemalt",
+    description: service.lastSection?.description
+      ? [service.lastSection.description]
       : [],
-    image: serviceData.lastSection?.image || "/why-designing.png",
+    image: service.lastSection?.image || "/why-designing.png",
   };
 
-  const faqsData = serviceData.faqs;
+  const faqsData = service.faqs;
 
   const calculaterBottomData = {
-    heading: "Why Choose Zemalt as Your Google Ads Partner?",
+    heading:
+      service.CalulaterBottom?.heading ||
+      "Why Choose Zemalt as Your Google Ads Partner?",
     description:
+      service.CalulaterBottom?.description ||
       "We are a trusted ad agency that drives fast growth and real reach. You get clear campaigns built on sharp strategy and smart targeting. Each plan cuts waste, raises clicks, and delivers steady leads that add lasting value to your business.",
   };
 
@@ -63,4 +99,6 @@ export default async function Service({ params }) {
       whyService={whyService}
     />
   );
-}
+};
+
+export default Page;

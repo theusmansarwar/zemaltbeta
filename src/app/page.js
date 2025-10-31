@@ -20,7 +20,7 @@ export const metadata = {
     title: "FAQs",
     description:
       "Zemalt is a leading digital marketing agency. We provide clear answers and practical guidance. Our clients receive dedicated support backed by proven expertise.",
-    questions: [
+    items: [
       {
         question:
           "What services do we provide to support your business growth?",

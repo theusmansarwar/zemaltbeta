@@ -9,13 +9,13 @@
 }
 .servicecard {
   width: 370px;
-  height: 360px; /* Fixed height instead of fit-content for consistent alignment */
+  height: 360px; 
   border-radius: var(--border-radius1);
   position: relative;
 }
 .servicecard .overlay1 {
   width: 370px;
-  height: 360px; /* Fixed height to match parent */
+  height: 360px; 
   border-radius: var(--border-radius1);
   position: relative;
   overflow: hidden;
@@ -31,7 +31,7 @@
   background-image: url("/distortion-img.png");
   background-size: cover;
   background-position: center;
-  opacity: 0.08; /* Change this value for more or less transparency */
+  opacity: 0.08;
 }
 .servicecard .overlay2 {
   width: 100%;

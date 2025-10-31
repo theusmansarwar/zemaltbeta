@@ -1,0 +1,19 @@
+.write-featured {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  min-height: 150px;
+  margin-top: 90px;
+}
+.write-featured h1 {
+  font-size: var(--heading-two);
+  
+}
+.write-featured h1 span {
+  color: var(--primary-color);
+}
+@media (max-width: 900px) {
+  .write-featured {
+    margin-top: 70px;
+  }
+}

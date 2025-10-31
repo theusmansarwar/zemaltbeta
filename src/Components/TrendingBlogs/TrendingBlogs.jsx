@@ -64,7 +64,7 @@ const TrendingBlogs = () => {
               <p className="blog-meta">6 Min Read</p>
               <hr />
               <div className="blog-footer">
-                <span className="blog-date">{formatDate(post.createdAt)}</span>
+                <span className="blog-date">{formatDate(post.publishedDate)}</span>
                 <div className="icons-container">
                   <a
                     href="https://www.facebook.com/zemaltpvtltd"

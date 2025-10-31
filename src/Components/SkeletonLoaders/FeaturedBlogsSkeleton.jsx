@@ -5,7 +5,6 @@ import "./FeaturedBlogsSkeleton.css";
 const FeaturedBlogsSkeleton = ({ count = 4 }) => {
   return (
     <div className="b2b-blogs">
-      <h2 className="b2b-heading">Featured Blogs</h2>
       <div className="b2b-blog-grid">
         {Array.from({ length: count }).map((_, index) => (
           <div className="b2b-blog-card skeleton" key={index}>

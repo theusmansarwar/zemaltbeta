@@ -1,10 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Header.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaAngleDown, FaTimes } from "react-icons/fa";
 import ServicesDropDown from "../DropDowns/ServicesDropDown";
 import { useRouter } from "next/navigation";
+import { fetchDropDownServices } from "@/DAL/Fetch";
 
 const services = [
   {
@@ -101,6 +102,7 @@ const services = [
     ],
   },
 ];
+
 const Header = () => {
   const router = useRouter();
   const [showDropdown, setShowDropdown] = useState(false); // desktop dropdown
@@ -108,9 +110,40 @@ const Header = () => {
   // Add these states
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [activeService, setActiveService] = useState(null);
+  const [services, setServices] = useState([]);
 
   const visibleDropdown = () => setShowDropdown(true);
   const hidedropdown = () => setShowDropdown(false);
+
+  useEffect(() => {
+    const getServices = async () => {
+      try {
+        const res = await fetchDropDownServices();
+
+
+        const fetchedServices = Array.isArray(res?.services)
+          ? res.services.map((service) => ({
+            name: service.title,
+            slug: service.slug,
+            items: Array.isArray(service.subServices?.items)
+              ? service.subServices.items.map((sub) => ({
+                name: sub.title,
+                slug: sub.slug,
+              }))
+              : [],
+          }))
+          : [];
+
+        setServices(fetchedServices);
+      } catch (error) {
+        console.error("Failed to fetch services:", error);
+        setServices([]);
+      }
+    };
+
+    getServices();
+  }, []);
+
 
   return (
     <div className="main-wrapper-fixed-width">
@@ -158,7 +191,7 @@ const Header = () => {
           <div className="maindropdown-area-flex " onMouseLeave={hidedropdown}>
             <div className="left" onMouseEnter={hidedropdown}></div>
             <div className="center" onMouseEnter={visibleDropdown}>
-              <ServicesDropDown />
+              <ServicesDropDown services={services} />
             </div>
             <div className="right" onMouseEnter={hidedropdown}></div>
           </div>
