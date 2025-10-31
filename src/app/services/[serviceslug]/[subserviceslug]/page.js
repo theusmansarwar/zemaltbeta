@@ -56,7 +56,7 @@ const Page = async ({ params }) => {
   const featuredData = {
     title: subService.title || "Subservice",
     spanTitle: "SERVICES",
-    description: subService.short_description || "",
+    description: subService.description || "",
   };
 
   return (

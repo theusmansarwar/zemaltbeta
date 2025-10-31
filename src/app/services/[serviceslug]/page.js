@@ -57,7 +57,7 @@ const Page = async ({ params }) => {
   const featuredData = {
     title: service.title || "Service",
     spanTitle: "SERVICES",
-    description: service.description || service.short_description || "",
+    description: service.description || service.description || "",
   };
 
   const cardData =

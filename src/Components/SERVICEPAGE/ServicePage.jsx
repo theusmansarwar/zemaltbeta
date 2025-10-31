@@ -5,7 +5,6 @@ import ServiceCard from "../Designing-cards/ServiceCard";
 import Faq from "../FAQ/Faq";
 import RevenueCalculator from "../RevenueCalculator/RevenueCalculator";
 import ServicePageFeatured from "../ServicePageFeatured/ServicePageFeatured";
-import TestimonialSlider from "../TestimonialSlider/TestimonialSlider";
 import WhyService from "../WhyService/WhyService";
 
 import "./page.css";
