@@ -3,6 +3,7 @@
   padding: 40px var(--left-space);
   background-color: var(--text-color4);
 }
+
 .proven-steps h2 {
   font-size: var(--heading-two);
   margin-bottom: 30px;
@@ -21,8 +22,9 @@
   min-width: 50px;
   text-align: right;
 }
-.proven-steps .content-box h3{
-  font-size: var(--heading-four);
+
+.proven-steps .content-box h3 {
+  font-size: 18px;
   display: block;
   margin-bottom: 5px;
 }
@@ -32,6 +34,7 @@
   line-height: var(--p-line-height);
   font-size: var(--default-p-size);
 }
+
 .proven-steps .content-box p span {
   display: block;
   margin-bottom: 2px;
@@ -41,17 +44,24 @@
   .proven-steps {
     padding: 20px var(--left-space);
   }
+
   .proven-steps h2 {
     text-align: left;
   }
+
   .proven-steps .content-box {
     flex-direction: column;
     gap: 10px;
   }
+
   .proven-steps .content-box p span {
     font-size: 14px;
   }
+
   .proven-steps .content-box strong {
     text-align: left;
   }
+  .proven-steps .content-box h3 {
+  font-size: 16px;
+}
 }
