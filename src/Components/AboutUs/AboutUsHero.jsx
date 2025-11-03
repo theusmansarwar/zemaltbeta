@@ -10,10 +10,7 @@ const AboutUsHero = () => {
          Zemalt is a digital agency that cares about results. It offers SEO, Google Ads, content writing, social media marketing, web development, and UI/UX design. It helps you grow and win online. The goal is to increase your visibility and provide real value. The team uses data, clear ideas, and full focus on clients. It creates work that fits your brand and builds trust. You can rely on honest support and strong skills. Every project is shaped to help you succeed.
         </p>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt,
-          laboriosam! Explicabo deserunt magnam magni repellat dolorem
-          assumenda. Est ab quasi cum vitae reiciendis odit deleniti, assumenda
-          ut numquam, adipisci ipsam!
+         Zemalt believes in clarity, creativity, and consistent growth. Every strategy focuses on measurable results and lasting impact. The team studies your business, audience, and goals to design solutions that deliver real progress. Each project combines smart design with practical marketing to keep your brand visible and competitive. 
         </p>
         <button className="work-btn">Check Our Work</button>
       </div>

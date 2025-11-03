@@ -8,10 +8,11 @@ import TestimonialSlider2 from "@/Components/TestimonialSlider/TestimonialSlider
 import GloballyTrusted from "@/Components/GloballyTrusted/GloballyTrusted";
 import HowDifferent from "@/Components/HowDifferent/HowDifferent";
 import BlogSection from "@/Components/BlogSection/BlogSection";
+
 export const metadata = {
-  title: "Services | Zemalt",
+  title: "Grow Your Brand Online with Zemalt | Digital Branding Solutions",
   description:
-    "Zemalt delivers expert marketing with clear plans, proven methods, and strong skills that build trust, boost reach, and drive more leads.",
+    "Grow your business online with Zemalt. Our digital marketing strategist delivers SEO, content, social media, web design, UI/UX & Google Ads services.",
 };
 const blogHeaderData = {
   heading: "Digital Marketing & SEO Services That Boost Reach & Increase Sales",

@@ -10,8 +10,9 @@ const WhyService = ({ data }) => {
         <h3>{data.title}</h3>
 
         {data.description.map((para, index) => (
-          <p key={index}>{para}</p>
+          <p key={index} dangerouslySetInnerHTML={{ __html: para }} />
         ))}
+
       </div>
 
       <img src={baseUrl + data.image} alt="Why Good Design" />

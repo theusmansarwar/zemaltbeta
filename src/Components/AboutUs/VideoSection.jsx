@@ -14,10 +14,7 @@ const VideoSection = () => {
       <img className="smoke-bg" src="/smoke-bg.jpg" alt="background image" />
       <h2>How can I get started with Zemalt?</h2>
       <p>
-        Getting started is simple. Contact us through our website, and our team
-        will set up a consultation. We’ll learn about your goals, discuss your
-        challenges, and create a digital marketing plan that fits your budget
-        and objectives.
+       See Zemalt in action and discover how we help businesses grow online. This video shows our expertise, our process, and the results we deliver. You will learn how we turn ideas into real success. Every project, campaign, and strategy is designed to build trust, visibility, and lasting impact. Watch now to understand why brands choose Zemalt and how we make digital growth simple, clear, and effective for you.
       </p>
       {!isPlaying ? (
         <div

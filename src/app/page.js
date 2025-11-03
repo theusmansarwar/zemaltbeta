@@ -12,10 +12,11 @@ import TestimonialSlider2 from "@/Components/TestimonialSlider/TestimonialSlider
 import BlogSection from "@/Components/BlogSection/BlogSection";
 
 export const metadata = {
-  title: "Zemalt",
+  title: "Zemalt | Digital Marketing, SEO & Web Design Services.",
   description:
-    "Get smart SEO and marketing solutions with Zemalt that increase search traffic, improve brand reach, and turn visitors into loyal customers.",
+    "Zemalt offers expert SEO, content writing, web design, UI/UX, and digital marketing services to build brands, boost rankings, and drive business growth",
 };
+
   const Homepagefaqs = {
     title: "FAQs",
     description:

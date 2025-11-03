@@ -9,9 +9,9 @@ import Faq from "@/Components/FAQ/Faq";
 
 
 export const metadata = {
-  title: "About Us | Zemalt",
+  title: "About Zemalt | Digital Marketing, SEO & Design Experts",
   description:
-    "Get smart SEO and marketing solutions with Zemalt that increase search traffic, improve brand reach, and turn visitors into loyal customers.",
+    "Learn about Zemalt, a full-service digital marketing agency specializing in SEO, content writing, UI/UX design, development, and paid media solutions.",
 };
 const aboutPageFaqs = {
   title: "FAQs about Zemalt",
@@ -47,6 +47,11 @@ const aboutPageFaqs = {
       question: "Do you work with businesses outside your location?",
       answer:
         "Yes, Zemalt works with clients worldwide. Our digital-first approach allows us to create and manage campaigns for businesses in different regions, while still offering personalized support",
+    },
+    {
+      question: "How can I get started with Zemalt?",
+      answer:
+        "You can start by reaching us through our website. Our team sets a consultation to learn your goals and challenges. Then we design a plan that fits your budget and drives growth.",
     },
   ],
 };

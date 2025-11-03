@@ -17,7 +17,7 @@ const GloballyTrusted = () => {
           Trusted by over <span>2200+</span> customers globally
         </h2>
         <p>
-          We've been helpingour customers with affordable Digital Marketing
+          We've been helping our customers with affordable Digital Marketing
           Services for
         </p>
         <div className="content-container">

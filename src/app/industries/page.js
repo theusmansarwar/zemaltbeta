@@ -4,15 +4,15 @@ import ServicePageFeatured from "@/Components/ServicePageFeatured/ServicePageFea
 
 
 export const metadata = {
-  title: "Industries | Zemalt",
+  title: "Industries We Serve | Zemalt Digital Solutions for Growth",
   description:
-    "Get smart SEO and marketing solutions with Zemalt that increase search traffic, improve brand reach, and turn visitors into loyal customers.",
+    "Zemalt offers customized SEO, marketing, and web solutions for a wide range of industries. Discover how we help businesses achieve growth across global markets.",
 };
 const featuredData = {
   title: "INDUSTRIES",
   spanTitle: "WE SERVE",
   description:
-    "You need a clear design that grows your brand. Zemalt creates sharp ideas that keep your style strong. You gain trust through smart detail and clean art. Each project shows focus and clear results.",
+    "Every industry faces different challenges, and we deliver solutions that fit each one. Our expertise covers IT, healthcare, finance, retail, and e-commerce. You receive services that enhance productivity, secure systems, and drive digital growth. We focus on strategies that create long-term impact and measurable success. We adapt our services to match your goals, from small businesses to large organizations. ",
 };
 const page = () => {
   return (

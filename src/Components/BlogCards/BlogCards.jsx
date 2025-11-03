@@ -12,6 +12,7 @@ import { fetchBlogCategories, fetchallBloglist } from "@/DAL/Fetch";
 import { baseUrl } from "@/config/Config";
 import BCard from "../SkeletonLoaders/BCard";
 import { formatDate } from "@/utils/FormatDate";
+import { FaChevronDown } from "react-icons/fa6";
 
 // ✅ Dummy Data (fallback if API fails)
 const blogData = [
@@ -76,8 +77,21 @@ const BlogCards = () => {
   const [rowsPerPage, setRowsPerPage] = useState(9);
   const [categories, setCategories] = useState([{ _id: "all", name: "All" }]);
   const [activeCategory, setActiveCategory] = useState("all");
+    const [sortOrder, setSortOrder] = useState("desc");
 
-  // ✅ Fetch categories
+  useEffect(() => {
+    if (blogs.length > 0) {
+      const sorted = [...blogs].sort((a, b) => {
+        const dateA = new Date(a.createdAt);
+        const dateB = new Date(b.createdAt);
+        return sortOrder === "asc" ? dateA - dateB : dateB - dateA;
+      });
+      setBlogs(sorted);
+    }
+  }, [sortOrder]);
+
+
+  //  Fetch categories
   useEffect(() => {
     const fetchCategories = async () => {
       try {
@@ -92,7 +106,7 @@ const BlogCards = () => {
     fetchCategories();
   }, []);
 
-  // ✅ Fetch blogs when filters change
+  // Fetch blogs when filters change
   useEffect(() => {
     fetchData();
   }, [page, rowsPerPage, activeCategory]);
@@ -108,7 +122,7 @@ const BlogCards = () => {
         setTotalPages(res.totalPages || 1);
         setTotalItems(res.totalBlogs || res.blogs.length);
       } else {
-        // ✅ fallback to dummy data
+        // fallback to dummy data
         setBlogs(blogData);
         setTotalPages(1);
         setTotalItems(blogData.length);
@@ -162,12 +176,6 @@ const BlogCards = () => {
       {/* ---------- Header with categories ---------- */}
       <div className="header">
         <div className="left">
-          <h2>
-            <span>Design is not just what it looks</span>{" "}
-            <span>like and feels like.</span>
-          </h2>
-        </div>
-        <div className="right">
           <CiCircleChevLeft
             onClick={scrollLeft}
             className={`scroll-btn ${!canScrollLeft ? "disabled" : ""}`}
@@ -175,7 +183,7 @@ const BlogCards = () => {
           <ul ref={ulRef} onScroll={checkScrollButtons}>
             {categories.map((cat, index) => (
               <li
-                key={cat._id || `cat-${index}`}
+                key={cat._id || "all"}
                 className={activeCategory === cat._id ? "active" : ""}
                 onClick={() => {
                   setActiveCategory(cat._id);
@@ -187,13 +195,29 @@ const BlogCards = () => {
               </li>
             ))}
           </ul>
+
           <CiCircleChevRight
             onClick={scrollRight}
             className={`scroll-btn ${!canScrollRight ? "disabled" : ""}`}
           />
         </div>
-      </div>
 
+        <div className="right">
+          <label>Sort by:</label>
+          <div className="select-wrapper">
+            <select
+              className="sort-select"
+              value={sortOrder}
+              onChange={(e) => setSortOrder(e.target.value)}
+            >
+              <option value="desc">Newest</option>
+              <option value="asc">Oldest</option>
+            </select>
+
+            <FaChevronDown className="select-icon" />
+          </div>
+        </div>
+      </div>
       {/* ---------- Blog Grid ---------- */}
       <div className="blog-grid">
         {loading ? (

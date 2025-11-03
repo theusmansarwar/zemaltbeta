@@ -9,19 +9,19 @@ const cards = [
     image: "/zemalt-logo.png", 
     points: [
       {
-        text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, iure!",
+        text: "Dedicated account manager and full in-house team that plan, build, and execute SEO assets.",
         type: "check",
       },
       {
-        text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, iure!",
+        text: "All-in-one platform for optimizing, tracking, and reporting SEO ROI.",
         type: "check",
       },
       {
-        text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, iure!",
+        text: "Built around your business goals, changing markets, and marketing efforts.",
         type: "check",
       },
       {
-        text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, iure!",
+        text: "24/7 support, live tracking, and direct client communication.",
         type: "check",
       },
     ],
@@ -30,19 +30,19 @@ const cards = [
     title: "Typical Seo Agency",
     points: [
       {
-        text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, iure!",
+        text: "Runs basic scans that highlight common issues.",
         type: "check",
       },
       {
-        text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, iure!",
+        text: "Tracks limited data using standard tools and reports.",
         type: "check",
       },
       {
-        text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, iure!",
+        text: "Uses multiple third-party tools that increase costs and create confusion.",
         type: "close",
       },
       {
-        text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, iure!",
+        text: "Follows the same templates that ignore unique business goals and audience needs.",
         type: "close",
       },
     ],
@@ -51,19 +51,19 @@ const cards = [
     title: "In-house Seo",
     points: [
       {
-        text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, iure!",
+        text: "Reviews content and performance on selected pages.",
         type: "check",
       },
       {
-        text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, iure!",
+        text: "Checks progress but lacks advanced technical review.",
         type: "check",
       },
       {
-        text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, iure!",
+        text: "Relies on outdated manual tracking tools that limit full visibility.",
         type: "close",
       },
       {
-        text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, iure!",
+        text: "Skips tracking of algorithm changes and some updates.",
         type: "close",
       },
     ],
