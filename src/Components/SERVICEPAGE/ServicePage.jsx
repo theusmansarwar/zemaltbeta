@@ -41,7 +41,7 @@ export default function ServicePage({
 
       {/* Revenue Calculator */}
 
-      <RevenueCalculator data={CalulaterBottom} />
+      {/* <RevenueCalculator data={CalulaterBottom} /> */}
 
       {/* Why Service Section */}
       {whyService?.published && <WhyService data={whyService} />}
