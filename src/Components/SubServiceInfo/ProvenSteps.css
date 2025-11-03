@@ -21,6 +21,11 @@
   min-width: 50px;
   text-align: right;
 }
+.proven-steps .content-box h3{
+  font-size: var(--heading-four);
+  display: block;
+  margin-bottom: 5px;
+}
 
 .proven-steps .content-box p {
   margin-bottom: 15px;

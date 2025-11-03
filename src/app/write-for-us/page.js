@@ -9,9 +9,9 @@ import WriteFeatured from "@/Components/WriteForUs/WriteFeatured";
 
 
 export const metadata = {
-  title: "Write for us | Zemalt",
+  title: "Write for us",
   description:
-    "Get smart SEO and marketing solutions with Zemalt that increase search traffic, improve brand reach, and turn visitors into loyal customers.",
+    "Write for Us at Zemalt — share your digital marketing, SEO, and social media insights with a platform that values expertise and real results.",
 };
 
  const writefaqs = {

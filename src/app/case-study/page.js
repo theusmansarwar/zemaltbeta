@@ -2,9 +2,9 @@ import CaseStudy from "@/Components/CaseStudy/CaseStudy";
 import ServicePageFeatured from "@/Components/ServicePageFeatured/ServicePageFeatured";
 
 export const metadata = {
-  title: "Case Study | Zemalt",
+  title: "Case Studies | Zemalt’s Success Stories in Digital Growth",
   description:
-    "Get smart SEO and marketing solutions with Zemalt that increase search traffic, improve brand reach, and turn visitors into loyal customers.",
+    "Zemalt’s case studies showcasing SEO, paid ads, and web development success. See how we drive growth and deliver measurable results for clients.",
 };
 const featuredData = {
   title: "CASE",

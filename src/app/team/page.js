@@ -3,9 +3,9 @@ import ServicePageFeatured from "@/Components/ServicePageFeatured/ServicePageFea
 import TeamCard from "@/Components/TeamCard/TeamCard";
 
 export const metadata = {
-  title: "Team | Zemalt",
+  title: "Team",
   description:
-    "Get smart SEO and marketing solutions with Zemalt that increase search traffic, improve brand reach, and turn visitors into loyal customers.",
+    "Meet the Zemalt team — a group of digital marketing experts passionate about SEO, design, and strategy that help brands grow with creativity and results",
 };
 const featuredData = {
   title: "OUR",
