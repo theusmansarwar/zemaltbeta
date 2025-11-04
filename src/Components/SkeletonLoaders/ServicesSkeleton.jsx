@@ -19,7 +19,6 @@ const ServicesSkeleton = ({ count = 12 }) => {
               <div className="skeleton-text services-skeleton-text"></div>
               <div className="skeleton-text services-skeleton-text"></div>
               <div className="skeleton-text services-skeleton-text"></div>
-              <div className="skeleton-text services-skeleton-text"></div>
               <div className="skeleton-button services-skeleton-button"></div>
             </div>
           </div>

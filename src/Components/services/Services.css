@@ -7,15 +7,17 @@
   justify-content: center;
   background-color: var(--text-color4);
 }
+
 .servicecard {
   width: 370px;
-  height: 300px; 
+  height: 300px;
   border-radius: var(--border-radius1);
   position: relative;
 }
+
 .servicecard .overlay1 {
   width: 370px;
-  height: 300px; 
+  height: 300px;
   border-radius: var(--border-radius1);
   position: relative;
   overflow: hidden;
@@ -33,6 +35,7 @@
   background-position: center;
   opacity: 0.08;
 }
+
 .servicecard .overlay2 {
   width: 100%;
   height: 100%;
@@ -48,32 +51,39 @@
   justify-content: center;
   gap: 20px;
 }
+
 .servicecard .overlay2 h3 {
   font-size: var(--heading-three);
-  margin: 0; /* Remove default margin for better control */
-  flex-shrink: 0; /* Prevent heading from shrinking */
+  margin: 0;
+  /* Remove default margin for better control */
+  flex-shrink: 0;
+  /* Prevent heading from shrinking */
   display: flex;
   justify-content: center;
 }
+
 .servicecard .overlay2 h3,
 .servicecard .overlay2 p {
   width: 100%;
   text-align: center;
 }
+
 .servicecard .overlay2 p {
   margin: 0;
   display: flex;
   height: 130px;
   justify-content: center;
-   line-height: var(--p-line-height);
-   font-size: var(--defult-p-size);
+  line-height: var(--p-line-height);
+  font-size: var(--defult-p-size);
 }
+
 .servicecard .overlay2 .btn-showmore {
   border: none;
   padding: 10px 20px;
   background-color: var(--main-color);
   display: flex;
-  align-items: center; /* Changed from flex-end to center for better alignment */
+  align-items: center;
+  /* Changed from flex-end to center for better alignment */
   width: fit-content;
   justify-content: center;
   gap: 10px;
@@ -86,10 +96,12 @@
   display: flex;
   justify-self: self-start;
 }
+
 .servicecard .overlay2 .btn-showmore:hover {
   color: var(--text-color);
   background-color: transparent;
 }
+
 .searchicon {
   width: 70px;
   height: 70px;
@@ -103,20 +115,25 @@
   align-items: center;
   justify-content: center;
 }
+
 .searchicon img {
   width: 50px;
   height: 50px;
 }
+
 @media (max-width: 900px) {
   .servicecard {
     width: 100%;
-    height: 360px; /* Maintain fixed height on mobile */
+    height: 360px;
+    /* Maintain fixed height on mobile */
     border-radius: var(--border-radius1);
     position: relative;
   }
+
   .servicecard .overlay1 {
     width: 100%;
-    height: 360px; /* Fixed height to match parent */
+    height: 360px;
+    /* Fixed height to match parent */
     border-radius: var(--border-radius1);
     position: relative;
     overflow: hidden;
@@ -124,6 +141,7 @@
     align-items: center;
     justify-content: center;
   }
+
   .servicecard .overlay2 h3 {
     height: fit-content;
   }
