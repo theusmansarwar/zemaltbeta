@@ -15,9 +15,7 @@ const Featured = () => {
           You will find a top-rated SEO agency. It has expert teams in digital marketing, design, and web development. Each service aligns clearly with your goals
         </p>
         <p className="desc">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum sit
-          quas Dolorum sit quas maiores consequuntur! Reprehenderit reiciendis
-          nihil consectetur et
+          Zemalt moves your brand forward through smart execution and measurable growth. Every strategy works with precision to deliver impact, drive performance, and build lasting digital authority.
         </p>
         <div className="buttons-area">
           <button

@@ -19,17 +19,17 @@ const companyLinks = [
   { slug: "/contact", label: "Contact" },
   { slug: "/blog", label: "Blog" },
   { slug: "/team", label: "Team" },
-  { slug: "/career", label: "Career" },
+  { slug: "/", label: "Career" },
   { slug: "/write-for-us", label: "Write for us" },
 ];
 
 const whatWeDoBest = [
-  { slug: "seo", label: "SEO ( Search Engine )" },
-  { slug: "social-media-marketing", label: "Social Media Marketing" },
+  { slug: "seo", label: "SEO ( Search Engine Optimization )" },
+  { slug: "social-media-marketing", label: "Social & Paid Media" },
   { slug: "web-development", label: "Web Development" },
-  { slug: "ui-ux", label: "Graphic Design" },
+  { slug: "ui-ux", label: "Designing" },
   { slug: "google-ads", label: "Google Ads" },
-  { slug: "seo-writing", label: "Content Writing" },
+  { slug: "content-writing", label: "Content Writing" },
 ];
 
 export default function Footer() {
@@ -189,15 +189,15 @@ export default function Footer() {
               </span>
               <span
                 onClick={() => {
-                  router.push("/contact");
+                  router.push("/team");
                 }}
                 className="footer-bottom-link"
               >
-                Offices
+                Team
               </span>
               <span
                 onClick={() => {
-                  router.push("/career");
+                  router.push("/");
                 }}
                 className="footer-bottom-link"
               >
@@ -205,12 +205,22 @@ export default function Footer() {
               </span>
             </div>
             <div className="top-right">
-              <a href="#" className="footer-bottom-link">
-                Legal
-              </a>
-              <a href="#" className="footer-bottom-link">
+               <span
+                onClick={() => {
+                  router.push("/terms-and-conditions");
+                }}
+                className="footer-bottom-link"
+              >
+                Terms & Conditions
+              </span>
+               <span
+                onClick={() => {
+                  router.push("/privacy-policy");
+                }}
+                className="footer-bottom-link"
+              >
                 Privacy Policy
-              </a>
+              </span>
             </div>
           </div>
           <div className="bottom">
@@ -227,9 +237,6 @@ export default function Footer() {
                 >
                   <FaFacebookF />
                 </a>
-                <a href="#" className="social-icon twitter">
-                  <FaXTwitter />
-                </a>
                 <a
                   href="https://www.instagram.com/zemaltpvtltd/"
                   className="social-icon instagram"
@@ -241,9 +248,6 @@ export default function Footer() {
                   className="social-icon linkedin"
                 >
                   <FaLinkedinIn />
-                </a>
-                <a href="#" className="social-icon tiktok">
-                  <FaTiktok />
                 </a>
               </div>
             </div>

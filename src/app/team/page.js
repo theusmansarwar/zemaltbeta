@@ -11,7 +11,7 @@ const featuredData = {
   title: "OUR",
   spanTitle: "TEAM",
   description:
-    "You need a clear design that grows your brand. Zemalt creates sharp ideas that keep your style strong. You gain trust through smart detail and clean art. Each project shows focus and clear results.",
+    "Behind every project stands a team that understands results. Zemalt brings together experts from SEO, design, development, and digital strategy. Each professional focuses on precision, performance, and measurable growth. We work with clear goals, proven methods, and a shared drive to help brands lead in their industries.",
 };
 const page = () => {
   return (

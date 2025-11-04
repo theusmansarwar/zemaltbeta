@@ -9,7 +9,7 @@ import Faq from "@/Components/FAQ/Faq";
 
 
 export const metadata = {
-  title: "About Zemalt | Digital Marketing, SEO & Design Experts",
+  title: "About Us",
   description:
     "Learn about Zemalt, a full-service digital marketing agency specializing in SEO, content writing, UI/UX design, development, and paid media solutions.",
 };

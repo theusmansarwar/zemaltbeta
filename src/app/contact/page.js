@@ -6,7 +6,7 @@ import ServicePageFeatured from "@/Components/ServicePageFeatured/ServicePageFea
 
 
 export const metadata = {
-  title: "Contact Zemalt | Get in Touch for SEO & Digital Marketing Services",
+  title: "Contact Us",
   description:
     "Do you have questions or need digital marketing support? Contact Zemalt today for SEO, content writing, web design, development, and advertising solutions.",
 };
@@ -14,7 +14,7 @@ const featuredData = {
   title: "CONTACT",
   spanTitle: "US",
   description:
-    "You need a clear design that grows your brand. Zemalt creates sharp ideas that keep your style strong. You gain trust through smart detail and clean art. Each project shows focus and clear results.",
+    "Reach out to Zemalt to discuss your project, ask questions, or share feedback. We review every message carefully and respond promptly. Our goal is to provide clear guidance, professional support, and personalized solutions. Connect with us today, and let’s create results that truly reflect your brand.",
 };
 const page = () => {
   return (

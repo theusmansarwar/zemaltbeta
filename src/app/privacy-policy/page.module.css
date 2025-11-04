@@ -1,0 +1,14 @@
+.privacyPage {
+  width: calc(100% - 10%);
+  padding: 40px var(--left-space);
+}
+
+.privacyLayout {
+  display: flex;
+  gap: 10px;
+}
+@media (max-width: 900px) {
+  .privacyLayout {
+    flex-direction: column;
+  }
+}

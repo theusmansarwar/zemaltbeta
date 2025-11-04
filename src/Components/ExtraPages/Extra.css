@@ -1,0 +1,96 @@
+.extra {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 90px;
+}
+
+.extra h1 {
+  font-size: var(--heading-two);
+  line-height: var(--heading-line-height);
+  color: var(--primary-color);
+  text-align: center;
+}
+.extra h2 {
+  font-size: var(--heading-three);
+  line-height: var(--heading-line-height);
+  margin-top: 30px;
+  color: var(--text-dark);
+}
+
+.extra p {
+  font-size: var(--default-p-size);
+  line-height: var(--p-line-height);
+  color: var(--text-light);
+}
+
+.extra p strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.extra ul {
+  padding-left: 20px;
+  list-style-type: disc;
+  color: var(--text-light);
+}
+
+.extra ul li {
+  margin-bottom: 8px;
+  line-height: var(--p-line-height);
+}
+
+.extra ul li span {
+  color: var(--primary-color);
+  margin-left: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.extra ul li a {
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.extra ul li a:hover {
+  opacity: 0.9;
+}
+
+.extra ul li span:hover {
+  opacity: 0.9;
+}
+
+.extra p span {
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.extra p span:hover {
+  opacity: 0.9;
+}
+
+.extra p a {
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.extra p a:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 900px) {
+  .extra {
+    margin-top: 70px;
+  }
+
+  .extra h2 {
+    width: 100%;
+    font-size: var(--heading-four);
+  }
+}

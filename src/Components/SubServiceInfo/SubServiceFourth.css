@@ -11,6 +11,9 @@
 .sub-service-fourth .description {
   line-height: var(--p-line-height);
   font-size: var(--default-p-size);
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
 }
 .sub-service-fourth img {
   width: 60%;
@@ -29,4 +32,8 @@
     width: 100%;
     margin: 20px 0;
   }
+  .sub-service-fourth .description {
+  width: 100%;
+  margin: 0;
+}
 }

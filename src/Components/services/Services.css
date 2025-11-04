@@ -9,13 +9,13 @@
 }
 .servicecard {
   width: 370px;
-  height: 360px; 
+  height: 300px; 
   border-radius: var(--border-radius1);
   position: relative;
 }
 .servicecard .overlay1 {
   width: 370px;
-  height: 360px; 
+  height: 300px; 
   border-radius: var(--border-radius1);
   position: relative;
   overflow: hidden;
@@ -52,7 +52,6 @@
   font-size: var(--heading-three);
   margin: 0; /* Remove default margin for better control */
   flex-shrink: 0; /* Prevent heading from shrinking */
-  height: 80px; /* Added fixed height for consistent heading alignment */
   display: flex;
   justify-content: center;
 }
@@ -64,7 +63,7 @@
 .servicecard .overlay2 p {
   margin: 0;
   display: flex;
-  height: 150px;
+  height: 130px;
   justify-content: center;
    line-height: var(--p-line-height);
    font-size: var(--defult-p-size);
@@ -92,12 +91,12 @@
   background-color: transparent;
 }
 .searchicon {
-  width: 90px;
-  height: 90px;
+  width: 70px;
+  height: 70px;
   border: 10px solid var(--text-color4);
   border-radius: 50%;
   position: absolute;
-  bottom: -15px;
+  bottom: -35px;
   right: -15px;
   background-color: var(--main-color);
   display: flex;

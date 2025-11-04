@@ -39,9 +39,7 @@ const OurFormat = () => {
                 230 <img src="/plus-icon.svg" alt="Add Icon" />
               </strong>
               <p>
-                nec Praesent libero, placerat nec non dignissim, viverra Lorem
-                tempor vitae elit. viverra turpis faucibus non. sit fringilla
-                risus Nam ex nisl.
+                More than 230 contributors are already part of our platform. The community has marketers, writers, business owners, designers, and other professionals.
               </p>
 
               <div className="progress-area">

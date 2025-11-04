@@ -5,7 +5,7 @@ import ServicePageFeatured from "@/Components/ServicePageFeatured/ServicePageFea
 import React from "react";
 
 export const metadata = {
-  title: "Careers | Zemalt",
+  title: "Careers",
   description:
     "Get smart SEO and marketing solutions with Zemalt that increase search traffic, improve brand reach, and turn visitors into loyal customers.",
 };

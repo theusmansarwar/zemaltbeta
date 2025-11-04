@@ -30,10 +30,46 @@
   align-items: flex-end;
   gap: 5px;
   color: var(--text-color);
+  transition: color 0.3s ease;
+  position: relative;
+  font-weight: 500
 }
+
+/* Hover text color */
 .header-area ul li:hover {
-  color: var(--text-color);
+  color: var(--primary-color);
 }
+
+/* Animated underline (hover) */
+.header-area ul li::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+/* Expand underline on hover */
+.header-area ul li:hover::after {
+  width: 100%;
+}
+
+/* Active state */
+.header-area ul li.active {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Keep full underline for active item */
+.header-area ul li.active::after {
+  width: 100%;
+}
+
+
 .header-area button {
   border: none;
   padding: 10px 20px;
@@ -75,8 +111,7 @@
   height: calc(90vh - 111px);
   padding-top: 40px;
 }
-/* mobile menu */
-/* existing styles remain */
+
 
 /* Mobile Menu Styles */
 .mobile-menu {
@@ -107,6 +142,11 @@
   border-bottom: 1px solid #eee;
   cursor: pointer;
 }
+.mobile-menu ul li.active {
+  color: var(--primary-color);
+  position: relative;
+  font-weight: 600;
+}
 
 /* Mobile Services Dropdown */
 .mobile-services-row {
@@ -127,7 +167,7 @@
   padding: 8px 0;
   border-bottom: none;
   font-size: 14px;
-  padding-left: 15px; /* 👈 pushes subservices right */
+  margin-left: 15px; /*  pushes subservices right */
 }
 .mobile-submenu > li:last-child {
   border-bottom: none;
@@ -146,7 +186,7 @@
   z-index: 30;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
   .header-area {
     height: 70px;
   }
@@ -157,7 +197,7 @@
     display: none;
   }
   .menu-icon {
-    display: block;
+    display: block; 
     font-size: 20px;
     flex-shrink: 0;
   }
