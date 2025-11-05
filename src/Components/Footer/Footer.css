@@ -310,6 +310,7 @@
   }
   .footer-bottom .top {
     gap: 10px;
+    flex-wrap: wrap;
   }
   .footer-bottom .top-left {
     gap: 10px;

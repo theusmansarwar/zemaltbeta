@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React, { useState } from "react";
 import "./JobApplicationForm.css";
 
@@ -8,8 +8,8 @@ const JobApplicationForm = () => {
     email: "",
     phone: "",
     resume: null,
-    education: "Matric",
-    city: "",
+    education: "",
+    basedInLahore: "",
     currentSalary: "",
     expectedSalary: "",
     relocate: "",
@@ -38,97 +38,131 @@ const JobApplicationForm = () => {
 
   return (
     <form className="job-form" onSubmit={handleSubmit}>
-      <h2>Apply for this job</h2>
+      <h2>Apply for this Job</h2>
 
+      {/* Row 1 */}
       <div className="form-row">
         <div className="form-group">
+          <input type="text" name="name" value={formData.name} onChange={handleChange} required placeholder=" " />
           <label>Name*</label>
-          <input type="text" name="name" value={formData.name} onChange={handleChange} required />
         </div>
-
         <div className="form-group">
+          <input type="email" name="email" value={formData.email} onChange={handleChange} required placeholder=" " />
           <label>Email*</label>
-          <input type="email" name="email" value={formData.email} onChange={handleChange} required />
         </div>
       </div>
 
-      <div className="form-group">
-        <label>Phone*</label>
-        <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required placeholder="Enter phone number" />
+      {/* Row 2 */}
+      <div className="form-row">
+        <div className="form-group">
+          <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required placeholder=" " />
+          <label>Phone*</label>
+        </div>
+        <div className="form-group">
+          <select name="education" value={formData.education} onChange={handleChange} required>
+            <option value="">Select Education</option>
+            <option>Matric</option>
+            <option>Intermediate</option>
+            <option>Bachelor</option>
+            <option>Master</option>
+            <option>PhD</option>
+          </select>
+          <label>Education*</label>
+        </div>
       </div>
 
-      <div className="form-group">
-        <label>CV / Resume*</label>
-        <input type="file" name="resume" onChange={handleChange} required />
+      {/* Row 3 */}
+      <div className="form-row">
+        <div className="form-group">
+          <select name="basedInLahore" value={formData.basedInLahore} onChange={handleChange} required>
+            <option value="">Select</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+          <label>Based in Lahore?*</label>
+        </div>
+        <div className="form-group">
+          <select name="relocate" value={formData.relocate} onChange={handleChange} required>
+            <option value="">Select</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+          <label>Willing to Relocate?*</label>
+        </div>
       </div>
 
-      <div className="form-group">
-        <label>Education</label>
-        <select name="education" value={formData.education} onChange={handleChange}>
-          <option>Matric</option>
-          <option>Intermediate</option>
-          <option>Bachelor</option>
-          <option>Master</option>
-          <option>PhD</option>
-        </select>
+      {/* Row 4 */}
+      <div className="form-row">
+        <div className="form-group">
+          <select name="experience" value={formData.experience} onChange={handleChange} required>
+            <option value="">Select</option>
+            <option>Less than 1 year</option>
+            <option>1–2 years</option>
+            <option>3–5 years</option>
+            <option>6–10 years</option>
+            <option>10+ years</option>
+          </select>
+          <label>Experience*</label>
+        </div>
+        <div className="form-group">
+          <input type="text" name="company" value={formData.company} onChange={handleChange} required placeholder=" " />
+          <label>Current Company*</label>
+        </div>
       </div>
 
-      <div className="form-group">
-        <label>Are you based in Lahore?*</label>
-        <input type="text" name="city" value={formData.city} onChange={handleChange} required />
+      {/* Row 5 */}
+      <div className="form-row">
+        <div className="form-group">
+          <input type="text" name="university" value={formData.university} onChange={handleChange} required placeholder=" " />
+          <label>University / Institute*</label>
+        </div>
+        <div className="form-group">
+          <input type="text" name="cgpa" value={formData.cgpa} onChange={handleChange} required placeholder=" " />
+          <label>CGPA*</label>
+        </div>
       </div>
 
-      <div className="form-group">
-        <label>What’s your current salary?*</label>
-        <input type="text" name="currentSalary" value={formData.currentSalary} onChange={handleChange} required />
+      {/* Row 6 */}
+      <div className="form-row">
+        <div className="form-group">
+          <input type="text" name="graduationYear" value={formData.graduationYear} onChange={handleChange} required placeholder=" " />
+          <label>Graduation Year*</label>
+        </div>
+        <div className="form-group">
+          <input type="url" name="linkedin" value={formData.linkedin} onChange={handleChange} required placeholder=" " />
+          <label>LinkedIn Profile*</label>
+        </div>
       </div>
 
-      <div className="form-group">
-        <label>What’s your expected salary?*</label>
-        <input type="text" name="expectedSalary" value={formData.expectedSalary} onChange={handleChange} required />
+      {/* Row 7 */}
+      <div className="form-row">
+        <div className="form-group">
+          <input type="text" name="currentSalary" value={formData.currentSalary} onChange={handleChange} required placeholder=" " />
+          <label>Current Salary*</label>
+        </div>
+        <div className="form-group">
+          <input type="text" name="expectedSalary" value={formData.expectedSalary} onChange={handleChange} required placeholder=" " />
+          <label>Expected Salary*</label>
+        </div>
       </div>
 
-      <div className="form-group">
-        <label>If not in LHR, are you willing to relocate?*</label>
-        <input type="text" name="relocate" value={formData.relocate} onChange={handleChange} required />
+      {/* Upload Resume */}
+      <div className="upload-section">
+        <label className="upload-label">Upload Your Resume*</label>
+        <div className="upload-box">
+          <input type="file" id="resume" name="resume" onChange={handleChange} required />
+          <span>Click or Drag & Drop your resume here (PDF, DOCX)</span>
+        </div>
       </div>
 
-      <div className="form-group">
-        <label>How many years of professional experience do you have?*</label>
-        <input type="text" name="experience" value={formData.experience} onChange={handleChange} required />
+      {/* Reason */}
+      <div className="text-area-cont">
+        <label className="textarea-label">Why do you want to switch from your current company?*</label>
+        <textarea name="reason" value={formData.reason} onChange={handleChange} required placeholder=" " />
+
       </div>
 
-      <div className="form-group">
-        <label>Name of University/Institute*</label>
-        <input type="text" name="university" value={formData.university} onChange={handleChange} required />
-      </div>
-
-      <div className="form-group">
-        <label>What was your CGPA?*</label>
-        <input type="text" name="cgpa" value={formData.cgpa} onChange={handleChange} required />
-      </div>
-
-      <div className="form-group">
-        <label>Mention your graduation year*</label>
-        <input type="text" name="graduationYear" value={formData.graduationYear} onChange={handleChange} required />
-      </div>
-
-      <div className="form-group">
-        <label>Current company name*</label>
-        <input type="text" name="company" value={formData.company} onChange={handleChange} required />
-      </div>
-
-      <div className="form-group">
-        <label>Please share your LinkedIn Profile Link*</label>
-        <input type="url" name="linkedin" value={formData.linkedin} onChange={handleChange} required />
-      </div>
-
-      <div className="form-group">
-        <label>Why do you want to switch from your current company?*</label>
-        <textarea name="reason" value={formData.reason} onChange={handleChange} required></textarea>
-      </div>
-
-      <button type="submit" className="submit-btn">Submit Application</button>
+      <button type="submit" className="application-submit-btn">Submit Application</button>
     </form>
   );
 };

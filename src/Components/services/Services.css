@@ -9,15 +9,15 @@
 }
 
 .servicecard {
-  width: 370px;
-  height: 300px;
+  width: 320px;
+  height: 280px;
   border-radius: var(--border-radius1);
   position: relative;
 }
 
 .servicecard .overlay1 {
-  width: 370px;
-  height: 300px;
+  width: 320px;
+  height: 280px;
   border-radius: var(--border-radius1);
   position: relative;
   overflow: hidden;
@@ -53,11 +53,9 @@
 }
 
 .servicecard .overlay2 h3 {
-  font-size: var(--heading-three);
+  font-size: var(--heading-four);
   margin: 0;
-  /* Remove default margin for better control */
   flex-shrink: 0;
-  /* Prevent heading from shrinking */
   display: flex;
   justify-content: center;
 }
@@ -75,6 +73,7 @@
   justify-content: center;
   line-height: var(--p-line-height);
   font-size: var(--defult-p-size);
+
 }
 
 .servicecard .overlay2 .btn-showmore {
