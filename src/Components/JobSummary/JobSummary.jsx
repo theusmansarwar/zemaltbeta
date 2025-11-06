@@ -55,45 +55,45 @@ const JobSummary = ({ job }) => {
         <h2 className="job-title">Job Summary</h2>
 
         <div className="job-item">
-          <FaMapMarkerAlt className="icon" />
+          <FaMapMarkerAlt className="job-icon" />
           <span>{job.location}</span>
         </div>
 
         <div className="job-item">
-          <FaBriefcase className="icon" />
+          <FaBriefcase className="job-icon" />
           <span>{job.jobtype}</span>
         </div>
 
         {/* ✅ Posted Date */}
         <div className="job-item">
-          <FaCalendarAlt className="icon" />
+          <FaCalendarAlt className="job-icon" />
           <span>
             Posted: {postedText}
           </span>
         </div>
 
         <div className="job-item">
-          <FaClipboardList className="icon" />
+          <FaClipboardList className="job-icon" />
           <span>Experience: {job.noofyearsexperience}</span>
         </div>
 
         <div className="job-item">
-          <FaRegClock className="icon" />
+          <FaRegClock className="job-icon" />
           <span>Office Timing: {job.officetiming}</span>
         </div>
 
         <div className="job-item">
-          <FaCalendarAlt className="icon" />
+          <FaCalendarAlt className="job-icon" />
           <span>Working Days: {workingDays}</span>
         </div>
 
         <div className="job-item">
-          <FaChair className="icon" />
+          <FaChair className="job-icon" />
           <span>No. of Vacancies: {job.noofvacancies}</span>
         </div>
 
         <div className="job-item">
-          <FaCalendarAlt className="icon" />
+          <FaCalendarAlt className="job-icon" />
           <span>Last Date to Apply: {formatDate(job.lastdatetoapply)}</span>
         </div>
 
