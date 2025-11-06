@@ -55,7 +55,7 @@ const MeetTeam = () => {
             onMouseEnter={() => setHoveredId(member._id || member.id)}
             onMouseLeave={() => setHoveredId(null)}
           >
-            <div className="card-image">
+            <div className="meet-card-image">
               <img
                 src={
                   member.image

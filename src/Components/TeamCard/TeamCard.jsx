@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import "./TeamCard.css";
 import { RiFacebookFill } from "react-icons/ri";
-import { FaLinkedinIn } from "react-icons/fa6";
+import { FaGithub, FaGlobe, FaLinkedinIn } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
 import { fetchAllTeam } from "@/DAL/Fetch";
 import { baseUrl } from "@/config/Config";
@@ -38,28 +38,47 @@ const TeamCard = () => {
           alt={member.name}
         />
         <div className="social-icons">
-          {
+          {member.socialLinks.facebook && (
             <a href={member.socialLinks.facebook} target="_blank" rel="noopener noreferrer">
               <div className="icon">
                 <RiFacebookFill />
               </div>
             </a>
-          }
-          {
+          )}
+
+          {member.socialLinks.linkedin && (
             <a href={member.socialLinks.linkedin} target="_blank" rel="noopener noreferrer">
               <div className="icon">
                 <FaLinkedinIn />
               </div>
             </a>
-          }
-          {
+          )}
+
+          {member.socialLinks.instagram && (
             <a href={member.socialLinks.instagram} target="_blank" rel="noopener noreferrer">
               <div className="icon">
                 <AiFillInstagram />
               </div>
             </a>
-          }
+          )}
+
+          {member.socialLinks.github && (
+            <a href={member.socialLinks.github} target="_blank" rel="noopener noreferrer">
+              <div className="icon">
+                <FaGithub />
+              </div>
+            </a>
+          )}
+
+          {member.socialLinks.portfolio && (
+            <a href={member.socialLinks.portfolio} target="_blank" rel="noopener noreferrer">
+              <div className="icon">
+                <FaGlobe />
+              </div>
+            </a>
+          )}
         </div>
+
       </div>
       <div className="profile-right">
         <strong>{member.name}</strong>
@@ -69,9 +88,9 @@ const TeamCard = () => {
     </div>
   );
 
- if (loading) {
-  return <TeamCardSkeleton />;
-}
+  if (loading) {
+    return <TeamCardSkeleton />;
+  }
 
   return (
     <div className="team-section">

@@ -5,22 +5,22 @@ const benefits = [
   {
     icon: "👥",
     title: "Team Work",
-    desc: "You become part of a team that values every voice. Everyone contributes to achieving shared goals. Team members guide, support, and motivate one another. The knowledge received is shared, problems get solved, and experts are celebrated together. Strong teamwork makes tasks simple and results stronger. You feel valued and included at every step.",
+    desc: "Join a team where every voice matters and collaboration drives success.We share knowledge, solve problems together, and celebrate each other’s expertise.",
   },
   {
     icon: "💼",
     title: "Secured Future",
-    desc: "You gain career stability and clear direction. Growth stays consistent, and opportunities keep coming. Our focus remains on long-term development and job security. You build confidence when you know your future is supported. A strong base gives you space to achieve both career and personal goals. You feel secure as your path grows stronger each year.",
+    desc: "You gain career stability and clear direction. Growth stays consistent, and opportunities keep coming. Our focus remains on long-term development and job security.",
   },
   {
     icon: "🎓",
     title: "Learning Opportunity",
-    desc: "You receive chances to learn every single day. Training, mentoring, and real projects prepare you for bigger challenges. Each experience adds knowledge, skills, and confidence to your role. You see your growth in action and feel the difference. Daily learning keeps you moving forward and closer to success. You enjoy progress with each new skill mastered.",
+    desc: "You receive chances to learn every single day. Training, mentoring, and real projects prepare you for bigger challenges. Each experience adds knowledge, skills, and confidence to your role.",
   },
   {
     icon: "📈",
     title: "Upgrade Skills",
-    desc: "You get support to strengthen your skills at every step. Tools, resources, and proper guidance stay within your reach. Each skill upgrade gives you more career options and stronger roles. You move closer to promotions and better opportunities. Growth in your skills leads to growth in your confidence. Your success expands as your abilities rise higher.",
+    desc: "You get support to strengthen your skills at every step. Tools, resources, and proper guidance stay within your reach. Each skill upgrade gives you more career options and stronger roles.",
   },
 ];
 
