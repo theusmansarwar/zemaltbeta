@@ -1,5 +1,5 @@
 
-import PrivacyPolicy from "@/components/ExtraPages/PrivacyPolicy";
+import PrivacyPolicy from "../../Components/ExtraPages/PrivacyPolicy";
 import styles from "./page.module.css";
 
 export const metadata = {

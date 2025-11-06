@@ -1,5 +1,5 @@
 
-import TermsAndConditions from "@/components/ExtraPages/TermsAndConditions";
+import TermsAndConditions from "../../Components/ExtraPages/TermsAndConditions";
 import styles from "./page.module.css";
 export const metadata = {
   title: "Terms and Conditions",
