@@ -30,14 +30,14 @@ export async function generateMetadata({ params }) {
     return {
       title: "Service Not Found",
       description: "This service is currently unavailable.",
-      icons: { icon: "/favicon.svg" },
+      icons: { icon: "/favicon.png" },
     };
   }
 
   return {
     title: service.metatitle,
     description: service.metaDescription,
-    icons: { icon: "/favicon.svg" },
+    icons: { icon: "/favicon.png" },
   };
 }
 

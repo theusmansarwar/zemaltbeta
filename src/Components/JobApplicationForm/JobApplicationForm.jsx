@@ -1,8 +1,9 @@
 'use client';
 import React, { useState } from "react";
 import "./JobApplicationForm.css";
+import { createApplication } from "@/DAL/Create";
 
-const JobApplicationForm = () => {
+const JobApplicationForm = ({ jobId }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -22,6 +23,8 @@ const JobApplicationForm = () => {
     reason: "",
   });
 
+  const [loading, setLoading] = useState(false);
+
   const handleChange = (e) => {
     const { name, value, type, files } = e.target;
     setFormData({
@@ -30,10 +33,50 @@ const JobApplicationForm = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
-    alert("Application Submitted!");
+
+    try {
+      setLoading(true);
+
+      // ✅ Prepare FormData (since there's a file)
+      const dataToSend = new FormData();
+      Object.entries(formData).forEach(([key, value]) => {
+        dataToSend.append(key, value);
+      });
+      dataToSend.append("jobId", jobId); // ✅ Include job ID
+
+      const response = await createApplication(dataToSend);
+
+      if (response?.status === 200) {
+        alert("✅ Application submitted successfully!");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          resume: null,
+          education: "",
+          basedInLahore: "",
+          currentSalary: "",
+          expectedSalary: "",
+          relocate: "",
+          experience: "",
+          university: "",
+          cgpa: "",
+          graduationYear: "",
+          company: "",
+          linkedin: "",
+          reason: "",
+        });
+      } else {
+        alert("❌ Failed to submit application. Try again later.");
+      }
+    } catch (error) {
+      console.error("Application Error:", error);
+      alert("❌ Something went wrong!");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -159,10 +202,11 @@ const JobApplicationForm = () => {
       <div className="text-area-cont">
         <label className="textarea-label">Why do you want to switch from your current company?*</label>
         <textarea name="reason" value={formData.reason} onChange={handleChange} required placeholder=" " />
-
       </div>
 
-      <button type="submit" className="application-submit-btn">Submit Application</button>
+      <button type="submit" className="application-submit-btn" disabled={loading}>
+        {loading ? "Submitting..." : "Submit Application"}
+      </button>
     </form>
   );
 };

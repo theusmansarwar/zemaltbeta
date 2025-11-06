@@ -37,6 +37,12 @@ const TeamCard = () => {
           src={member.image ? `${baseUrl}${member.image}` : "/dummy.png"}
           alt={member.name}
         />
+        
+      </div>
+      <div className="profile-right">
+        <strong>{member.name}</strong>
+        <span className="role">{member.role.name}</span>
+        {member.description && <p className="description">{member.description}</p>}
         <div className="social-icons">
           {member.socialLinks.facebook && (
             <a href={member.socialLinks.facebook} target="_blank" rel="noopener noreferrer">
@@ -78,12 +84,6 @@ const TeamCard = () => {
             </a>
           )}
         </div>
-
-      </div>
-      <div className="profile-right">
-        <strong>{member.name}</strong>
-        <span className="role">{member.role.name}</span>
-        {member.description && <p className="description">{member.description}</p>}
       </div>
     </div>
   );

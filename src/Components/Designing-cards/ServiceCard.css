@@ -6,7 +6,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -23,8 +23,8 @@
   left: 0;
 }
 .designing-card {
-  width: calc(30% - 60px);
-  min-height: 320px;
+  width: calc(32% - 60px);
+  min-height: 350px;
   min-width: 300px;
   background-color: #f9f9f9;
   border-radius: var(--border-radius1);
@@ -51,7 +51,7 @@
 }
 .designing-card ul li {
   font-size: var(--default-p-size);
-  line-height: 1.8;
+  line-height: var(--p-line-height);
   color: #868686;
 }
 .icon-area-for-des {

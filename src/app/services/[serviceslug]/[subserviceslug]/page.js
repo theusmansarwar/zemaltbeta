@@ -7,8 +7,8 @@ import { fetchSubServiceBySlug } from "@/DAL/Fetch";
 async function getSubService(slug) {
   try {
     const res = await fetchSubServiceBySlug(slug);
-    console.log({"subservise dataaaaa":res});
-    
+    console.log({ "subservise dataaaaa": res });
+
     if (res?.service) return res.service;
 
     return null;
@@ -30,14 +30,14 @@ export async function generateMetadata({ params }) {
     return {
       title: "Service Not Found",
       description: "This service is currently unavailable.",
-      icons: { icon: "/favicon.svg" },
+      icons: { icon: "/favicon.png" },
     };
   }
 
   return {
     title: subService.metatitle,
-    description:subService.metaDescription,
-    icons: { icon: "/favicon.svg" },
+    description: subService.metaDescription,
+    icons: { icon: "/favicon.png" },
   };
 }
 

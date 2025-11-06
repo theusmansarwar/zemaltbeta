@@ -1,12 +1,12 @@
 "use client";
 import React from "react";
-import "./CaseStudySkeleton.css";
+import "./ProductsSkeleton.css";
 
-const CaseStudySkeleton = ({ count = 4 }) => {
+const ProductsSkeleton = ({ count = 4 }) => {
   return (
-    <div className="case-study-grid">
+    <div className="products-grid">
       {Array.from({ length: count }).map((_, i) => (
-        <div key={i} className="study-card skeleton-study-card">
+        <div key={i} className="products-card skeleton-products-card">
           {/* Left Side (Image Circle) */}
           <div className="left">
             <div className="skeleton-circle"></div>
@@ -27,4 +27,4 @@ const CaseStudySkeleton = ({ count = 4 }) => {
   );
 };
 
-export default CaseStudySkeleton;
+export default ProductsSkeleton;

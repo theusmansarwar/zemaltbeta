@@ -1,22 +1,22 @@
-.case-study-grid {
+.products-grid {
   width: calc(100% - (var(--left-space) * 2));
   padding: 40px var(--left-space);
   background-color: var(--text-color4);
 }
-.case-study-grid .study-card {
+.products-grid .products-card {
   display: flex;
   justify-content: space-between;
   gap: 20px;
   margin-bottom: 80px;
 }
-.case-study-grid .study-card:last-child {
+.products-grid .products-card:last-child {
   margin-bottom: 40px;
 }
 
-.case-study-grid .study-card .left {
+.products-grid .products-card .left {
   width: 30%;
 }
-.case-study-grid .study-card .left .img-container {
+.products-grid .products-card .left .img-container {
   height: 200px;
   width: 200px;
   padding: 20px;
@@ -27,25 +27,25 @@
   justify-content: center;
   justify-self: center;
 }
-.case-study-grid .study-card .left .img-container img {
+.products-grid .products-card .left .img-container img {
   width: 80%;
   height: 80%;
 }
-.case-study-grid .study-card .right {
+.products-grid .products-card .right {
   width: 65%;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.case-study-grid .study-card .right h2 {
+.products-grid .products-card .right h2 {
   font-size: var(--heading-three);
 }
-.case-study-grid .study-card .right p {
+.products-grid .products-card .right p {
   font-size: var(--default-p-size);
   line-height: var(--p-line-height);
 }
 
-.case-study-grid .study-card .right .study-btn {
+.products-grid .products-card .right .products-btn {
   border: none;
   padding: 12px 20px;
   background-color: var(--primary-color);
@@ -61,23 +61,23 @@
   width: fit-content;
   -webkit-tap-highlight-color: transparent;
 }
-.case-study-grid .study-card .right .study-btn:hover {
+.products-grid .products-card .right .products-btn:hover {
   color: var(--text-color);
   background-color: transparent;
 }
 
 @media (max-width: 900px) {
-  .case-study-grid {
+  .products-grid {
     padding: 20px var(--left-space);
   }
-  .case-study-grid .study-card {
+  .products-grid .products-card {
     flex-direction: column;
     margin-bottom: 30px;
   }
-  .case-study-grid .study-card .left {
+  .products-grid .products-card .left {
     width: 100%;
   }
-  .case-study-grid .study-card .left .img-container {
+  .products-grid .products-card .left .img-container {
     height: 60px;
     width: 60px;
     padding: 20px;
@@ -87,19 +87,19 @@
     align-items: center;
     justify-content: center;
   }
-  .case-study-grid .study-card .left .img-container img {
+  .products-grid .products-card .left .img-container img {
     width: 60px;
   }
-  .case-study-grid .study-card .right {
+  .products-grid .products-card .right {
     width: 100%;
     gap: 10px;
   }
-  .case-study-grid .study-card .right {
+  .products-grid .products-card .right {
     align-items: flex-start;
     flex-direction: column;
     gap: 10px;
   }
-  .case-study-grid .study-card .right .study-btn {
+  .products-grid .products-card .right .products-btn {
     padding: 8px 16px;
     gap: 10px;
     font-size: 12px;

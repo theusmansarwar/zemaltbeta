@@ -6,8 +6,6 @@ import {
   FaInstagram,
   FaLinkedinIn,
   FaLocationDot,
-  FaTiktok,
-  FaXTwitter,
 } from "react-icons/fa6";
 import "./Footer.css";
 import { IoCall, IoMail } from "react-icons/io5";
@@ -15,11 +13,11 @@ import { useRouter } from "next/navigation";
 
 const companyLinks = [
   { slug: "/", label: "Home" },
+  { slug: "/products", label: "Products" },
   { slug: "/about-us", label: "About" },
   { slug: "/contact", label: "Contact" },
   { slug: "/blog", label: "Blog" },
   { slug: "/team", label: "Team" },
-  { slug: "/", label: "Career" },
   { slug: "/write-for-us", label: "Write for us" },
 ];
 
@@ -197,11 +195,11 @@ export default function Footer() {
               </span>
               <span
                 onClick={() => {
-                  router.push("/");
+                  router.push("/career");
                 }}
                 className="footer-bottom-link"
               >
-                Careers
+                Career
               </span>
             </div>
             <div className="top-right">

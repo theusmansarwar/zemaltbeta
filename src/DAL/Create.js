@@ -46,3 +46,12 @@ export const Subscribe = async (data) => {
   };
   return invokeApi(reqObj);
 };
+export const createApplication = async (data) => {
+  const reqObj = {
+    path: "/Applications/add",
+    method: "POST",
+    headers: {},
+    postData: data,
+  };
+  return invokeApi(reqObj);
+};

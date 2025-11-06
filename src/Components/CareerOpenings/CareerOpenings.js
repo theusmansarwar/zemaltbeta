@@ -1,50 +1,53 @@
-'use client'
-import React, { useState } from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import "./CareerOpenings.css";
+import { fetchJobs } from "@/DAL/Fetch";
+import { useRouter } from "next/navigation";
 
 const CareerOpenings = () => {
-  const [activeCategory, setActiveCategory] = useState("Development");
+  const router = useRouter();
+  const [activeCategory, setActiveCategory] = useState("");
+  const [categories, setCategories] = useState([]);
+  const [jobs, setJobs] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  const categories = [
-    { name: "Admin" },
-    { name: "Development", count: 20 },
-    { name: "Support" },
-    { name: "Design" },
-    { name: "Digital Marketing" },
-  ];
+  // Fetch jobs from backend
+  useEffect(() => {
+    const loadJobs = async () => {
+      try {
+        setLoading(true);
+        const res = await fetchJobs();
 
-  const jobs = [
-    {
-      title: "Wordpress Developer",
-      experience: "2 Years",
-      deadline: "2021-05-08",
-      category: "Development",
-    },
-    {
-      title: "Javascript",
-      experience: "1 Years",
-      deadline: "2021-05-08",
-      category: "Development",
-    },
-    {
-      title: "Apps Developer",
-      experience: "3 Years",
-      deadline: "2021-05-08",
-      category: "Development",
-    },
-    {
-      title: "IOS Developer",
-      experience: "2 Years",
-      deadline: "2021-05-08",
-      category: "Development",
-    },
-    {
-      title: "Node JS Developer",
-      experience: "3 Years",
-      deadline: "2021-05-08",
-      category: "Development",
-    },
-  ];
+        if (res?.status === 200 && res?.jobs?.length > 0) {
+          setJobs(res.jobs);
+
+          // Get unique categories with count
+          const uniqueCategories = res.jobs.reduce((acc, job) => {
+            const cat = job.jobCategory || "Uncategorized";
+            acc[cat] = (acc[cat] || 0) + 1;
+            return acc;
+          }, {});
+
+          const formatted = Object.keys(uniqueCategories).map((name) => ({
+            name,
+            count: uniqueCategories[name],
+          }));
+
+          setCategories(formatted);
+          setActiveCategory(formatted[0]?.name || "");
+        } else {
+          setJobs([]);
+          setCategories([]);
+        }
+      } catch (error) {
+        console.error("Error fetching jobs:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadJobs();
+  }, []);
 
   return (
     <div className="career-container">
@@ -56,40 +59,55 @@ const CareerOpenings = () => {
         Check out our open roles below and fill out an application.
       </p>
 
-      <div className="career-layout">
-        {/* Categories */}
-        <div className="career-categories">
-          {categories.map((cat, i) => (
-            <p
-              key={i}
-              className={`category ${activeCategory === cat.name ? "active" : ""}`}
-              onClick={() => setActiveCategory(cat.name)}
-            >
-              {cat.name} {cat.count && <span>({cat.count})</span>}
-            </p>
-          ))}
-        </div>
+      {loading ? (
+        <p className="loading-text">Loading job openings...</p>
+      ) : (
+        <div className="career-layout">
+          {/* Categories */}
+          <div className="career-categories">
+            {categories.length > 0 ? (
+              categories.map((cat, i) => (
+                <p
+                  key={i}
+                  className={`category ${activeCategory === cat.name ? "active" : ""}`}
+                  onClick={() => setActiveCategory(cat.name)}
+                >
+                  {cat.name} <span>({cat.count})</span>
+                </p>
+              ))
+            ) : (
+              <p>No categories found</p>
+            )}
+          </div>
 
-        {/* Job Listings */}
-        <div className="career-jobs">
-          {jobs
-            .filter((job) => job.category === activeCategory)
-            .map((job, i) => (
-              <div className="job-card" key={i}>
-                <div className="job-title">{job.title}</div>
-                <div className="job-info">
-                  <span>
-                    <strong>Experience</strong> <br /> {job.experience}
-                  </span>
-                  <span>
-                    <strong>Deadline</strong> <br /> {job.deadline}
-                  </span>
-                  <span className="arrow">→</span>
+          {/* Job Listings */}
+          <div className="career-jobs">
+            {jobs
+              .filter((job) => job.jobCategory === activeCategory)
+              .map((job, i) => (
+                <div className="job-card" key={i}>
+                  <div className="job-title">{job.jobtitle}</div>
+                  <div className="job-info">
+                    <span>
+                      <strong>Experience</strong> <br /> {job.noofyearsexperience || "N/A"}
+                    </span>
+                    <span>
+                      <strong>Deadline</strong> <br />{" "}
+                      {job.lastdatetoapply
+                        ? new Date(job.lastdatetoapply).toLocaleDateString()
+                        : "N/A"}
+                    </span>
+                    <span className="arrow" onClick={()=>{router.push(`/career/${job._id}`)}}>→</span>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+
+            {jobs.filter((job) => job.jobCategory === activeCategory).length === 0 && (
+              <p className="no-jobs">No jobs available in this category.</p>
+            )}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

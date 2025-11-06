@@ -312,7 +312,7 @@ const Header = () => {
           </li>
 
           {/* Other menu items */}
-          <li   className={pathname === "/case-study" ? "active" : ""}
+          <li className={pathname === "/case-study" ? "active" : ""}
             onClick={() => {
               router.push("/case-study");
               setMobileMenu(false);
@@ -320,7 +320,7 @@ const Header = () => {
           >
             Case Studies
           </li>
-          <li   className={pathname === "/industries" ? "active" : ""}
+          <li className={pathname === "/industries" ? "active" : ""}
             onClick={() => {
               router.push("/industries");
               setMobileMenu(false);
@@ -328,7 +328,7 @@ const Header = () => {
           >
             Industries We Serve
           </li>
-          <li   className={pathname === "/blog" ? "active" : ""}
+          <li className={pathname === "/blog" ? "active" : ""}
             onClick={() => {
               router.push("/blog");
               setMobileMenu(false);
@@ -336,7 +336,7 @@ const Header = () => {
           >
             Blogs
           </li>
-          <li   className={pathname === "/about-us" ? "active" : ""}
+          <li className={pathname === "/about-us" ? "active" : ""}
             onClick={() => {
               router.push("/about-us");
               setMobileMenu(false);
@@ -344,7 +344,7 @@ const Header = () => {
           >
             About Us
           </li>
-          <li   className={pathname === "/contact" ? "active" : ""}
+          <li className={pathname === "/contact" ? "active" : ""}
             onClick={() => {
               router.push("/contact");
               setMobileMenu(false);
