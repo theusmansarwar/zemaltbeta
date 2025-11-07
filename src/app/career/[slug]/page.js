@@ -3,7 +3,7 @@ import JobSummary from "@/Components/JobSummary/JobSummary";
 import ServicePageFeatured from "@/Components/ServicePageFeatured/ServicePageFeatured";
 import { fetchJobById } from "@/DAL/Fetch";
 import React from "react";
-import styles from "./apply/page.module.css";
+import styles from "./page.module.css";
 
 
 const Page = async ({ params }) => {
@@ -25,8 +25,8 @@ const Page = async ({ params }) => {
       <ServicePageFeatured data={featuredData} />
       {job ? (
         <div className={styles.jobpage}>
-          <JobDescription description={job.description} />
-          <JobSummary job={job} />
+          <div><JobDescription description={job.description} /></div>
+          <div><JobSummary job={job} /></div>
         </div>
       ) : (
         <p style={{ textAlign: "center", margin: "2rem 0" }}>
