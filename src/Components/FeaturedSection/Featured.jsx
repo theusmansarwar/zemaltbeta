@@ -3,7 +3,12 @@ import React from "react";
 import "./Featured.css";
 import { FaArrowRight, FaArrowTrendUp } from "react-icons/fa6";
 import { useRouter } from "next/navigation";
+
+
+
+const brands = ["/plutosec.png", "/digitalaura.png", "/carteroil.png", "/smartenergy.png"]
 const Featured = () => {
+
   const router = useRouter();
   return (
     <div className="Featured" id="zemalt">
@@ -36,10 +41,14 @@ const Featured = () => {
         <div className="trusted">
           <p className="trusted-p">Trusted by top global brands</p>{" "}
           <div className="personarea">
-            <div className="trusted-circle"></div>
-            <div className="trusted-circle"></div>
-            <div className="trusted-circle"></div>
-            <div className="trusted-circle"></div>
+            {brands.map((brand, index) => (
+              <div key={index} className="trusted-circle" style={{
+                backgroundImage: `url(${brand})`,
+                backgroundSize: "contain",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              }}></div>
+            ))}
             <span>+</span>
           </div>{" "}
         </div>

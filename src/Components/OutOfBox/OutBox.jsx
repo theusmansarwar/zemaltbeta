@@ -1,6 +1,9 @@
 import React from "react";
 import "./OutBox.css";
 import { FaPlay } from "react-icons/fa";
+
+
+const brands = ["/sim.png", "/moawin.png", "/broadium.png"]
 const OutBox = () => {
   return (
     <div className="OutBox" id="unique-ideas">
@@ -23,10 +26,14 @@ const OutBox = () => {
           </div>
 
           <div className="circleimg-area">
-            <div className="circleimg"></div>
-            <div className="circleimg"></div>
-            <div className="circleimg"></div>
-            <div className="circleimg"></div>
+            {brands.map((brand, index) => (
+              <div key={index} className="circleimg" style={{
+                backgroundImage: `url(${brand})`,
+                backgroundSize: "contain",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              }}></div>
+            ))}
             <span className="plus">+</span>
           </div>
         </div>

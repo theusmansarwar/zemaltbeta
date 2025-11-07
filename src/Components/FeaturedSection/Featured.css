@@ -16,6 +16,7 @@
   display: flex;
   width: 100%;
   margin-top: 30px;
+  min-height: 60px;
 }
 .trusted .trusted-p {
   width: 35%;
@@ -41,11 +42,8 @@
   width: 70px;
   height: 70px;
   margin-right: -10px;
-  border: 2px solid grey;
   border-radius: 50%;
-  background-image: url("/person.png");
-  background-size: cover;
-  background-position: center;
+ 
 }
 .Featured .left h1 {
   font-size: var(--heading-one);

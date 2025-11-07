@@ -3,14 +3,14 @@ import JobSummary from "@/Components/JobSummary/JobSummary";
 import ServicePageFeatured from "@/Components/ServicePageFeatured/ServicePageFeatured";
 import { fetchJobById } from "@/DAL/Fetch";
 import React from "react";
+import styles from "./apply/page.module.css";
+
 
 const Page = async ({ params }) => {
   const { slug } = params;
 
-//  Fetch job details using your helper function
+  // Fetch job details
   const response = await fetchJobById(slug);
-  
-  
   const job = response?.job || null;
 
   const featuredData = {
@@ -24,8 +24,7 @@ const Page = async ({ params }) => {
     <div className="PageBg">
       <ServicePageFeatured data={featuredData} />
       {job ? (
-        <div className="job-summary">
-          {/* ✅ Pass job details to components */}
+        <div className={styles.jobpage}>
           <JobDescription description={job.description} />
           <JobSummary job={job} />
         </div>

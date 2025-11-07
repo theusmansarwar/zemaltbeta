@@ -1,6 +1,5 @@
 .job-description {
-  width: 70%;
-  max-width: 800px;
+  width: calc(100% - 50px);
   padding: 25px;
   background: #fff;
   border-radius: 10px;

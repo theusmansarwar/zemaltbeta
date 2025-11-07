@@ -1,0 +1,32 @@
+.jobpage {
+    width: calc(100% - 10%);
+    padding: 40px  5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+/* JobDescription (70%) */
+.jobpage> :first-child {
+    width: 75%;
+}
+
+/* JobSummary (30%) */
+.jobpage> :last-child {
+    width: 25%;
+}
+
+/* Responsive for mobile */
+@media (max-width: 900px) {
+    .jobpage  {
+        flex-direction: column;
+        width: calc(100% - 40px);
+        padding: 20px;
+    }
+
+    .jobpage> :first-child,
+    .jobpage> :last-child {
+        width: 100%;
+    }
+}

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./CareerOpenings.css";
 import { fetchJobs } from "@/DAL/Fetch";
 import { useRouter } from "next/navigation";
+import { FaRightLong } from "react-icons/fa6";
 
 const CareerOpenings = () => {
   const router = useRouter();
@@ -97,7 +98,7 @@ const CareerOpenings = () => {
                         ? new Date(job.lastdatetoapply).toLocaleDateString()
                         : "N/A"}
                     </span>
-                    <span className="arrow" onClick={()=>{router.push(`/career/${job._id}`)}}>→</span>
+                    <span className="arrow" onClick={()=>{router.push(`/career/${job._id}`)}}><FaRightLong /></span>
                   </div>
                 </div>
               ))}
