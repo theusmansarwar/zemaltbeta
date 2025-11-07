@@ -48,9 +48,10 @@ export const Subscribe = async (data) => {
 };
 export const createApplication = async (data) => {
   const reqObj = {
-    path: "/Applications/add",
+    path: "/applications/add",
     method: "POST",
-    headers: {},
+    headers: {
+    },
     postData: data,
   };
   return invokeApi(reqObj);

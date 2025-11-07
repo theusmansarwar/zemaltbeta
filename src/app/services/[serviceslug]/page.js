@@ -7,7 +7,6 @@ import { fetchServiceBySlug } from "@/DAL/Fetch";
 async function getService(slug) {
   try {
     const res = await fetchServiceBySlug(slug);
-    console.log({ servicedataaa: res });
 
     if (res?.service) return res.service;
 

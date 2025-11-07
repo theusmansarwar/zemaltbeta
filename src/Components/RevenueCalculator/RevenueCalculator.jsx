@@ -21,7 +21,6 @@ const RevenueCalculator = ({ data }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form Data:", formData);
     alert("Calculation Done! Check console for data.");
   };
 

@@ -9,7 +9,7 @@ const Page = async ({ params }) => {
 
 //  Fetch job details using your helper function
   const response = await fetchJobById(slug);
-  console.log(response);
+  
   
   const job = response?.job || null;
 
