@@ -17,6 +17,7 @@
   width: 100%;
   margin-top: 30px;
   min-height: 60px;
+  
 }
 .trusted .trusted-p {
   width: 35%;
@@ -43,6 +44,7 @@
   height: 70px;
   margin-right: -10px;
   border-radius: 50%;
+  border: 2px solid #efeeee;
  
 }
 .Featured .left h1 {
