@@ -7,15 +7,21 @@
   justify-content: center;
   gap: 50px;
 }
+
 .BigIdea h2 {
   font-size: var(--heading-two);
   text-align: center;
 }
-.BigIdea img {
-  width: 80%;
+
+.BigIdea .big-idea-img {
+  width: auto;
+  height: 800px;
+  max-width: 1024px;
 }
-@media(max-width:900px){
-  .BigIdea img {
-  width: 100%;
-}
+
+@media(max-width:900px) {
+  .BigIdea .big-idea-img {
+    width: 100%;
+    height: auto;
+  }
 }

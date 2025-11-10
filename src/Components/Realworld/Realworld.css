@@ -15,7 +15,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/drive-card-img.png");
+  background-image: url("/drive-card-img.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right bottom;
@@ -23,10 +23,11 @@
   z-index: 0;
 }
 
-.realworld > * {
+.realworld>* {
   position: relative;
   z-index: 1;
 }
+
 .realworld h3 {
   width: 80%;
   font-size: 36px;
@@ -45,11 +46,12 @@
   scrollbar-width: none;
   margin-bottom: 50px;
 }
+
 .work-area .work-div {
   height: 370px;
   min-width: 370px;
   max-width: 370px;
-  background-image: url("/how-we-work.png");
+  background-image: url("/how-we-work.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -58,14 +60,17 @@
   cursor: pointer;
   transition: 0.2s ease;
   background-color: var(--text-color3);
- 
+
 }
+
 .work-area .work-div:hover {
   border-radius: 50%;
 }
+
 .work-area .work-div .detail-btn {
   display: none;
 }
+
 .work-area .work-div:hover .detail-btn {
   display: block;
   height: 150px;
@@ -76,6 +81,7 @@
   background-color: var(--primary-color);
   border-radius: 50%;
 }
+
 .work-area .work-div .work-overlay {
   height: 100%;
   width: 100%;
@@ -85,8 +91,9 @@
   justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.20);
   border-radius: 12px;
-   transition: 0.2s ease;
+  transition: 0.2s ease;
 }
+
 .work-area .work-div .work-overlay p {
   display: flex;
   align-items: center;
@@ -96,36 +103,44 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
 .work-area .work-div .work-overlay .desc {
   font-size: 18px;
   font-weight: 600;
 }
+
 .work-area .work-div .work-overlay p span {
   width: 10%;
   height: 2px;
   background-color: var(--text-color4);
 }
+
 .work-area .work-div:hover .work-overlay p {
   display: none;
 }
+
 .work-area .work-div:hover .work-overlay {
   justify-content: center;
   border-radius: 50%;
-  
+
 }
+
 @media (max-width: 900px) {
   .realworld {
     min-height: fit-content;
   }
+
   .realworld h3 {
     width: var(--default-width);
     padding: 0px;
     font-size: 24px;
   }
+
   .realworld ul {
     width: var(--default-width);
     gap: 10px;
   }
+
   .realworld ul li {
     white-space: nowrap;
   }
@@ -138,10 +153,11 @@
     gap: 10px;
     scrollbar-width: none;
   }
+
   .work-area .work-div {
     height: 300px;
     min-width: 300px;
-    background-image: url("/how-we-work.png");
+    background-image: url("/how-we-work.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -149,12 +165,15 @@
     border-radius: var(--border-radius1);
     cursor: pointer;
   }
+
   .work-area .work-div:hover {
     border-radius: 50%;
   }
+
   .work-area .work-div .detail-btn {
     display: none;
   }
+
   .work-area .work-div:hover .detail-btn {
     display: block;
     height: 100px;
@@ -169,6 +188,7 @@
   .work-area .work-div:hover .work-overlay p {
     display: none;
   }
+
   .work-area .work-div:hover .work-overlay {
     justify-content: center;
   }

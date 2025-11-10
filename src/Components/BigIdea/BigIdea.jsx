@@ -5,7 +5,7 @@ const BigIdea = ({ data }) => {
   return (
     <div className="BigIdea">
       <h2>{data.heading}</h2>
-      <img src={baseUrl + data.image} />
+      <img className="big-idea-img" src={baseUrl + data.image} />
     </div>
   );
 };

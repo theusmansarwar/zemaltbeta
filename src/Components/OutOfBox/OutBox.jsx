@@ -20,7 +20,7 @@ const OutBox = () => {
         <div className="left">
           <div className="ltop">
             <h3>
-              920<span>+</span>
+              50<span>+</span>
             </h3>
             <p>Project finish with superbly</p>
           </div>

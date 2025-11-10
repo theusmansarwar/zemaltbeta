@@ -63,7 +63,7 @@ const SecondSection = () => {
               <div
                 className="box2"
                 style={{
-                  backgroundImage: `url(/blog-thumbnail.jpg)`,
+                  backgroundImage: `url(/top.webp)`,
                   backgroundPosition: "center",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",

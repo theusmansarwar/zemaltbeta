@@ -5,7 +5,7 @@ const Carousal = () => {
     <div
       className="carousal"
       style={{
-        backgroundImage: `url("/drive-card-img.png")`,
+        backgroundImage: `url("/drive-card-img.webp")`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",

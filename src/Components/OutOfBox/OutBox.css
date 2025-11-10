@@ -12,6 +12,7 @@
   padding: 0px var(--left-space);
   margin-bottom: 50px;
 }
+
 .OutBox .bottom {
   width: var(--default-width);
   display: flex;
@@ -19,20 +20,23 @@
   padding: 0px var(--left-space);
   gap: 20px;
 }
+
 .OutBox .top h2 {
   font-size: var(--heading-two);
   width: 57%;
 }
+
 .OutBox .top p {
   width: 40%;
   color: var(--text-color3);
   font-size: var(--default-p-size);
   line-height: var(--p-line-height);
 }
+
 .OutBox .bottom .left {
   height: 350px;
   width: 35%;
-  background-image: url("/drive-card-img.png");
+  background-image: url("/drive-card-img.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -43,25 +47,30 @@
   flex-direction: column;
   gap: 80px;
 }
+
 .ltop {
   width: 80%;
 }
+
 .ltop p {
   color: var(--text-color3);
 }
+
 .ltop h3 {
   font-size: 78px;
   color: var(--text-color4);
   display: flex;
   align-items: center;
 }
+
 .ltop h3 span {
   color: var(--primary-color);
 }
+
 .OutBox .bottom .right {
   height: 350px;
   width: calc(65% - 20px);
-  background-image: url("/how-we-work.png");
+  background-image: url("/how-we-work.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -71,11 +80,13 @@
   align-items: center;
   justify-content: center;
 }
+
 .OutBox .bottom .right p {
   color: var(--text-color4);
   font-size: var(--heading-one);
   word-spacing: 20px;
 }
+
 .OutBox .bottom .right .play-box {
   height: 130px;
   width: 130px;
@@ -96,18 +107,21 @@
 .OutBox .bottom .right .play-box svg {
   font-size: 36px;
 }
+
 .circleimg-area {
   display: flex;
   align-items: center;
   width: 80%;
   gap: 2%;
 }
+
 .circleimg-area .plus {
   color: var(--text-color4);
   font-size: 78px;
   font-weight: 600;
   margin-bottom: 15px;
 }
+
 .circleimg {
   height: 70px;
   width: 70px;
@@ -115,6 +129,7 @@
   background-color: var(--text-color3);
   flex-shrink: 0;
 }
+
 @media (max-width: 900px) {
   .OutBox .top {
     flex-direction: column;
@@ -125,6 +140,7 @@
   .OutBox .top h2 {
     width: 100%;
   }
+
   .OutBox .top p {
     width: var(--default-width);
   }
@@ -138,40 +154,49 @@
     width: 50%;
     gap: 40px;
   }
+
   .ltop {
     width: var(--default-width);
   }
+
   .ltop p {
     color: var(--text-color3);
   }
+
   .ltop h3 {
     font-size: 32px;
     color: var(--text-color4);
     display: flex;
     align-items: center;
   }
+
   .ltop h3 span {
     color: var(--primary-color);
     font-size: 32px;
     margin-bottom: 10px;
   }
+
   .OutBox .bottom .right {
     height: 185px;
     width: 50%;
   }
+
   .OutBox .bottom .right p {
     text-align: center;
   }
+
   .circleimg-area .plus {
     font-size: 28px;
     margin-bottom: 10px;
   }
+
   .OutBox .bottom .right .play-box {
     height: 50px;
     width: 50px;
     margin-right: -10px;
     margin-bottom: -10px;
   }
+
   .OutBox .bottom .right .play-box svg {
     font-size: 24px;
   }
@@ -182,10 +207,12 @@
     width: 80%;
     gap: 2%;
   }
+
   .circleimg-area svg {
     color: var(--text-color4);
     font-size: 12px;
   }
+
   .circleimg {
     height: 20px;
     width: 20px;

@@ -103,32 +103,32 @@ const Cards2 = () => {
             <h3>{item.Subtitle}</h3>
             <p>{item.Description}</p>
             <div className="cardstyle-btn"><span>Click me</span> <FiArrowRight /></div>
-      
-          {activeId === item.id && (
-            <>
-              <div className="image1" style={{
-                backgroundImage:`url('/how-we-work.png')`,
-                backgroundPosition:"center",
-                backgroundSize:"cover",
-                backgroundRepeat:"no-repeat",
-                width:"100%",
-                height:"250px",
-                marginTop:"20px"
-              }}></div>
-              <div className="image2"
-              
-              style={{
-                backgroundImage:`url('/how-we-work.png')`,
-                backgroundPosition:"center",
-                backgroundSize:"cover",
-                backgroundRepeat:"no-repeat",
-                width:"100%",
-                height:"250px",
-                marginTop:"20px"
-              }}></div>
-            </>
-          )}
-              </div>
+
+            {activeId === item.id && (
+              <>
+                <div className="image1" style={{
+                  backgroundImage: `url('/how-we-work.webp')`,
+                  backgroundPosition: "center",
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                  width: "100%",
+                  height: "250px",
+                  marginTop: "20px"
+                }}></div>
+                <div className="image2"
+
+                  style={{
+                    backgroundImage: `url('/how-we-work.webp')`,
+                    backgroundPosition: "center",
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
+                    width: "100%",
+                    height: "250px",
+                    marginTop: "20px"
+                  }}></div>
+              </>
+            )}
+          </div>
         </div>
       ))}
     </div>

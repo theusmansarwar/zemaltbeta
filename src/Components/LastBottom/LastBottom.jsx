@@ -16,7 +16,7 @@ export default function LastBottom() {
 
       <div className="lastbottom-right">
         <div className="lastbottom-image">
-          <div className="image-text">LOREMIPSUM</div>
+          {/* <div className="image-text">LOREMIPSUM</div> */}
         </div>
       </div>
     </section>

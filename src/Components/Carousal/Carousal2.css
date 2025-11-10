@@ -1,7 +1,7 @@
 .carousal2 {
   height: 250px;
   width: var(--default-width);
-  background-image: url("/drive-card-img.png");
+  background-image: url("/drive-card-img.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -12,6 +12,7 @@
   justify-self: center;
   gap: 50px;
 }
+
 .carousal2 h2 {
   font-size: var(--heading-one);
   color: var(--text-color4);
@@ -35,6 +36,7 @@
   transition: 0.2s ease;
   -webkit-tap-highlight-color: transparent;
 }
+
 .carousal2 button:hover {
   color: var(--text-color4);
   background-color: transparent;

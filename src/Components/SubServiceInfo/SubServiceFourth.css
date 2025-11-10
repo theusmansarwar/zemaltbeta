@@ -3,6 +3,7 @@
   padding: 40px var(--left-space);
   background-color: #f9f9f9;
 }
+
 .sub-service-fourth h2 {
   font-size: var(--heading-two);
   margin-bottom: 10px;
@@ -15,9 +16,12 @@
   width: 90%;
   margin: 0 auto;
 }
-.sub-service-fourth img {
-  width: 60%;
-  margin-left: 20%;
+
+.sub-service-fourth .sub-fourth-img {
+  width: 80%;
+  height: auto;
+  max-width: 1024px;
+  margin-left: 10%;
   margin-top: 40px;
 }
 
@@ -25,15 +29,18 @@
   .sub-service-fourth {
     padding: 20px var(--left-space);
   }
+
   .sub-service-fourth h2 {
     text-align: left;
   }
-  .sub-service-fourth img {
+
+  .sub-service-fourth .sub-fourth-img {
     width: 100%;
     margin: 20px 0;
   }
+
   .sub-service-fourth .description {
-  width: 100%;
-  margin: 0;
-}
+    width: 100%;
+    margin: 0;
+  }
 }

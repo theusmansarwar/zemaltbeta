@@ -13,17 +13,17 @@ const JobApplicationForm = ({ jobId }) => {
     phone: "",
     resume: "", // stores uploaded path
     education: "",
-    basedInLahore: null,
+    basedInLahore: "",
     currentSalary: "",
     expectedSalary: "",
-    willingToRelocate: null,
+    willingToRelocate: "",
     experience: "",
     university: "",
     cgpa: "",
     graduationYear: "",
-    company: "",
-    linkedin: "",
-    reason: "",
+    currentCompany: "",
+    linkedinProfile: "",
+    whyDoYouWantToSwitch: "",
   });
 
   const [loading, setLoading] = useState(false);
@@ -35,12 +35,12 @@ const JobApplicationForm = ({ jobId }) => {
     let newValue = value;
 
     if (name === "basedInLahore") {
-      newValue = value === "Yes" ? true : value === "No" ? false : null;
-      if (newValue) setFormData((prev) => ({ ...prev, willingToRelocate: null }));
+      newValue = value === "Yes" ? true : value === "No" ? false : "";
+      if (newValue) setFormData((prev) => ({ ...prev, willingToRelocate: "" }));
     }
 
     if (name === "willingToRelocate") {
-      newValue = value === "Yes" ? true : value === "No" ? false : null;
+      newValue = value === "Yes" ? true : value === "No" ? false : "";
     }
 
 
@@ -52,12 +52,6 @@ const JobApplicationForm = ({ jobId }) => {
     e.preventDefault();
     setErrors({});
 
-    if (!formData.resume) {
-      setErrors({ resume: "Please upload your resume" });
-      toast.error("Please upload your resume before submitting.");
-      return;
-    }
-
     try {
       setLoading(true);
 
@@ -68,7 +62,7 @@ const JobApplicationForm = ({ jobId }) => {
         "name", "email", "phone", "resume", "education",
         "basedInLahore", "currentSalary", "expectedSalary",
         "experience", "university", "cgpa", "graduationYear",
-        "company", "linkedin", "reason"
+        "currentCompany", "linkedinProfile", "whyDoYouWantToSwitch"
       ];
 
       alwaysFields.forEach((key) => {
@@ -81,10 +75,14 @@ const JobApplicationForm = ({ jobId }) => {
       }
 
       dataToSend.append("jobId", jobId);
+      for (let [key, value] of dataToSend.entries()) {
+        console.log(`${key}:`, value);
+      }
+
 
       const response = await createApplication(dataToSend);
 
-      if (response?.status === true) {
+      if (response?.status === 200) {
         toast.success(" Application submitted successfully!");
         setFormData({
           name: "",
@@ -92,25 +90,25 @@ const JobApplicationForm = ({ jobId }) => {
           phone: "",
           resume: "",
           education: "",
-          basedInLahore: null,
+          basedInLahore: "",
           currentSalary: "",
           expectedSalary: "",
-          willingToRelocate: null,
+          willingToRelocate: "",
           experience: "",
           university: "",
           cgpa: "",
           graduationYear: "",
-          company: "",
-          linkedin: "",
-          reason: "",
+          currentCompany: "",
+          linkedinProfile: "",
+          whyDoYouWantToSwitch: "",
         });
-      } else if (response?.status === 400 && response?.missingFields) {
+      } else if (response.status === 400 && response?.missingFields) {
         const fieldErrors = {};
         response.missingFields.forEach((field) => {
           fieldErrors[field.name] = field.message;
         });
         setErrors(fieldErrors);
-        toast.error("Please fill in all required fields correctly.");
+        toast.error("Please fill in all fields correctly.");
       } else {
         toast.error("Failed to submit application. Try again later.");
       }
@@ -132,17 +130,17 @@ const JobApplicationForm = ({ jobId }) => {
       {/* Row 1: Name & Email */}
       <div className="form-row">
         <div className="form-group">
+
           <input
             type="text"
             name="name"
             value={formData.name}
             onChange={handleChange}
-            required
-            placeholder=" "
-            className={errors.name ? "error" : ""}
+            placeholder=""
           />
           <label>Name*</label>
           {errors.name && <span className="error-message">{errors.name}</span>}
+
         </div>
         <div className="form-group">
           <input
@@ -150,12 +148,12 @@ const JobApplicationForm = ({ jobId }) => {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            required
+
             placeholder=" "
-            className={errors.email ? "error" : ""}
           />
           <label>Email*</label>
           {errors.email && <span className="error-message">{errors.email}</span>}
+
         </div>
       </div>
 
@@ -167,20 +165,19 @@ const JobApplicationForm = ({ jobId }) => {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            required
+
             placeholder=" "
-            className={errors.phone ? "error" : ""}
           />
           <label>Phone*</label>
           {errors.phone && <span className="error-message">{errors.phone}</span>}
+
         </div>
         <div className="form-group">
+
           <select
             name="education"
             value={formData.education}
             onChange={handleChange}
-            required
-            className={errors.education ? "error" : ""}
           >
             <option value="">Select Education</option>
             <option>Matric</option>
@@ -199,6 +196,7 @@ const JobApplicationForm = ({ jobId }) => {
       {/* Row 3: Based in Lahore & Willing to Relocate */}
       <div className="form-row">
         <div className="form-group">
+
           <select
             name="basedInLahore"
             value={
@@ -209,8 +207,6 @@ const JobApplicationForm = ({ jobId }) => {
                   : ""
             }
             onChange={handleChange}
-            required
-            className={errors.basedInLahore ? "error" : ""}
           >
             <option value="">Select</option>
             <option value="Yes">Yes</option>
@@ -224,6 +220,7 @@ const JobApplicationForm = ({ jobId }) => {
 
         {showRelocateField && (
           <div className="form-group">
+
             <select
               name="willingToRelocate"
               value={
@@ -234,8 +231,6 @@ const JobApplicationForm = ({ jobId }) => {
                     : ""
               }
               onChange={handleChange}
-              required
-              className={errors.willingToRelocate ? "error" : ""}
             >
               <option value="">Select</option>
               <option value="Yes">Yes</option>
@@ -252,12 +247,11 @@ const JobApplicationForm = ({ jobId }) => {
       {/* Row 4: Experience & Current Company */}
       <div className="form-row">
         <div className="form-group">
+
           <select
             name="experience"
             value={formData.experience}
             onChange={handleChange}
-            required
-            className={errors.experience ? "error" : ""}
           >
             <option value="">Select</option>
             <option>Less than 1 year</option>
@@ -273,18 +267,17 @@ const JobApplicationForm = ({ jobId }) => {
         </div>
 
         <div className="form-group">
+
           <input
             type="text"
-            name="company"
-            value={formData.company}
+            name="currentCompany"
+            value={formData.currentCompany}
             onChange={handleChange}
-            required
-            placeholder=" "
-            className={errors.company ? "error" : ""}
+            placeholder=""
           />
           <label>Current Company*</label>
-          {errors.company && (
-            <span className="error-message">{errors.company}</span>
+          {errors.currentCompany && (
+            <span className="error-message">{errors.currentCompany}</span>
           )}
         </div>
       </div>
@@ -292,14 +285,13 @@ const JobApplicationForm = ({ jobId }) => {
       {/* Row 5: University & CGPA */}
       <div className="form-row">
         <div className="form-group">
+
           <input
             type="text"
             name="university"
             value={formData.university}
             onChange={handleChange}
-            required
             placeholder=" "
-            className={errors.university ? "error" : ""}
           />
           <label>University / Institute*</label>
           {errors.university && (
@@ -308,17 +300,16 @@ const JobApplicationForm = ({ jobId }) => {
         </div>
 
         <div className="form-group">
+
           <input
             type="number"
             name="cgpa"
             value={formData.cgpa}
             onChange={handleChange}
-            required
             placeholder=" "
             step="0.01"
             min="0"
             max="4"
-            className={errors.cgpa ? "error" : ""}
           />
           <label>CGPA*</label>
           {errors.cgpa && <span className="error-message">{errors.cgpa}</span>}
@@ -328,14 +319,14 @@ const JobApplicationForm = ({ jobId }) => {
       {/* Row 6: Graduation Year & LinkedIn */}
       <div className="form-row">
         <div className="form-group">
+
           <input
             type="number"
             name="graduationYear"
             value={formData.graduationYear}
             onChange={handleChange}
-            required
+
             placeholder=""
-            className={errors.graduationYear ? "error" : ""}
           />
           <label>Graduation Year*</label>
           {errors.graduationYear && (
@@ -344,18 +335,17 @@ const JobApplicationForm = ({ jobId }) => {
         </div>
 
         <div className="form-group">
+
           <input
             type="url"
-            name="linkedin"
-            value={formData.linkedin}
+            name="linkedinProfile"
+            value={formData.linkedinProfile}
             onChange={handleChange}
-            required
-            placeholder=" "
-            className={errors.linkedin ? "error" : ""}
+            placeholder=""
           />
           <label>LinkedIn Profile*</label>
-          {errors.linkedin && (
-            <span className="error-message">{errors.linkedin}</span>
+          {errors.linkedinProfile && (
+            <span className="error-message">{errors.linkedinProfile}</span>
           )}
         </div>
       </div>
@@ -363,15 +353,14 @@ const JobApplicationForm = ({ jobId }) => {
       {/* Row 7: Current & Expected Salary */}
       <div className="form-row">
         <div className="form-group">
+
           <input
             type="number"
             name="currentSalary"
             value={formData.currentSalary}
             onChange={handleChange}
-            required
             placeholder=" "
             min="0"
-            className={errors.currentSalary ? "error" : ""}
           />
           <label>Current Salary*</label>
           {errors.currentSalary && (
@@ -380,15 +369,14 @@ const JobApplicationForm = ({ jobId }) => {
         </div>
 
         <div className="form-group">
+
           <input
             type="number"
             name="expectedSalary"
             value={formData.expectedSalary}
             onChange={handleChange}
-            required
             placeholder=" "
             min="0"
-            className={errors.expectedSalary ? "error" : ""}
           />
           <label>Expected Salary*</label>
           {errors.expectedSalary && (
@@ -411,15 +399,14 @@ const JobApplicationForm = ({ jobId }) => {
         <label className="textarea-label">
           Why do you want to switch from your current company?*
         </label>
+        {errors.whyDoYouWantToSwitch && <span className="error-message">{errors.whyDoYouWantToSwitch}</span>}
         <textarea
-          name="reason"
-          value={formData.reason}
+          name="whyDoYouWantToSwitch"
+          value={formData.whyDoYouWantToSwitch}
           onChange={handleChange}
-          required
           placeholder=" "
-          className={errors.reason ? "error" : ""}
         />
-        {errors.reason && <span className="error-message">{errors.reason}</span>}
+
       </div>
 
       <button type="submit" className="application-submit-btn" disabled={loading}>

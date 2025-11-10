@@ -15,7 +15,7 @@ const SubServiceFourth = ({ data }) => {
           }}
         />
       )}
-      <img src={baseUrl + data.image} alt="sub service" />
+      <img className="sub-fourth-img" src={baseUrl + data.image} alt="sub service" />
     </div>
   );
 };

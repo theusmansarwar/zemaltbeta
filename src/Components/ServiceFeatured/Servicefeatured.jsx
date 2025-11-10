@@ -20,7 +20,7 @@ const Servicefeatured = () => {
             </p>
           </div>
           <div className="right">
-            <h2>217+</h2>
+            <h2>50+</h2>
             <p>Projects Done Successfully</p>
           </div>
         </div>

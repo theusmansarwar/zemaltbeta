@@ -1,17 +1,29 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./ServicesDropDown.css";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { FiArrowRight } from "react-icons/fi";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 const ServicesDropDown = ({ services }) => {
   const router = useRouter();
-
+  const pathname = usePathname();
   const [selectedIndex, setSelectedIndex] = useState(0);
 
+  // ✅ Automatically highlight active service based on URL
+  useEffect(() => {
+    if (services && pathname.includes("/services")) {
+      const foundIndex = services.findIndex((s) =>
+        pathname.includes(s.slug)
+      );
+      if (foundIndex !== -1) {
+        setSelectedIndex(foundIndex);
+      }
+    }
+  }, [pathname, services]);
+
   const handleMainServiceClick = (service) => {
-      router.push(`/services/${service.slug}`);
+    router.push(`/services/${service.slug}`);
   };
 
   const handleSubServiceClick = (mainSlug, subSlug) => {
@@ -51,13 +63,16 @@ const ServicesDropDown = ({ services }) => {
         <div className="mid">
           <ul>
             {services[selectedIndex]?.items?.map((item, i) => (
-              <li key={i} className="active">
+              <li key={i}>
                 <span
                   onClick={() =>
                     handleSubServiceClick(
                       services[selectedIndex].slug,
                       item.slug
                     )
+                  }
+                  className={
+                    pathname.includes(item.slug) ? "active-sub" : ""
                   }
                 >
                   {item.name}

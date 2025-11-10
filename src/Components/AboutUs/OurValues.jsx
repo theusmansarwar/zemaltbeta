@@ -17,7 +17,7 @@ const OurValues = () => {
         provide. Zemalt grows when you grow, and every commitment we make turns
         into real progress for your brand.
       </p>
-      <img className="values-img" src="/our-values.png" alt=" Our Values" />
+      <img className="values-img" src="/our-values.webp" alt=" Our Values" />
     </div>
   );
 };

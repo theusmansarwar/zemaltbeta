@@ -71,6 +71,11 @@
   cursor: pointer;
   margin-bottom: 10px;
 }
+.maindropdown .bottom .mid ul li span.active-sub {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
 
 .maindropdown .bottom .right {
   width: 25%;
@@ -104,7 +109,7 @@
   opacity: 0.9;
 }
 
-li.active {
-  background: var(--gradient-three);
-  color: var(--background);
+.maindropdown .bottom .left ul li.active {
+   background: var(--primary-color);
+  color: var(--text-color4);
 }
