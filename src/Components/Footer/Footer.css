@@ -185,6 +185,14 @@
 .footer-links span:hover {
   color: var(--primary-color);
 }
+/* Disable hover effect for industry items */
+.footer-links .industry-item,
+.footer-links .industry-item:hover {
+  color: var(--text-color4) !important;
+  cursor: default !important;
+  pointer-events: none; /* prevents hover click or pointer change */
+}
+
 
 .footer-bottom {
   margin-top: 40px;

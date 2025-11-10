@@ -29,6 +29,15 @@ const whatWeDoBest = [
   { slug: "google-ads", label: "Google Ads" },
   { slug: "content-writing", label: "Content Writing" },
 ];
+const industries = [
+  { label: "E-Commerce & Retail" },
+  { label: "Real Estate & Property" },
+  { label: "Healthcare & Wellness" },
+  { label: "Finance & Fintech" },
+  { label: "Travel & Hospitality" },
+  { label: "Technology & Startups" },
+  { label: "Food & Restaurants" },
+];
 
 export default function Footer() {
   const router = useRouter();
@@ -130,32 +139,15 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Products Column */}
+           {/* Industries We Serve */}
           <div className="footer-column">
             <h3 className="column-title">Industries We Serve</h3>
             <ul className="footer-links">
-              <li>
-                <FaAngleRight /> <span>E-Commerce & Retail</span>
-              </li>
-              <li>
-                <FaAngleRight /> <span>Real Estate & Property</span>
-              </li>
-              <li>
-                <FaAngleRight />
-                <span>Healthcare & Wellness</span>
-              </li>
-              <li>
-                <FaAngleRight /> <span>Finance & Fintech</span>
-              </li>
-              <li>
-                <FaAngleRight /> <span>Travel & Hospitality</span>
-              </li>
-              <li>
-                <FaAngleRight /> <span>Technology & Startups</span>
-              </li>
-              <li>
-                <FaAngleRight /> <span>Food & Restaurants</span>
-              </li>
+              {industries.map((industry, index) => (
+                <li key={index} className="industry-item">
+                  <FaAngleRight /> <span>{industry.label}</span>
+                </li>
+              ))}
             </ul>
           </div>
 
