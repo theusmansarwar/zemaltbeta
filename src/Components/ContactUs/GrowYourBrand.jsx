@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 
 const GrowYourBrand = () => {
   const router = useRouter();
-  // ✅ Data array
+  // Data array
   const servicesData = [
     {
       heading: "Main Services",
@@ -26,42 +26,38 @@ const GrowYourBrand = () => {
       items: [
         {
           label: "E-Commerce Development",
-          slug: "/services/ecommerce-development",
+          slug: "/services/web-development/ecommerce",
         },
-        { label: "CMS Development", slug: "/services/cms-development" },
-        { label: "Shopify Store Development", slug: "/services/shopify-store-development" },
+        { label: "CMS Development", slug: "/services/web-development/cms-development" },
+        { label: "Shopify Store Development", slug: "/services//web-development/shopify-store-development" },
         {
-          label: "Personal Brand Development",
-          slug: "/services/personal-brand-development",
+          label: "Brand Website Development",
+          slug: "/services/web-development/brand-website-development",
         },
-        {
-          label: "Customized Stores Development",
-          slug: "/services/customized-stores-development",
-        },
-        { label: "Rebuild Website", slug: "/services/rebuild-website" },
+
+        { label: "Website Rebuilding", slug: "/services//web-development/website-rebuilding" },
       ],
     },
     {
       heading: "SEO / Local Services",
       items: [
-        { label: "SEO Audit", slug: "/services/seo/seo-audit" },
+        { label: "SEO Audit", slug: "/services/seo/audit" },
         { label: "Local SEO", slug: "/services/seo/local-seo" },
-        { label: "SEO Services", slug: "/services/seo" },
+        { label: "On/Off-Page SEO", slug: "/services/seo/on-page-and-off-page-seo" },
         { label: "E-commerce SEO", slug: "/services/seo/ecommerce-seo" },
         {
-          label: "Social Media Marketing",
-          slug: "/services/social-media-marketing",
+          label: "Technical SEO",
+          slug: "/services/seo/technical-seo",
         },
-        { label: "Custom SEO Reporting", slug: "/services/seo/seo-reporting" },
-        { label: "Brand Building & Ranking", slug: "/services/seo/digital-marketing" },
+        { label: "Brand Building", slug: "/services/seo/brand-building" },
       ],
     },
     {
       heading: "Our Company",
       items: [
         { label: "Home", slug: "/" },
-        { label: "About", slug: "/about" },
-        { label: "Contact", slug: "/contact" },
+        { label: "Services", slug: "/services" },
+        { label: "About Us", slug: "/about-us" },
         { label: "Blog", slug: "/blog" },
         { label: "Team", slug: "/team" },
         { label: "Career", slug: "/career" },

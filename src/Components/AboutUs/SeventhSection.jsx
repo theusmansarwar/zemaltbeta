@@ -1,7 +1,10 @@
+"use client"
 import React from "react";
 import "./SeventhSection.css";
 import { FaArrowRight } from "react-icons/fa6";
+import { useRouter } from "next/navigation";
 const SeventhSection = () => {
+  const router = useRouter();
   return (
     <div className="seventh-section">
       <img className="watermark" src="/zemalt-watermark.svg" alt="Zemalt" />
@@ -49,7 +52,7 @@ const SeventhSection = () => {
           </p>
         </div>
       </div>
-      <button className="proposal-btn">Get Proposal<FaArrowRight /></button>
+      <button className="proposal-btn" onClick={()=>{router.push("/contact")}}>Get Proposal<FaArrowRight /></button>
     </div>
   );
 };

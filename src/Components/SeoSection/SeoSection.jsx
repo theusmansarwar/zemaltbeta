@@ -1,7 +1,10 @@
+"use client"
 import React from "react";
 import "./SeoSection.css";
 import { FaArrowRight } from "react-icons/fa6";
+import { useRouter } from "next/navigation";
 const SeoSection = () => {
+  const router = useRouter();
   return (
     <div className="seo-section" id="seo-marketing-services">
       <div className="seo-content-container">
@@ -60,7 +63,7 @@ const SeoSection = () => {
           </ul>
         </div>
       </div>
-      <button className="proposal-btn">
+      <button className="proposal-btn" onClick={()=>{router.push("/contact")}}>
         Get Proposal
         <FaArrowRight />
       </button>

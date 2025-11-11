@@ -1,30 +1,53 @@
 .fourth-section {
   width: 100% - (var(--left-space) * 2);
-  padding: 40px var(--left-space);
+  padding: 40px var(--left-space) 0;
   background-color: var(--text-color4);
+  display: flex;
+  height: fit-content;
+  justify-content: space-between;
+  margin-bottom: 40px;
+
 }
+
 .fourth-section .left {
-  width: 50%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
+.fourth-section .right {
+  width: 35%;
+  height: auto;
+  max-height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+
+.fourth-section .right img {
+  width: 100%;
+  height: auto;
+}
+
 .fourth-section .left h2 {
   font-size: var(--heading-two);
   color: var(--primary-color);
   margin-bottom: 10px;
 }
+
 .fourth-section .left ul li {
   margin-bottom: 10px;
   margin-left: 20px;
   font-size: var(--default-p-size);
   line-height: var(--p-line-height);
 }
+
 .fourth-section .left .buttons-area {
   display: flex;
   align-items: center;
   gap: 50px;
 }
+
 .fourth-section .left .buttons-area p {
   text-decoration: underline;
   font-size: var(--default-p-size);
@@ -32,9 +55,11 @@
   cursor: pointer;
   user-select: none;
 }
+
 .fourth-section .left .buttons-area p:hover {
   color: rgb(109, 106, 106);
 }
+
 .fourth-section .left .buttons-area button {
   border: none;
   padding: 10px 20px;
@@ -50,22 +75,36 @@
   transition: 0.3s ease;
   -webkit-tap-highlight-color: transparent;
 }
+
 .fourth-section .left .buttons-area button:hover {
   color: var(--text-color);
   background-color: transparent;
 }
+
+
+
+
 @media (max-width: 900px) {
   .fourth-section {
     padding: 20px var(--left-space);
+    margin-bottom: 10px;
   }
+
   .fourth-section .left {
     width: 100%;
   }
+
+  .fourth-section .right {
+    display: none;
+  }
+
+
   .fourth-section .left .buttons-area {
     align-items: flex-start;
     flex-direction: column;
     gap: 10px;
   }
+
   .fourth-section .left .buttons-area p {
     text-decoration: underline;
     font-size: var(--default-p-size);

@@ -6,15 +6,15 @@
 }
 
 .map-section .left {
-  width: 50%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
 .map-section .right {
-  width: 50%;
-  height: 400px;
+  width: 60%;
+  height: auto;
 }
 .map-section .right img {
   width: 100%;

@@ -1,7 +1,9 @@
+"use client"
 import React from "react";
 import "./AboutUsHero.css";
-import { FaPlus } from "react-icons/fa6";
+import { useRouter } from "next/navigation";
 const AboutUsHero = () => {
+  const router = useRouter();
   return (
     <div className="about-hero">
       <div className="left">
@@ -12,7 +14,7 @@ const AboutUsHero = () => {
         <p>
          Zemalt believes in clarity, creativity, and consistent growth. Every strategy focuses on measurable results and lasting impact. The team studies your business, audience, and goals to design solutions that deliver real progress. Each project combines smart design with practical marketing to keep your brand visible and competitive. 
         </p>
-        <button className="work-btn">Check Our Work</button>
+        <button className="work-btn" onClick={()=>{router.push("/products")}}>Check Our Work</button>
       </div>
       <div className="right">
         <div className="box">

@@ -1,7 +1,10 @@
+"use client"
 import React from "react";
 import "./SecondSection.css";
 import { FaArrowRight } from "react-icons/fa6";
+import { useRouter } from "next/navigation";
 const SecondSection = () => {
+  const router = useRouter();
   return (
     <div className="second-section">
       <div className="left">
@@ -37,7 +40,7 @@ const SecondSection = () => {
           <div className="top">
             <div className="content">
               <strong>
-                230 <img src="/plus-icon.svg" alt="Add Icon" />
+                50 <img src="/plus-icon.svg" alt="Add Icon" />
               </strong>
               <p>
                 We have worked on many projects. Our work is always focused on
@@ -72,7 +75,7 @@ const SecondSection = () => {
             </div>
           </div>
         </div>
-        <button className="proposal-btn">Get Proposal <FaArrowRight /></button>
+        <button className="proposal-btn" onClick={()=>{router.push("/contact")}}>Get Proposal <FaArrowRight /></button>
       </div>
     </div>
   );

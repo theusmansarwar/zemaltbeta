@@ -5,6 +5,7 @@
   z-index: 2;
   overflow: hidden;
   background-color: var(--text-color4);
+  margin-top: 40px;
 }
 
 /* background image */
@@ -72,6 +73,7 @@
 @media (max-width: 900px) {
   .video-section {
     padding: 20px var(--left-space);
+    margin-top: 10px;
   }
   .video-section .thumbnail-container {
     margin: 20px 0;

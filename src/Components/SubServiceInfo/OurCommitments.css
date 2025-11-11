@@ -8,6 +8,7 @@
   justify-content: center;
   gap: 30px;
   background-color: var(--text-color4);
+  margin-top: 40px;
 }
 .our-commitments .commitment-title {
   text-align: center;
