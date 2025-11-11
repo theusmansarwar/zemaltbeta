@@ -67,7 +67,7 @@ const MeetTeam = () => {
               />
             </div>
             <div className="card-content">
-              <h4 className="card-name">{member.name}</h4>
+              <h3 className="card-name">{member.name}</h3>
               <p className="card-role">{member.role?.name || member.role}</p>
             </div>
           </div>

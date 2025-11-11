@@ -39,7 +39,7 @@ const BlogSection = ({ data }) => {
           <p>{data.description}</p>
           <button
             className="see-more"
-            onClick={() => router.push("/services/seo")}
+            onClick={() => router.push("/blog")}
           >
             See more
           </button>

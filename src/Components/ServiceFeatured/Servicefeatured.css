@@ -27,10 +27,10 @@
   height: 5px;
 }
 .Servicefeatured-bottom {
-  width: calc(90% - 100px);
+  width: calc(90% - 80px);
   background-color: #f0f0f0;
   border-radius: var(--border-radius1);
-  padding: 50px;
+  padding: 40px;
   margin-top: 50px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.195);
 }
@@ -50,7 +50,7 @@
 }
 .Servicefeatured-bottom .top .left p {
   font-size: var(--default-p-size);
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   line-height: var(--p-line-height);
 }
 .Servicefeatured-bottom .top .right h2 {
