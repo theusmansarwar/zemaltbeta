@@ -48,6 +48,7 @@ body {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
@@ -67,7 +68,7 @@ html {
   left: 0;
   height: 100%;
   width: 100%;
-  background-image: url("/distortion-img.png");
+  background-image: url("/distortion-img.webp");
   background-size: contain;
   background-position: center;
   opacity: 0.06;

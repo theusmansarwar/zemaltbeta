@@ -13,16 +13,18 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background-image: url("/distortion-img.png");
+  background-image: url("/distortion-img.webp");
   background-size: contain;
   background-position: center;
   opacity: 0.06;
   z-index: -1;
 }
+
 .homebg h2 {
   font-size: var(--heading-two);
   text-align: center;
 }
+
 @media (max-width: 900px) {
   .homebg {
     margin-top: 70px;

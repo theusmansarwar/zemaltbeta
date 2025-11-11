@@ -84,7 +84,7 @@
 .read-time {
   color: var(--text-color3);
 }
-.blog-card h4 {
+.blog-card h3 {
   font-size: var(--heading-four);
   margin-bottom: 10px;
   width: 90%;

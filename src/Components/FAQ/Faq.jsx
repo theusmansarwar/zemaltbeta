@@ -25,7 +25,7 @@ const Faq = ({ faqs }) => {
             More Questions
           </button>
         </div>
-        <img src="/Question.png" alt="FAQs" />
+        <img src="/Question.webp" alt="FAQs" />
       </div>
       <div className="faq-right">
         {faqs?.items?.map((item, index) => (

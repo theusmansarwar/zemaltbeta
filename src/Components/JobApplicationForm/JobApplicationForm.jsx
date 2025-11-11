@@ -75,10 +75,7 @@ const JobApplicationForm = ({ jobId }) => {
       }
 
       dataToSend.append("jobId", jobId);
-      for (let [key, value] of dataToSend.entries()) {
-        console.log(`${key}:`, value);
-      }
-
+     
 
       const response = await createApplication(dataToSend);
 

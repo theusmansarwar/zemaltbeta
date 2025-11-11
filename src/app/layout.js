@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/Components/Header/Header";
 import Footer from "@/Components/Footer/Footer";
@@ -16,9 +16,16 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-jakarta",
+  display: "swap",
+});
 
 const title = "Zemalt | Digital Marketing, SEO & Web Design Services.";
-const description = "Zemalt offers expert SEO, content writing, web design, UI/UX, and digital marketing services to build brands, boost rankings, and drive business growth";
+const description =
+  "Zemalt offers expert SEO, content writing, web design, UI/UX, and digital marketing services to build brands, boost rankings, and drive business growth";
 
 const url = "https://zemalt.com";
 const image = "/favicon.png";
@@ -56,10 +63,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta name="robots" content="noindex, nofollow" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -75,9 +78,12 @@ export default function RootLayout({ children }) {
                 "https://www.facebook.com/zemaltpvtltd",
               ],
             }),
-          }} />
+          }}
+        />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${jakarta.variable}`}
+      >
         <Providers>
           <ToastContainer
             position="top-right"
@@ -87,7 +93,7 @@ export default function RootLayout({ children }) {
           />
           <ViewCounter />
           <Header />
-          {children}
+          <main id="main-content">{children}</main>
           <Footer />
         </Providers>
       </body>

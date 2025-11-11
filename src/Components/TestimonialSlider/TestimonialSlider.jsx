@@ -29,7 +29,7 @@ const TestimonialSlider = () => {
       <p className="testimonial-quote">“ {quote} ”</p>
       <div className="testimonial-bottom">
         <div className="testimonial-user">
-          <img src="/person.png" alt={name} />
+          <img src="/person.webp" alt={name} />
           <div className="user-container">
             <p className="user-name">{name}</p>
             <p className="user-position">{position}</p>
@@ -42,8 +42,8 @@ const TestimonialSlider = () => {
             style={{
               opacity: currentIndex === 0 ? 0.5 : 1,
               pointerEvents: currentIndex === 0 ? "none" : "auto",
-             
-              
+
+
             }}
           >
             <FaArrowLeft />
@@ -58,9 +58,8 @@ const TestimonialSlider = () => {
             onClick={
               currentIndex < Testimonials.length - 1 ? handleNext : undefined
             }
-            className={`optbtns ${
-              currentIndex === Testimonials.length - 1 ? "inactive" : ""
-            }`}
+            className={`optbtns ${currentIndex === Testimonials.length - 1 ? "inactive" : ""
+              }`}
             style={{
               opacity: currentIndex === Testimonials.length - 1 ? 0.5 : 1,
               pointerEvents:

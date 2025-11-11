@@ -11,8 +11,8 @@ const ServiceCard = ({ data }) => {
   const currentpath = pathname.split("/").pop();
   return (
     <div className="designing-page-grid">
-      <img className="rightimage" src="/right.png" alt="right decoration" />
-      <img className="leftimage" src="/left.png" alt="left decoration" />
+      <img className="rightimage" src="/right.webp" alt="right decoration" />
+      <img className="leftimage" src="/left.webp" alt="left decoration" />
 
       {data.map((card, index) => (
         <div className="designing-card" key={index}>
@@ -20,7 +20,7 @@ const ServiceCard = ({ data }) => {
             <img src={baseUrl + card.icon} alt="icon" />
           </div>
           <h3>{card.title}</h3>
-         {card.short_description && (
+          {card.short_description && (
             <div
               dangerouslySetInnerHTML={{
                 __html: card.short_description,

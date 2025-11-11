@@ -74,7 +74,7 @@ export default function Footer() {
         <div className="footer-content">
           {/* Office/Assistance Column */}
           <div className="footer-column">
-            <h3 className="column-title">OFFICE / ASSISTANCE</h3>
+            <h4 className="column-title">OFFICE / ASSISTANCE</h4>
             <div className="contact-info">
               <div className="contact-item">
                 <span className="contact-icon">
@@ -129,7 +129,7 @@ export default function Footer() {
 
           {/* Company Profile Column */}
           <div className="footer-column">
-            <h3 className="column-title">Our Company</h3>
+            <h4 className="column-title">Our Company</h4>
             <ul className="footer-links">
               {companyLinks.map((link, index) => (
                 <li key={index} onClick={() => router.push(link.slug)}>
@@ -139,9 +139,9 @@ export default function Footer() {
             </ul>
           </div>
 
-           {/* Industries We Serve */}
+          {/* Industries We Serve */}
           <div className="footer-column">
-            <h3 className="column-title">Industries We Serve</h3>
+            <h4 className="column-title">Industries We Serve</h4>
             <ul className="footer-links">
               {industries.map((industry, index) => (
                 <li key={index} className="industry-item">
@@ -153,7 +153,7 @@ export default function Footer() {
 
           {/* Our Services Column */}
           <div className="footer-column">
-            <h3 className="column-title">What We Do Best</h3>
+            <h4 className="column-title">What We Do Best</h4>
             <ul className="footer-links">
               {whatWeDoBest.map((service, index) => (
                 <li key={index} onClick={() => router.push(`/services/${service.slug}`)}>
@@ -195,7 +195,7 @@ export default function Footer() {
               </span>
             </div>
             <div className="top-right">
-               <span
+              <span
                 onClick={() => {
                   router.push("/terms-and-conditions");
                 }}
@@ -203,7 +203,7 @@ export default function Footer() {
               >
                 Terms & Conditions
               </span>
-               <span
+              <span
                 onClick={() => {
                   router.push("/privacy-policy");
                 }}
@@ -222,18 +222,21 @@ export default function Footer() {
             <div className="-bottom-right">
               <div className="social-icons">
                 <a
+                  aria-label="Visit Zemalt on Facebook"
                   href="https://www.facebook.com/zemaltpvtltd"
                   className="social-icon facebook"
                 >
                   <FaFacebookF />
                 </a>
                 <a
+                  aria-label="Visit Zemalt on Instagram"
                   href="https://www.instagram.com/zemaltpvtltd/"
                   className="social-icon instagram"
                 >
                   <FaInstagram />
                 </a>
                 <a
+                  aria-label="Visit Zemalt on Linkedin"
                   href="https://www.linkedin.com/company/zemalt/"
                   className="social-icon linkedin"
                 >

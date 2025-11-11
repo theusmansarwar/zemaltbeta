@@ -68,12 +68,13 @@ const BlogSection = ({ data }) => {
                 </span>
               </div>
               <div className="card-bottom">
-                <h4>{truncateTextByWords(blog.title, 10)}</h4>
+                <h3>{truncateTextByWords(blog.title, 10)}</h3>
                 <div className="desc-btn-container">
                   <p className="description">
                     {truncateTextByWords(blog.description, 15)}
                   </p>
                   <button
+                    aria-label="Read More"
                     className="read-button"
                     onClick={() => router.push(`/blog/${blog.slug}`)}
                   >

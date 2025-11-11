@@ -151,9 +151,9 @@ const Header = () => {
     <div className="main-wrapper-fixed-width">
       <div className="header-area">
         <img
-          src="/zemalt-logo.png"
+          src="/zemalt-logo.webp"
           onClick={() => router.push("/")}
-          alt="Logo"
+          alt="Zemalt.com"
         />
 
         {/* Desktop Nav */}

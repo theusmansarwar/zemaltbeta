@@ -71,7 +71,7 @@ const Page = async ({ params }) => {
     heading:
       service.imageSection?.title ||
       "Bright minds shape clear paths and act fast.",
-    image: service.imageSection?.image || "/zemalt-logo.png",
+    image: service.imageSection?.image || "/zemalt-logo.webp",
     published: service.imageSection?.published ?? false,
   };
 

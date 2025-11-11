@@ -34,7 +34,7 @@ const TeamCard = () => {
     <div key={member._id} className="team-card">
       <div className="profile-left">
         <img
-          src={member.image ? `${baseUrl}${member.image}` : "/dummy.png"}
+          src={member.image ? `${baseUrl}${member.image}` : "/person.webp"}
           alt={member.name}
         />
         

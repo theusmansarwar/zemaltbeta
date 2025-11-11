@@ -6,7 +6,7 @@ import { IoMdClose } from "react-icons/io";
 const cards = [
   {
     title: "Zemalt",
-    image: "/zemalt-logo.png", 
+    image: "/zemalt-logo.webp",
     points: [
       {
         text: "Dedicated account manager and full in-house team that plan, build, and execute SEO assets.",

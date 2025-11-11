@@ -7,7 +7,7 @@ const Cards = () => {
     <div className="cards-area-testimonials">
       <div className="testimonial-card">
         <div className="testimonial-content">
-          <img className="testimonial-logo" src="/google.png" />
+          <img className="testimonial-logo" src="/google.webp"  alt="Google"/>
           <p>
             We are the top digital marketing agency for branding corp. We offer
             a full rang engine ....
@@ -22,7 +22,7 @@ const Cards = () => {
       </div>
       <div className="testimonial-card">
         <div className="testimonial-content">
-          <img className="testimonial-logo" src="/trustpilot.png" />
+          <img className="testimonial-logo" src="/trustpilot.webp" alt="Trustpilot"/>
           <p>
             We are the top digital marketing agency for branding corp. We offer
             a full rang engine ....
@@ -37,7 +37,7 @@ const Cards = () => {
       </div>
       <div className="testimonial-card">
         <div className="testimonial-content">
-          <img className="testimonial-logo" src="/clutch-logo.png" />
+          <img className="testimonial-logo" src="/clutch-logo.webp" alt="Clutch" />
           <p>
             We are the top digital marketing agency for branding corp. We offer
             a full rang engine ....

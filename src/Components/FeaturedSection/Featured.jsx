@@ -3,9 +3,6 @@ import React from "react";
 import "./Featured.css";
 import { FaArrowRight, FaArrowTrendUp } from "react-icons/fa6";
 import { useRouter } from "next/navigation";
-
-
-
 const brands = ["/plutosec.png", "/digitalaura.png", "/carteroil.png", "/smartenergy.png"]
 const Featured = () => {
 

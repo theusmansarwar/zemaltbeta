@@ -4,7 +4,7 @@ import Cards from "./Cards";
 const TestimonialSection = () => {
   return (
     <div className="TestimonialSection" id="reviews">
-      <img src="/Vector.png" className="testimonial-icon" />
+      <img src="/Vector.png" className="testimonial-icon" alt="Quote icon" />
       <div className="Testimonial-header">
         <h2>What Our Clients Say About Results</h2>
 
