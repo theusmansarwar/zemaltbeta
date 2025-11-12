@@ -13,9 +13,9 @@ import { useRouter } from "next/navigation";
 
 const companyLinks = [
   { slug: "/", label: "Home" },
-  { slug: "/products", label: "Products" },
-  { slug: "/about-us", label: "About" },
-  { slug: "/contact", label: "Contact" },
+  { slug: "/products", label: "Our Products" },
+  { slug: "/about-us", label: "About Us" },
+  { slug: "/contact", label: "Contact Us" },
   { slug: "/blog", label: "Blog" },
   { slug: "/team", label: "Team" },
   { slug: "/write-for-us", label: "Write for us" },
@@ -74,7 +74,7 @@ export default function Footer() {
         <div className="footer-content">
           {/* Office/Assistance Column */}
           <div className="footer-column">
-            <h4 className="column-title">OFFICE / ASSISTANCE</h4>
+            <h3 className="column-title">OFFICE / ASSISTANCE</h3>
             <div className="contact-info">
               <div className="contact-item">
                 <span className="contact-icon">
@@ -129,7 +129,7 @@ export default function Footer() {
 
           {/* Company Profile Column */}
           <div className="footer-column">
-            <h4 className="column-title">Our Company</h4>
+            <h3 className="column-title">Our Company</h3>
             <ul className="footer-links">
               {companyLinks.map((link, index) => (
                 <li key={index} onClick={() => router.push(link.slug)}>
@@ -141,7 +141,7 @@ export default function Footer() {
 
           {/* Industries We Serve */}
           <div className="footer-column">
-            <h4 className="column-title">Industries We Serve</h4>
+            <h3 className="column-title">Industries We Serve</h3>
             <ul className="footer-links">
               {industries.map((industry, index) => (
                 <li key={index} className="industry-item">
@@ -153,7 +153,7 @@ export default function Footer() {
 
           {/* Our Services Column */}
           <div className="footer-column">
-            <h4 className="column-title">What We Do Best</h4>
+            <h3 className="column-title">What We Do Best</h3>
             <ul className="footer-links">
               {whatWeDoBest.map((service, index) => (
                 <li key={index} onClick={() => router.push(`/services/${service.slug}`)}>

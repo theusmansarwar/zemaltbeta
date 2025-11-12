@@ -5,6 +5,7 @@ import truncateTextByWords from "@/utils/TruncateByWords";
 import { useRouter } from "next/navigation";
 import { fetchallBloglist, fetchBlogCategories } from "@/DAL/Fetch"; // ✅ use new API
 import { baseUrl } from "@/config/Config";
+import { toast } from "react-toastify";
 
 export default function RecentBlogs() {
   const router = useRouter();
@@ -26,7 +27,7 @@ export default function RecentBlogs() {
         setRecentPosts(res.blogs);
       }
     } catch (error) {
-      console.error("Error fetching recent posts:", error);
+      toast.error("Error fetching recent posts:", error);
     } finally {
       setLoading(false);
     }
@@ -40,7 +41,7 @@ export default function RecentBlogs() {
         setCategories(res.categories);
       }
     } catch (error) {
-      console.error("Error fetching categories:", error);
+      toast.error("Error fetching categories:", error);
     }
   };
 
@@ -81,9 +82,8 @@ export default function RecentBlogs() {
                   <div
                     className="post-image"
                     style={{
-                      backgroundImage: `url(${
-                        post.thumbnail ? baseUrl + post.thumbnail : "/dummy.png"
-                      })`,
+                      backgroundImage: `url(${post.thumbnail ? baseUrl + post.thumbnail : "/dummy.png"
+                        })`,
                       backgroundSize: "cover",
                       backgroundPosition: "center",
                       backgroundRepeat: "no-repeat",

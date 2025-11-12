@@ -7,6 +7,7 @@ import { AiFillInstagram } from "react-icons/ai";
 import { fetchAllTeam } from "@/DAL/Fetch";
 import { baseUrl } from "@/config/Config";
 import TeamCardSkeleton from "../SkeletonLoaders/TeamCardSkeleton";
+import { toast } from "react-toastify";
 
 const TeamCard = () => {
   const [categories, setCategories] = useState([]);
@@ -24,7 +25,7 @@ const TeamCard = () => {
         setCategories(res.categories);
       }
     } catch (err) {
-      console.error("Error fetching team:", err);
+      toast.error("Error fetching team:", err);
     } finally {
       setLoading(false);
     }
@@ -37,7 +38,7 @@ const TeamCard = () => {
           src={member.image ? `${baseUrl}${member.image}` : "/person.webp"}
           alt={member.name}
         />
-        
+
       </div>
       <div className="profile-right">
         <strong>{member.name}</strong>

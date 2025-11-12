@@ -8,6 +8,7 @@ import RecentBlogs from "../RecentBlogs/RecentBlogs";
 import { fetchBlogBySlug } from "@/DAL/Fetch";
 import Comment from "../Comment/Comment";
 import FeaturedBlogs from "../FeaturedBlogs/FeaturedBlogs";
+import { toast } from "react-toastify";
 
 const BlogDetail = ({ slug }) => {
   const [blog, setBlog] = useState(null);
@@ -21,7 +22,7 @@ const BlogDetail = ({ slug }) => {
 
         setBlog(res.blog);
       } catch (err) {
-        console.error("Error fetching blog details:", err);
+        toast.error("Error fetching blog details:", err);
       } finally {
         setLoading(false);
       }

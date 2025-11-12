@@ -7,6 +7,7 @@ import { baseUrl } from "@/config/Config";
 import truncateTextByWords from "@/utils/TruncateByWords";
 import { fetchCaseStudies } from "@/DAL/Fetch";
 import CaseStudySkeleton from "../SkeletonLoaders/CaseStudySkeleton";
+import { toast } from "react-toastify";
 
 const CaseStudy = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +20,7 @@ const CaseStudy = () => {
         const res = await fetchCaseStudies();
         setCaseStudy(res.CaseStudies);
       } catch (err) {
-        console.error("Error fetching industries:", err);
+        toast.error("Error fetching industries:", err);
       } finally {
         setLoading(false);
       }

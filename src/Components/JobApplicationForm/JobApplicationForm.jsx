@@ -75,7 +75,7 @@ const JobApplicationForm = ({ jobId }) => {
       }
 
       dataToSend.append("jobId", jobId);
-     
+
 
       const response = await createApplication(dataToSend);
 
@@ -110,7 +110,7 @@ const JobApplicationForm = ({ jobId }) => {
         toast.error("Failed to submit application. Try again later.");
       }
     } catch (err) {
-      console.error("Application error:", err);
+      toast.error("Application error:", err);
       toast.error("Something went wrong!");
     } finally {
       setLoading(false);

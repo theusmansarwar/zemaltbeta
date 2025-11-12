@@ -8,16 +8,16 @@ export const metadata = {
     "Zemalt’s case studies showcasing SEO, paid ads, and web development success. See how we drive growth and deliver measurable results for clients.",
 };
 const featuredData = {
-  title: "Products",
-  spanTitle: "",
+  title: "OUR",
+  spanTitle: "Products",
   description:
-    "You deserve proof that strategies create real growth. Zemalt’s case studies highlight how we solve challenges and deliver measurable success. Each story explains the problem faced, the approach we used, and the results achieved. You see how SEO improves rankings, how ads generate conversions, and how social media builds engagement. Every example reflects our commitment to clarity, precision, and performance. You understand the value of our methods through clear outcomes. Explore our case studies and learn how Zemalt transforms business goals into results that matter. Your success story can be the next one we create.",
+    "Our solutions help businesses operate efficiently and grow steadily. The platform focuses on clear results and practical use. The design ensures speed, accuracy, and consistency in every task. Teams complete work faster and reduce errors. Every feature reflects careful research, quality, and precision. The tools simplify complex processes and support better decision-making.",
 };
 const page = () => {
   return (
     <div className="PageBg">
       <ServicePageFeatured data={featuredData} />
-      <Products/>
+      <Products />
     </div>
   );
 };

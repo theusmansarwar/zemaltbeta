@@ -5,8 +5,9 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import ProductsPopup from "./ProductsPopup";
 import { baseUrl } from "@/config/Config";
 import truncateTextByWords from "@/utils/TruncateByWords";
-import {  fetchProducts } from "@/DAL/Fetch";
+import { fetchProducts } from "@/DAL/Fetch";
 import ProductsSkeleton from "../SkeletonLoaders/ProductsSkeleton";
+import { toast } from "react-toastify";
 
 const Products = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +20,7 @@ const Products = () => {
         const res = await fetchProducts();
         setProducts(res.Products);
       } catch (err) {
-        console.error("Error fetching industries:", err);
+        toast.error("Error fetching industries:", err);
       } finally {
         setLoading(false);
       }

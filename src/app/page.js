@@ -71,8 +71,8 @@ export default function Home() {
       <Whyus />
       <TestimonialSection />
       <TestimonialSlider2 />
-      <Faq faqs={Homepagefaqs} />
       <BlogSection data={blogHeaderData} />
+      <Faq faqs={Homepagefaqs} />
       <SeoSection />
     </div>
   );

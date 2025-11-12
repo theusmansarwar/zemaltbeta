@@ -7,6 +7,7 @@ import { fetchIndustries } from "@/DAL/Fetch";
 import { baseUrl } from "@/config/Config";
 import truncateTextByWords from "@/utils/TruncateByWords";
 import IndustryCardSkeleton from "../SkeletonLoaders/IndustryCardSkeleton";
+import { toast } from "react-toastify";
 
 const IndustryCard = () => {
   const router = useRouter();
@@ -18,7 +19,7 @@ const IndustryCard = () => {
         const res = await fetchIndustries();
         setIndustries(res.industries);
       } catch (err) {
-        console.error("Error fetching industries:", err);
+        toast.error("Error fetching industries:", err);
       } finally {
         setLoading(false);
       }
@@ -28,7 +29,7 @@ const IndustryCard = () => {
   }, []);
 
   if (loading) {
-    return <IndustryCardSkeleton/>;
+    return <IndustryCardSkeleton />;
   }
 
   return (

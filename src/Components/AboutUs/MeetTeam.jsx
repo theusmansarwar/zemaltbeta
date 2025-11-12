@@ -4,6 +4,7 @@ import "./MeetTeam.css";
 import { fetchFeaturedTeam } from "@/DAL/Fetch";
 import { baseUrl } from "@/config/Config";
 import MeetTeamSkeleton from "../SkeletonLoaders/MeetTeamSkeleton";
+import { toast } from "react-toastify";
 
 const MeetTeam = () => {
   const [hoveredId, setHoveredId] = useState(null);
@@ -16,7 +17,7 @@ const MeetTeam = () => {
         const res = await fetchFeaturedTeam();
         setTeamData(res?.Members || []);
       } catch (err) {
-        console.error("Error fetching team:", err);
+        toast.error("Error fetching team:", err);
       } finally {
         setLoading(false);
       }
@@ -25,7 +26,7 @@ const MeetTeam = () => {
   }, []);
 
   if (loading) return <MeetTeamSkeleton />;
-  
+
   return (
     <div className="meet-team" id="team">
       <h2>Meet the team</h2>
@@ -49,9 +50,8 @@ const MeetTeam = () => {
         {teamData.map((member) => (
           <div
             key={member._id || member.id}
-            className={`meet-team-card ${
-              hoveredId === (member._id || member.id) ? "expanded" : "collapsed"
-            }`}
+            className={`meet-team-card ${hoveredId === (member._id || member.id) ? "expanded" : "collapsed"
+              }`}
             onMouseEnter={() => setHoveredId(member._id || member.id)}
             onMouseLeave={() => setHoveredId(null)}
           >

@@ -6,6 +6,7 @@ import "./TestimonialSlider2.css";
 import { fetchTestimonial } from "@/DAL/Fetch";
 import TestimonialSliderSkeleton from "../SkeletonLoaders/TestimonialSliderSkeleton";
 import { baseUrl } from "@/config/Config";
+import { toast } from "react-toastify";
 
 const TestimonialSlider2 = () => {
   const [testimonials, setTestimonials] = useState([]);
@@ -21,7 +22,7 @@ const TestimonialSlider2 = () => {
           setTestimonials(res.testimonials);
         }
       } catch (error) {
-        console.error("Failed to fetch testimonials:", error);
+        toast.error("Failed to fetch testimonials:", error);
       } finally {
         setLoading(false);
       }
@@ -96,9 +97,8 @@ const TestimonialSlider2 = () => {
 
         {/* Right Arrow */}
         <FaCircleChevronRight
-          className={`scroll-btn right ${
-            current === testimonials.length - 1 ? "disabled" : ""
-          }`}
+          className={`scroll-btn right ${current === testimonials.length - 1 ? "disabled" : ""
+            }`}
           onClick={nextSlide}
         />
 
@@ -109,9 +109,8 @@ const TestimonialSlider2 = () => {
             onClick={prevSlide}
           />
           <FaCircleChevronRight
-            className={`scroll-btn ${
-              current === testimonials.length - 1 ? "disabled" : ""
-            }`}
+            className={`scroll-btn ${current === testimonials.length - 1 ? "disabled" : ""
+              }`}
             onClick={nextSlide}
           />
         </div>

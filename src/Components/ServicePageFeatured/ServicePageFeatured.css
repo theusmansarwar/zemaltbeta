@@ -13,6 +13,7 @@
 .servicepage-featured h1 {
   font-size: var(--heading-one);
   text-align: center;
+  text-transform: uppercase;
 }
 
 .servicepage-featured h1 span {

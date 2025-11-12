@@ -10,6 +10,7 @@ import { fetchallBloglist, fetchFeaturedBlog } from "@/DAL/Fetch";
 import { baseUrl } from "@/config/Config";
 import FeaturedBlogsSkeleton from "../SkeletonLoaders/FeaturedBlogsSkeleton";
 import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 const FeaturedBlogs = () => {
   const router = useRouter();
@@ -23,7 +24,7 @@ const FeaturedBlogs = () => {
         const featuredBlogs = res?.blogs || [];
         setBlogs(featuredBlogs);
       } catch (error) {
-        console.error("Error fetching featured blogs:", error);
+        toast.error("Error fetching featured blogs:", error);
       } finally {
         setLoading(false);
       }

@@ -22,7 +22,7 @@ const OutBox = () => {
             <h3>
               50<span>+</span>
             </h3>
-            <p>Project finish with superbly</p>
+            <p>Projects finished superbly</p>
           </div>
 
           <div className="circleimg-area">

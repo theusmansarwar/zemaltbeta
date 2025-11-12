@@ -6,6 +6,7 @@ import { fetchallBloglist } from "@/DAL/Fetch";
 import truncateTextByWords from "@/utils/TruncateByWords";
 import { useRouter } from "next/navigation";
 import BCard2 from "../SkeletonLoaders/BCard2";
+import { toast } from "react-toastify";
 
 const colors = ["#ff4d4d", "#4caf50", "#2196f3", "#ff9800", "#9c27b0"];
 
@@ -20,7 +21,7 @@ const BlogSection = ({ data }) => {
         const res = await fetchallBloglist("", 1, 3, "");
         setBlogs(res?.blogs || []);
       } catch (err) {
-        console.error("Error fetching blogs:", err);
+        toast.error("Error fetching blogs:", err);
       } finally {
         setLoading(false);
       }

@@ -2,34 +2,41 @@
   width: 100% - (var(--left-space) * 2);
   padding: 40px var(--left-space);
   background-color: var(--text-color4);
+  margin-top: 40px;
 }
+
 .seo-section .seo-content-container {
   display: flex;
   gap: 30px;
 }
+
 .seo-section .seo-content-container .left {
-  width: 85%;
+  width: 82%;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 .seo-section .seo-content-container .left span {
   font-size: var(--heading-two);
   display: block;
 }
+
 .seo-section .seo-content-container .left p {
   font-size: var(--default-p-size);
   line-height: var(--p-line-height);
 }
+
 .seo-section .seo-content-container .left ul li {
   margin-left: 20px;
   margin-bottom: 10px;
   color: var(--primary-color);
 }
+
 .seo-section .seo-content-container .right {
   height: inherit;
-  width: 15%;
-  padding: 40px 20px;
+  width: calc(23% - 60px) ;
+  padding: 40px 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,15 +44,18 @@
   background-color: #f9f9f9;
   border-radius: var(--border-radius1);
 }
+
 .seo-section .seo-content-container .right ul li {
   margin-bottom: 10px;
 }
+
 .seo-section .seo-content-container .right ul li a {
   text-decoration: none;
   cursor: pointer;
   transition: color 0.3s ease;
   color: var(--main-color);
 }
+
 .seo-section .seo-content-container .right ul li a:hover {
   color: var(--primary-color);
 }
@@ -70,27 +80,36 @@
   gap: 10px;
   -webkit-tap-highlight-color: transparent;
 }
+
 .seo-section .proposal-btn:hover {
   background-color: transparent;
   color: var(--main-color);
 }
+
 @media (max-width: 900px) {
-  
+  .seo-section {
+    margin-top: 10px;
+  }
+
   .seo-section .seo-content-container {
     flex-direction: column;
     display: flex;
     gap: 30px;
   }
+
   .seo-section .seo-content-container .left {
     width: 100%;
   }
+
   .seo-section .seo-content-container .right {
-    width: calc(100% - 40px);
+    width: calc(100% - 60px);
     align-items: flex-start;
   }
+
   .seo-section .seo-content-container .right ul li {
     margin-left: 10px;
   }
+
   .seo-section .proposal-btn {
     width: 100%;
     margin-left: 0%;

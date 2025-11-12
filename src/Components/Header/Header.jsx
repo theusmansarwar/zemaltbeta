@@ -6,6 +6,7 @@ import { FaAngleDown, FaTimes } from "react-icons/fa";
 import ServicesDropDown from "../DropDowns/ServicesDropDown";
 import { usePathname, useRouter } from "next/navigation";
 import { fetchDropDownServices } from "@/DAL/Fetch";
+import { toast } from "react-toastify";
 
 const services = [
   {
@@ -138,7 +139,7 @@ const Header = () => {
 
         setServices(fetchedServices);
       } catch (error) {
-        console.error("Failed to fetch services:", error);
+        toast.error("Failed to fetch services:", error);
         setServices([]);
       }
     };
@@ -173,6 +174,12 @@ const Header = () => {
           >
             Services <FaAngleDown />
           </li>
+          <li
+            className={pathname === "/products" ? "active" : ""}
+            onClick={() => router.push("/products")}
+          >
+            Our Products
+          </li>
 
           <li
             className={pathname === "/case-study" ? "active" : ""}
@@ -196,17 +203,10 @@ const Header = () => {
           </li>
 
           <li
-            className={pathname === "/about-us" ? "active" : ""}
-            onClick={() => router.push("/about-us")}
-          >
-            About Us
-          </li>
-
-          <li
             className={pathname === "/contact" ? "active" : ""}
             onClick={() => router.push("/contact")}
           >
-            Contact
+            Contact Us
           </li>
         </ul>
 
@@ -310,6 +310,14 @@ const Header = () => {
               </ul>
             )}
           </li>
+          <li className={pathname === "/products" ? "active" : ""}
+            onClick={() => {
+              router.push("/products");
+              setMobileMenu(false);
+            }}
+          >
+            Our Products
+          </li>
 
           {/* Other menu items */}
           <li className={pathname === "/case-study" ? "active" : ""}
@@ -336,21 +344,14 @@ const Header = () => {
           >
             Blogs
           </li>
-          <li className={pathname === "/about-us" ? "active" : ""}
-            onClick={() => {
-              router.push("/about-us");
-              setMobileMenu(false);
-            }}
-          >
-            About Us
-          </li>
+
           <li className={pathname === "/contact" ? "active" : ""}
             onClick={() => {
               router.push("/contact");
               setMobileMenu(false);
             }}
           >
-            Contact
+            Contact Us
           </li>
         </ul>
       </div>

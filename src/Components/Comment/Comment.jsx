@@ -52,15 +52,15 @@ const Comment = ({ blogId, comments = [] }) => {
       const response = await commentAdd(payload);
 
       if (response.status === 201) {
-        toast.success(response?.message || "Comment submitted successfully ✅");
+        toast.success(response?.message || "Comment submitted successfully ");
         setFormData({ name: "", email: "", comment: "" });
         setIsSubmitted(false);
       } else {
-        toast.error(response?.message || "Failed to submit comment ❌");
+        toast.error(response?.message || "Failed to submit comment ");
       }
     } catch (err) {
-      console.error("Error submitting comment:", err);
-      toast.error("Something went wrong. Please try again later ❌");
+      toast.error("Error submitting comment:", err);
+      toast.error("Something went wrong. Please try again later ");
     }
   };
 

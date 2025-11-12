@@ -117,9 +117,9 @@ const ContactForm = () => {
         </div>
         <h3 className="recog-heading">Premium Digital Agency Recognized by</h3>
         <div className="logos-container">
-          <img src="/zemalt-logo.webp" alt="Zemalt" />
-          <img src="/zemalt-logo.webp" alt="Zemalt" />
-          <img src="/zemalt-logo.webp" alt="Zemalt" />
+          <img src="/plutosec-nobg.png" alt="Plutosec" />
+          <img src="/digitalaura-nobg.png" alt="Digital Aura" />
+          <img src="/carteroil-nobg.png" alt="CarterOil" />
         </div>
       </div>
 

@@ -10,6 +10,7 @@ import { fetchPopularBlogs } from "@/DAL/Fetch";
 import { baseUrl } from "@/config/Config";
 import TrendingBlogsSkeleton from "../SkeletonLoaders/TrendingBlogsSkeleton";
 import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 const TrendingBlogs = () => {
   const router = useRouter();
@@ -22,7 +23,7 @@ const TrendingBlogs = () => {
         const res = await fetchPopularBlogs(6);
         setTrendingBlogs(res?.blogs || []);
       } catch (error) {
-        console.error("Error fetching trending blogs:", error);
+        toast.error("Error fetching trending blogs:", error);
       } finally {
         setLoading(false);
       }

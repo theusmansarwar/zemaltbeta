@@ -29,7 +29,6 @@ const description =
 
 const url = "https://zemalt.com";
 const image = "/favicon.png";
-
 export const metadata = {
   title,
   description,

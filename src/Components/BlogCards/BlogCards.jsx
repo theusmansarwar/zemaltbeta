@@ -13,6 +13,7 @@ import { baseUrl } from "@/config/Config";
 import BCard from "../SkeletonLoaders/BCard";
 import { formatDate } from "@/utils/FormatDate";
 import { FaChevronDown } from "react-icons/fa6";
+import { toast } from "react-toastify";
 
 // ✅ Dummy Data (fallback if API fails)
 const blogData = [
@@ -77,7 +78,7 @@ const BlogCards = () => {
   const [rowsPerPage, setRowsPerPage] = useState(9);
   const [categories, setCategories] = useState([{ _id: "all", name: "All" }]);
   const [activeCategory, setActiveCategory] = useState("all");
-    const [sortOrder, setSortOrder] = useState("desc");
+  const [sortOrder, setSortOrder] = useState("desc");
 
   useEffect(() => {
     if (blogs.length > 0) {
@@ -100,7 +101,7 @@ const BlogCards = () => {
 
         setCategories([{ _id: "all", name: "All" }, ...data]);
       } catch (error) {
-        console.error("Error fetching categories:", error);
+        toast.error("Error fetching categories:", error);
       }
     };
     fetchCategories();
@@ -128,7 +129,7 @@ const BlogCards = () => {
         setTotalItems(blogData.length);
       }
     } catch (error) {
-      console.error("Error fetching blogs:", error);
+      toast.error("Error fetching blogs:", error);
       setBlogs(blogData); // fallback
       setTotalPages(1);
       setTotalItems(blogData.length);

@@ -3,6 +3,7 @@ import "./RealWorldPopup.css";
 import { IoCloseCircleSharp } from "react-icons/io5";
 import { FaArrowDown } from "react-icons/fa6";
 import { baseUrl } from "@/config/Config";
+import { toast } from "react-toastify";
 
 const RealWorldPopup = ({ onClose, project }) => {
     const handleDownload = async () => {
@@ -28,7 +29,7 @@ const RealWorldPopup = ({ onClose, project }) => {
             // Cleanup blob URL
             window.URL.revokeObjectURL(url);
         } catch (error) {
-            console.error("Download error:", error);
+            toast.error("Download error:", error);
         }
     };
 

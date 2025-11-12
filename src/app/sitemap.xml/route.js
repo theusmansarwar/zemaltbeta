@@ -1,4 +1,5 @@
 import { fetchServicesSlugs, getblogSlugs } from "@/DAL/Fetch";
+import { toast } from "react-toastify";
 
 export const dynamic = "force-dynamic";
 
@@ -29,26 +30,25 @@ export async function GET() {
       serviceRoutes = res2.slugs.map((service) => `services/${service.slug}`);
     }
   } catch (error) {
-    console.error("Error fetching slugs:", error);
+    toast.error("Error fetching slugs:", error);
   }
   const allRoutes = [...staticRoutes, ...serviceRoutes, ...blogRoutes];
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   ${allRoutes
-    .map(
-      (route) => `
+      .map(
+        (route) => `
     <url>
       <loc>${baseUrl}/${route}</loc>
       <lastmod>${new Date().toISOString()}</lastmod>
       <changefreq>weekly</changefreq>
-      <priority>${
-        route.startsWith("services/") || route.startsWith("blogs/")
-          ? "0.7"
-          : "0.9"
-      }</priority>
+      <priority>${route.startsWith("services/") || route.startsWith("blogs/")
+            ? "0.7"
+            : "0.9"
+          }</priority>
     </url>`
-    )
-    .join("")}
+      )
+      .join("")}
 </urlset>`;
   return new Response(sitemap, {
     headers: {

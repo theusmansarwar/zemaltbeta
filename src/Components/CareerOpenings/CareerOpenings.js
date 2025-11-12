@@ -4,6 +4,7 @@ import "./CareerOpenings.css";
 import { fetchJobs } from "@/DAL/Fetch";
 import { useRouter } from "next/navigation";
 import { FaRightLong } from "react-icons/fa6";
+import { toast } from "react-toastify";
 
 const CareerOpenings = () => {
   const router = useRouter();
@@ -41,7 +42,7 @@ const CareerOpenings = () => {
           setCategories([]);
         }
       } catch (error) {
-        console.error("Error fetching jobs:", error);
+        toast.error("Error fetching jobs:", error);
       } finally {
         setLoading(false);
       }
@@ -98,7 +99,7 @@ const CareerOpenings = () => {
                         ? new Date(job.lastdatetoapply).toLocaleDateString()
                         : "N/A"}
                     </span>
-                    <span className="arrow" onClick={()=>{router.push(`/career/${job._id}`)}}><FaRightLong /></span>
+                    <span className="arrow" onClick={() => { router.push(`/career/${job._id}`) }}><FaRightLong /></span>
                   </div>
                 </div>
               ))}

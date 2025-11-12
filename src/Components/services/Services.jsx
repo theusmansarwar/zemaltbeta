@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { fetchAllServices } from "@/DAL/Fetch";
 import { baseUrl } from "@/config/Config";
 import ServicesSkeleton from "../SkeletonLoaders/ServicesSkeleton";
+import { toast } from "react-toastify";
 const Services = () => {
   const router = useRouter();
 
@@ -22,14 +23,14 @@ const Services = () => {
           setServices(res.services);
         }
       } catch (error) {
-        console.error("Failed to fetch services:", error);
+        toast.error("Failed to fetch services:", error);
       } finally {
         setLoading(false);
       }
     };
     loadServices();
   }, []);
-  if (loading) return <ServicesSkeleton count={rowsPerPages}/>;
+  if (loading) return <ServicesSkeleton count={rowsPerPages} />;
   return (
     <div className="services-grid">
       {services.map((item, index) => {

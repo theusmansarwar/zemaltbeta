@@ -14,9 +14,8 @@
 }
 
 .BigIdea .big-idea-img {
-  width: auto;
-  height: 800px;
-  max-width: 1024px;
+  width: 80%;
+  height: auto;
 }
 
 @media(max-width:900px) {

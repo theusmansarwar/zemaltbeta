@@ -9,6 +9,7 @@ import {
 import axios from "axios";
 import { baseUrl } from "@/config/Config";
 import { FaCloudUploadAlt, FaTimes, FaFilePdf } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const VisuallyHiddenInput = React.forwardRef(({ onChange, accept }, ref) => (
   <input
@@ -128,7 +129,7 @@ const UploadFile = ({
 
       if (onUploadComplete) onUploadComplete(uploadedPath);
     } catch (error) {
-      console.error("Upload failed:", error);
+      toast.error("Upload failed:", error);
       setFileObj((prev) => ({ ...prev, uploading: false }));
     }
   };
@@ -160,7 +161,7 @@ const UploadFile = ({
           sx={{
             width: 180,
             border: "1px solid #bfbebeff",
-            
+
             borderRadius: "8px",
             overflow: "hidden",
             position: "relative",
@@ -199,7 +200,7 @@ const UploadFile = ({
                 objectFit: "cover",
                 borderRadius: "4px",
                 border: "1px solid #bfbebeff",
-                backgroundColor:'#e2e2e2ff'
+                backgroundColor: '#e2e2e2ff'
               }}
             />
           )}

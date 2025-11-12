@@ -6,6 +6,7 @@ import { fetchCaseStudies } from "@/DAL/Fetch";
 import { baseUrl } from "@/config/Config";
 import RealworldSkeleton from "../SkeletonLoaders/RealWorldSkeleton";
 import RealWorldSkeleton from "../SkeletonLoaders/RealWorldSkeleton";
+import { toast } from "react-toastify";
 
 const Realworld = () => {
   const [projects, setProjects] = useState([]);
@@ -21,10 +22,10 @@ const Realworld = () => {
         if (response && Array.isArray(response.CaseStudies)) {
           setProjects(response.CaseStudies);
         } else {
-          console.error("Unexpected API response:", response);
+          toast.error("No products found:", response);
         }
       } catch (error) {
-        console.error("Error fetching case studies:", error);
+        toast.error("Error fetching case studies:", error);
       } finally {
         setLoading(false);
       }
