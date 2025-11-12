@@ -24,6 +24,17 @@ const PortfolioPopup = ({ project, onClose }) => {
         <div className="gallery">
           {/* Left: Main preview */}
           <div className="gallery-preview">
+            {/* Blurred background */}
+            {selected?.type === "image" && (
+              <div
+                className="blur-bg"
+                style={{
+                  backgroundImage: `url(${baseUrl}/${selected.src})`,
+                }}
+              />
+            )}
+
+            {/* Foreground preview */}
             {selected?.type === "image" ? (
               <img src={`${baseUrl}/${selected.src}`} alt="preview" />
             ) : (
@@ -31,14 +42,14 @@ const PortfolioPopup = ({ project, onClose }) => {
             )}
           </div>
 
+
           {/* Right: Thumbnails list */}
           <div className="gallery-thumbnails">
             {media.map((item, index) => (
               <div
                 key={index}
-                className={`thumb ${
-                  item.src === selected?.src ? "active" : ""
-                }`}
+                className={`thumb ${item.src === selected?.src ? "active" : ""
+                  }`}
                 onClick={() => setSelected(item)}
               >
                 {item.type === "image" ? (

@@ -50,7 +50,7 @@ const PortfolioCards = ({ data }) => {
 
               {/* Plain-text excerpt: strip HTML then truncate */}
               <p>
-                {truncateTextByWords(stripHtml(project.description || ""), 80)}
+                {truncateTextByWords(stripHtml(project.description || ""), 120)}
               </p>
             </div>
 

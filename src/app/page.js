@@ -57,9 +57,9 @@ const Homepagefaqs = {
 };
 const blogHeaderData = {
   heading:
-    "Digital Marketing & SEO Services That Drive Traffic and Increase Revenue",
+    "Discover Expert Marketing Strategies and Insights – Visit Our Blog Today",
   description:
-    "Zemalt is a top digital marketing agency. Our team supports brands with comprehensive service solutions, helping clients achieve higher search rankings through expert guidance. With clear strategies and focused actions, we drive more visitors to their websites.",
+    "Explore our blog for expert strategies, SEO tips, and marketing insights that help you drive traffic, increase engagement, and grow your business.Discover step- by - step guides, industry trends, and proven techniques to boost your online presence.Our posts simplify complex marketing concepts, giving you practical ideas to implement immediately.Stay informed, learn from real examples, and take your digital strategy to the next level.",
 };
 export default function Home() {
 

@@ -3,9 +3,9 @@ import Products from "@/Components/Products/Products";
 import ServicePageFeatured from "@/Components/ServicePageFeatured/ServicePageFeatured";
 
 export const metadata = {
-  title: "Products",
+  title: "Business Management Software Solutions | Zemalt Systems",
   description:
-    "Zemalt’s case studies showcasing SEO, paid ads, and web development success. See how we drive growth and deliver measurable results for clients.",
+    "Zemalt business software boosts efficiency and growth with smart HR, POS, inventory, appointment, and taxi dispatch solutions for seamless operations.",
 };
 const featuredData = {
   title: "OUR",
