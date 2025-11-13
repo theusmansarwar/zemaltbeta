@@ -47,10 +47,20 @@ const CaseStudy = () => {
     <div className="case-study-grid">
       {caseStudy?.map((item) => (
         <div key={item.id} className="study-card">
-          {/* Left Side (Image) */}
           <div className="left">
             <div className="img-container">
-              <img src={baseUrl + item.image} alt={item.title} />
+              {/* Blurred background */}
+              <div
+                className="blur-bg"
+                style={{ backgroundImage: `url(${baseUrl + item.image})` }}
+              ></div>
+
+              {/* Foreground image */}
+              <img
+                className="case-img"
+                src={baseUrl + item.image}
+                alt={item.title}
+              />
             </div>
           </div>
 

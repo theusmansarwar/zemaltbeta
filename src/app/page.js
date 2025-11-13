@@ -10,6 +10,7 @@ import SeoSection from "@/Components/SeoSection/SeoSection";
 import MeetTeam from "@/Components/AboutUs/MeetTeam";
 import TestimonialSlider2 from "@/Components/TestimonialSlider/TestimonialSlider2";
 import BlogSection from "@/Components/BlogSection/BlogSection";
+import PortfolioCards2 from "@/Components/portfolioCards/PortfolioCards2";
 
 export const metadata = {
   title: "Zemalt | Digital Marketing, SEO & Web Design Services.",
@@ -71,6 +72,7 @@ export default function Home() {
       <Whyus />
       <TestimonialSection />
       <TestimonialSlider2 />
+      {/* <PortfolioCards2/> */}
       <BlogSection data={blogHeaderData} />
       <Faq faqs={Homepagefaqs} />
       <SeoSection />

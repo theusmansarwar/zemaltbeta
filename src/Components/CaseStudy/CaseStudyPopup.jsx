@@ -58,11 +58,13 @@ const CaseStudyPopup = ({ onClose, project }) => {
     <div className="study-popup-parent">
       <div className="study-popup">
         <IoCloseCircleSharp className="close-icon" onClick={onClose} />
-
         <div className="top">
+          <div
+            className="blur-bg"
+            style={{ backgroundImage: `url(${baseUrl + project.image})` }}
+          ></div>
           <img src={baseUrl + project.image} alt={project.name} />
         </div>
-
         <div className="bottom">
           <h2>{project.name}</h2>
           {project.detail && (

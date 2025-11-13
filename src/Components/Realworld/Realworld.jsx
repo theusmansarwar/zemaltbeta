@@ -47,30 +47,38 @@ const Realworld = () => {
         <RealWorldSkeleton />
       ) : (
         <div className="work-area">
-          {projects.map((project, index) => (
-            <div
-              className="work-div"
-              key={project._id || index}
-              style={{
-                backgroundImage: `url(${baseUrl + project.image || "/placeholder.png"})`,
-              }}
-            >
-              <div className="work-overlay">
-                <p>
-                  <span />
-                  {project.name}
-                </p>
-                <p className="desc">{project.shortdescription}</p>
-                <div
-                  className="detail-btn"
-                  onClick={() => setSelectedProject(project)}
-                >
-                  See More
-                </div>
-              </div>
-            </div>
-          ))}
+  {projects.map((project, index) => (
+    <div
+      className="work-div"
+      key={project._id || index}
+      style={{
+        backgroundImage: `url(${baseUrl + project.image || "/placeholder.png"})`,
+      }}
+    >
+      {/* clear image */}
+      <img
+        src={baseUrl + project.image || "/placeholder.png"}
+        alt={project.name}
+        className="work-main-img"
+      />
+
+      <div className="work-overlay">
+        <p>
+          <span />
+          {project.name}
+        </p>
+        <p className="desc">{project.shortdescription}</p>
+        <div
+          className="detail-btn"
+          onClick={() => setSelectedProject(project)}
+        >
+          See More
         </div>
+      </div>
+    </div>
+  ))}
+</div>
+
       )}
 
       {/* Popup */}

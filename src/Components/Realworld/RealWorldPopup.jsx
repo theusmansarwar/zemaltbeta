@@ -38,6 +38,10 @@ const RealWorldPopup = ({ onClose, project }) => {
             <div className="rw-popup">
                 <IoCloseCircleSharp className="close-icon" onClick={onClose} />
                 <div className="top">
+                    <div
+                        className="blur-bg"
+                        style={{ backgroundImage: `url(${baseUrl + project.image})` }}
+                    ></div>
                     <img src={baseUrl + project.image} alt={project.name} />
                 </div>
 

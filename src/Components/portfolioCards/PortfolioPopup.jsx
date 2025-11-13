@@ -29,16 +29,16 @@ const PortfolioPopup = ({ project, onClose }) => {
               <div
                 className="blur-bg"
                 style={{
-                  backgroundImage: `url(${baseUrl}/${selected.src})`,
+                  backgroundImage: `url(${selected.src})`,
                 }}
               />
             )}
 
             {/* Foreground preview */}
             {selected?.type === "image" ? (
-              <img src={`${baseUrl}/${selected.src}`} alt="preview" />
+              <img src={`${selected.src}`} alt="preview" />
             ) : (
-              <video src={`${baseUrl}/${selected.src}`} controls />
+              <video src={`${selected.src}`} controls />
             )}
           </div>
 
@@ -53,9 +53,9 @@ const PortfolioPopup = ({ project, onClose }) => {
                 onClick={() => setSelected(item)}
               >
                 {item.type === "image" ? (
-                  <img src={`${baseUrl}${item.src}`} alt={`thumb-${index}`} />
+                  <img src={`${item.src}`} alt={`thumb-${index}`} />
                 ) : (
-                  <video src={`${baseUrl}${item.src}`} />
+                  <video src={`${item.src}`} />
                 )}
               </div>
             ))}

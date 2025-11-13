@@ -9,7 +9,7 @@ const CaseStudySkeleton = ({ count = 4 }) => {
         <div key={i} className="study-card skeleton-study-card">
           {/* Left Side (Image Circle) */}
           <div className="left">
-            <div className="skeleton-circle"></div>
+            <div className="skeleton-square"></div>
           </div>
 
           {/* Right Side (Content) */}
