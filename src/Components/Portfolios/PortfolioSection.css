@@ -1,0 +1,136 @@
+.portfolio-section {
+    width: calc(100% - (var(--left-space) * 2));
+    padding: 40px var(--left-space);
+    background-color: #f9f9f9;
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-section .head-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.portfolio-section .head-container h2 {
+    font-size: var(--heading-two);
+    color: var(--main-color);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.portfolio-section .head-container .view-btn {
+    font-size: var(--default-p-size);
+    color: var(--primary-color);
+    outline: none;
+    border: none;
+    background-color: transparent;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-section p {
+    line-height: var(--p-line-height);
+    font-size: var(--default-p-size);
+}
+
+.portfolio-cards-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 24px;
+    padding: 40px 0;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    width: 100%;
+}
+
+/* Circle Styling */
+.top-circle1 {
+    width: 20px;
+    height: 20px;
+    background-color: rgba(128, 128, 128, 0.19);
+    border-radius: 50%;
+    position: absolute;
+    top: 70px;
+    left: 30px;
+}
+
+.top-circle2 {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(128, 128, 128, 0.19);
+    border-radius: 50%;
+    position: absolute;
+    top: 90px;
+    left: 30px;
+}
+
+.bottom-circle {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(128, 128, 128, 0.19);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0px;
+    right: -100px;
+}
+
+/* Dots for carousel */
+.dots-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #aaa;
+    border-radius: 50%;
+    transition: all 0.35s ease;
+    cursor: pointer;
+}
+
+.dot.active {
+    width: 35px;
+    border-radius: 30px;
+    background-color: var(--primary-color);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 900px) {
+    .portfolio-section {
+        width: calc(100% - (var(--left-space) * 2));
+        padding: 20px var(--left-space);
+    }
+
+    .dots-wrapper {
+        margin-top: 0px;
+    }
+
+    .top-circle1 {
+        background-color: rgba(128, 128, 128, 0.096);
+        top: 60px;
+        left: 0px;
+    }
+
+    .top-circle2 {
+        width: 100px;
+        height: 100px;
+        background-color: rgba(128, 128, 128, 0.096);
+        top: 70px;
+        left: 0px;
+    }
+
+    .bottom-circle {
+        width: 200px;
+        height: 200px;
+        background-color: rgba(128, 128, 128, 0.096);
+    }
+}

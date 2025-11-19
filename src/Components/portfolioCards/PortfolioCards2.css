@@ -1,177 +1,83 @@
-.portfolio-cards2 {
-    width: 100% - (var(--left-space) * 2);
-    padding: 40px var(--left-space);
-    background-color: #f9f9f9;
-    position: relative;
-    overflow: hidden;
-}
-
-.portfolio-cards2 h2 {
-    font-size: var(--heading-two);
-    color: var(--main-color);
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-
-.portfolio-cards2 p {
-    line-height: var(--p-line-height);
-    font-size: var(--default-p-size);
-}
-
-.portfolio-cards-container {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 24px;
-    padding: 40px 0;
-}
-
-.portfolio-cards-container .eachcard {
-    width: 49%;
-    height: 370px;
-    position: relative;
-    border-radius: var(--border-radius1);
-    overflow: hidden;
+.eachcard {
+  min-width: calc((100% - 24px) / 2);
+  flex-shrink: 0;
+  height: 370px;
+  position: relative;
+  border-radius: var(--border-radius1);
+  overflow: hidden;
 }
 
 /* black gradient overlay (bottom → top) */
-.portfolio-cards-container .eachcard::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 50%;
-    /* covers only lower half */
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-    z-index: 0;
+.eachcard::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  z-index: 0;
 }
-
-/* icon */
-.portfolio-cards-container .eachcard svg {
+/* icon background overlay */
+.eachcard .icon-wrapper {
     position: absolute;
-    right: 10px;
-    top: 10px;
-    flex-shrink: 0;
-    width: 64px;
-    height: 64px;
-    color: var(--text-color4);
-    cursor: pointer;
-    transition: transform 0.3s ease;
+    right: 12px;
+    top: 12px;
+    width: 70px;
+    height: 70px;
+    background: rgba(0, 0, 0, 0.1); /* semi-transparent black */
+    backdrop-filter: blur(6px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: 2;
+    transition: 0.3s ease;
+}
+.eachcard .icon-wrapper:hover svg {
+    transform: scale(1.1);
+}
+/* icon */
+.eachcard svg {
+  
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  color: var(--text-color4);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  z-index: 2;
 }
 
 /* hover effect */
-.portfolio-cards-container .eachcard svg:hover {
-    transform: scale(1.06);
+.eachcard svg:hover {
+  transform: scale(1.06);
 }
 
 /* title text */
-.portfolio-cards-container .eachcard h3 {
-    position: absolute;
-    left: 20px;
-    bottom: 20px;
-    font-size: var(--heading-one);
-    color: var(--text-color4);
-    font-weight: 700;
-    z-index: 2;
-    /* keep above gradient */
+.eachcard h3 {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  font-size: 48px;
+  color: var(--text-color4);
+  font-weight: 700;
+  z-index: 2;
 }
 
-
-
-/* Circle Styling */
-.top-circle1 {
-    width: 20px;
-    height: 20px;
-    background-color: rgba(128, 128, 128, 0.19);
-    border-radius: 50%;
-    position: absolute;
-    top: 70px;
-    left: 30px;
-}
-
-.top-circle2 {
-    width: 100px;
-    height: 100px;
-    background-color: rgba(128, 128, 128, 0.19);
-    border-radius: 50%;
-    position: absolute;
-    top: 90px;
-    left: 30px;
-}
-
-.bottom-circle {
-    width: 200px;
-    height: 200px;
-    background-color: rgba(128, 128, 128, 0.19);
-    border-radius: 50%;
-    position: absolute;
-    bottom: 0px;
-    right: -100px;
-}
-
-.dots-wrapper {
-    display: flex;
-    gap: 10px;
-}
-
-.dot {
-    width: 12px;
-    height: 12px;
-    background-color: gray;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.dot.active {
-    width: 30px;
-    border-radius: 50px;
-    background-color: white;
-}
-
+/* Mobile */
 @media (max-width: 900px) {
-    .portfolio-cards-container {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+  .eachcard {
+    min-width: 100%;
+    height: 220px;
+  }
 
-    .portfolio-cards-container .eachcard {
-        width: 100%;
-        height: 250px;
-    }
+  .eachcard svg {
+    width: 45px;
+    height: 45px;
+  }
 
-    .portfolio-cards-container .eachcard svg {
-        position: absolute;
-        right: 10px;
-        top: 10px;
-        flex-shrink: 0;
-        width: 45px;
-        height: 45px;
-        color: var(--text-color4);
-        cursor: pointer;
-        transition: transform 0.3s ease;
-        z-index: 2;
-    }
-
-    .top-circle1 {
-        background-color: rgba(128, 128, 128, 0.096);
-        top: 60px;
-        left: 0px;
-    }
-
-    .top-circle2 {
-        width: 100px;
-        height: 100px;
-        background-color: rgba(128, 128, 128, 0.096);
-        top: 70px;
-        left: 0px;
-    }
-
-    .bottom-circle {
-        width: 200px;
-        height: 200px;
-        background-color: rgba(128, 128, 128, 0.096);
-    }
+  .eachcard h3 {
+    font-size: 24px;
+  }
 }

@@ -63,8 +63,8 @@ const SeoSection = () => {
           </ul>
         </div>
       </div>
-      <button className="proposal-btn" onClick={()=>{router.push("/contact")}}>
-        Get Proposal
+      <button className="proposal-btn" onClick={() => { router.push("/contact") }}>
+        Get a Proposal
         <FaArrowRight />
       </button>
     </div>

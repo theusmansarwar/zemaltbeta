@@ -1,0 +1,53 @@
+.strategic-marketing {
+  width: calc(100% - 20%);
+  padding: 40px 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.strategic-marketing h2 {
+  font-size: var(--heading-two);
+  line-height: var(--heading-line-height);
+  text-align: center;
+}
+.strategic-marketing p {
+  font-size: var(--default-p-size);
+  line-height: var(--p-line-height);
+  text-align: center;
+}
+.strategic-marketing .proposal-btn {
+  width: 40%;
+  margin: 20px auto 0;
+  background-color: var(--primary-color);
+  outline: none;
+  padding: 12px 24px;
+  border-radius: var(--border-radius1);
+  color: var(--text-color4);
+  border-style: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: 2px solid var(--primary-color);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.strategic-marketing .proposal-btn:hover {
+  background-color: transparent;
+  color: var(--main-color);
+}
+@media (max-width: 900px) {
+  .strategic-marketing {
+    width: calc(100% - 10%);
+    padding: 20px 5%;
+  }
+  .strategic-marketing .proposal-btn {
+    width: 90%;
+    margin: 20px auto 0;
+  }
+}

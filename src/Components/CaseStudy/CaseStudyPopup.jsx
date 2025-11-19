@@ -53,9 +53,14 @@ const CaseStudyPopup = ({ onClose, project }) => {
       setProgress(0);
     }
   };
+  const handleOverlayClick = (e) => {
+    if (e.target.classList.contains("study-popup-parent")) {
+      onClose();
+    }
+  };
 
   return (
-    <div className="study-popup-parent">
+    <div className="study-popup-parent" onClick={handleOverlayClick}>
       <div className="study-popup">
         <IoCloseCircleSharp className="close-icon" onClick={onClose} />
         <div className="top">

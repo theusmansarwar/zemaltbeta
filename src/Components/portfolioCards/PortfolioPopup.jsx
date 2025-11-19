@@ -3,8 +3,11 @@ import React, { useState } from "react";
 import "./PortfolioPopup.css";
 import { IoCloseCircleSharp } from "react-icons/io5";
 import { baseUrl } from "@/config/Config";
+import { FaArrowRight } from "react-icons/fa6";
+import { useRouter } from "next/navigation";
 
 const PortfolioPopup = ({ project, onClose }) => {
+  const router = useRouter();
   if (!project) return null;
 
   // Combine images + videos in one array
@@ -14,9 +17,13 @@ const PortfolioPopup = ({ project, onClose }) => {
   ];
 
   const [selected, setSelected] = useState(media[0] || null);
-
+  const handleOverlayClick = (e) => {
+    if (e.target.classList.contains("popup-parent")) {
+      onClose();
+    }
+  };
   return (
-    <div className="popup-parent">
+    <div className="popup-parent" onClick={handleOverlayClick}>
       <div className="portfolio-popup">
         <IoCloseCircleSharp className="close-icon" onClick={onClose} />
 
@@ -69,7 +76,12 @@ const PortfolioPopup = ({ project, onClose }) => {
             dangerouslySetInnerHTML={{ __html: project.description || "" }}
           />
         </div>
+        <button className="proposal-btn" onClick={() => { router.push("/contact") }}>
+          Get a Proposal
+          <FaArrowRight />
+        </button>
       </div>
+
     </div>
   );
 };

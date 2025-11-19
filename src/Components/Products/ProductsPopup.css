@@ -28,6 +28,7 @@
   cursor: pointer;
   position: sticky;
   top: 0;
+  z-index: 30;
 }
 
 /* Top */
@@ -65,10 +66,10 @@
 }
 
 
-.products-popup .bottom .proposal-btn {
+.products-popup .bottom .cntct-btn {
   width: 60%;
   margin-left: 20%;
-  margin-top: 30px;
+  margin-top: 20px;
   background-color: var(--primary-color);
   outline: none;
   padding: 12px 24px;
@@ -85,7 +86,7 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-.products-popup .bottom .proposal-btn:hover {
+.products-popup .bottom .cntct-btn:hover {
   background-color: transparent;
   color: var(--main-color);
 }
@@ -122,9 +123,8 @@
     text-align: left;
   }
 
-  .products-popup .bottom .proposal-btn {
+  .products-popup .bottom .cntct-btn {
     width: 100%;
     margin-left: 0%;
-    margin-top: 20px;
   }
 }

@@ -8,9 +8,13 @@ import { useRouter } from "next/navigation";
 
 const ProductsPopup = ({ onClose, project }) => {
   const router = useRouter();
-
+const handleOverlayClick = (e) => {
+    if (e.target.classList.contains("products-popup-parent")) {
+      onClose();
+    }
+  };
   return (
-    <div className="products-popup-parent">
+    <div className="products-popup-parent" onClick={handleOverlayClick}>
       <div className="products-popup">
         <IoCloseCircleSharp className="close-icon" onClick={onClose} />
 
@@ -28,7 +32,7 @@ const ProductsPopup = ({ onClose, project }) => {
             />
           )}
 
-          <button className="proposal-btn" onClick={() => { router.push("/contact") }}>
+          <button className="cntct-btn" onClick={() => { router.push("/contact") }}>
             Talk to Our Expert <FaArrowRightLong />
           </button>
         </div>

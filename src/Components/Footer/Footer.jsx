@@ -16,8 +16,8 @@ const companyLinks = [
   { slug: "/products", label: "Our Products" },
   { slug: "/about-us", label: "About Us" },
   { slug: "/contact", label: "Contact Us" },
+  { slug: "/portfolio", label: "Portfolio" },
   { slug: "/blog", label: "Blog" },
-  { slug: "/team", label: "Team" },
   { slug: "/write-for-us", label: "Write for us" },
 ];
 

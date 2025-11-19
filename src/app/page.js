@@ -11,6 +11,11 @@ import MeetTeam from "@/Components/AboutUs/MeetTeam";
 import TestimonialSlider2 from "@/Components/TestimonialSlider/TestimonialSlider2";
 import BlogSection from "@/Components/BlogSection/BlogSection";
 import PortfolioCards2 from "@/Components/portfolioCards/PortfolioCards2";
+import PortfolioSection from "@/Components/Portfolios/PortfolioSection";
+import StrategicMarketing from "@/Components/StrategicMarketing/StrategicMarketing";
+import ImpactOfMarketing from "@/Components/ImpactOfMarketing/ImpactOfMarketing";
+import HomeServices from "@/Components/HomeServices/HomeServices";
+import ReasonsToChoose from "@/Components/ReasonsToChoose/ReasonsToChoose";
 
 export const metadata = {
   title: "Zemalt | Digital Marketing, SEO & Web Design Services.",
@@ -68,11 +73,14 @@ export default function Home() {
     <div className={styles.Home}>
       <Featured />
       <OutBox />
-      <Realworld />
-      <Whyus />
+      <StrategicMarketing/>
+      <ImpactOfMarketing/>
+      <PortfolioSection/>
+      <HomeServices/>
+      <ReasonsToChoose/>
+      {/* <Whyus /> */}
       <TestimonialSection />
       <TestimonialSlider2 />
-      {/* <PortfolioCards2/> */}
       <BlogSection data={blogHeaderData} />
       <Faq faqs={Homepagefaqs} />
       <SeoSection />

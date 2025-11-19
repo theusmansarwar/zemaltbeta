@@ -52,7 +52,7 @@ const SeventhSection = () => {
           </p>
         </div>
       </div>
-      <button className="proposal-btn" onClick={()=>{router.push("/contact")}}>Get Proposal<FaArrowRight /></button>
+      <button className="proposal-btn" onClick={() => { router.push("/contact") }}>Get a Proposal<FaArrowRight /></button>
     </div>
   );
 };

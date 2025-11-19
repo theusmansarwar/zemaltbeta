@@ -18,8 +18,9 @@
   --heading-two: 38px;
   --heading-three: 32px;
   --heading-four: 24px;
-  --default-p-size: 16px;
-  --p-line-height: 1.4;
+  --default-p-size: 18px;
+  --p-line-height: 1.6;
+  --heading-line-height: 1.2;
 }
 
 * {
