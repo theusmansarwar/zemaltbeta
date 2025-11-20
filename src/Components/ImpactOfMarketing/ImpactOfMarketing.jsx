@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FiTrendingUp, FiDatabase, FiEdit3, FiBarChart2, FiChevronDown } from "react-icons/fi";
 import "./ImpactOfMarketing.css";
 import { useRouter } from "next/navigation";
@@ -56,66 +56,97 @@ const featureData = [
 ];
 
 export default function ImpactOfMarketing() {
-    const router = useRouter();
-    const [active, setActive] = useState(featureData[0]);
-    const [expandedId, setExpandedId] = useState(featureData[0].id);
+  const router = useRouter();
+  const [active, setActive] = useState(featureData[0]);
+  const [expandedId, setExpandedId] = useState(featureData[0].id);
+  const autoSwitchRef = useRef(true); // auto-switch control
+  const [isMobile, setIsMobile] = useState(false);
 
-    const handleFeatureClick = (item) => {
-        setActive(item);
-        setExpandedId(item.id);
-    };
+  // Detect mobile
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 1160);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
-    return (
-        <div className="landing-page">
-            <h2 className="title">Unleash Revenue Growth with Proven Marketing Strategies</h2>
-            <p className="description">Our data-driven and creative strategies help brands accelerate leads, optimize conversions, and expand revenue. Each campaign combines insight, innovation, and proven methods to deliver measurable results. Clients gain clarity and control over their growth, ensuring lasting impact in the competitive digital landscape.</p>
-            <div className="landing-container">
+  const handleFeatureClick = (item) => {
+    setActive(item);
+    setExpandedId(item.id);
+    autoSwitchRef.current = false; // stop auto-switch on user click
+  };
 
-                {/* LEFT SECTION */}
-                <div className="left-section">
-                    <div className="features-list">
-                        {featureData.map((item) => (
-                            <div key={item.id} className="feature-wrapper">
-                                <div
-                                    className={`feature-card ${active.id === item.id ? "active" : ""}`}
-                                    onClick={() => handleFeatureClick(item)}
-                                >
-                                    <div className="feature-card-header">
-                                        <div className="feature-icon" style={{ backgroundColor: item.bg }}>
-                                            {item.icon}
-                                        </div>
-                                        <strong className="feature-title">{item.title}</strong>
-                                    </div>
-                                    <FiChevronDown
-                                        className={`dropdown-icon ${expandedId === item.id ? "expanded" : ""}`}
-                                        size={20}
-                                    />
-                                </div>
+  // Auto-switch logic
+  useEffect(() => {
+    if (isMobile) return; // stop auto-switch on mobile
 
-                                {/* Mobile Content */}
-                                <div className={`mobile-content ${expandedId === item.id ? "expanded" : ""}`}>
-                                    <img src={item.img} alt={item.title} className="mobile-image" />
-                                    <strong className="mobile-heading">{item.heading}</strong>
-                                    <p className="mobile-text">{item.text1}</p>
-                                    <p className="mobile-text">{item.text2}</p>
-                                </div>
-                            </div>
-                        ))}
+    let currentIndex = 0;
+    const interval = setInterval(() => {
+      if (!autoSwitchRef.current) return;
+      currentIndex = (currentIndex + 1) % featureData.length;
+      setActive(featureData[currentIndex]);
+      setExpandedId(featureData[currentIndex].id);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [isMobile]);
+
+  return (
+    <div className="landing-page">
+      <h2 className="title">Unleash Revenue Growth with Proven Marketing Strategies</h2>
+      <p className="description">
+        Our data-driven and creative strategies help brands accelerate leads, optimize conversions, and expand revenue...
+      </p>
+      <div className="landing-container">
+        {/* LEFT SECTION */}
+        <div className="left-section">
+          <div className="features-list">
+            {featureData.map((item) => (
+              <div key={item.id} className="feature-wrapper">
+                <div
+                  className={`feature-card ${active.id === item.id ? "active" : ""}`}
+                  onClick={() => handleFeatureClick(item)}
+                >
+                  <div className="feature-card-header">
+                    <div className="feature-icon" style={{ backgroundColor: item.bg }}>
+                      {item.icon}
                     </div>
+                    <strong className="feature-title">{item.title}</strong>
+                  </div>
+                  <FiChevronDown
+                    className={`dropdown-icon ${expandedId === item.id ? "expanded" : ""}`}
+                    size={20}
+                  />
                 </div>
 
-                {/* RIGHT SECTION */}
-                <div className="right-section">
-                    <div className="hero-content">
-                        <img src={active.img} alt={active.title} className="dynamic-image" />
-
-                        <h3 className="hero-heading">{active.heading}</h3>
-
-                        <p className="hero-text">{active.text1}</p>
-                        <p className="hero-text">{active.text2}</p>
-                    </div>
+                {/* Mobile Content */}
+                <div className={`mobile-content ${expandedId === item.id ? "expanded" : ""}`}>
+                  <img src={item.img} alt={item.title} className="mobile-image" />
+                  <strong className="mobile-heading">{item.heading}</strong>
+                  <p className="mobile-text">{item.text1}</p>
+                  <p className="mobile-text">{item.text2}</p>
                 </div>
-            </div>
+              </div>
+            ))}
+          </div>
         </div>
-    );
+
+        {/* RIGHT SECTION */}
+        {!isMobile && (
+          <div className="right-section">
+            {featureData.map((item) =>
+              item.id === active.id ? (
+                <div className="hero-content animate-fade-slide" key={item.id}>
+                  <img src={item.img} alt={item.title} className="dynamic-image" />
+                  <h3 className="hero-heading">{item.heading}</h3>
+                  <p className="hero-text">{item.text1}</p>
+                  <p className="hero-text">{item.text2}</p>
+                </div>
+              ) : null
+            )}
+          </div>
+        )}
+      </div>
+    </div>
+  );
 }

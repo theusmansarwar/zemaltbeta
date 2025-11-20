@@ -75,7 +75,7 @@
   display: flex;
   align-items: center;
   gap: 50px;
-  margin: 30px 0;
+  margin: 10px 0;
 }
 
 .Featured .left .buttons-area p {
@@ -140,7 +140,17 @@
   background-position: center;
 }
 
-.Featured .right .top .left .up-icon {
+/* --- Bounce Animation --- */
+@keyframes bounceIcon {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.up-icon {
   height: 100px;
   width: 100px;
   border-radius: 50%;
@@ -152,7 +162,50 @@
   justify-content: center;
   font-size: 50px;
   color: var(--primary-color);
+  cursor: pointer;
+  animation: bounceIcon 2.5s infinite ease-in-out;
+  position: relative;
+  transition: transform 0.3s ease;
 }
+
+
+/* Stop bouncing when hovering (more premium UX) */
+.up-icon:hover {
+  animation-play-state: paused;
+  transform: scale(1.05);
+}
+
+/* ---- Tooltip Styles ---- */
+
+.tooltip-container {
+  position: relative;
+}
+
+.tooltip-text {
+  position: absolute;
+  top: 0%; 
+  left: 163%;
+  transform: translateX(-50%);
+  background:#f9f9f9;
+  color: var(--primary-color);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translate(-50%, 10px);
+  z-index: 20;
+}
+
+/* Show tooltip on hover */
+.tooltip-container:hover .tooltip-text {
+  opacity: 1;
+  transform: translate(-50%, -4px);
+}
+
+
 
 .Featured .right .top .right {
   width: calc(49% - 40px);
@@ -216,24 +269,50 @@
   gap: 3%;
   align-items: flex-end;
 }
+/* --- Bar Growth Animation --- */
+@keyframes growBar {
+  0% {
+    transform: scaleY(0);
+  }
+  45% {
+    transform: scaleY(1);
+  }
+  55% {
+    transform: scaleY(1); /* pause at full height */
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
 
-.Featured .right .bottom .right .item1 {
-  height: 120px;
+.Featured .right .bottom .right .item1,
+.Featured .right .bottom .right .item2,
+.Featured .right .bottom .right .item3 {
+  transform-origin: bottom;
   width: 30%;
   background-color: var(--primary-color);
+  animation: growBar 2.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Set individual heights */
+.Featured .right .bottom .right .item1 {
+  --bar-height: 120px;
+  height: var(--bar-height);
+  animation-delay: 0s;
 }
 
 .Featured .right .bottom .right .item2 {
-  height: 150px;
-  width: 30%;
-  background-color: var(--primary-color);
+  --bar-height: 150px;
+  height: var(--bar-height);
+  animation-delay: 0.3s;
 }
 
 .Featured .right .bottom .right .item3 {
-  height: 180px;
-  width: 30%;
-  background-color: var(--primary-color);
+  --bar-height: 180px;
+  height: var(--bar-height);
+  animation-delay: 0.6s;
 }
+
 
 .progress-area {
   width: 100%;
@@ -257,6 +336,7 @@
   font-size: 78px;
   font-weight: 600;
 }
+
 
 @media (max-width: 1200px) {
   .Featured .left h1 {

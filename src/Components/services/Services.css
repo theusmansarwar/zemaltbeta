@@ -10,14 +10,14 @@
 
 .servicecard {
   width: 320px;
-  height: 280px;
+  height: 290px;
   border-radius: var(--border-radius1);
   position: relative;
 }
 
 .servicecard .overlay1 {
   width: 320px;
-  height: 280px;
+  height: 290px;
   border-radius: var(--border-radius1);
   position: relative;
   overflow: hidden;
@@ -69,7 +69,7 @@
 .servicecard .overlay2 p {
   margin: 0;
   display: flex;
-  height: 130px;
+  height: 140px;
   justify-content: center;
   line-height: var(--p-line-height);
   font-size: var(--defult-p-size);
@@ -117,8 +117,8 @@
 }
 
 .searchicon img {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
 }
 
 @media (max-width: 900px) {

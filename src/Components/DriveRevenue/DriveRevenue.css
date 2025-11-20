@@ -26,14 +26,15 @@
   width: calc(300px - 40px);
   padding: 20px;
   background-color: var(--text-color4);
+  transition: 0.3s ease;
 }
 
 .drive-revenue .each-card .card-logo {
-  width: 150px;
+  width: 120px;
   margin-bottom: 20px;
 }
 
-.drive-revenue .each-card:first-child {
+.drive-revenue .each-card:hover {
   width: calc(300px - 40px);
   padding: 20px;
   background-color: #edf9f8;

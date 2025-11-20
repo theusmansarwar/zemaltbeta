@@ -53,8 +53,11 @@ const Featured = () => {
       <div className="right">
         <div className="top">
           <div className="left">
-            <div className="up-icon">
+            <div className="up-icon tooltip-container" onClick={() => {
+              router.push("/products");
+            }}>
               <FaArrowTrendUp />
+              <span className="tooltip-text">Growth Performance</span>
             </div>
           </div>
           <div className="right">

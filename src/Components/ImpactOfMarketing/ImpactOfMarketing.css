@@ -3,13 +3,14 @@
   width: calc(100% - 10%);
   padding: 40px var(--left-space);
   overflow: hidden;
-  background-color: white;
 }
+
 .landing-page .title {
   font-size: var(--heading-two);
   text-align: center;
   line-height: var(--heading-line-height);
 }
+
 .landing-page .description {
   font-size: var(--default-p-size);
   line-height: var(--p-line-height);
@@ -28,7 +29,7 @@
   width: calc(40% - 80px);
   display: flex;
   flex-direction: column;
-  padding: 0px 40px;
+  padding: 0 40px;
   gap: 50px;
 }
 
@@ -43,27 +44,16 @@
   display: flex;
   align-items: center;
   gap: 16px;
-  transition: 0.3s ease;
-  cursor: pointer;
-  padding: 16px 10px;
   justify-content: space-between;
+  padding: 16px 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
 .feature-card-header {
   display: flex;
   align-items: center;
   gap: 16px;
-}
-
-.dropdown-icon {
-  display: none;
-  transition: transform 0.3s ease;
-  color: #1a1a1a;
-  flex-shrink: 0;
-}
-
-.dropdown-icon.expanded {
-  transform: rotate(180deg);
 }
 
 .feature-card:hover {
@@ -100,13 +90,24 @@
   color: var(--primary-color);
 }
 
+.dropdown-icon {
+  display: none;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+  color: #1a1a1a;
+}
+
+.dropdown-icon.expanded {
+  transform: rotate(180deg);
+}
+
 /* ==== RIGHT SECTION ==== */
 .right-section {
   width: calc(60% - 80px);
   height: fit-content;
   display: flex;
   justify-content: center;
-  padding: 20px 40px 50px;
+  padding: 20px 40px 30px;
   background: linear-gradient(135deg, #003a70 0%, #004b8f 100%);
   border-radius: var(--border-radius1);
   color: white;
@@ -117,6 +118,7 @@
   flex-direction: column;
   gap: 26px;
   text-align: left;
+  min-height: 350px;
 }
 
 /* ==== IMAGE PREVIEW ==== */
@@ -129,19 +131,6 @@
   border-radius: 14px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
   opacity: 0;
-  animation: fadeSlideIn 0.5s ease forwards;
-}
-
-/* Fade + slide animation for image swap */
-@keyframes fadeSlideIn {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 
 /* ==== TEXT ==== */
@@ -157,52 +146,74 @@
   margin: 0;
 }
 
-/* ==== RESPONSIVE ADJUSTMENTS ==== */
+/* ==== ANIMATION ==== */
+.animate-fade-slide,
+.dynamic-image,
+.hero-heading,
+.hero-text {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 0.5s ease forwards;
+}
 
-/* Mobile Content - Hidden on Desktop */
+.dynamic-image { animation-delay: 0s; }
+.hero-heading { animation-delay: 0.1s; }
+.hero-text:nth-of-type(1) { animation-delay: 0.2s; }
+.hero-text:nth-of-type(2) { animation-delay: 0.3s; }
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==== RESPONSIVE ADJUSTMENTS ==== */
 .mobile-content {
   display: none;
 }
 
-/* Tablets */
+/* Mobile / tablet styles */
 @media (max-width: 1160px) {
   .landing-page {
-    width: calc(100% - 10%);
     padding: 20px var(--left-space);
   }
-  .landing-page .description {
-  width: 100%;
-  margin: 20px auto;
-}
 
-.landing-container {
-  display: flex;
-  margin-top: 10px;
-}
+  .landing-page .description {
+    width: 100%;
+    margin: 20px auto;
+  }
+
   .landing-container {
     flex-direction: column;
+    margin-top: 10px;
   }
+
   .left-section {
     width: 100%;
-    padding: 0px;
+    padding: 0;
   }
+
   .right-section {
     display: none;
   }
+
   .feature-wrapper {
     border: 1px solid gainsboro;
     border-radius: 10px;
   }
+
   .feature-card {
     width: calc(100% - 20px);
     padding: 10px;
   }
+
   .dropdown-icon {
     display: block;
   }
+
   .feature-card.active .dropdown-icon {
     color: var(--primary-color);
   }
+
   /* Mobile Collapsible Content */
   .mobile-content {
     display: block;
@@ -219,9 +230,10 @@
     padding: 20px;
     margin-top: 10px;
   }
+
   .mobile-content.expanded .feature-wrapper {
-   border-bottom-left-radius: 20px;
-   border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
   }
 
   .mobile-image {
@@ -251,9 +263,17 @@
     margin-bottom: 0;
   }
 
-  
-
   .feature-title {
     font-size: 14px;
+  }
+
+  /* Disable animations on mobile */
+  .animate-fade-slide,
+  .dynamic-image,
+  .hero-heading,
+  .hero-text {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
   }
 }

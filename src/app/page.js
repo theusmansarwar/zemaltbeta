@@ -2,15 +2,11 @@
 import styles from "./page.module.css";
 import Featured from "@/Components/FeaturedSection/Featured";
 import OutBox from "@/Components/OutOfBox/OutBox";
-import Realworld from "@/Components/Realworld/Realworld";
 import Faq from "@/Components/FAQ/Faq";
-import Whyus from "@/Components/why-us-section/Whyus";
 import TestimonialSection from "@/Components/Testimonial/TestimonialSection";
 import SeoSection from "@/Components/SeoSection/SeoSection";
-import MeetTeam from "@/Components/AboutUs/MeetTeam";
 import TestimonialSlider2 from "@/Components/TestimonialSlider/TestimonialSlider2";
 import BlogSection from "@/Components/BlogSection/BlogSection";
-import PortfolioCards2 from "@/Components/portfolioCards/PortfolioCards2";
 import PortfolioSection from "@/Components/Portfolios/PortfolioSection";
 import StrategicMarketing from "@/Components/StrategicMarketing/StrategicMarketing";
 import ImpactOfMarketing from "@/Components/ImpactOfMarketing/ImpactOfMarketing";
@@ -22,7 +18,50 @@ export const metadata = {
   description:
     "Zemalt offers expert SEO, content writing, web design, UI/UX, and digital marketing services to build brands, boost rankings, and drive business growth",
 };
-
+const reasonsData = {
+  heading: "4 Reasons to Choose Zemalt as your Digital Marketing Agency",
+  highlightWord: "Choose Zemalt",
+  steps: [
+    {
+      question: "Proven Methods Strengthening Online Visibility",
+      answer:
+        "Structured digital marketing with clear intent and reliable data boosts visibility. Targeted SEO services guide campaigns toward measurable reach across competitive markets. Strategic keyword planning and smart adjustments maintain stable performance across platforms. Focused content marketing increases engagement and retention. Zemalt uses refined methods to push projects toward consistent online growth. Every step emphasizes clarity, efficiency, and long-term results without unnecessary complexity or confusion."
+    },
+    {
+      question: "Creative Execution Elevating Brand Presence",
+      answer:
+        "Strategic design and clear messaging enhance brand impact across digital channels. Social media marketing thrives through deep audience understanding and creative ideas. Visual coherence strengthens recognition, while PPC elements support engagement. Zemalt ensures polished concepts help brands stand out in crowded feeds. Every campaign balances fresh value, effective communication, and long-term appeal. Users experience clarity, relevance, and impact without feeling overwhelmed."
+    },
+    {
+      question: "Data Intelligence Guiding Smarter Decisions",
+      answer:
+        "Accurate metrics and structured evaluation improve every stage of digital marketing. Insights highlight performance patterns and eliminate wasted effort. SEO, PPC, and social media data guide campaigns toward measurable results. Strategic analysis supports higher conversions and sustained campaign stability. Zemalt uses trend analysis to make decisions predictable, efficient, and aligned with long-term digital goals."
+    },
+    {
+      question: "Industry Experience Delivering Reliable Results",
+      answer:
+        "Zemalt applies expertise in SEO, web development, and social media marketing to maintain accuracy and efficiency. Tailored strategies improve reach, outperform competitors, and provide stability. Structured processes ensure campaigns remain organized, predictable, and refined. Complex challenges are simplified into actionable steps, guaranteeing reliable results and long-term growth. Every project benefits from tested methods and proven industry insight."
+    }
+  ]
+};
+ const marketingContent = [
+    {
+      type: "heading",
+      text: "Strategic Digital Marketing That Builds Trust and Accelerates Growth",
+    },
+    {
+      type: "paragraph",
+      text: "What drives real growth for a modern business? A clear strategy, consistent execution, and a digital presence that truly represents your vision. Our team guides you like a skilled digital marketing strategist who understands your goals and turns them into actionable steps. You get targeted campaigns, clean messaging, and social media management and content creation services that help your audience trust your brand.",
+    },
+    {
+      type: "paragraph",
+      text: "Business needs a partner that plans each step with focus. You receive support that fosters clarity, enhances visibility, and yields measurable results. A dedicated digital marketing agency for small businesses provides you with structure and long-term direction that many marketing companies often fail to deliver.",
+    },
+    {
+      type: "paragraph",
+      text: "What happens when your brand needs something specific? You get answers, guidance, and solutions tailored to your next move. If you want a strategy session or need help with a project, reach out anytime. Our team is ready to support your growth, one strong step at a time.",
+    }
+  ];
 const Homepagefaqs = {
   title: "FAQs",
   description:
@@ -30,34 +69,34 @@ const Homepagefaqs = {
   items: [
     {
       question:
-        "What services do we provide to support your business growth?",
+        "Why hire a digital marketing agency?",
       answer:
-        "Zemalt provides all digital marketing solutions in one place. Our services include SEO, PPC ads, social media management, content writing, web design, and branding. Each service is built to improve visibility and bring in more customers.",
+        "A professional agency brings experience, tools, and strategy. Zemalt ensures efficient campaigns, optimized SEO, and well-designed ad campaigns. ",
     },
     {
-      question: "Why is SEO audit important before starting campaigns?",
+      question: "Will online marketing really help my small or local business?",
       answer:
-        "An SEO audit shows what holds a website back. Zemalt checks site speed, broken links, mobile use, and keyword gaps. You get a clear plan with fixes that boost performance. Strong audits lead to higher rankings and more traffic.",
+        "Yes. Targeted digital marketing services, local SEO, and online advertising campaigns help small businesses attract nearby customers and increase brand visibility in their area.",
     },
     {
-      question: "How can Zemalt help e-commerce stores grow sales?",
+      question: "Do I need prior experience to benefit from online marketing?",
       answer:
-        "We optimize product pages, categories, and content to rank higher. Customers find your store faster and buy with ease. Zemalt improves visibility, increases conversions, and drives steady growth. Online shops achieve long-term success through our strategies.",
+        "No experience is required. Expert guidance in social media marketing, SEO, and online advertising ensures campaigns run smoothly and deliver measurable results.",
     },
     {
-      question: "How do we measure digital marketing success?",
+      question: "How do I know if my campaigns are working?",
       answer:
-        "We track every step with data. Reports show rankings, traffic, leads, and sales clearly. You always know what works and where growth comes from. Zemalt uses transparent reporting so you can trust the results.",
+        "You can track performance using clear reports on website traffic, leads, conversions, and engagement metrics. Analytics help refine digital marketing strategies for better results.",
     },
     {
-      question: "How fast can Zemalt deliver results?",
+      question: "How do I choose the right digital strategy for my business?",
       answer:
-        "Some services, like ads, bring traffic and leads within days. SEO builds long-term success and usually shows results within weeks. Zemalt focuses on both quick wins and steady growth. Businesses see progress faster with our proven methods.",
+        "Start by defining clear goals and understanding your audience. Tailored SEO, PPC, and social media marketing strategies help reach the right people and achieve measurable outcomes.",
     },
     {
-      question: "Why invest in digital marketing?",
+      question: "Why invest in digital marketing now?",
       answer:
-        "The competition online grows every day. Waiting gives rivals more space to take customers. Zemalt helps brands secure visibility, build authority, and gain trust today. Early action brings long-term growth and lasting market advantage.",
+        "Zemalt helps brands gain visibility, build authority, and attract loyal customers through SEO, social media, and ad campaigns. Early action secures long-term growth.",
     },
   ],
 };
@@ -73,12 +112,11 @@ export default function Home() {
     <div className={styles.Home}>
       <Featured />
       <OutBox />
-      <StrategicMarketing/>
+      <StrategicMarketing data={marketingContent}/>
       <ImpactOfMarketing/>
       <PortfolioSection/>
       <HomeServices/>
-      <ReasonsToChoose/>
-      {/* <Whyus /> */}
+      <ReasonsToChoose data={reasonsData}/>
       <TestimonialSection />
       <TestimonialSlider2 />
       <BlogSection data={blogHeaderData} />

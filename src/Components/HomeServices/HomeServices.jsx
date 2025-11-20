@@ -31,7 +31,7 @@ const servicesData = [
       "Plan and write content for a long-term connection.",
     ],
     buttonText: "Explore Content Services",
-     slug: "/services/content-writing"
+    slug: "/services/content-writing"
   },
   {
     tab: "Social Media & Paid Ads",
@@ -90,9 +90,12 @@ const servicesData = [
 export default function HomeServices() {
   const router = useRouter();
   const [activeTab, setActiveTab] = useState(servicesData[0].tab)
+  const [isSwitching, setIsSwitching] = useState(false)
   const tabsRef = useRef(null)
   const [canScrollLeft, setCanScrollLeft] = useState(false)
   const [canScrollRight, setCanScrollRight] = useState(true)
+  const autoSwitchRef = useRef(true) // Track if auto-switch should continue
+  const [isDesktop, setIsDesktop] = useState(true)
 
   const activeContent = servicesData.find((item) => item.tab === activeTab)
 
@@ -115,6 +118,48 @@ export default function HomeServices() {
 
     el.scrollTo({ left: newScroll, behavior: "smooth" })
   }
+
+  const handleTabClick = (tab) => {
+    setIsSwitching(true)
+    autoSwitchRef.current = false // Stop auto-switch on user interaction
+    
+    setTimeout(() => {
+      setActiveTab(tab)
+      setIsSwitching(false)
+    }, 150)
+  }
+
+  // Check if desktop
+  useEffect(() => {
+    const checkDesktop = () => {
+      setIsDesktop(window.innerWidth > 768)
+    }
+    
+    checkDesktop()
+    window.addEventListener('resize', checkDesktop)
+    return () => window.removeEventListener('resize', checkDesktop)
+  }, [])
+
+  // Auto-switch logic for desktop only
+  useEffect(() => {
+    if (!isDesktop) return // Only run on desktop
+
+    let currentIndex = servicesData.findIndex(item => item.tab === activeTab)
+
+    const interval = setInterval(() => {
+      if (!autoSwitchRef.current) return // Stop if user clicked
+
+      setIsSwitching(true)
+      
+      setTimeout(() => {
+        currentIndex = (currentIndex + 1) % servicesData.length
+        setActiveTab(servicesData[currentIndex].tab)
+        setIsSwitching(false)
+      }, 150)
+    }, 5000) // Switch every 5 seconds
+
+    return () => clearInterval(interval)
+  }, [activeTab, isDesktop])
 
   useEffect(() => {
     updateScrollButtons()
@@ -143,7 +188,7 @@ export default function HomeServices() {
               <button
                 key={item.tab}
                 className={`hservices-tab ${activeTab === item.tab ? 'active' : ''}`}
-                onClick={() => setActiveTab(item.tab)}
+                onClick={() => handleTabClick(item.tab)}
               >
                 {item.tab}
               </button>
@@ -160,17 +205,25 @@ export default function HomeServices() {
         </div>
 
         {/* Content Area */}
-        <div className="hservices-content">
+        <div className={`hservices-content ${isSwitching ? 'switching' : ''}`}>
           <div className="hservices-left">
-            <h3 className="hservices-heading">{activeContent.title}</h3>
-            <p className="hservices-description">{activeContent.description}</p>
+            <h3 className="hservices-heading" key={`heading-${activeTab}`}>
+              {activeContent.title}
+            </h3>
+            <p className="hservices-description" key={`desc-${activeTab}`}>
+              {activeContent.description}
+            </p>
 
-            <button className="hservices-link" onClick={()=>{router.push(`${activeContent.slug}`)}}>
+            <button 
+              className="hservices-link" 
+              onClick={() => { router.push(`${activeContent.slug}`) }}
+              key={`btn-${activeTab}`}
+            >
               {activeContent.buttonText} <FaArrowRight />
             </button>
           </div>
 
-          <div className="hservices-right">
+          <div className="hservices-right" key={`features-${activeTab}`}>
             {activeContent.features.map((feature, i) => (
               <div key={i} className="hservices-card">{feature}</div>
             ))}

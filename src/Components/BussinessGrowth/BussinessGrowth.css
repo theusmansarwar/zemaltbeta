@@ -1,0 +1,73 @@
+.bussiness-growth {
+  width: calc(100% - 10%);
+  padding: 40px var(--left-space);
+  background-color: var(--text-color4);
+  display: flex;
+  justify-content: space-between;
+}
+.bussiness-growth .left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.bussiness-growth .left h2 {
+  font-size: var(--heading-two);
+  line-height: var(--heading-line-height);
+}
+.bussiness-growth .left p {
+  font-size: var(--default-p-size);
+  line-height: var(--p-line-height);
+}
+.bussiness-growth .left .proposal-btn {
+  width: 40%;
+  background-color: var(--primary-color);
+  outline: none;
+  padding: 12px 24px;
+  border-radius: var(--border-radius1);
+  color: var(--text-color4);
+  border-style: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: 2px solid var(--primary-color);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.bussiness-growth .left .proposal-btn:hover {
+  background-color: transparent;
+  color: var(--main-color);
+}
+
+.bussiness-growth .right {
+  width: 48%;
+}
+.bussiness-growth .right img {
+  width: 100%;
+  height: 100%;
+  max-height: 400px;
+}
+@media (max-width: 900px) {
+  .bussiness-growth {
+    width: calc(100% - 10%);
+    padding: 20px var(--left-space);
+    flex-direction: column;
+    gap: 20px;
+  }
+  .bussiness-growth .left {
+    width: 100%;
+  }
+  .bussiness-growth .left .proposal-btn {
+    width: 80%;
+  }
+  .bussiness-growth .right {
+    width: 100%;
+  }
+  .bussiness-growth .right img {
+    max-height: 200px;
+  }
+}

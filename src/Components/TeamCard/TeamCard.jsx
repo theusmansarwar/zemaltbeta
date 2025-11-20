@@ -30,6 +30,18 @@ const TeamCard = () => {
       setLoading(false);
     }
   };
+  const formatUrl = (url) => {
+    if (!url) return null;
+
+    // If URL already contains http or https, return it
+    if (url.startsWith("http://") || url.startsWith("https://")) return url;
+
+    // If URL starts with www → prepend https
+    if (url.startsWith("www.")) return `https://${url}`;
+
+    return url;
+  };
+
 
   const renderMember = (member) => (
     <div key={member._id} className="team-card">
@@ -46,7 +58,7 @@ const TeamCard = () => {
         {member.description && <p className="description">{member.description}</p>}
         <div className="social-icons">
           {member.socialLinks.facebook && (
-            <a href={member.socialLinks.facebook} target="_blank" rel="noopener noreferrer">
+            <a href={formatUrl(member.socialLinks.facebook)} target="_blank" rel="noopener noreferrer">
               <div className="icon">
                 <RiFacebookFill />
               </div>
@@ -54,7 +66,7 @@ const TeamCard = () => {
           )}
 
           {member.socialLinks.linkedin && (
-            <a href={member.socialLinks.linkedin} target="_blank" rel="noopener noreferrer">
+            <a href={formatUrl(member.socialLinks.linkedin)} target="_blank" rel="noopener noreferrer">
               <div className="icon">
                 <FaLinkedinIn />
               </div>
@@ -62,7 +74,7 @@ const TeamCard = () => {
           )}
 
           {member.socialLinks.instagram && (
-            <a href={member.socialLinks.instagram} target="_blank" rel="noopener noreferrer">
+            <a href={formatUrl(member.socialLinks.instagram)} target="_blank" rel="noopener noreferrer">
               <div className="icon">
                 <AiFillInstagram />
               </div>
@@ -70,7 +82,7 @@ const TeamCard = () => {
           )}
 
           {member.socialLinks.github && (
-            <a href={member.socialLinks.github} target="_blank" rel="noopener noreferrer">
+            <a href={formatUrl(member.socialLinks.github)} target="_blank" rel="noopener noreferrer">
               <div className="icon">
                 <FaGithub />
               </div>
@@ -78,13 +90,14 @@ const TeamCard = () => {
           )}
 
           {member.socialLinks.portfolio && (
-            <a href={member.socialLinks.portfolio} target="_blank" rel="noopener noreferrer">
+            <a href={formatUrl(member.socialLinks.portfolio)} target="_blank" rel="noopener noreferrer">
               <div className="icon">
                 <FaGlobe />
               </div>
             </a>
           )}
         </div>
+
       </div>
     </div>
   );
