@@ -180,7 +180,7 @@ const portfolios = [
         _id: "7",
         title: "SIM SOLUTIONS CO LLC",
 
-        thumbnail: "/sim2",
+         thumbnail: "/sim2.webp",
         images: [
             "/sim2.webp",
             "/sim1.webp",
