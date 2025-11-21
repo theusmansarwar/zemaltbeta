@@ -83,12 +83,12 @@ export default function Footer() {
                 <a href="tel:+923007044566">+92 3007044566</a>
               </div>
 
-              <div className="contact-item">
+              {/* <div className="contact-item">
                 <span className="contact-icon">
                   <IoCall />
                 </span>
                 <a href="tel:+92123456789">+92 123456789 (USA)</a>
-              </div>
+              </div> */}
 
               <div className="contact-item">
                 <span className="contact-icon">
@@ -116,14 +116,14 @@ export default function Footer() {
                 </a>
               </div>
 
-              <div className="contact-item">
+              {/* <div className="contact-item">
                 <span className="contact-icon">
                   <FaLocationDot />
                 </span>
                 <a href="#" target="_blank" rel="noopener noreferrer">
                   USA: Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
 

@@ -4,13 +4,11 @@ import "./ReasonsToChoose.css";
 
 const ReasonsToChoose = ({data}) => {
   return (
-    <section className="reasons">
+    <section className="reasons" id="why-choose-zemalt">
       
       {/* Dynamic Heading */}
       <h2 className="reasons-title">
-        {data.heading.split(data.highlightWord)[0]}
-        <span>{data.highlightWord}</span>
-        {data.heading.split(data.highlightWord)[1]}
+        {data.heading}
       </h2>
 
       {/* Dynamic Steps */}

@@ -2,22 +2,22 @@
   display: flex;
   flex-wrap: wrap;
   gap: 50px;
-  width: var(--default-width);
-  padding: 60px var(--left-space);
+  width: calc(100% - 5%);
+  padding: 40px 2.5%;
   justify-content: center;
   background-color: var(--text-color4);
 }
 
 .servicecard {
-  width: 320px;
-  height: 290px;
+  width: 350px;
+  height: 350px;
   border-radius: var(--border-radius1);
   position: relative;
 }
 
 .servicecard .overlay1 {
-  width: 320px;
-  height: 290px;
+  width: 350px;
+  height: 350px;
   border-radius: var(--border-radius1);
   position: relative;
   overflow: hidden;
@@ -69,10 +69,10 @@
 .servicecard .overlay2 p {
   margin: 0;
   display: flex;
-  height: 140px;
+  height: 170px;
   justify-content: center;
   line-height: var(--p-line-height);
-  font-size: var(--defult-p-size);
+  font-size: var(--default-p-size);
 
 }
 

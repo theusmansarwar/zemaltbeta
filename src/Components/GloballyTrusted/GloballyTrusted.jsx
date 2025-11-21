@@ -1,6 +1,7 @@
 import React from "react";
 import "./GloballyTrusted.css";
 import { FaStar } from "react-icons/fa6";
+import CountUp from "../animation/CountUp";
 const GloballyTrusted = () => {
   return (
     <div
@@ -14,7 +15,7 @@ const GloballyTrusted = () => {
     >
       <div className="content-parent">
         <h2>
-          Trusted by over <span>2200+</span> customers globally
+          Trusted by over <span> <CountUp end={200} />+</span> customers globally
         </h2>
         <p>
           We've been helping our customers with affordable Digital Marketing
@@ -32,7 +33,7 @@ const GloballyTrusted = () => {
               4.9 <FaStar />
             </div>
             <div className="right">
-              <img className="google-icon" src="/google.png" alt="Google" />
+              <img className="google-icon" src="/google.webp" alt="Google" />
               <span>310 reviews on</span>
             </div>
           </div>

@@ -94,8 +94,6 @@ export default function HomeServices() {
   const tabsRef = useRef(null)
   const [canScrollLeft, setCanScrollLeft] = useState(false)
   const [canScrollRight, setCanScrollRight] = useState(true)
-  const autoSwitchRef = useRef(true) // Track if auto-switch should continue
-  const [isDesktop, setIsDesktop] = useState(true)
 
   const activeContent = servicesData.find((item) => item.tab === activeTab)
 
@@ -121,45 +119,12 @@ export default function HomeServices() {
 
   const handleTabClick = (tab) => {
     setIsSwitching(true)
-    autoSwitchRef.current = false // Stop auto-switch on user interaction
-    
+
     setTimeout(() => {
       setActiveTab(tab)
       setIsSwitching(false)
     }, 150)
   }
-
-  // Check if desktop
-  useEffect(() => {
-    const checkDesktop = () => {
-      setIsDesktop(window.innerWidth > 768)
-    }
-    
-    checkDesktop()
-    window.addEventListener('resize', checkDesktop)
-    return () => window.removeEventListener('resize', checkDesktop)
-  }, [])
-
-  // Auto-switch logic for desktop only
-  useEffect(() => {
-    if (!isDesktop) return // Only run on desktop
-
-    let currentIndex = servicesData.findIndex(item => item.tab === activeTab)
-
-    const interval = setInterval(() => {
-      if (!autoSwitchRef.current) return // Stop if user clicked
-
-      setIsSwitching(true)
-      
-      setTimeout(() => {
-        currentIndex = (currentIndex + 1) % servicesData.length
-        setActiveTab(servicesData[currentIndex].tab)
-        setIsSwitching(false)
-      }, 150)
-    }, 5000) // Switch every 5 seconds
-
-    return () => clearInterval(interval)
-  }, [activeTab, isDesktop])
 
   useEffect(() => {
     updateScrollButtons()
@@ -168,7 +133,7 @@ export default function HomeServices() {
   }, [])
 
   return (
-    <section className="hservices-section">
+    <section className="hservices-section" id='services'>
       <div className="hservices-container">
 
         <h2 className="hservices-title">Boost Your Online Presence with Expert Digital Marketing</h2>

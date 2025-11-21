@@ -18,7 +18,7 @@ const BussinessGrowth = () => {
                 </button>
             </div>
             <div className="right">
-                <img src="/blog-thumbnail.jpg" alt="" />
+                <img src="/services-main.webp" alt="Zemalt Services" />
             </div>
 
         </div>

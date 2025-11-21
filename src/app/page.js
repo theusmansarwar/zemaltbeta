@@ -19,8 +19,7 @@ export const metadata = {
     "Zemalt offers expert SEO, content writing, web design, UI/UX, and digital marketing services to build brands, boost rankings, and drive business growth",
 };
 const reasonsData = {
-  heading: "4 Reasons to Choose Zemalt as your Digital Marketing Agency",
-  highlightWord: "Choose Zemalt",
+  heading: "Why Zemalt’s Digital Marketing Delivers High-Performance Results",
   steps: [
     {
       question: "Proven Methods Strengthening Online Visibility",
@@ -114,10 +113,10 @@ export default function Home() {
       <OutBox />
       <StrategicMarketing data={marketingContent}/>
       <ImpactOfMarketing/>
-      <PortfolioSection/>
       <HomeServices/>
-      <ReasonsToChoose data={reasonsData}/>
       <TestimonialSection />
+      <PortfolioSection/>
+      <ReasonsToChoose data={reasonsData}/>
       <TestimonialSlider2 />
       <BlogSection data={blogHeaderData} />
       <Faq faqs={Homepagefaqs} />

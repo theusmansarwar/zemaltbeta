@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 
 const ProductsPopup = ({ onClose, project }) => {
   const router = useRouter();
-const handleOverlayClick = (e) => {
+  const handleOverlayClick = (e) => {
     if (e.target.classList.contains("products-popup-parent")) {
       onClose();
     }
@@ -19,9 +19,12 @@ const handleOverlayClick = (e) => {
         <IoCloseCircleSharp className="close-icon" onClick={onClose} />
 
         <div className="top">
+          <div
+            className="blur-bg"
+            style={{ backgroundImage: `url(${baseUrl + project.image})` }}
+          ></div>
           <img src={baseUrl + project.image} alt={project.name} />
         </div>
-
         <div className="bottom">
           <h2>{project.name}</h2>
           {project.detail && (

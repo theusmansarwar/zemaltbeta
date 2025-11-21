@@ -10,7 +10,7 @@ const StrategicMarketing = ({data}) => {
  
 
   return (
-    <div className='strategic-marketing'>
+    <div className='strategic-marketing' id='digitalmarketing'>
       {data.map((item, index) => (
         item.type === "heading" ? (
           <h2 key={index}>{item.text}</h2>

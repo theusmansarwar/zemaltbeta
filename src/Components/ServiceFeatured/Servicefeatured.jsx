@@ -1,5 +1,6 @@
 import React from "react";
 import "./Servicefeatured.css";
+import CountUp from "../animation/CountUp";
 const Servicefeatured = () => {
   return (
     <div className="Servicefeatured">
@@ -20,7 +21,7 @@ const Servicefeatured = () => {
             </p>
           </div>
           <div className="right">
-            <h2>50+</h2>
+            <h2> <CountUp end={50} />+</h2>
             <p>Projects Done Successfully</p>
           </div>
         </div>

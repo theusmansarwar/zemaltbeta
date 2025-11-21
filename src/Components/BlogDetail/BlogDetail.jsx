@@ -42,7 +42,7 @@ const BlogDetail = ({ slug }) => {
         <div className="left-section">
           <LeftDetail blog={blog} />
         </div>
-        <div className="right-section">
+        <div className="blog-detail-right">
           <RecentBlogs />
         </div>
       </div>

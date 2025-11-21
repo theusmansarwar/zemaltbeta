@@ -9,7 +9,7 @@ const ProductsSkeleton = ({ count = 4 }) => {
         <div key={i} className="products-card skeleton-products-card">
           {/* Left Side (Image Circle) */}
           <div className="left">
-            <div className="skeleton-circle"></div>
+            <div className="skeleton-square"></div>
           </div>
 
           {/* Right Side (Content) */}

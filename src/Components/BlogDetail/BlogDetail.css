@@ -24,7 +24,7 @@
   min-width: 0; /* prevents overflow */
 }
 
-.blog-detail .main-section .right-section {
+.blog-detail .main-section .blog-detail-right {
   flex: 1;
   min-width: 250px; /* keeps sidebar space reserved */
 }

@@ -23,7 +23,7 @@
 }
 
 .drive-revenue .each-card {
-  width: calc(300px - 40px);
+  width: calc(28% - 40px);
   padding: 20px;
   background-color: var(--text-color4);
   transition: 0.3s ease;
@@ -35,7 +35,7 @@
 }
 
 .drive-revenue .each-card:hover {
-  width: calc(300px - 40px);
+   width: calc(28% - 40px);
   padding: 20px;
   background-color: #edf9f8;
   border-radius: var(--border-radius1);
@@ -52,12 +52,13 @@
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  margin-bottom: 10px;
-  font-size: 14px;
+  margin-bottom: 20px;
+  font-size: var(--default-p-size);
   line-height: var(--p-line-height);
 }
 
 .drive-revenue .each-card ul li .check-icon {
+  margin-top: 5px;
   width: 20px;
   height: 20px;
   border-radius: 50%;

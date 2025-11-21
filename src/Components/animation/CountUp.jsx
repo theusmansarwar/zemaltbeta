@@ -37,7 +37,7 @@ const CountUp = ({ end, duration = 1000 }) => {
     };
   }, [end, duration, hasCounted]);
 
-  return <span ref={ref}>{count}</span>;
+  return <span  ref={ref}>{count}</span>;
 };
 
 export default CountUp;

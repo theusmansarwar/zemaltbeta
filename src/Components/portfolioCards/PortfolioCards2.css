@@ -59,7 +59,7 @@
   position: absolute;
   left: 20px;
   bottom: 20px;
-  font-size: 48px;
+  font-size: var(--heading-two);
   color: var(--text-color4);
   font-weight: 700;
   z-index: 2;

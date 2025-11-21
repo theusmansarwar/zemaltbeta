@@ -36,7 +36,7 @@ const portfolios = [
     },
     {
         _id: "2",
-        title: "Smart Energie Ltd (United Kingdom)",
+        title: "Smart Energie Ltd (UK)",
 
 
         thumbnail: "/smartenergy1.webp",
@@ -146,34 +146,62 @@ const portfolios = [
     `,
         published: true
     },
-    // {
-    //     _id: "6",
-    //     title: "Broadium (.NET / .US / .SHOP)",
+    {
+        _id: "6",
+        title: "Broadium (.NET / .US / .SHOP)",
 
-    //     thumbnail: "/placeholder.webp",
-    //     images: [
-    //         "/placeholder.webp",
-    //         "/placeholder.webp",
-    //         "/placeholder.webp",
-    //     ],
-    //     videos: [],
-    //     description: `
-    //   <p>Broadium required a unified digital presence across multiple domains. The challenge was maintaining consistency while serving different audiences.</p>
+        thumbnail: "/broadium2.webp",
+        images: [
+            "/broadium2.webp",
+            "/broadium1.webp",
+            "/broadium3.webp",
+        ],
+        videos: [],
+        description: `
+      <p>Broadium required a unified digital presence across multiple domains. The challenge was maintaining consistency while serving different audiences.</p>
 
-    //   <ul>
-    //     <li>Developed custom websites for broadium.net, broadium.us, and broadium.shop.</li>
-    //     <li>Created a structured brand theme with visual consistency.</li>
-    //     <li>Designed responsive layouts for seamless browsing.</li>
-    //     <li>Built complete brand assets including logo variations and type rules.</li>
-    //     <li>Created digital asset packs for cross-platform usage.</li>
-    //   </ul>
+      <ul>
+        <li>Developed custom websites for broadium.net, broadium.us, and broadium.shop.</li>
+        <li>Created a structured brand theme with visual consistency.</li>
+        <li>Designed responsive layouts for seamless browsing.</li>
+        <li>Built complete brand assets including logo variations and type rules.</li>
+        <li>Created digital asset packs for cross-platform usage.</li>
+      </ul>
 
-    //   <p>The project resulted in a cohesive identity that felt premium and unified. The brand became more recognizable, structured, and scalable.</p>
+      <p>The project resulted in a cohesive identity that felt premium and unified. The brand became more recognizable, structured, and scalable.</p>
 
-    //   <p>The final delivery positioned Broadium as a modern, trustworthy, and industry-ready brand.</p>
-    // `,
-    //     published: true
-    // },
+      <p>The final delivery positioned Broadium as a modern, trustworthy, and industry-ready brand.</p>
+    `,
+        published: true
+    },
+    {
+        _id: "7",
+        title: "SIM SOLUTIONS CO LLC",
+
+        thumbnail: "/sims2.webp",
+        images: [
+            "/sims2.webp",
+            "/sims1.webp",
+            "/sims3.webp",
+        ],
+        videos: [],
+        description: `
+      <p>Sim Solutions Co LLC took a decisive step to strengthen its brand presence and present a professional image to clients and partners. Zemalt delivered a comprehensive design solution focused on clarity, consistency, and visual appeal. The goal was to create a logo and company profile that reflected the company’s innovation, reliability, and market position.</p>
+
+      <ul>
+        <li>Designed a modern, versatile logo representing innovation and professionalism.</li>
+        <li>Developed a structured company profile highlighting products, services, and company strengths.</li>
+        <li>Ensured all design elements aligned with brand values and market positioning.</li>
+        <li>Created visuals that conveyed credibility and enhanced audience perception.</li>
+        <li>Standardised presentation materials to improve client engagement and communication.</li>
+        <li>Optimised layouts for clarity, readability, and professional appeal.</li>
+        <li>Tracked stakeholder feedback to refine and finalise design elements.</li>
+      </ul>
+
+      <p>The new logo and company profile elevated Sim Solutions’ brand identity. Clear visuals and consistent messaging strengthened client perception and helped the company stand out in competitive markets. Positive responses from partners and improved professional presentation highlighted the impact of high-quality design. Standardised materials ensured efficient communication, leaving a lasting impression on potential clients. Zemalt supported Sim Solutions in creating a professional, coherent, and visually compelling brand presence that reinforced credibility and market positioning.</p>
+    `,
+        published: true
+    },
 ];
 
 const PortfolioPage = () => {

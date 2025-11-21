@@ -35,7 +35,6 @@ export const metadata = {
   ];
   const reasonsData = {
   heading: "Why Businesses Choose Zemalt for Digital Growth?",
-  highlightWord: "Choose Zemalt",
   steps: [
     {
       question: "Targeted Traffic That Converts",
@@ -59,11 +58,7 @@ export const metadata = {
     }
   ]
 };
-const blogHeaderData = {
-  heading: "Digital Marketing & SEO Services That Boost Reach & Increase Sales",
-  description:
-    "Trust skilled experts to guide brand growth. The team uses proven methods. They improve search rankings. They attract qualified visitors. It is important to know they support steady traffic flow to each client's website.",
-};
+
 const Servicespagefaqs = {
   title: "FAQs",
   description:
@@ -116,7 +111,6 @@ export default function Page() {
       <Services />
       <ReasonsToChoose data={reasonsData}/>
       <HowDifferent />
-      <BlogSection data={blogHeaderData} />
       <Realworld />
       <DriveRevenue />
       <GloballyTrusted />

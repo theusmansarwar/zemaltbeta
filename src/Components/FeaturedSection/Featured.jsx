@@ -3,6 +3,7 @@ import React from "react";
 import "./Featured.css";
 import { FaArrowRight, FaArrowTrendUp } from "react-icons/fa6";
 import { useRouter } from "next/navigation";
+import CountUp from "../animation/CountUp";
 const brands = ["/plutosec.png", "/digitalaura.png", "/carteroil.png", "/smartenergy.png"]
 const Featured = () => {
 
@@ -57,11 +58,13 @@ const Featured = () => {
               router.push("/products");
             }}>
               <FaArrowTrendUp />
-              <span className="tooltip-text">Growth Performance</span>
+              <span className="tooltip-text">Bussiness Solutions</span>
             </div>
           </div>
           <div className="right">
-            <p>251+</p>
+            <p>
+              <CountUp end={150} />+
+            </p>
             <p>
               Top companies choose to work with us. Trust grows through clear
               results.

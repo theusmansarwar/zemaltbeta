@@ -52,7 +52,10 @@ const SeoSection = () => {
           <ul>
             <li><a href="#zemalt">Zemalt</a></li>
             <li><a href="#unique-ideas">Unique Ideas</a></li>
-            <li><a href="#marketing-objectives">Marketing Objectives</a></li>
+            <li><a href="#digitalmarketing">Digital Marketing</a></li>
+            <li><a href="#marketingstrategis">Marketing Startegies</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#services">Services</a></li>
             <li><a href="#revenue-impact">Revenue Impact</a></li>
             <li><a href="#why-choose-zemalt">Why Choose Zemalt</a></li>
             <li><a href="#reviews">Reviews</a></li>

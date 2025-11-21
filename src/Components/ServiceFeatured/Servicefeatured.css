@@ -57,6 +57,7 @@
   width: fit-content;
   font-size: var(--heading-one);
   color: var(--primary-color);
+  font-weight: 900;
 }
 .Servicefeatured-bottom .top .right p {
   font-size: var(--default-p-size);

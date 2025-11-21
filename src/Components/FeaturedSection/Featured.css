@@ -250,6 +250,7 @@
   align-items: center;
   gap: 10px;
   font-size: 14px;
+
 }
 
 .Featured .right .bottom .left p:last-child {
@@ -291,8 +292,13 @@
   transform-origin: bottom;
   width: 30%;
   background-color: var(--primary-color);
-  animation: growBar 2.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
+.Featured .right .bottom:hover .right .item1,
+.Featured .right .bottom:hover .right .item2,
+.Featured .right .bottom:hover .right .item3 {
+  animation: growBar 2.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 
 /* Set individual heights */
 .Featured .right .bottom .right .item1 {
@@ -334,7 +340,7 @@
 
 .Featured .right .top .right p:first-child {
   font-size: 78px;
-  font-weight: 600;
+  font-weight: 900;
 }
 
 

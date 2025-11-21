@@ -20,9 +20,9 @@ const OutBox = () => {
           if (entry.isIntersecting) {
             setIsVisible(true);
           } else {
-            // 👇 RESET so animation can restart next time
+            //  RESET so animation can restart next time
             setIsVisible(false);
-            setDisplayedText(""); 
+            setDisplayedText("");
           }
         });
       },
@@ -38,7 +38,7 @@ const OutBox = () => {
     if (!isVisible) return;
 
     let index = 0;
-    setDisplayedText(""); 
+    setDisplayedText("");
 
     const interval = setInterval(() => {
       if (index < fullText.length) {
@@ -92,14 +92,17 @@ const OutBox = () => {
         <div className="right" ref={rightSectionRef}>
           <div className="overlay">
             <p className="animated-text">
-              {/* {displayedText.split("").map((char, i) => (
-                <span key={i} className="char" style={{ animationDelay: `${i * 0.07}s` }}>
+              {/* {[...displayedText].map((char, i) => (
+                <span
+                  key={i}
+                  className="char"
+                  style={{ animationDelay: `${i * 0.07}s` }}
+                >
                   {char}
                 </span>
               ))} */}
               HOW WE WORK
             </p>
-
             <div className="play-box">
               <FaPlay />
             </div>

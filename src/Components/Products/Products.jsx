@@ -49,9 +49,7 @@ const Products = () => {
         <div key={item.id} className="products-card">
           {/* Left Side (Image) */}
           <div className="left">
-            <div className="img-container">
-              <img src={baseUrl + item.image} alt={item.title} />
-            </div>
+            <img className="pro-img" src={baseUrl + item.image} alt={item.name} />
           </div>
 
           {/* Right Side (Content) */}
