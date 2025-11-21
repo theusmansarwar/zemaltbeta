@@ -180,11 +180,11 @@ const portfolios = [
         _id: "7",
         title: "SIM SOLUTIONS CO LLC",
 
-        thumbnail: "/sims2.webp",
+        thumbnail: "/sim2",
         images: [
-            "/sims2.webp",
-            "/sims1.webp",
-            "/sims3.webp",
+            "/sim2.webp",
+            "/sim1.webp",
+            "/sim3.webp",
         ],
         videos: [],
         description: `
