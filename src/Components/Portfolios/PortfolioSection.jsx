@@ -124,7 +124,7 @@ const portfolios = [
         _id: "5",
         title: "Moawin Foundation (USA)",
 
-        thumbnail:  "/moawin1.webp",
+        thumbnail: "/moawin1.webp",
         images: [
             "/moawin1.webp",
             "/moawin2.webp",
