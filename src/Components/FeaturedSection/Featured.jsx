@@ -110,7 +110,7 @@ const Featured = () => {
           </div>
           <div className="right">
             <p>
-              <CountUp end={150} />+
+              <CountUp end={10} />+
             </p>
             <p>
               Top companies choose to work with us. Trust grows through clear
