@@ -10,45 +10,47 @@ const OutBox = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [displayedText, setDisplayedText] = useState("");
   const rightSectionRef = useRef(null);
+  const [hasAnimated, setHasAnimated] = useState(false);
+
 
   const fullText = "HOW  WE  WORK";
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-          } else {
-            //  RESET so animation can restart next time
-            setIsVisible(false);
-            setDisplayedText("");
-          }
-        });
-      },
-      { threshold: 0.4 } // smoother trigger
-    );
+useEffect(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          setIsVisible(true);
+          setHasAnimated(true); // prevent future resets
+        }
+      });
+    },
+    { threshold: 0.4 }
+  );
 
-    if (rightSectionRef.current) observer.observe(rightSectionRef.current);
+  if (rightSectionRef.current) observer.observe(rightSectionRef.current);
+  return () => observer.disconnect();
+}, [hasAnimated]);
 
-    return () => observer.disconnect();
-  }, []);
 
   useEffect(() => {
-    if (!isVisible) return;
+  if (!isVisible) return;
 
-    let index = 0;
-    setDisplayedText("");
+  let index = 0;
+  setDisplayedText("");
 
-    const interval = setInterval(() => {
-      if (index < fullText.length) {
-        setDisplayedText((prev) => prev + fullText[index]);
-        index++;
-      } else clearInterval(interval);
-    }, 80);
+  const interval = setInterval(() => {
+    if (index < fullText.length) {
+      setDisplayedText((prev) => prev + fullText[index]);
+      index++;
+    } else {
+      clearInterval(interval);
+    }
+  }, 80);
 
-    return () => clearInterval(interval);
-  }, [isVisible]);
+  return () => clearInterval(interval);
+}, [isVisible]);
+
 
   return (
     <div className="OutBox" id="unique-ideas">
@@ -92,7 +94,7 @@ const OutBox = () => {
         <div className="right" ref={rightSectionRef}>
           <div className="overlay">
             <p className="animated-text">
-              {/* {[...displayedText].map((char, i) => (
+              {[...displayedText].map((char, i) => (
                 <span
                   key={i}
                   className="char"
@@ -100,8 +102,8 @@ const OutBox = () => {
                 >
                   {char}
                 </span>
-              ))} */}
-              HOW WE WORK
+              ))}
+              
             </p>
             <div className="play-box">
               <FaPlay />

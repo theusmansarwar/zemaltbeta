@@ -19,7 +19,7 @@ const AboutUsHero = () => {
       <div className="right">
         <div className="box">
           <strong>
-            1000 <img src="/plus-icon.svg" alt="Add Icon" />
+            50 <img src="/plus-icon.svg" alt="Add Icon" />
           </strong>
           <p>
             <span>Completed </span>
@@ -28,7 +28,7 @@ const AboutUsHero = () => {
         </div>
         <div className="box">
           <strong>
-            250 <img src="/plus-icon.svg" alt="Add Icon" />
+            5 <img src="/plus-icon.svg" alt="Add Icon" />
           </strong>
           <p>
             <span>On Going</span>
@@ -37,7 +37,7 @@ const AboutUsHero = () => {
         </div>
         <div className="box">
           <strong>
-            500 <img src="/plus-icon.svg" alt="Add Icon" />
+            200 <img src="/plus-icon.svg" alt="Add Icon" />
           </strong>
           <p>
             <span>Happy</span>

@@ -204,3 +204,15 @@ export const getComments = async (data) => {
   };
   return invokeApi(reqObj);
 };
+export const getPortfolios = async (data) => {
+  const reqObj = {
+    path: `/portfolio/userportfolio`,
+    method: "GET",
+    headers: {
+    
+    },
+
+    postData: {data},
+  };
+  return invokeApi(reqObj);
+};

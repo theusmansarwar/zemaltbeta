@@ -4,6 +4,7 @@ import "./ServicesDropDown.css";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { FiArrowRight } from "react-icons/fi";
 import { useRouter, usePathname } from "next/navigation";
+import { baseUrl } from "@/config/Config";
 
 const ServicesDropDown = ({ services }) => {
   const router = useRouter();
@@ -33,6 +34,10 @@ const ServicesDropDown = ({ services }) => {
       router.push(`/services/${mainSlug}/${subSlug}`);
     }
   };
+
+  console.log(`${baseUrl + services.menuImage} `);
+  console.log(services);
+
 
   return (
     <div className="maindropdown">
@@ -84,7 +89,11 @@ const ServicesDropDown = ({ services }) => {
 
         {/* Right Section */}
         <div className="right">
-          <img src="/dropdown-img.svg" alt="" />
+          <img
+            src={baseUrl + services[selectedIndex]?.menuImage}
+            alt={services[selectedIndex]?.name}
+          />
+
           <p
             className="view-all-btn"
             onClick={() => {

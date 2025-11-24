@@ -10,9 +10,9 @@
 }
 
 .realworld-skeleton-card {
-  height: 370px;
-  min-width: 370px;
-  max-width: 370px;
+  height: 350px;
+  min-width: 350px;
+  max-width: 350px;
   border-radius: var(--border-radius1);
   border: 8px solid var(--text-color3);
   background-color: var(--text-color3);

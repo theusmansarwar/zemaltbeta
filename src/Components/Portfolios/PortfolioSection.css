@@ -81,14 +81,14 @@
 }
 
 /* Dots for carousel */
-.dots-wrapper {
+.port-dots-wrapper {
     display: flex;
     justify-content: center;
     margin-top: 20px;
     gap: 10px;
 }
 
-.dot {
+.pagination-dot  {
     width: 10px;
     height: 10px;
     background-color: #aaa;
@@ -97,7 +97,7 @@
     cursor: pointer;
 }
 
-.dot.active {
+.pagination-dot.active {
     width: 35px;
     border-radius: 30px;
     background-color: var(--primary-color);
@@ -110,7 +110,7 @@
         padding: 20px var(--left-space);
     }
 
-    .dots-wrapper {
+    .port-dots-wrapper {
         margin-top: 0px;
     }
 

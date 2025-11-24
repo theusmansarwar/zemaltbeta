@@ -8,101 +8,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { fetchDropDownServices } from "@/DAL/Fetch";
 import { toast } from "react-toastify";
 
-const services = [
-  {
-    name: "SEO",
-    slug: "seo",
-    items: [
-      { name: "On/Off-Page SEO", slug: "on-off-page-seo" },
-      { name: "Technical SEO", slug: "technical-seo" },
-      { name: "Local SEO", slug: "local-seo" },
-      { name: "E-commerce SEO", slug: "ecommerce-seo" },
-      { name: "Brand Building & Digital Marketing", slug: "digital-marketing" },
-      { name: "SEO Audit", slug: "seo-audit" },
-    ],
-  },
-  {
-    name: "Content Writing",
-    slug: "seo-writing",
-    items: [
-      { name: "SEO Loaded Articles", slug: "seo-loaded-articles" },
-      { name: "Content Writing", slug: "content-writing" },
-      { name: "Copywriting", slug: "copywriting" },
-      { name: "Product Descriptions", slug: "product-descriptions" },
-      { name: "E-Commerce Content", slug: "ecommerce-content" },
-      { name: "Website Design Structure Content", slug: "structure-content" },
-    ],
-  },
-  {
-    name: "UI UX Designing",
-    slug: "ui-ux",
-    items: [
-      { name: "UI/UX Design", slug: "ui-ux-design" },
-      { name: "Infographic Design", slug: "infographic-design" },
-      {
-        name: "Advertising & Marketing Graphics",
-        slug: "advertising-marketing-graphics",
-      },
-      { name: "Packaging Designs", slug: "packaging-designs" },
-      {
-        name: "Catalogue, Stationery & Gifts Design",
-        slug: "catalogue-stationery-gifts-design",
-      },
-      {
-        name: "Creative Assets & Custom Art",
-        slug: "creative-assets-custom-art",
-      },
-    ],
-  },
-  {
-    name: "Web Development",
-    slug: "web-development",
-    items: [
-      { name: "E-Commerce Development", slug: "ecommerce-development" },
-      { name: "CMS Development", slug: "cms-development" },
-      { name: "Shopify Store Development", slug: "shopify-store-development" },
-      {
-        name: "Personal Brand Development",
-        slug: "personal-brand-development",
-      },
-      {
-        name: "Customized Stores Development",
-        slug: "customized-stores-development",
-      },
-      {
-        name: "Rebuild Website",
-        slug: "rebuild-website",
-      },
-    ],
-  },
-  {
-    name: "Social Media Marketing",
-    slug: "social-media-marketing",
-    items: [
-      { name: "Paid Social", slug: "paid-social" },
-      { name: "Meta Ads", slug: "meta-ads" },
-      { name: "Managing Accounts", slug: "managing-accounts" },
-      {
-        name: "Managing Social Advertising",
-        slug: "managing-social-advertising",
-      },
-      { name: "Advertising Creation", slug: "advertising-creation" },
-      { name: "Creative Add-ons", slug: "creative-add-ons" },
-    ],
-  },
-  {
-    name: "Google Ads Management",
-    slug: "google-ads",
-    items: [
-      { name: "Search Ads", slug: "search-ads" },
-      { name: "Display Ads", slug: "display-ads" },
-      { name: "Video Ads", slug: "video-ads" },
-      { name: "Shopping Ads", slug: "shopping-ads" },
-      { name: "App Campaigns", slug: "app-compaigns" },
-      { name: "Local Campaigns", slug: "local-compaigns" },
-    ],
-  },
-];
+
 
 const Header = () => {
   const router = useRouter();
@@ -128,6 +34,7 @@ const Header = () => {
           ? res.services.map((service) => ({
             name: service.title,
             slug: service.slug,
+            menuImage: service.menuImg,
             items: Array.isArray(service.subServices?.items)
               ? service.subServices.items.map((sub) => ({
                 name: sub.title,
@@ -138,6 +45,8 @@ const Header = () => {
           : [];
 
         setServices(fetchedServices);
+        console.log({ "servicesssss": services });
+
       } catch (error) {
         toast.error("Failed to fetch services:", error);
         setServices([]);
@@ -194,6 +103,12 @@ const Header = () => {
           >
             Industries We Serve
           </li>
+          <li
+            className={pathname === "/portfolio" ? "active" : ""}
+            onClick={() => router.push("/portfolio")}
+          >
+            Portfolio
+          </li>
 
           <li
             className={pathname === "/blog" ? "active" : ""}
@@ -202,12 +117,7 @@ const Header = () => {
             Blogs
           </li>
 
-          <li
-            className={pathname === "/contact" ? "active" : ""}
-            onClick={() => router.push("/contact")}
-          >
-            Contact Us
-          </li>
+
         </ul>
 
 
@@ -336,6 +246,14 @@ const Header = () => {
           >
             Industries We Serve
           </li>
+          <li className={pathname === "/portfolio" ? "active" : ""}
+            onClick={() => {
+              router.push("/portfolio");
+              setMobileMenu(false);
+            }}
+          >
+            Portfolio
+          </li>
           <li className={pathname === "/blog" ? "active" : ""}
             onClick={() => {
               router.push("/blog");
@@ -345,14 +263,7 @@ const Header = () => {
             Blogs
           </li>
 
-          <li className={pathname === "/contact" ? "active" : ""}
-            onClick={() => {
-              router.push("/contact");
-              setMobileMenu(false);
-            }}
-          >
-            Contact Us
-          </li>
+
         </ul>
       </div>
     </div>

@@ -19,33 +19,35 @@
   z-index: 0;
 }
 /* icon background overlay */
-.eachcard .icon-wrapper {
-    position: absolute;
-    right: 12px;
-    top: 12px;
-    width: 70px;
-    height: 70px;
-    background: rgba(0, 0, 0, 0.1); /* semi-transparent black */
-    backdrop-filter: blur(6px);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2;
-    transition: 0.3s ease;
+.eachcard .word-wrapper {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: fit-content;
+  padding: 10px 18px;
+  background: rgba(0, 0, 0, 0.312); /* semi-transparent black */
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  z-index: 2;
+  transition: 0.3s ease;
+  cursor: pointer;
 }
-.eachcard .icon-wrapper:hover svg {
-    transform: scale(1.1);
+.eachcard .word-wrapper:hover {
+  transform: scale(1.02);
+}
+.eachcard .word-wrapper svg{
+  color: var(--text-color4);
 }
 /* icon */
-.eachcard svg {
-  
-  flex-shrink: 0;
-  width: 64px;
-  height: 64px;
+.eachcard span {
   color: var(--text-color4);
-  cursor: pointer;
   transition: transform 0.3s ease;
+  font-weight: bold;
+  font-size: 14px;
   z-index: 2;
 }
 
@@ -70,11 +72,6 @@
   .eachcard {
     min-width: 100%;
     height: 220px;
-  }
-
-  .eachcard svg {
-    width: 45px;
-    height: 45px;
   }
 
   .eachcard h3 {

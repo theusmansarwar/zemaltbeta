@@ -1,18 +1,65 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Featured.css";
 import { FaArrowRight, FaArrowTrendUp } from "react-icons/fa6";
 import { useRouter } from "next/navigation";
 import CountUp from "../animation/CountUp";
 const brands = ["/plutosec.png", "/digitalaura.png", "/carteroil.png", "/smartenergy.png"]
-const Featured = () => {
+const typingLines = [
+  "Smart Moves, Big Wins",
+  "Innovate, Move, Succeed",
+  "Strategy, Design, Growth",
+  "Ideas That Drive Results",
+  "Growth Shows Success"
+];
 
+const Featured = () => {
   const router = useRouter();
+  const [currentLineIndex, setCurrentLineIndex] = useState(0);
+  const [displayText, setDisplayText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [typingSpeed, setTypingSpeed] = useState(150);
+
+  useEffect(() => {
+    const currentLine = typingLines[currentLineIndex];
+
+    const handleTyping = () => {
+      if (!isDeleting) {
+        // Typing forward
+        if (displayText.length < currentLine.length) {
+          setDisplayText(currentLine.substring(0, displayText.length + 1));
+          setTypingSpeed(50);
+        } else {
+          // Pause at end before deleting
+          setTimeout(() => setIsDeleting(true), 1000);
+        }
+      } else {
+        // Deleting
+        if (displayText.length > 0) {
+          setDisplayText(currentLine.substring(0, displayText.length - 1));
+          setTypingSpeed(50);
+        } else {
+          // Move to next line
+          setIsDeleting(false);
+          setCurrentLineIndex((prev) => (prev + 1) % typingLines.length);
+          setTypingSpeed(200);
+        }
+      }
+    };
+
+    const timer = setTimeout(handleTyping, typingSpeed);
+    return () => clearTimeout(timer);
+  }, [displayText, isDeleting, currentLineIndex, typingSpeed]);
+
   return (
     <div className="Featured" id="zemalt">
       <div className="left">
         <h1>
-          Zemalt- <br /> Smart Moves, Big Wins
+          Zemalt- <br />
+          <span className="typing-text">
+            {displayText}
+            <span className="cursor">|</span>
+          </span>
         </h1>
         <p className="desc">
           You will find a top-rated SEO agency. It has expert teams in digital marketing, design, and web development. Each service aligns clearly with your goals

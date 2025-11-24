@@ -73,16 +73,15 @@
 .header-area button {
   border: none;
   padding: 10px 20px;
-  background-color: transparent;
-  color: var(--text-color);
-  border: 1px solid var(--text-color);
+  background-color: var(--primary-color);
+  color: var(--text-color4);
+  border: 1px solid var(--primary-color);
   border-radius: var(--border-radius1);
   -webkit-tap-highlight-color: transparent;
 }
 .header-area button:hover {
   cursor: pointer;
-  background-color: var(--text-color);
-  color: var(--text-color4);
+  opacity: 0.9;
 }
 .menu-icon {
   display: none;

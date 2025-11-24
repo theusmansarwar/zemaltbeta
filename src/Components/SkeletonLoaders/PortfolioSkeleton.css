@@ -1,0 +1,62 @@
+.portfolio-skeleton-card {
+  min-width: calc((100% - 24px) / 2);
+  height: 370px;
+  border-radius: var(--border-radius1);
+  position: relative;
+  overflow: hidden;
+  background-color: #e2e2e2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  animation: pulsePortfolio 1.6s infinite ease-in-out;
+}
+
+/* ICON FIXED */
+.skeleton-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  background: #cfcfcf;
+  z-index: 3; /* <-- FIX */
+}
+
+/* Background Img Layer */
+.skeleton-img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  background: #ddd;
+  z-index: 1; 
+}
+
+.skeleton-title {
+  width: 50%;
+  height: 36px;
+  background: #cfcfcf;
+  border-radius: 4px;
+  position: relative;
+  z-index: 4;
+  margin: 0 0 20px 20px;
+}
+
+@keyframes pulsePortfolio {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+@media (max-width: 900px) {
+  .portfolio-skeleton-card {
+    min-width: 100%;
+    height: 220px;
+  }
+
+  .skeleton-icon {
+    width: 45px;
+    height: 45px;
+  }
+}
