@@ -2,6 +2,7 @@
   width: 100% - (var(--left-space) * 2);
   padding: 40px var(--left-space);
   background-color: var(--text-color4);
+
 }
 
 .reasons .reasons-title {

@@ -2,7 +2,7 @@
   width: calc(100% - (var(--left-space) * 2));
   padding: 40px var(--left-space);
   background-color: var(--text-color4);
-  margin-bottom: 40px;
+ 
 }
 
 .testimonial-slider2 h2 {

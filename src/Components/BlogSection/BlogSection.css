@@ -50,7 +50,6 @@
 .blog-cards {
   display: flex;
   width: var(--default-width);
-  justify-content: space-between;
   padding: 0px var(--left-space);
   gap: 20px;
 }

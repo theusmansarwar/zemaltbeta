@@ -70,7 +70,7 @@ const CaseStudy = () => {
             {item.description && (
               <p
                 dangerouslySetInnerHTML={{
-                  __html: truncateTextByWords(item.description, 50),
+                  __html: item.description,
                 }}
               />
             )}

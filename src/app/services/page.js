@@ -109,14 +109,14 @@ export default function Page() {
      <BussinessGrowth/>
      <StrategicMarketing data={marketingContent}/>
       <Services />
-      <ReasonsToChoose data={reasonsData}/>
       <HowDifferent />
       <Realworld />
       <DriveRevenue />
       <GloballyTrusted />
-      <TestimonialSlider2 />
-      <Faq faqs={Servicespagefaqs} />
       <LastBottom />
+      <TestimonialSlider2 />
+      <ReasonsToChoose data={reasonsData}/>
+      <Faq faqs={Servicespagefaqs} />
     </div>
   );
 }
