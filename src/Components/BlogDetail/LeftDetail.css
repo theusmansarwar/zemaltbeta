@@ -3,26 +3,34 @@
   flex-direction: column;
   width: 100%;
 }
-
+.blog-detail-thumbnail {
+  width: 100%;
+  height: auto;
+}
 .custom-html-styles {
-  padding:0 10px;
+  padding: 0 10px;
   margin-top: 24px;
   color: var(--main-color);
   text-align: justify;
 }
-.custom-html-styles img{
-  height: 400px;
+.custom-html-styles h2,
+.custom-html-styles h3,
+.custom-html-styles h4 {
+  margin-bottom: 10px;
+}
+.custom-html-styles img {
+  height: 450px;
   width: auto;
+  display: flex;
+  justify-self: center;
+  margin: 20px 0;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
 }
 
-
-@media (min-width: 640px) {
-  .custom-html-styles {
-    padding-left: 32px;
-    padding-right: 32px;
+@media (max-width: 900px) {
+  .custom-html-styles img {
+    height: auto;
+    width: 100%;
+    max-height: 300px;
   }
-  .custom-html-styles img{
-  height: 300px;
-  width: auto;
-}
 }

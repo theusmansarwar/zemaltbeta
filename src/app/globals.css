@@ -49,7 +49,6 @@ body {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
-
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
@@ -84,13 +83,11 @@ html {
   justify-content: space-between;
 }
 
-
 .dangerously-set-data p {
   margin-bottom: 10px;
   font-size: var(--default-p-size);
   line-height: var(--p-line-height);
 }
-
 
 /* List items */
 .dangerously-set-data li {
@@ -113,7 +110,6 @@ html {
   display: inline-block;
   margin-bottom: 10px;
 }
-
 
 @media (max-width: 900px) {
   :root {

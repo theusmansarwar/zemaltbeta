@@ -54,7 +54,6 @@
   object-fit: contain;
 }
 
-
 .case-study-grid .study-card .right {
   width: 65%;
   display: flex;
@@ -101,25 +100,11 @@
   .case-study-grid .study-card {
     flex-direction: column;
     margin-bottom: 30px;
+    
   }
 
   .case-study-grid .study-card .left {
     width: 100%;
-  }
-
-  .case-study-grid .study-card .left .img-container {
-    height: 60px;
-    width: 60px;
-    padding: 20px;
-    border-radius: 50%;
-    border: 9px solid var(--primary-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .case-study-grid .study-card .left .img-container img {
-    width: 60px;
   }
 
   .case-study-grid .study-card .right {

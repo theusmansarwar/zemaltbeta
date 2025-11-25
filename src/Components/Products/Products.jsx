@@ -58,7 +58,7 @@ const Products = () => {
             {item.description && (
               <div className="description"
                 dangerouslySetInnerHTML={{
-                  __html: truncateTextByWords(item.description, 80),
+                  __html: truncateTextByWords(item.description, 50),
                 }}
               />
             )}

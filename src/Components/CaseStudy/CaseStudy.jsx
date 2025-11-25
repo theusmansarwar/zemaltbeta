@@ -68,9 +68,9 @@ const CaseStudy = () => {
           <div className="right">
             <h2>{item.name}</h2>
             {item.description && (
-              <div
+              <p
                 dangerouslySetInnerHTML={{
-                  __html: truncateTextByWords(item.description, 300),
+                  __html: truncateTextByWords(item.description, 50),
                 }}
               />
             )}

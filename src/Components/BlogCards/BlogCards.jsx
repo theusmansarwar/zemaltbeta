@@ -15,49 +15,6 @@ import { formatDate } from "@/utils/FormatDate";
 import { FaChevronDown } from "react-icons/fa6";
 import { toast } from "react-toastify";
 
-// ✅ Dummy Data (fallback if API fails)
-const blogData = [
-  {
-    _id: 1,
-    slug: "react-best-practices",
-    title: "Richard Norton photorealistic rendering as real photos",
-    author: "John Doe",
-    createdAt: "2025-08-01",
-    thumbnail: "/blog-thumbnail.jpg",
-    description: "Learn the top practices to write clean React code.",
-    category: "Technology",
-  },
-  {
-    _id: 2,
-    slug: "node-performance-tips",
-    title: "Node.js Performance Tips",
-    author: "Jane Smith",
-    createdAt: "2025-07-20",
-    thumbnail: "/blog-thumbnail.jpg",
-    description: "Boost your Node.js apps with these performance hacks.",
-    category: "Modern",
-  },
-  {
-    _id: 3,
-    slug: "mongodb-scaling-1",
-    title: "Scaling MongoDB",
-    author: "Mike Johnson",
-    createdAt: "2025-07-15",
-    thumbnail: "/blog-thumbnail.jpg",
-    description: "A guide on scaling MongoDB for high traffic applications.",
-    category: "Industrial",
-  },
-  {
-    _id: 4,
-    slug: "mongodb-scaling-2",
-    title: "Scaling MongoDB Again",
-    author: "Mike Johnson",
-    createdAt: "2025-07-16",
-    thumbnail: "/blog-thumbnail.jpg",
-    description: "Another MongoDB scaling approach.",
-    category: "Minimalist",
-  },
-];
 
 const BlogCards = () => {
   const router = useRouter();
@@ -123,17 +80,19 @@ const BlogCards = () => {
         setTotalPages(res.totalPages || 1);
         setTotalItems(res.totalBlogs || res.blogs.length);
       } else {
-        // fallback to dummy data
-        setBlogs(blogData);
+        setBlogs([]);
         setTotalPages(1);
-        setTotalItems(blogData.length);
+        setTotalItems(0);
       }
+
     } catch (error) {
-      toast.error("Error fetching blogs:", error);
-      setBlogs(blogData); // fallback
+      toast.error("Error fetching blogs");
+      setBlogs([]);
       setTotalPages(1);
-      setTotalItems(blogData.length);
-    } finally {
+      setTotalItems(0);
+    }
+
+    finally {
       setLoading(false);
     }
   };
