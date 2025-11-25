@@ -191,9 +191,12 @@ const ContactForm = () => {
             )}
             <div className="checkbox-grid">
               {[
-                "Social Media Marketing",
-                "Youtube Automation",
-                "Graphic Designing",
+                "SEO",
+                "Social & Paid Media",
+                "Web Development",
+                "Designing",
+                "Google Ads",
+                "Content Writing",
                 "General Inquiry",
                 "Other",
               ].map((subject) => {
