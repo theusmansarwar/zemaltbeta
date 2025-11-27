@@ -21,13 +21,13 @@
 
 .sub-service-content .left {
   width: 35%;
-  max-height: 300px;
+  max-height: 420px;
 }
 
 .sub-service-content .left img {
   width: 100%;
   height: auto;
-  max-height: 300px;
+  max-height: 420px;
   object-fit: cover;
   border-radius: 10px;
 }

@@ -12,10 +12,11 @@
 }
 
 .products-popup {
-  width: calc(60% - 20px);
+  border-radius: 10px;
+  width: calc(60% - 40px);
   margin: 0 auto;
   background-color: var(--text-color4);
-  padding: 10px;
+  padding: 10px 20px;
   height: 80vh;
   overflow-y: auto;
   scrollbar-width: thin;
@@ -40,8 +41,8 @@
   height: auto;
   display: flex;
   justify-content: center; /* center image horizontally */
-  align-items: center;     /* optional: center vertically if needed */
-  overflow: hidden;        /* hide blur overflow at edges */
+  align-items: center; /* optional: center vertically if needed */
+  overflow: hidden; /* hide blur overflow at edges */
 }
 
 .products-popup .top .blur-bg {
@@ -60,14 +61,13 @@
 
 .products-popup .top img {
   width: 100%;
-  height:auto;
+  height: auto;
   max-height: 200px;
-  object-fit: contain;  /* keeps aspect ratio */
+  object-fit: contain; /* keeps aspect ratio */
   object-position: center;
   position: relative;
   z-index: 1;
 }
-
 
 /* Bottom */
 .products-popup .bottom {
@@ -83,7 +83,6 @@
   display: block;
   text-align: left;
 }
-
 
 .products-popup .bottom .cntct-btn {
   width: 60%;
