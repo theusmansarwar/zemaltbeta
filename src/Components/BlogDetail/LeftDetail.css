@@ -48,8 +48,8 @@
   margin-bottom: 10px;
 }
 .custom-html-styles img {
-  height: 450px;
-  width: auto;
+  height: auto;
+  width: 100%;
   display: flex;
   justify-self: center;
   margin: 20px 0;

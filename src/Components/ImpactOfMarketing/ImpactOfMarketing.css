@@ -156,14 +156,28 @@
   animation: fadeSlideIn 0.5s ease forwards;
 }
 
-.dynamic-image { animation-delay: 0s; }
-.hero-heading { animation-delay: 0.1s; }
-.hero-text:nth-of-type(1) { animation-delay: 0.2s; }
-.hero-text:nth-of-type(2) { animation-delay: 0.3s; }
+.dynamic-image {
+  animation-delay: 0s;
+}
+.hero-heading {
+  animation-delay: 0.1s;
+}
+.hero-text:nth-of-type(1) {
+  animation-delay: 0.2s;
+}
+.hero-text:nth-of-type(2) {
+  animation-delay: 0.3s;
+}
 
 @keyframes fadeSlideIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ==== RESPONSIVE ADJUSTMENTS ==== */

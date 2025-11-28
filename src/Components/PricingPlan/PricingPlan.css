@@ -1,0 +1,121 @@
+.pricing-container {
+  width: calc(100% - 10%);
+  padding: 40px 5%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.permonth {
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 400;
+  margin: 0%;
+}
+.pricing-card {
+  width: 26%;
+  height: fit-content;
+  border-radius: var(--border-radius1);
+  padding: 30px;
+  text-align: center;
+  background-color: #f9f9f9;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.pricing-card:nth-child(even) {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 30px;
+}
+.pricing-card:nth-child(even) svg {
+  color: rgb(255, 255, 255);
+  width: 20px;
+  height: 20px;
+}
+.pricing-card h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: left;
+  color: var(--primary-color);
+}
+
+.pricing-card h3 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: left;
+  color: var(--warning-color);
+}
+
+.cta-button {
+  background: white;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.pricing-card:nth-child(even) .cta-button {
+  background: var(--white-color);
+
+  color: var(--primary-color);
+}
+.pricing-card:nth-child(even) .cta-button:hover {
+  background: var(--horizontal-gradient);
+  color: white;
+  border: 1px solid white;
+}
+.pricing-card:nth-child(odd) .cta-button:hover {
+  background: #f9f9f9;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+.pricing-card:nth-child(even).pricing-card h2 {
+  color: var(--white-color);
+}
+.pricing-card:nth-child(even).pricing-card h3 {
+  color: white;
+}
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+}
+.pricing-card li {
+  font-size: var(--default-p-size);
+  line-height: var(--p-line-height);
+}
+.feature {
+  text-align: left;
+  font-size: 14px;
+  display: flex;
+  margin-bottom: 8px;
+  justify-content: space-between;
+}
+.pricing-card:nth-child(even) .feature {
+  color: var(--white-color);
+}
+.feature svg {
+  color: rgb(79, 112, 198);
+  background-color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+.feature p {
+  width: 90%;
+}
+@media (max-width: 768px) {
+  .pricing-container {
+    flex-direction: column;
+  }
+  .pricing-card {
+    width: 100%;
+  }
+}
