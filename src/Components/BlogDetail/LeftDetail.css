@@ -13,6 +13,16 @@
   color: var(--main-color);
   text-align: justify;
 }
+.custom-html-styles p {
+  margin: 30px 0;
+}
+.custom-html-styles ul {
+  margin: 40px 0;
+}
+.custom-html-styles ul li {
+  font-size: var(--default-p-size);
+  line-height: var(--p-line-height);
+}
 .custom-html-styles h2 {
   font-size: var(--heading-three);
   margin-top: 20px;
@@ -31,9 +41,7 @@
   font-size: 20px;
   margin-top: 20px;
 }
-.custom-html-styles ul {
-  margin: 40px 0;
-}
+
 .custom-html-styles h2,
 .custom-html-styles h3,
 .custom-html-styles h4 {
@@ -70,6 +78,6 @@
     margin-top: 10px;
   }
   .custom-html-styles ul {
-  margin: 10px 0;
-}
+    margin: 10px 0;
+  }
 }
