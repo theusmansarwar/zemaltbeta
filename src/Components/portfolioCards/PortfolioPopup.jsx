@@ -25,7 +25,7 @@ const PortfolioPopup = ({ project, onClose }) => {
   return (
     <div className="popup-parent" onClick={handleOverlayClick}>
       <div className="portfolio-popup">
-        <IoCloseCircleSharp className="close-icon" onClick={onClose} />
+        {/* <IoCloseCircleSharp className="close-icon" onClick={onClose} /> */}
 
         {/*  Top Section (Gallery) */}
         <div className="gallery">
