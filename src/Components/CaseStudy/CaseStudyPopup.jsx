@@ -62,7 +62,7 @@ const CaseStudyPopup = ({ onClose, project }) => {
   return (
     <div className="study-popup-parent" onClick={handleOverlayClick}>
       <div className="study-popup">
-        <IoCloseCircleSharp className="close-icon" onClick={onClose} />
+        {/* <IoCloseCircleSharp className="close-icon" onClick={onClose} /> */}
         <div className="top">
           <div
             className="blur-bg"

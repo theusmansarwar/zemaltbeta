@@ -9,28 +9,34 @@
   display: flex;
   align-items: center;
   justify-content: center;
+   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* iOS support */
 }
 
 .study-popup {
-  border-radius: 10px;
-  width: calc(60% - 40px);
+   border-radius: 2px;
+  width: calc(60% - 20px);
   margin: 0 auto;
   background-color: var(--text-color4);
-  padding: 10px 20px;
-  height: 80vh;
+  padding: 10px ; /* ---- added right spacing */
+  height: 75vh;
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: var(--primary-color) transparent;
+  border: none;
+  outline: 15px solid white;
+  outline-offset: 0; /* remove negative margin (fix image overlap) */
+  position: relative;
 }
 
-.study-popup-parent .study-popup .close-icon {
+/* .study-popup-parent .study-popup .close-icon {
   color: var(--primary-color);
   font-size: 28px;
   cursor: pointer;
   position: sticky;
   top: 0;
   z-index: 30;
-}
+} */
 
 .study-popup .top {
   position: relative; /* ✅ needed for absolute .blur-bg */

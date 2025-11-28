@@ -16,7 +16,7 @@ const ProductsPopup = ({ onClose, project }) => {
   return (
     <div className="products-popup-parent" onClick={handleOverlayClick}>
       <div className="products-popup">
-        <IoCloseCircleSharp className="close-icon" onClick={onClose} />
+        {/* <IoCloseCircleSharp className="close-icon" onClick={onClose} /> */}
 
         <div className="top">
           <div
