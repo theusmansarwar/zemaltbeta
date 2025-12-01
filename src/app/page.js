@@ -12,6 +12,7 @@ import StrategicMarketing from "@/Components/StrategicMarketing/StrategicMarketi
 import ImpactOfMarketing from "@/Components/ImpactOfMarketing/ImpactOfMarketing";
 import HomeServices from "@/Components/HomeServices/HomeServices";
 import ReasonsToChoose from "@/Components/ReasonsToChoose/ReasonsToChoose";
+import ContactSection from "@/Components/ContactSection/ContactSection";
 
 export const metadata = {
   title: "Zemalt | Digital Marketing, SEO & Web Design Services.",
@@ -121,6 +122,7 @@ export default function Home() {
       <BlogSection data={blogHeaderData} />
       <Faq faqs={Homepagefaqs} />
       <SeoSection />
+      {/* <ContactSection/> */}
     </div>
   );
 }

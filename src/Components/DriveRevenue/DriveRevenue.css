@@ -35,7 +35,7 @@
 }
 
 .drive-revenue .each-card:hover {
-   width: calc(28% - 40px);
+  width: calc(28% - 40px);
   padding: 20px;
   background-color: #edf9f8;
   border-radius: var(--border-radius1);
@@ -96,4 +96,9 @@
   .drive-revenue h2 p {
     display: inline;
   }
+  .drive-revenue .each-card {
+    width: calc(100% - 40px);
+    padding: 20px;
+  }
+  
 }

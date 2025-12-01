@@ -3,12 +3,11 @@ import React from "react";
 import "./PricingPlan.css";
 import { FaCircleCheck } from "react-icons/fa6";
 import { useRouter } from "next/navigation";
+import { FaCheckCircle } from "react-icons/fa";
 
 const plans = [
   {
     title: "Trial Plan",
-    price: "$20",
-    duration:"15 Days",
     targetAudience: "Businesses wanting to test your service before committing.",
     features: [
       "Website SEO audit (basic)",
@@ -22,8 +21,6 @@ const plans = [
   },
   {
     title: "Premium Plan",
-    price: "$650 - $999 ",
-    duration:"per month",
     targetAudience: "Businesses that want aggressive SEO and long-term growth.",
     features: [
       "Advanced website SEO audit",
@@ -31,17 +28,12 @@ const plans = [
       "Complete on-page SEO implementation",
       "15+ high-quality backlinks per month",
       "Content creation (blog posts, guest posts)",
-      "Advanced technical SEO fixes (site speed, schema markup, crawl errors)",
-      "Competitor analysis (in-depth)",
-      "Monthly detailed SEO reports & strategy consultation",
-      "Conversion rate optimization (CRO) guidance",
-      "Full-Stack SEO"
+      "Content creation (blog posts, guest posts)",
+      "Content creation (blog posts, guest posts)",
     ],
   },
   { 
     title: "Basic Plan",
-    price: "$350 - $450 ",
-    duration:"per month",
     targetAudience: "Small businesses looking for affordable SEO improvements.",
     features: [
       "Full website SEO audit",
@@ -69,7 +61,7 @@ const PricingPlan = () => {
           <ul>
             {plan.features.map((feature, idx) => (
               <li key={idx} className="feature">
-                <FaCircleCheck /> <p>{feature}</p>
+                <FaCheckCircle /> {feature}
               </li>
             ))}
           </ul>

@@ -1,5 +1,6 @@
 
 import ContactForm from "@/Components/ContactUs/ContactForm";
+import ContactUs from "@/Components/ContactUs/ContactUs";
 import GrowYourBrand from "@/Components/ContactUs/GrowYourBrand";
 import MapSection from "@/Components/ContactUs/MapSection";
 import ServicePageFeatured from "@/Components/ServicePageFeatured/ServicePageFeatured";
@@ -20,7 +21,7 @@ const page = () => {
   return (
     <div className="PageBg">
       <ServicePageFeatured data={featuredData} />
-      <ContactForm/>
+      <ContactUs/>
       <GrowYourBrand/>
       <MapSection/>
     </div>

@@ -1,64 +1,12 @@
 .contact-form {
-  width: calc(100% - 10%);
-  padding: 40px 5%;
-  background-color: var(--text-color4);
-  display: flex;
-  gap: 40px;
-  height: fit-content;
-}
-/* Left */
-.contact-form .left {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-}
-.contact-form .left h2 {
-  font-size: var(--heading-two);
-}
-.contact-form .left h2 span {
-  color: var(--primary-color);
-}
-.contact-form .left .info-container {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-.contact-form .left .info-container .each-info {
-  border-right: 2px solid var(--primary-color);
-  padding-right: 10px;
-}
-.contact-form .left .info-container .each-info:last-child {
-  border-right: none;
-  padding-right: 0;
-}
-.contact-form .left .info-container .each-info p strong {
-  display: block;
-}
-.contact-form .left .recog-heading {
-  color: var(--primary-color);
-  font-size: var(--heading-four);
-  font-style: italic;
-}
-.contact-form .left .logos-container {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-.contact-form .left .logos-container img {
-  width: 120px;
-}
-
-/* Right */
-.contact-form .right {
-  width: calc(50% - 40px);
+  width: calc(100% - 40px);
   padding: 20px;
   background-color: #f9f9f9;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.195);
   border-radius: var(--border-radius2);
 }
 
-.contact-form .right form {
+.contact-form form {
   display: flex;
   flex-direction: column;
 }
@@ -113,16 +61,16 @@
   color: var(--text-color4) !important;
 }
 
-.contact-form .right .fromgrouprow {
+.contact-form .fromgrouprow {
   display: flex;
   gap: 10px;
   width: 100%;
 }
-.contact-form .right .fromgrouprow .formgroupform2 {
+.contact-form .fromgrouprow .formgroupform2 {
   width: 50%;
 }
-.contact-form .right .fromgrouprow .formgroupform2 input,
-.contact-form .right textarea {
+.contact-form .fromgrouprow .formgroupform2 input,
+.contact-form textarea {
   width: calc(100% - 32px);
   padding: 8px 16px;
   padding-left: 0;
@@ -132,8 +80,8 @@
   background-color: transparent;
 }
 
-.contact-form .right .fromgrouprow .formgroupform2 input:focus,
-.contact-form .right textarea:focus {
+.contact-form .fromgrouprow .formgroupform2 input:focus,
+.contact-form textarea:focus {
   outline: none;
   border-bottom: 1px solid var(--primary-color);
 }
@@ -167,13 +115,13 @@
   user-select: none;
 }
 
-.contact-form .right textarea {
+.contact-form textarea {
   height: 60px;
   resize: none;
   margin-bottom: 5px;
 }
 
-.contact-form .right .submit-btn {
+.contact-form .submit-btn {
   width: calc(300px - 48px);
   background-color: var(--primary-color);
   padding: 12px 24px;
@@ -193,7 +141,7 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-.contact-form .right .submit-btn:hover {
+.contact-form .submit-btn:hover {
   background-color: transparent;
   color: var(--primary-color);
 }
@@ -208,50 +156,21 @@
 /* Responsive */
 @media (max-width: 900px) {
   .contact-form {
+    width: calc(100% - 20px);
+    padding: 10px;
     flex-direction: column;
     gap: 20px;
   }
-  .contact-form .left {
-    width: 100%;
-    gap: 30px;
-  }
-  .contact-form .left .logos-container {
-    justify-content: center;
-  }
-  .contact-form .left .logos-container img {
-    width: 80px;
-  }
-  .contact-form .left .info-container {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-  .contact-form .left .info-container .each-info {
-    padding-right: 5px;
-  }
-  .contact-form .left .info-container .each-info p {
-    font-size: 14px;
-  }
-  .contact-form .left .info-container .each-info p strong {
-    display: inline;
-  }
-  .contact-form .left .recog-heading {
-    font-size: 16px;
-  }
-  .contact-form .right {
-    width: calc(100% - 20px);
-    padding: 10px;
-  }
-  .contact-form .right form {
+  .contact-form form {
     align-items: center;
     justify-content: center;
   }
-  .contact-form .right .fromgrouprow {
+  .contact-form .fromgrouprow {
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  .contact-form .right .fromgrouprow .formgroupform2 {
+  .contact-form .fromgrouprow .formgroupform2 {
     width: 100%;
   }
   .formgroupform2 .react-international-phone-country-selector-button {

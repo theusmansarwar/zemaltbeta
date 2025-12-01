@@ -1,0 +1,16 @@
+.contact-section {
+  width: calc(100% - 10%);
+  padding: 40px var(--left-space);
+  display: flex;
+  gap: 40px;
+  overflow: hidden;
+  background: var(--text-color4);
+}
+
+
+/* Responsive stacking */
+@media (max-width: 900px) {
+  .contact-section {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,16 @@
+.contact-us {
+  width: calc(100% - 10%);
+  padding: 40px var(--left-space);
+  display: flex;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+}
+
+
+/* Responsive stacking */
+@media (max-width: 900px) {
+  .contact-us {
+    flex-direction: column;
+  }
+}
