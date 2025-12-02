@@ -8,9 +8,12 @@ export async function GET() {
   const staticRoutes = [
     "",
     "services",
+    "products",
+    "case-study", 
     "industries",
-    "case-study",
+    "portfolio",
     "contact",
+    "about-us",
     "career",
     "team",
     "write-for-us",
@@ -23,14 +26,14 @@ export async function GET() {
   try {
     const res = await getblogSlugs();
     if (res?.slugs && Array.isArray(res.slugs)) {
-      blogRoutes = res.slugs.map((blog) => `blogs/${blog.slug}`);
+      blogRoutes = res.slugs.map((blog) => `blog/${blog.slug}`);
     }
     const res2 = await fetchServicesSlugs();
     if (res2?.slugs && Array.isArray(res2.slugs)) {
       serviceRoutes = res2.slugs.map((service) => `services/${service.slug}`);
     }
   } catch (error) {
-    toast.error("Error fetching slugs:", error);
+    console.error("Error fetching slugs:", error);
   }
   const allRoutes = [...staticRoutes, ...serviceRoutes, ...blogRoutes];
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -42,7 +45,7 @@ export async function GET() {
       <loc>${baseUrl}/${route}</loc>
       <lastmod>${new Date().toISOString()}</lastmod>
       <changefreq>weekly</changefreq>
-      <priority>${route.startsWith("services/") || route.startsWith("blogs/")
+      <priority>${route.startsWith("services/") || route.startsWith("blog/")
             ? "0.7"
             : "0.9"
           }</priority>

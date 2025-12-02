@@ -1,74 +1,91 @@
-"use client";
-import React from "react";
-import "./PricingPlan.css";
-import { FaCircleCheck } from "react-icons/fa6";
-import { useRouter } from "next/navigation";
-import { FaCheckCircle } from "react-icons/fa";
+"use client"
+import { useRouter } from "next/navigation"
+import "./PricingPlan.css"
+import { FaCheckCircle } from "react-icons/fa"
 
 const plans = [
   {
-    title: "Trial Plan",
-    targetAudience: "Businesses wanting to test your service before committing.",
-    features: [
-      "Website SEO audit (basic)",
-      "Keyword analysis (5 keywords)",
-      "On-page SEO recommendations",
-      "One backlink from a high-authority site",
-      "Competitor analysis (basic)",
-      "Basic technical SEO check (broken links, speed, mobile-friendliness)",
-      "15-day validity",
-    ],
-  },
-  {
-    title: "Premium Plan",
-    targetAudience: "Businesses that want aggressive SEO and long-term growth.",
-    features: [
-      "Advanced website SEO audit",
-      "Keyword research & tracking (50+ keywords)",
-      "Complete on-page SEO implementation",
-      "15+ high-quality backlinks per month",
-      "Content creation (blog posts, guest posts)",
-      "Content creation (blog posts, guest posts)",
-      "Content creation (blog posts, guest posts)",
-    ],
-  },
-  { 
     title: "Basic Plan",
-    targetAudience: "Small businesses looking for affordable SEO improvements.",
     features: [
-      "Full website SEO audit",
-      "Keyword research & tracking (15 keywords)",
-      "On-page SEO (meta tags, content optimization, internal linking)",
-      "5 high-quality backlinks per month",
-      "Google My Business optimization",
-      "Basic technical SEO fixes",
-      "Monthly performance report",
-      "Local SEO strategies",
-     
-
+      "Basic SEO (Audit + 5–10 Keywords)",
+      "Basic Custom Website (5–7 Pages)",
+      "Basic Social Media Management (2 Platforms)",
+      "Basic Google Ads Setup (1 Campaign)",
+      "Basic Content Writing (Blogs + Captions)",
+      "Basic Graphic Designing (Posts + Banners)",
+      "Monthly Performance Report",
+      "Basic Website Optimization",
+      "Email Support Only"
     ],
   },
+   {
+    title: "Premium Plan",
+    features: [
+      "Premium SEO (Advanced On/Off-page)",
+      "Premium Custom Website (15+ Pages)",
+      "Premium Social Media Marketing",
+      "Premium Google Ads Management",
+      "Premium Content Writing",
+      "Advanced Graphic Designing",
+      "Analytics Dashboard & Reports",
+      "Website Maintenance & Security",
+      "Dedicated Account Manager"
+    ],
+    featured: true,
+  },
+
+  {
+    title: "Standard Plan",
+    features: [
+      "Standard SEO (On-page + Basic Keywords)",
+      "Standard Custom Website (8–10 Pages)",
+      "Standard Social Media Management (3 Platforms)",
+      "Standard Google Ads Management",
+      "Standard Content Writing",
+      "Basic Graphic Designing",
+      "Monthly Reporting & Tracking",
+      "Website Optimization",
+      "Support via Email & Calls"
+    ],
+  },
+
  
 ];
+
 
 const PricingPlan = () => {
   const router = useRouter();
   return (
-    <div className="pricing-container">
-      {plans.map((plan, index) => (
-        <div key={index} className="pricing-card">
-          <h2>{plan.title}</h2>
-          <ul>
-            {plan.features.map((feature, idx) => (
-              <li key={idx} className="feature">
-                <FaCheckCircle /> {feature}
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
-    </div>
-  );
-};
+    <div className="pricing-wrapper">
+      <h2 className="pricing-sec-heading">Complete Digital Growth Packages</h2>
+      <div className="pricing-container">
+        {plans.map((plan, index) => (
+         <div key={index} className={`pricing-card ${plan.featured ? "featured" : ""}`}>
+  {plan.featured && (
+    <div className="featured-top-banner">MOST POPULAR</div>
+  )}
+  <div className="card-header">
+    <h2 className="card-title">{plan.title}</h2>
+  </div>
 
-export default PricingPlan;
+  <ul className="features-list">
+    {plan.features.map((feature, idx) => (
+      <li key={idx} className="feature">
+        <FaCheckCircle className="check-icon" />
+        <span>{feature}</span>
+      </li>
+    ))}
+  </ul>
+
+  <button className="cta-button" onClick={() => router.push("/contact")}>
+    Get Started
+  </button>
+</div>
+
+        ))}
+      </div>
+    </div>
+  )
+}
+
+export default PricingPlan

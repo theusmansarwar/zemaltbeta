@@ -13,6 +13,7 @@ import BussinessGrowth from "@/Components/BussinessGrowth/BussinessGrowth";
 import StrategicMarketing from "@/Components/StrategicMarketing/StrategicMarketing";
 import ReasonsToChoose from "@/Components/ReasonsToChoose/ReasonsToChoose";
 import PricingPlan from "@/Components/PricingPlan/PricingPlan";
+import ContactSection from "@/Components/ContactSection/ContactSection";
 
 export const metadata = {
   title: "Grow Your Brand Online with Zemalt | Digital Branding Solutions",
@@ -113,12 +114,13 @@ export default function Page() {
       <HowDifferent />
       <Realworld />
       <DriveRevenue />
-      {/* <PricingPlan/> */}
+      <ReasonsToChoose data={reasonsData}/>
+      <TestimonialSlider2 />
       <GloballyTrusted />
       <LastBottom />
-      <TestimonialSlider2 />
-      <ReasonsToChoose data={reasonsData}/>
+      <PricingPlan/>
       <Faq faqs={Servicespagefaqs} />
+      <ContactSection/>
     </div>
   );
 }

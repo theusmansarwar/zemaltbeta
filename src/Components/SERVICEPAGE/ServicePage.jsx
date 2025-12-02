@@ -1,6 +1,7 @@
 import BigIdea from "../BigIdea/BigIdea";
 import Carousal from "../Carousal/Carousal";
 import Carousal2 from "../Carousal/Carousal2";
+import ContactSection from "../ContactSection/ContactSection";
 import ServiceCard from "../Designing-cards/ServiceCard";
 import Faq from "../FAQ/Faq";
 import RevenueCalculator from "../RevenueCalculator/RevenueCalculator";
@@ -45,6 +46,7 @@ export default function ServicePage({
 
       {/* Why Service Section */}
       {whyService?.published && <WhyService data={whyService} />}
+      <ContactSection/>
     </div>
   );
 }

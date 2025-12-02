@@ -79,6 +79,31 @@
   border-bottom: 1px solid var(--main-color);
   background-color: transparent;
 }
+.website-radio-group .radio-options {
+  display: flex;
+  gap: 40px;
+}
+.formgroupform2 .radio-item {
+  
+  display: flex;
+  align-items: center;
+  gap: 6px; 
+  cursor: pointer;
+}
+input[type="radio"] {
+  accent-color: var(--primary-color);
+  cursor: pointer;
+}
+
+#website{
+    width: calc(100% - 32px);
+  padding: 8px 16px;
+  padding-left: 0;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--main-color);
+  background-color: transparent;
+}
 
 .contact-form .fromgrouprow .formgroupform2 input:focus,
 .contact-form textarea:focus {
@@ -173,6 +198,11 @@
   .contact-form .fromgrouprow .formgroupform2 {
     width: 100%;
   }
+  .website-radio-group,
+  .formgroupform2 {
+ width: 100%;
+}
+
   .formgroupform2 .react-international-phone-country-selector-button {
     height: 38px !important;
   }

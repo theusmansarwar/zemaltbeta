@@ -45,7 +45,6 @@ const Header = () => {
           : [];
 
         setServices(fetchedServices);
-        console.log({ "servicesssss": services });
 
       } catch (error) {
         toast.error("Failed to fetch services:", error);

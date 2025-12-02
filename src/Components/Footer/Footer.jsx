@@ -46,7 +46,7 @@ export default function Footer() {
       {/* Footer Overlay */}
       <div className="footer-overlay"></div>
       {/* Header Section */}
-      <div className="footer-header">
+      {/* <div className="footer-header">
         <div className="header-content">
           <div className="header-left">
             <h2 className="get-in-touch">
@@ -67,7 +67,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Main Footer Content */}
       <div className="footer-main">

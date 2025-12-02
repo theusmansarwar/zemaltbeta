@@ -27,7 +27,18 @@ export default function LastBottom() {
       </div>
 
       <div className="lastbottom-right">
-        <div className="lastbottom-image">
+        <div className="lastbottom-image"
+        
+
+  style={{
+    backgroundImage: `url(/cybersecurity.webp)`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+  }}
+>
+
+
          
         </div>
       </div>

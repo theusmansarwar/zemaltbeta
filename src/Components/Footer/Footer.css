@@ -1,8 +1,6 @@
 .footer-container {
   position: relative;
   width: 100%;
-  padding-top: 60px;
-  margin-top: 90px;
   height: fit-content;
   z-index: auto; /* keep content above overlay */
    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(/footer-bg.webp);
@@ -20,7 +18,7 @@
   background: rgba(0, 0, 0, 0.4); 
   z-index: -1;
 }
-
+/* 
 .footer-header {
   width: calc(90% - 80px);
   background: var(--text-color4);
@@ -47,19 +45,19 @@
   font-size: var(--heading-three);
   margin: 0 0 10px 0;
   letter-spacing: 1px;
-  position: relative; /* important for line positioning */
-  display: inline-block; /* keeps the underline aligned with text */
+  position: relative;
+  display: inline-block; 
 }
 
 .get-in-touch::after {
   content: "";
   position: absolute;
-  bottom: -4px; /* distance from text */
+  bottom: -4px; 
   left: 0;
-  width: 105px; /* adjust width as needed */
-  height: 4px; /* line thickness */
-  background: var(--primary-color); /* line color */
-  border-radius: 2px; /* rounded edges */
+  width: 105px; 
+  height: 4px;
+  background: var(--primary-color); 
+  border-radius: 2px; 
 }
 
 .touch-blue {
@@ -91,7 +89,7 @@
 .header-right .contact-btn:hover {
   background-color: transparent;
   color: var(--main-color);
-}
+} */
 
 .footer-main {
   width: calc(90% - 20px);
@@ -277,12 +275,10 @@
 }
 
 @media (max-width: 900px) {
-  .footer-container {
-    margin-top: 70px;
-  }
+
   .footer-header {
     width: calc(90% - 20px);
-    padding: 20px 10px;
+    padding: 10px;
   }
   .header-content {
     flex-direction: column;
@@ -314,7 +310,7 @@
   .footer-main {
     width: calc(96% - 20px);
     margin: 0 auto;
-    padding: 60px 10px 0 10px;
+    padding: 20px 10px 0 10px;
   }
   .footer-bottom .top {
     gap: 10px;

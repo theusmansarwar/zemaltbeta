@@ -122,7 +122,7 @@ export default function Home() {
       <BlogSection data={blogHeaderData} />
       <Faq faqs={Homepagefaqs} />
       <SeoSection />
-      {/* <ContactSection/> */}
+      <ContactSection/>
     </div>
   );
 }

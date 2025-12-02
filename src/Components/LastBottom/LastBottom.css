@@ -62,13 +62,10 @@
 .lastbottom-image {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 480px;
   border-radius: var(--border-radius1);
   overflow: hidden;
-  background-image: url(https://images.pexels.com/photos/3183172/pexels-photo-3183172.jpeg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+
 }
 
 .image-text {
