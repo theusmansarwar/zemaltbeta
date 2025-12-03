@@ -1,24 +1,32 @@
 .pricing-wrapper {
-  width: calc(100% - 10%);
-  padding: 40px 5%;
+  width: calc(100% - 20%);
+  padding: 40px 10%;
   background-color: white;
 }
-.pricing-wrapper .pricing-sec-heading{
+.pricing-wrapper .pricing-sec-heading {
   font-size: var(--heading-two);
   text-align: center;
   margin-bottom: 50px;
 }
 
-
+/* Wrapper for each card to handle the banner */
+.pricing-card-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
 
 /* Modern card layout with 3-column grid and responsive stacking */
 .pricing-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 32px;
 }
 
 .pricing-card {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+  background-color: white;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -52,57 +60,49 @@
 
 /* Featured card styling with accent border */
 .pricing-card.featured {
-  border: 2px solid var(--primary-color);
-  transform: scale(1.05);
   background-color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 16px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  z-index: 10;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
 }
 
 .pricing-card.featured:hover {
-  transform: scale(1.05) translateY(-8px);
+  transform: translateY(0px);
 }
 
-.featured-badge {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: var(--primary-color);
-  color: white;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
 /* Top Purple MOST POPULAR Banner */
-.featured-top-banner {
-  position: absolute;
-  top: 0;
-  left: 0;
+.featured-outside {
+  top: -50px;
+  position: relative;
+  background-color: var(--primary-color);
+  border-radius: 18px;
   width: 100%;
-  background: var(--primary-color); /* Adjust to your purple */
+  height: 100%;
+  padding: 2px;
+  z-index: 1;
+}
+.featured-outside strong {
+  display: block;
   color: white;
   font-weight: 700;
   text-align: center;
-  padding: 15px 0;
   font-size: var(--default-p-size);
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  border-radius: 16px 16px 0 0; /* Match card rounding */
-}
-
-
-
-.pricing-card.featured .card-title {
-  font-size: var(--heading-four);
-  margin-bottom: 20px;
-  margin-top: 40px;
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  padding: 10px 0;
 }
 .card-title {
   font-size: var(--heading-four);
   margin-bottom: 20px;
 }
-
 
 .features-list {
   list-style: none;
@@ -112,13 +112,14 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  min-height: 320px;
 }
 
 .feature {
   display: flex;
   gap: 12px;
   align-items: flex-start;
-  font-size: var(--default-p-size);
+  font-size: 14px;
   line-height: var(--p-line-height);
 }
 
@@ -149,42 +150,35 @@
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
 }
 
-
 /* Responsive design for mobile and tablet */
-@media (max-width: 1024px) {
+@media (max-width: 1120px) {
+  .pricing-wrapper {
+    width: calc(100% - 10%);
+    padding: 20px 5%;
+  }
   .pricing-container {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 24px;
   }
-
-  .pricing-card.featured {
-    transform: scale(1);
-  }
-
-  .pricing-card.featured:hover {
-    transform: translateY(-8px);
-  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .pricing-wrapper {
-    padding: 40px 4%;
+    width: calc(100% - 10%);
+    padding: 20px 5%;
+  }
+  .pricing-card-wrapper {
+    margin-top: 0px;
   }
 
   .pricing-container {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 10px;
   }
-
-  .pricing-card {
-    padding: 32px;
+  .featured-outside {
+    top: 0px;
   }
-
-  .pricing-title {
-    font-size: 32px;
-  }
-
-  .pricing-description {
-    font-size: 16px;
+  .features-list {
+    min-height: fit-content;
   }
 }

@@ -2,7 +2,6 @@
   width: calc(100% - (var(--left-space) * 2));
   padding: 40px var(--left-space);
   background-color: var(--text-color4);
- 
 }
 
 .testimonial-slider2 h2 {
@@ -82,7 +81,6 @@
   align-items: center;
   gap: 10px;
   align-self: self-start;
-  
 }
 
 .testimonial2-card strong span {
@@ -137,11 +135,14 @@
   .testimonial-slider2 {
     width: calc(100% - (var(--left-space) * 2));
     padding: 40px var(--left-space);
-     margin-bottom: 10px;
+    margin-bottom: 10px;
   }
   .slider-wrapper {
     flex-direction: column;
+    width: 100%;
+    margin: 0;
   }
+
   .testimonial2-card .stars {
     gap: 5px;
     padding: 10px;

@@ -100,5 +100,8 @@
     width: calc(100% - 40px);
     padding: 20px;
   }
-  
+  .drive-revenue .card-list {
+    gap: 10px;
+    padding: 20px 0;
+  }
 }
