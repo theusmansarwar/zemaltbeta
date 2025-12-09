@@ -1,6 +1,5 @@
 import ServicePage from "@/Components/SERVICEPAGE/ServicePage";
 import { fetchServiceBySlug } from "@/DAL/Fetch";
-import { toast } from "react-toastify";
 
 /** ---------------------------------------------------------------
  * Fetch Service by slug
@@ -8,13 +7,12 @@ import { toast } from "react-toastify";
 async function getService(slug) {
   try {
     const res = await fetchServiceBySlug(slug);
-    console.log("servicedataaaaaa", res);
 
     if (res?.service) return res.service;
 
     return null;
   } catch (error) {
-    toast.error("Error fetching service:", error);
+    console.error("Error fetching service:", error);
     return null;
   }
 }
