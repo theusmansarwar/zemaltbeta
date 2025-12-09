@@ -1,0 +1,127 @@
+.why-this {
+  width: calc(100% - 20%);
+  padding: 40px 10%;
+
+  background-color: white;
+}
+.why-this .why-this-header {
+  width: 100%;
+  margin-bottom: 50px;
+  display: flex;
+  gap: 40px;
+}
+.why-this .why-this-header .header-left {
+  width: 45%;
+}
+.why-this .why-this-header .header-left h2 {
+  font-size: var(--heading-two);
+  max-width: 550px;
+  text-align: left;
+}
+.why-this .why-this-header .header-right {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+.header-right p {
+  font-size: var(--default-p-size);
+  color: var(--text-color3);
+  margin-bottom: 15px;
+  line-height: var(--p-line-height);
+}
+
+.why-this-steps {
+  display: flex;
+  align-items: stretch; /* make children match heights */
+  gap: 40px;
+  justify-content: center;
+}
+.why-this-steps .steps-left {
+  width: 40%;
+  display: flex;
+}
+.why-this-steps .steps-left img {
+  width: 100%;
+  height: 100%; /* stretches to match right side */
+  object-fit: cover; /* maintain image aspect ratio */
+  border-radius: var(--border-radius1);
+}
+.why-this-steps .why-steps-container {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+}
+.why-this-steps h2 {
+  font-size: var(--heading-two);
+  margin-bottom: 30px;
+}
+
+.why-this-steps .content-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+}
+
+.why-this-steps .content-box:hover {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 30px;
+}
+
+.why-this-steps .content-box strong {
+  font-size: var(--heading-two);
+  color: var(--primary-color);
+  display: inline-block;
+  min-width: 50px;
+  text-align: right;
+}
+.why-this-steps .content-box:hover strong {
+  color: white;
+}
+.why-this-steps .content-box h3 {
+  font-size: 20px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.why-this-steps .content-box p {
+  line-height: var(--p-line-height);
+  font-size: var(--default-p-size);
+}
+
+.why-this-steps .content-box p span {
+  display: block;
+  margin-bottom: 2px;
+}
+
+@media (max-width: 900px) {
+  .why-this-steps {
+    padding: 20px var(--left-space);
+  }
+  .why-this-steps .steps-left img {
+    height: auto; /* let image shrink naturally on mobile */
+  }
+
+  .why-this-steps h2 {
+    text-align: left;
+  }
+
+  .why-this-steps .content-box {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .why-this-steps .content-box p span {
+    font-size: 14px;
+  }
+
+  .why-this-steps .content-box strong {
+    text-align: left;
+  }
+  .why-this-steps .content-box h3 {
+    font-size: 16px;
+  }
+}

@@ -4,6 +4,9 @@ import Carousal2 from "../Carousal/Carousal2";
 import ContactSection from "../ContactSection/ContactSection";
 import ServiceCard from "../Designing-cards/ServiceCard";
 import Faq from "../FAQ/Faq";
+import IndustrySolutions from "../MainServicesPage/IndustrySolutions";
+import MainServiceFirst from "../MainServicesPage/MainServiceFirst";
+import WhyThis from "../MainServicesPage/WhyThis";
 import RevenueCalculator from "../RevenueCalculator/RevenueCalculator";
 import ServicePageFeatured from "../ServicePageFeatured/ServicePageFeatured";
 import WhyService from "../WhyService/WhyService";
@@ -24,12 +27,15 @@ export default function ServicePage({
       {featuredData?.published !== false && (
         <ServicePageFeatured data={featuredData} />
       )}
+      {/* <MainServiceFirst />
+
+      <IndustrySolutions /> */}
+      <WhyThis/>
 
       {/* Sub Services */}
       {cardData?.published && cardData.items?.length > 0 && (
         <ServiceCard data={cardData.items} />
       )}
-
 
       {/* Carousal (always visible) */}
       <Carousal />
@@ -46,7 +52,7 @@ export default function ServicePage({
 
       {/* Why Service Section */}
       {whyService?.published && <WhyService data={whyService} />}
-      <ContactSection/>
+      <ContactSection />
     </div>
   );
 }
