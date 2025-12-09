@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from "react";
 import "./CaseStudyPopup.css";
 import { IoCloseCircleSharp } from "react-icons/io5";
