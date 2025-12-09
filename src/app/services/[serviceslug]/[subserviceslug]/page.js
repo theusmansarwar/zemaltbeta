@@ -68,7 +68,6 @@ const Page = async ({ params }) => {
       provenSteps={subService.provenSteps || {}}
       imageData={subService.imageSection}
       faqs={subService.faqs || {}}
-      portfolio={subService.portfolio || {}}
       cta={subService.cta || {}}
     />
   );

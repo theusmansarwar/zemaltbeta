@@ -19,7 +19,6 @@ const ProjectPage = ({
   provenSteps,
   imageData,
   faqs,
-  portfolio,
   cta,
 }) => {
   const { subserviceslug } = useParams();
@@ -55,10 +54,7 @@ const ProjectPage = ({
       {/* Commitments Section */}
       <OurCommitments />
 
-      {/* Portfolio */}
-       {portfolio?.published && (
-        <PortfolioCards data={portfolio} />
-      )}
+    
     </div>
   );
 };
