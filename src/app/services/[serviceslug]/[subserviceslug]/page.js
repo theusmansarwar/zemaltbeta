@@ -1,6 +1,5 @@
 import ProjectPage from "@/Components/SERVICEPAGE/ProjectPage";
 import { fetchSubServiceBySlug } from "@/DAL/Fetch";
-import { toast } from "react-toastify";
 
 /** ---------------------------------------------------------------
  * Fetch Subservice by slug
@@ -13,7 +12,7 @@ async function getSubService(slug) {
 
     return null;
   } catch (error) {
-    toast.error("Error fetching subservice:", error);
+    console.error("Error fetching subservice:", error);
     return null;
   }
 }
