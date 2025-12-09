@@ -15,6 +15,8 @@ import "./page.css";
 
 export default function ServicePage({
   featuredData,
+  firstSectionData,
+  secondData,
   cardData,
   imageData,
   Faqs,
@@ -27,10 +29,14 @@ export default function ServicePage({
       {featuredData?.published !== false && (
         <ServicePageFeatured data={featuredData} />
       )}
-      {/* <MainServiceFirst />
-
-      <IndustrySolutions /> */}
-      <WhyThis/>
+      {/* {firstSectionData?.published && (
+        <MainServiceFirst data={firstSectionData} />
+      )}
+      {secondData?.published && (
+        <IndustrySolutions data={secondData } />
+      )}
+       */}
+      <WhyThis />
 
       {/* Sub Services */}
       {cardData?.published && cardData.items?.length > 0 && (

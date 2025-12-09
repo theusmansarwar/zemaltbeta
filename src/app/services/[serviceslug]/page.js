@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 async function getService(slug) {
   try {
     const res = await fetchServiceBySlug(slug);
+    console.log("servicedataaaaaa", res);
 
     if (res?.service) return res.service;
 
@@ -64,9 +65,9 @@ const Page = async ({ params }) => {
 
   const cardData = {
     published: service.subServices?.published ?? false,
-    items: service.subServices?.items?.length > 0 ? service.subServices.items : [],
+    items:
+      service.subServices?.items?.length > 0 ? service.subServices.items : [],
   };
-
 
   const imageData = {
     heading:
@@ -74,6 +75,12 @@ const Page = async ({ params }) => {
       "Bright minds shape clear paths and act fast.",
     image: service.imageSection?.image || "/zemalt-logo.webp",
     published: service.imageSection?.published ?? false,
+  };
+  const firstSectionData = {
+    heading: service.firstSection?.title,
+    description: service.firstSection?.description,
+    image: service.firstSection?.image || "/zemalt-logo.webp",
+    published: service.firstSection?.published ?? false,
   };
 
   const whyService = {
@@ -83,6 +90,16 @@ const Page = async ({ params }) => {
       : [],
     image: service.lastSection?.image || "/why-designing.png",
     published: service.lastSection?.published ?? false,
+  };
+
+  const secondData = {
+    heading: service.firstSection?.title,
+    description: service.firstSection?.description,
+    faqs: service.secondSection || [],
+    published:
+      service.secondSectionPublished ??
+      service.secondSection?.published ??
+      false,
   };
 
   const faqsData = {
@@ -97,12 +114,13 @@ const Page = async ({ params }) => {
     description:
       service.CalulaterBottom?.description ||
       "We are a trusted ad agency that drives fast growth and real reach. You get clear campaigns built on sharp strategy and smart targeting. Each plan cuts waste, raises clicks, and delivers steady leads that add lasting value to your business.",
-
   };
 
   return (
     <ServicePage
       featuredData={featuredData}
+      firstsectionData={firstSectionData}
+      secondData={secondData}
       cardData={cardData}
       imageData={imageData}
       Faqs={faqsData}

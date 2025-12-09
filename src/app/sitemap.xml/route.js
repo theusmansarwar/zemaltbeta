@@ -1,5 +1,4 @@
 import { fetchServicesSlugs, getblogSlugs } from "@/DAL/Fetch";
-import { toast } from "react-toastify";
 
 export const dynamic = "force-dynamic";
 
