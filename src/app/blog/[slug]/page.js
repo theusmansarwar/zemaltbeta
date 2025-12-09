@@ -11,7 +11,7 @@ export async function generateMetadata({ params }) {
   const title = blog?.title || slug.replace(/-/g, " ");
   const description =
     blog?.metaDescription ||
-    `Details about ${slug.replace(/-/g, " ")} on Digital Aura.`;
+    `Details about ${slug.replace(/-/g, " ")} on Zemalt.`;
   const image = baseUrl + blog?.thumbnail;
   const url = `https://zemalt.com/${slug}`;
   return {

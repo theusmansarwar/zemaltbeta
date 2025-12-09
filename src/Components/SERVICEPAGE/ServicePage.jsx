@@ -21,7 +21,7 @@ export default function ServicePage({
   imageData,
   Faqs,
   CalulaterBottom,
-  whyService,
+  whyThisData,
 }) {
   return (
     <div className="homebg">
@@ -29,14 +29,12 @@ export default function ServicePage({
       {featuredData?.published !== false && (
         <ServicePageFeatured data={featuredData} />
       )}
-      {/* {firstSectionData?.published && (
+      {firstSectionData?.published && (
         <MainServiceFirst data={firstSectionData} />
       )}
-      {secondData?.published && (
-        <IndustrySolutions data={secondData } />
-      )}
-       */}
-      <WhyThis />
+      {secondData?.published && <IndustrySolutions data={secondData} />}
+
+      {whyThisData?.published && <WhyThis data={whyThisData} />}
 
       {/* Sub Services */}
       {cardData?.published && cardData.items?.length > 0 && (
@@ -56,8 +54,6 @@ export default function ServicePage({
 
       {/* <RevenueCalculator data={CalulaterBottom} /> */}
 
-      {/* Why Service Section */}
-      {whyService?.published && <WhyService data={whyService} />}
       <ContactSection />
     </div>
   );

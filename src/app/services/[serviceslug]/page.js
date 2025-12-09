@@ -81,24 +81,24 @@ const Page = async ({ params }) => {
     published: service.firstSection?.published ?? false,
   };
 
-  const whyService = {
-    title: service.lastSection?.title || "Why Choose Zemalt",
-    description: service.lastSection?.description
-      ? [service.lastSection.description]
-      : [],
-    image: service.lastSection?.image || "/why-designing.png",
-    published: service.lastSection?.published ?? false,
-  };
+
 
   const secondData = {
-    heading: service.firstSection?.title,
-    description: service.firstSection?.description,
-    faqs: service.secondSection || [],
+    heading: service.secondSection?.title,
+    steps: service.secondSection || [],
     published:
       service.secondSectionPublished ??
       service.secondSection?.published ??
       false,
   };
+  const whyThisData = {
+    heading: service.whySteps?.title,
+    description: service.whySteps?.description,
+    image: service.whySteps?.image,
+    items: service.whySteps?.items || [],
+    published: service.whySteps?.published ?? false,
+  };
+
 
   const faqsData = {
     faqs: service.faqs || [],
@@ -117,13 +117,13 @@ const Page = async ({ params }) => {
   return (
     <ServicePage
       featuredData={featuredData}
-      firstsectionData={firstSectionData}
+      firstSectionData={firstSectionData}
       secondData={secondData}
       cardData={cardData}
       imageData={imageData}
       Faqs={faqsData}
       CalulaterBottom={calculaterBottomData}
-      whyService={whyService}
+      whyThisData={whyThisData}
     />
   );
 };
