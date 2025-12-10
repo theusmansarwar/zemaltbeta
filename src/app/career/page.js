@@ -21,7 +21,7 @@ const page = () => {
       <ServicePageFeatured data={featuredData} />
       <Benefits />
       <CareerOpenings />
-      <Carousal2 heading="Ready to work with us" link="/"/>
+      {/* <Carousal2 heading="Ready to work with us" link="/"/> */}
     </div>
   );
 };

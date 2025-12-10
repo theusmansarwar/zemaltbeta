@@ -1,4 +1,3 @@
-
 import React from "react";
 import "./Extra.css";
 
@@ -16,9 +15,12 @@ const TermsAndConditions = () => {
 
       <h2>Acceptance of Terms</h2>
       <p>
-        You accept all terms mentioned here when you access  <a href="https://zemalt.com" target="_blank" rel="noopener noreferrer">zemalt.com</a>. Must
-        stop using the website immediately if you do not agree. Zemalt may
-        update or revise these terms at any time without notice. The latest
+        You accept all terms mentioned here when you access{" "}
+        <a href="https://zemalt.com" target="_blank" rel="noopener noreferrer">
+          zemalt.com
+        </a>
+        . Must stop using the website immediately if you do not agree. Zemalt
+        may update or revise these terms at any time without notice. The latest
         version always applies to your use of the site.
       </p>
       <p>
@@ -29,7 +31,10 @@ const TermsAndConditions = () => {
       </p>
 
       <h2>Services We Provide</h2>
-      <p>Zemalt provides complete digital and creative solutions for your brand. Our core services include:</p>
+      <p>
+        Zemalt provides complete digital and creative solutions for your brand.
+        Our core services include:
+      </p>
       <ul>
         <li>Web design and development</li>
         <li>Search engine optimization (SEO)</li>
@@ -46,9 +51,13 @@ const TermsAndConditions = () => {
 
       <h2>Use of Website</h2>
       <p>
-        You must use  <a href="https://zemalt.com" target="_blank" rel="noopener noreferrer">zemalt.com</a> fairly and lawfully. The website is designed to
-        share service information and insights about our work. You agree not to
-        use the site in any manner that may harm it or interrupt operations.
+        You must use{" "}
+        <a href="https://zemalt.com" target="_blank" rel="noopener noreferrer">
+          zemalt.com
+        </a>{" "}
+        fairly and lawfully. The website is designed to share service
+        information and insights about our work. You agree not to use the site
+        in any manner that may harm it or interrupt operations.
       </p>
       <p>Avoid:</p>
       <ul>
@@ -151,9 +160,7 @@ const TermsAndConditions = () => {
       </p>
 
       <h2>Limitation of Liability</h2>
-      <p>
-        Zemalt is not responsible for:
-      </p>
+      <p>Zemalt is not responsible for:</p>
       <ul>
         <li>Technical errors, downtime, or hosting failures.</li>
         <li>Delays caused by client-side inputs or third-party tools.</li>
@@ -187,18 +194,39 @@ const TermsAndConditions = () => {
 
       <h2>Governing Law</h2>
       <p>
-        These Terms and Conditions follow the laws of <b>Pakistan</b>. Any dispute
-        related to Zemalt, its website, or services will be handled in Pakistani
-        courts. Zemalt encourages mutual discussion and resolution before legal
-        action. The company always operates under fair, ethical, and transparent
-        standards.
+        These Terms and Conditions follow the laws of <b>Pakistan</b>. Any
+        dispute related to Zemalt, its website, or services will be handled in
+        Pakistani courts. Zemalt encourages mutual discussion and resolution
+        before legal action. The company always operates under fair, ethical,
+        and transparent standards.
       </p>
 
       <h2>Contact Information</h2>
-      <p>For questions about these Terms and Conditions, you can reach us through the details below:</p>
+      <p>
+        For questions about these Terms and Conditions, you can reach us through
+        the details below:
+      </p>
       <ul>
-        <li>Email: <a href="mailto:company@zemalt.com">company@zemalt.com</a></li>
-        <li>Website: <a href="https://zemalt.com" target="_blank" rel="noopener noreferrer">https://zemalt.com</a></li>
+        <li>
+          Email:{" "}
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=company@zemalt.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            company@zemalt.com
+          </a>
+        </li>
+        <li>
+          Website:{" "}
+          <a
+            href="https://zemalt.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://zemalt.com
+          </a>
+        </li>
       </ul>
       <p>
         We review every inquiry carefully and reply as soon as possible. Your

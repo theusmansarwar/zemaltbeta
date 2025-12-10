@@ -1,10 +1,6 @@
-"use client"
 import React from "react";
 import "./SeoSection.css";
-import { FaArrowRight } from "react-icons/fa6";
-import { useRouter } from "next/navigation";
 const SeoSection = () => {
-  const router = useRouter();
   return (
     <div className="seo-section" id="seo-marketing-services">
       <div className="seo-content-container">
@@ -50,26 +46,45 @@ const SeoSection = () => {
         <div className="right">
           <strong>Table of Contents</strong>
           <ul>
-            <li><a href="#zemalt">Zemalt</a></li>
-            <li><a href="#unique-ideas">Unique Ideas</a></li>
-            <li><a href="#digitalmarketing">Digital Marketing</a></li>
-            <li><a href="#marketingstrategis">Marketing Startegies</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#revenue-impact">Revenue Impact</a></li>
-            <li><a href="#why-choose-zemalt">Why Choose Zemalt</a></li>
-            <li><a href="#reviews">Reviews</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#faqs">Faqs</a></li>
-            <li><a href="#increase-revenue">Increase Revenue</a></li>
-            <li><a href="#seo-marketing-services">SEO marketing services</a></li>
+            <li>
+              <a href="#zemalt">Zemalt</a>
+            </li>
+            <li>
+              <a href="#unique-ideas">Unique Ideas</a>
+            </li>
+            <li>
+              <a href="#digitalmarketing">Digital Marketing</a>
+            </li>
+            <li>
+              <a href="#marketingstrategis">Marketing Startegies</a>
+            </li>
+            <li>
+              <a href="#portfolio">Portfolio</a>
+            </li>
+            <li>
+              <a href="#services">Services</a>
+            </li>
+            <li>
+              <a href="#revenue-impact">Revenue Impact</a>
+            </li>
+            <li>
+              <a href="#why-choose-zemalt">Why Choose Zemalt</a>
+            </li>
+            <li>
+              <a href="#reviews">Reviews</a>
+            </li>
+            <li>
+              <a href="#faqs">Faqs</a>
+            </li>
+            <li>
+              <a href="#increase-revenue">Increase Revenue</a>
+            </li>
+            <li>
+              <a href="#seo-marketing-services">SEO marketing services</a>
+            </li>
           </ul>
         </div>
       </div>
-      <button className="proposal-btn" onClick={() => { router.push("/contact") }}>
-        Get a Proposal
-        <FaArrowRight />
-      </button>
     </div>
   );
 };

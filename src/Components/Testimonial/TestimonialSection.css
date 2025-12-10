@@ -16,12 +16,12 @@
   z-index: 2;
 }
 .Testimonial-header h2 {
-  width: 55%;
+  width: 50%;
   font-size: var(--heading-two);
   color: var(--text-color4);
 }
 .Testimonial-header p {
-  width: 40%;
+  width: 45%;
   color: var(--text-color4);
   font-size: var(--default-p-size);
   line-height: var(--p-line-height);

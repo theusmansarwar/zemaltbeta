@@ -17,7 +17,6 @@
     font-size: var(--heading-two);
     color: var(--main-color);
     margin-bottom: 10px;
-    text-transform: uppercase;
 }
 
 .portfolio-section .head-container .view-btn {

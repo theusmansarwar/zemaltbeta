@@ -52,14 +52,7 @@ export default function RecentBlogs() {
         <h3 className="categories-title">Categories</h3>
         <ul className="categories-list">
           {categories.length > 0 ? (
-            categories.map((cat) => (
-              <li
-                key={cat._id}
-                onClick={() => router.push(`/blog/category/${cat.slug}`)}
-              >
-                {cat.name}
-              </li>
-            ))
+            categories.map((cat) => <li key={cat._id}>{cat.name}</li>)
           ) : (
             <li>No categories found</li>
           )}
@@ -82,8 +75,9 @@ export default function RecentBlogs() {
                   <div
                     className="post-image"
                     style={{
-                      backgroundImage: `url(${post.thumbnail ? baseUrl + post.thumbnail : "/dummy.png"
-                        })`,
+                      backgroundImage: `url(${
+                        post.thumbnail ? baseUrl + post.thumbnail : "/dummy.png"
+                      })`,
                       backgroundSize: "cover",
                       backgroundPosition: "center",
                       backgroundRepeat: "no-repeat",

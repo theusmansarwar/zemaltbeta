@@ -90,6 +90,13 @@
   font-style: italic;
   text-align: center;
 }
+.error-message {
+  display: block;
+  margin-top: 3px;
+  margin-bottom: 5px;
+  color: red;
+  font-size: 10px;
+}
 @media (max-width: 900px) {
   .comment-container {
     width: calc(100% - 10%);

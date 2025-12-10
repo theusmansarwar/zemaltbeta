@@ -70,6 +70,9 @@ const Comment = ({ blogId, comments = [] }) => {
       <div className="comment-form">
         <h2>Leave a Comment</h2>
         <form onSubmit={handleSubmit}>
+          {formErrors.name && (
+            <span className="error-message">{formErrors.name}</span>
+          )}
           <input
             type="text"
             name="name"
@@ -77,10 +80,9 @@ const Comment = ({ blogId, comments = [] }) => {
             value={formData.name}
             onChange={handleChange}
           />
-          {formErrors.name && (
-            <span className="error-message">{formErrors.name}</span>
+          {formErrors.email && (
+            <span className="error-message">{formErrors.email}</span>
           )}
-
           <input
             type="email"
             name="email"
@@ -88,19 +90,15 @@ const Comment = ({ blogId, comments = [] }) => {
             value={formData.email}
             onChange={handleChange}
           />
-          {formErrors.email && (
-            <span className="error-message">{formErrors.email}</span>
+          {formErrors.comment && (
+            <span className="error-message">{formErrors.comment}</span>
           )}
-
           <textarea
             name="comment"
             placeholder="Write your comment..."
             value={formData.comment}
             onChange={handleChange}
           ></textarea>
-          {formErrors.comment && (
-            <span className="error-message">{formErrors.comment}</span>
-          )}
 
           <button type="submit">Submit Comment</button>
         </form>

@@ -156,7 +156,10 @@ export default function Footer() {
             <h3 className="column-title">What We Do Best</h3>
             <ul className="footer-links">
               {whatWeDoBest.map((service, index) => (
-                <li key={index} onClick={() => router.push(`/services/${service.slug}`)}>
+                <li
+                  key={index}
+                  onClick={() => router.push(`/services/${service.slug}`)}
+                >
                   <FaAngleRight /> <span>{service.label}</span>
                 </li>
               ))}
@@ -222,6 +225,8 @@ export default function Footer() {
             <div className="-bottom-right">
               <div className="social-icons">
                 <a
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="Visit Zemalt on Facebook"
                   href="https://www.facebook.com/zemaltpvtltd"
                   className="social-icon facebook"
@@ -229,6 +234,8 @@ export default function Footer() {
                   <FaFacebookF />
                 </a>
                 <a
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="Visit Zemalt on Instagram"
                   href="https://www.instagram.com/zemaltpvtltd/"
                   className="social-icon instagram"
@@ -236,6 +243,8 @@ export default function Footer() {
                   <FaInstagram />
                 </a>
                 <a
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="Visit Zemalt on Linkedin"
                   href="https://www.linkedin.com/company/zemalt/"
                   className="social-icon linkedin"

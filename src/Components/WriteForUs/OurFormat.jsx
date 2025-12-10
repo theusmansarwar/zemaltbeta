@@ -1,7 +1,10 @@
+"use client"
 import React from "react";
 import "./OurFormat.css";
 import { FaArrowRight } from "react-icons/fa6";
+import { useRouter } from "next/navigation";
 const OurFormat = () => {
+  const router = useRouter();
   return (
     <div className="our-format">
       <div className="left">
@@ -68,7 +71,7 @@ const OurFormat = () => {
             </div>
           </div>
         </div>
-        <button className="proposal-btn">
+        <button className="proposal-btn" onClick={()=>{router.push("/contact")}}>
           Send Your Query Here <FaArrowRight />
         </button>
       </div>

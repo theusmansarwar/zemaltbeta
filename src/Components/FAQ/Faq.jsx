@@ -5,10 +5,16 @@ import { useRouter } from "next/navigation";
 
 const Faq = ({ faqs }) => {
   const router = useRouter();
-  const [openIndex, setOpenIndex] = useState(0);
+
+  // Initialize: first item open, others closed
+  const [openStates, setOpenStates] = useState(
+    faqs?.items?.map((_, index) => index === 0) || []
+  );
 
   const toggle = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
+    const newStates = [...openStates];
+    newStates[index] = !newStates[index]; // Toggle only the clicked item
+    setOpenStates(newStates);
   };
 
   return (
@@ -17,11 +23,7 @@ const Faq = ({ faqs }) => {
         <h2 className="faq-heading">{faqs?.title}</h2>
         <p>{faqs?.description}</p>
         <div className="faq-buttons">
-          <button
-            onClick={() => {
-              router.push("/contact");
-            }}
-          >
+          <button onClick={() => router.push("/contact")}>
             More Questions
           </button>
         </div>
@@ -32,9 +34,9 @@ const Faq = ({ faqs }) => {
           <div key={index} className="faq-item">
             <div className="faq-question" onClick={() => toggle(index)}>
               <span>{item.question}</span>
-              <span>{openIndex === index ? "−" : "+"}</span>
+              <span>{openStates[index] ? "−" : "+"}</span>
             </div>
-            {openIndex === index && (
+            {openStates[index] && (
               <div className="faq-answer">
                 <p>{item.answer}</p>
               </div>
