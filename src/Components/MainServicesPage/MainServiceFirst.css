@@ -2,8 +2,7 @@
   width: calc(100% - 10%);
   padding: 40px var(--left-space);
   display: flex;
-  align-items: stretch;
-  justify-content: center;
+  align-items: center;
   gap: 40px;
   background: white;
 }
@@ -26,7 +25,7 @@
 }
 
 .main-first-section .right {
-  width: 65%;
+  width: 58%;
   display: flex;
   flex-direction: column;
   gap: 20px;

@@ -41,7 +41,7 @@ export default function ServicePage({
       {whyThisData?.published && <WhyThis data={whyThisData} />}
 
       {/* Carousal (always visible) */}
-      <Carousal />
+      {/* <Carousal /> */}
 
       {/* Image Section */}
       {imageData?.published && <BigIdea data={imageData} />}
