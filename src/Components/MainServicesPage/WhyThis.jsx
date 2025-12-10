@@ -16,12 +16,12 @@ const WhyThis = ({ data }) => {
 
       <div className="why-this-steps">
         <div className="steps-left">
-          <img src={baseUrl + data?.image} alt="Why this" />
+          <img src={baseUrl + data?.image} alt={data.heading} />
         </div>
 
-        <div className="why-steps-container">
+        <div className="why-steps-box">
           {data?.items?.map((step, index) => (
-            <div className="content-box" key={step._id}>
+            <div className="why-steps-content" key={step._id}>
               <strong className="step-number">
                 {(index + 1).toString().padStart(2, "0")}
               </strong>

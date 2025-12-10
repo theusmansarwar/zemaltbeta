@@ -32,14 +32,13 @@ export default function ServicePage({
       {firstSectionData?.published && (
         <MainServiceFirst data={firstSectionData} />
       )}
-      {secondData?.published && <IndustrySolutions data={secondData} />}
-
-      {whyThisData?.published && <WhyThis data={whyThisData} />}
-
       {/* Sub Services */}
       {cardData?.published && cardData.items?.length > 0 && (
         <ServiceCard data={cardData.items} />
       )}
+      {secondData?.published && <IndustrySolutions data={secondData} />}
+
+      {whyThisData?.published && <WhyThis data={whyThisData} />}
 
       {/* Carousal (always visible) */}
       <Carousal />

@@ -8,28 +8,33 @@
   position: relative;
 }
 
-.industry-solutions .hero-content {
+.industry-solutions .solutions-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   width: 100%;
   position: relative;
+   min-height: 600px;
 }
 
 /* Left Section */
-.industry-solutions .hero-content .left-section {
+.industry-solutions .solutions-content .solutions-left {
   display: flex;
   flex-direction: column;
   gap: 40px;
   padding: 40px 80px;
 }
 
-.industry-solutions .hero-content .left-section .heading-box {
+.industry-solutions .solutions-content .solutions-left .heading-box {
   background-color: transparent;
-  max-width: 400px;
+  width: 100%;
 }
 
-.industry-solutions .hero-content .left-section .heading-box .main-heading {
+.industry-solutions
+  .solutions-content
+  .solutions-left
+  .heading-box
+  .main-heading {
   font-size: var(--heading-two);
   line-height: var(--heading-line-height);
   color: var(--text-color4);
@@ -39,14 +44,21 @@
 }
 
 /* Services Grid */
-.industry-solutions .industry-solutions-grid {
+.industry-solutions
+  .solutions-content
+  .solutions-left
+  .industry-solutions-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
 }
 
-.industry-solutions .industry-solutions-grid .solution-card {
-  background-color: #2a2a2a;
+.industry-solutions
+  .solutions-content
+  .solutions-left
+  .industry-solutions-grid
+  .solution-card {
+  background-color: transparent;
   border-radius: var(--border-radius1);
   padding: 20px;
   display: flex;
@@ -55,13 +67,40 @@
   transition: all 0.3s ease;
   border: 1px solid #333333;
 }
-
-.industry-solutions .industry-solutions-grid .solution-card:hover {
-  background-color: #323232;
+.industry-solutions
+  .solutions-content
+  .solutions-left
+  .industry-solutions-grid
+  .solution-card:hover{
   border-color: var(--primary-color);
 }
+/* Hover ONLY for Card 2 */
+.industry-solutions
+  .solutions-content
+  .solutions-left
+  .industry-solutions-grid
+  .solution-card:nth-child(2) {
+  background-color: #FFFFFF1A;
+}
 
-.industry-solutions .industry-solutions-grid .solution-card .solution-icon {
+/* Hover ONLY for Card 3 */
+.industry-solutions
+  .solutions-content
+  .solutions-left
+  .industry-solutions-grid
+  .solution-card:nth-child(3) {
+  background-color: #FFFFFF1A;
+}
+
+
+
+
+.industry-solutions
+  .solutions-content
+  .solutions-left
+  .industry-solutions-grid
+  .solution-card
+  .solution-icon {
   width: 40px;
   height: 40px;
   display: flex;
@@ -70,12 +109,22 @@
   color: var(--primary-color);
 }
 
-.industry-solutions .industry-solutions-grid .solution-card .solution-title {
+.industry-solutions
+  .solutions-content
+  .solutions-left
+  .industry-solutions-grid
+  .solution-card
+  .solution-title {
   font-size: var(--default-p-size);
   color: var(--text-color4);
 }
 
-.industry-solutions .industry-solutions-grid .solution-card .solution-description {
+.industry-solutions
+  .solutions-content
+  .solutions-left
+  .industry-solutions-grid
+  .solution-card
+  .solution-description {
   font-size: 14px;
   color: #b0b0b0;
   margin: 0;
@@ -83,55 +132,87 @@
 }
 
 /* Footer Text */
-.footer-text {
+.industry-solutions .solutions-content .solutions-left .footer-text {
   font-size: 14px;
   color: #b0b0b0;
   margin: 0;
 }
 
-.get-free-quote {
+.industry-solutions
+  .solutions-content
+  .solutions-left
+  .footer-text
+  .get-free-quote {
   color: var(--primary-color);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s ease;
+  cursor: pointer;
 }
 
-.get-free-quote:hover {
+.industry-solutions
+  .solutions-content
+  .solutions-left
+  .footer-text
+  .get-free-quote:hover {
   color: #6ab3ff;
   text-decoration: underline;
 }
+@keyframes bubbleScale {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  45% {
+    transform: translate(-50%, -50%) scale(1.07);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes bubbleScale {
+  0% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.07);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
 /* Circle Button Center */
-.circle-button {
+.industry-solutions .solutions-content .center-btn {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  margin-left: -40px;  /* Half of width (80px / 2) */
+  margin-top: -40px;   /* Half of height (80px / 2) */
   z-index: 5;
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--primary-color) 0%, #659ad2 100%);
   cursor: pointer;
-  transition: all 0.3s ease;
-
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: bubbleScale 1.5s infinite ease-in-out;
 }
-.circle-button svg {
-  font-size: 28px;
+
+.industry-solutions .solutions-content .center-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 32px rgba(74, 158, 255, 0.25);
+}
+.industry-solutions .solutions-content .center-btn svg {
+  font-size: 36px;
   flex-shrink: 0;
   color: var(--text-color4);
 }
 
-.circle-button:hover {
-  transform: translate(-50%, -50%) scale(1.05);
-  box-shadow: 0 8px 32px rgba(74, 158, 255, 0.25);
-}
-
 /* Right Section */
-.right-section {
+.industry-solutions .solutions-content .solutions-right {
   height: 100%;
   display: flex;
   align-items: center;
@@ -140,26 +221,46 @@
 
 /* Responsive Design */
 @media (max-width: 1200px) {
-  .industry-solutions .hero-content {
-    display: grid;
+  .industry-solutions .solutions-content {
     grid-template-columns: 1fr;
     gap: 40px;
     padding: 20px var(--left-space);
   }
-  .industry-solutions-grid {
+
+  .industry-solutions
+    .solutions-content
+    .solutions-left
+    .industry-solutions-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
+  .industry-solutions
+  .solutions-content
+  .solutions-left
+  .industry-solutions-grid
+  .solution-card:nth-child(2) {
+  background-color: transparent;
+}
 
-  .circle-button {
+/* Hover ONLY for Card 3 */
+.industry-solutions
+  .solutions-content
+  .solutions-left
+  .industry-solutions-grid
+  .solution-card:nth-child(3) {
+  background-color: transparent;
+}
+
+  .industry-solutions .solutions-content .center-btn {
     display: none;
   }
 
-  .industry-solutions .hero-content .left-section {
+  .industry-solutions .solutions-content .solutions-left {
     width: 100%;
     padding: 0;
   }
-  .industry-solutions .hero-content .right-section {
+
+  .industry-solutions .solutions-content .solutions-right {
     width: 100%;
     height: 200px;
   }

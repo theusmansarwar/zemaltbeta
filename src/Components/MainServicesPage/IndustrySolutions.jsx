@@ -3,14 +3,15 @@ import { useRouter } from "next/navigation";
 import "./IndustrySolutions.css";
 import { GoArrowUpRight } from "react-icons/go";
 import { baseUrl } from "@/config/Config";
+import { FiArrowUpRight } from "react-icons/fi";
 
 export default function IndustrySolutions({ data }) {
-  const router = useRouter()
+  const router = useRouter();
   return (
     <div className="industry-solutions">
-      <div className="hero-content">
+      <div className="solutions-content">
         {/* Left Section */}
-        <div className="left-section">
+        <div className="solutions-left">
           <div className="heading-box">
             <h2 className="main-heading">{data?.heading}</h2>
           </div>
@@ -32,20 +33,30 @@ export default function IndustrySolutions({ data }) {
 
           <p className="footer-text">
             Let's make something great work together.{" "}
-            <span  className="get-free-quote" onClick={()=>{router.push("/contact")}}>
+            <span
+              className="get-free-quote"
+              onClick={() => {
+                router.push("/contact");
+              }}
+            >
               Get Free Quote
             </span>
           </p>
         </div>
 
         {/* Center Button */}
-        <div className="circle-button">
-          <GoArrowUpRight />
+        <div
+          className="center-btn"
+          onClick={() => {
+            router.push("/case-study");
+          }}
+        >
+          <FiArrowUpRight />
         </div>
 
         {/*  Dynamic Right Image */}
         <div
-          className="right-section"
+          className="solutions-right"
           style={{
             backgroundImage: `url(${baseUrl + data?.steps?.image})`,
             backgroundPosition: "center",
