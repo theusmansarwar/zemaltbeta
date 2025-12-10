@@ -20,7 +20,7 @@ export default function MainServiceFirst({ data }) {
       </div>
 
       <div className="right">
-        <h2 className="main-first-title">{data.heading}</h2>
+        <h2 className="main-first-title">{data.title}</h2>
         <p
           className="description dangerously-set-data"
           dangerouslySetInnerHTML={{ __html: data.description }}

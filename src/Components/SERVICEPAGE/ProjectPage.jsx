@@ -1,16 +1,15 @@
 "use client";
 import React from "react";
-import PortfolioCards from "../portfolioCards/PortfolioCards";
 import ServicePageFeatured from "../ServicePageFeatured/ServicePageFeatured";
 import "./page.css";
 import { useParams } from "next/navigation";
 import ProvenSteps from "../SubServiceInfo/ProvenSteps";
 import SubServiceFourth from "../SubServiceInfo/SubServiceFourth";
-import SubServiceFirst from "../SubServiceInfo/SubServiceFirst";
 import WhyZemalt from "../SubServiceInfo/WhyZemalt";
 import TalkToExpert from "../SubServiceInfo/TalkToExpert";
 import Faq from "../FAQ/Faq";
 import OurCommitments from "../SubServiceInfo/OurCommitments";
+import MainServiceFirst from "../MainServicesPage/MainServiceFirst";
 
 const ProjectPage = ({
   featuredData,
@@ -34,7 +33,7 @@ const ProjectPage = ({
       <ServicePageFeatured data={featuredData} title={formattedTitle} />
 
       {/* Introduction Section */}
-      {introduction?.published && <SubServiceFirst data={introduction} />}
+      {introduction?.published && <MainServiceFirst data={introduction} />}
 
       {/* Why Choose Us */}
       {whySection?.published && <WhyZemalt data={whySection} />}
@@ -53,8 +52,6 @@ const ProjectPage = ({
 
       {/* Commitments Section */}
       <OurCommitments />
-
-    
     </div>
   );
 };
