@@ -7,6 +7,8 @@ import { fetchServiceBySlug } from "@/DAL/Fetch";
 async function getService(slug) {
   try {
     const res = await fetchServiceBySlug(slug);
+    console.log("service dataaaa",res);
+    
 
     if (res?.service) return res.service;
 
@@ -80,8 +82,11 @@ const Page = async ({ params }) => {
     image: service.firstSection?.image || "/zemalt-logo.webp",
     published: service.firstSection?.published ?? false,
   };
-
-
+  const contentSectionData = {
+    title: service.contentSection?.title,
+    description: service.contentSection?.description,
+    published: service.firstSection?.published ?? false,
+  };
 
   const secondData = {
     heading: service.secondSection?.title,
@@ -98,7 +103,6 @@ const Page = async ({ params }) => {
     items: service.whySteps?.items || [],
     published: service.whySteps?.published ?? false,
   };
-
 
   const faqsData = {
     faqs: service.faqs || [],
@@ -118,6 +122,7 @@ const Page = async ({ params }) => {
     <ServicePage
       featuredData={featuredData}
       firstSectionData={firstSectionData}
+      contentSectionData={contentSectionData}
       secondData={secondData}
       cardData={cardData}
       imageData={imageData}

@@ -11,6 +11,7 @@
   font-size: var(--heading-two);
   line-height: var(--heading-line-height);
   text-align: center;
+  margin-bottom: 10px;
 }
 .strategic-marketing p {
   font-size: var(--default-p-size);

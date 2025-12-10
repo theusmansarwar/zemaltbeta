@@ -1,4 +1,3 @@
-
 import styles from "./page.module.css";
 import Featured from "@/Components/FeaturedSection/Featured";
 import OutBox from "@/Components/OutOfBox/OutBox";
@@ -25,51 +24,48 @@ const reasonsData = {
     {
       question: "Proven Methods Strengthening Online Visibility",
       answer:
-        "Structured digital marketing with clear intent and reliable data boosts visibility. Targeted SEO services guide campaigns toward measurable reach across competitive markets. Strategic keyword planning and smart adjustments maintain stable performance across platforms. Focused content marketing increases engagement and retention. Zemalt uses refined methods to push projects toward consistent online growth. Every step emphasizes clarity, efficiency, and long-term results without unnecessary complexity or confusion."
+        "Structured digital marketing with clear intent and reliable data boosts visibility. Targeted SEO services guide campaigns toward measurable reach across competitive markets. Strategic keyword planning and smart adjustments maintain stable performance across platforms. Focused content marketing increases engagement and retention. Zemalt uses refined methods to push projects toward consistent online growth. Every step emphasizes clarity, efficiency, and long-term results without unnecessary complexity or confusion.",
     },
     {
       question: "Creative Execution Elevating Brand Presence",
       answer:
-        "Strategic design and clear messaging enhance brand impact across digital channels. Social media marketing thrives through deep audience understanding and creative ideas. Visual coherence strengthens recognition, while PPC elements support engagement. Zemalt ensures polished concepts help brands stand out in crowded feeds. Every campaign balances fresh value, effective communication, and long-term appeal. Users experience clarity, relevance, and impact without feeling overwhelmed."
+        "Strategic design and clear messaging enhance brand impact across digital channels. Social media marketing thrives through deep audience understanding and creative ideas. Visual coherence strengthens recognition, while PPC elements support engagement. Zemalt ensures polished concepts help brands stand out in crowded feeds. Every campaign balances fresh value, effective communication, and long-term appeal. Users experience clarity, relevance, and impact without feeling overwhelmed.",
     },
     {
       question: "Data Intelligence Guiding Smarter Decisions",
       answer:
-        "Accurate metrics and structured evaluation improve every stage of digital marketing. Insights highlight performance patterns and eliminate wasted effort. SEO, PPC, and social media data guide campaigns toward measurable results. Strategic analysis supports higher conversions and sustained campaign stability. Zemalt uses trend analysis to make decisions predictable, efficient, and aligned with long-term digital goals."
+        "Accurate metrics and structured evaluation improve every stage of digital marketing. Insights highlight performance patterns and eliminate wasted effort. SEO, PPC, and social media data guide campaigns toward measurable results. Strategic analysis supports higher conversions and sustained campaign stability. Zemalt uses trend analysis to make decisions predictable, efficient, and aligned with long-term digital goals.",
     },
     {
       question: "Industry Experience Delivering Reliable Results",
       answer:
-        "Zemalt applies expertise in SEO, web development, and social media marketing to maintain accuracy and efficiency. Tailored strategies improve reach, outperform competitors, and provide stability. Structured processes ensure campaigns remain organized, predictable, and refined. Complex challenges are simplified into actionable steps, guaranteeing reliable results and long-term growth. Every project benefits from tested methods and proven industry insight."
-    }
-  ]
+        "Zemalt applies expertise in SEO, web development, and social media marketing to maintain accuracy and efficiency. Tailored strategies improve reach, outperform competitors, and provide stability. Structured processes ensure campaigns remain organized, predictable, and refined. Complex challenges are simplified into actionable steps, guaranteeing reliable results and long-term growth. Every project benefits from tested methods and proven industry insight.",
+    },
+  ],
 };
- const marketingContent = [
-    {
-      type: "heading",
-      text: "Strategic Digital Marketing That Builds Trust and Accelerates Growth",
-    },
-    {
-      type: "paragraph",
-      text: "What drives real growth for a modern business? A clear strategy, consistent execution, and a digital presence that truly represents your vision. Our team guides you like a skilled digital marketing strategist who understands your goals and turns them into actionable steps. You get targeted campaigns, clean messaging, and social media management and content creation services that help your audience trust your brand.",
-    },
-    {
-      type: "paragraph",
-      text: "Business needs a partner that plans each step with focus. You receive support that fosters clarity, enhances visibility, and yields measurable results. A dedicated digital marketing agency for small businesses provides you with structure and long-term direction that many marketing companies often fail to deliver.",
-    },
-    {
-      type: "paragraph",
-      text: "What happens when your brand needs something specific? You get answers, guidance, and solutions tailored to your next move. If you want a strategy session or need help with a project, reach out anytime. Our team is ready to support your growth, one strong step at a time.",
-    }
-  ];
+
+const marketingContent = {
+  title: "Strategic Digital Marketing That Builds Trust and Accelerates Growth",
+  description: `
+      <p>
+        What drives real growth for a modern business? A clear strategy, consistent execution, and a digital presence that truly represents your vision. Our team guides you like a skilled digital marketing strategist who understands your goals and turns them into actionable steps. You get targeted campaigns, clean messaging, and social media management and content creation services that help your audience trust your brand.
+      </p>
+      <p>
+        Business needs a partner that plans each step with focus. You receive support that fosters clarity, enhances visibility, and yields measurable results. A dedicated digital marketing agency for small businesses provides you with structure and long-term direction that many marketing companies often fail to deliver.
+      </p>
+      <p>
+       What happens when your brand needs something specific? You get answers, guidance, and solutions tailored to your next move. If you want a strategy session or need help with a project, reach out anytime. Our team is ready to support your growth, one strong step at a time.
+      </p>
+    `,
+};
+
 const Homepagefaqs = {
   title: "FAQs",
   description:
     "Zemalt is a leading digital marketing agency. We provide clear answers and practical guidance. Our clients receive dedicated support backed by proven expertise.",
   items: [
     {
-      question:
-        "Why hire a digital marketing agency?",
+      question: "Why hire a digital marketing agency?",
       answer:
         "A professional agency brings experience, tools, and strategy. Zemalt ensures efficient campaigns, optimized SEO, and well-designed ad campaigns. ",
     },
@@ -107,22 +103,21 @@ const blogHeaderData = {
     "Explore our blog for expert strategies, SEO tips, and marketing insights that help you drive traffic, increase engagement, and grow your business.Discover step- by - step guides, industry trends, and proven techniques to boost your online presence.Our posts simplify complex marketing concepts, giving you practical ideas to implement immediately.Stay informed, learn from real examples, and take your digital strategy to the next level.",
 };
 export default function Home() {
-
   return (
     <div className={styles.Home}>
       <Featured />
       <OutBox />
-      <StrategicMarketing data={marketingContent}/>
-      <ImpactOfMarketing/>
-      <HomeServices/>
+      <StrategicMarketing data={marketingContent} />
+      <ImpactOfMarketing />
+      <HomeServices />
       <TestimonialSection />
-      <PortfolioSection/>
-      <ReasonsToChoose data={reasonsData}/>
+      <PortfolioSection />
+      <ReasonsToChoose data={reasonsData} />
       <TestimonialSlider2 />
       <BlogSection data={blogHeaderData} />
       <Faq faqs={Homepagefaqs} />
       <SeoSection />
-      <ContactSection/>
+      <ContactSection />
     </div>
   );
 }

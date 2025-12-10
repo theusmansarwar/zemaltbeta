@@ -9,6 +9,7 @@ import MainServiceFirst from "../MainServicesPage/MainServiceFirst";
 import WhyThis from "../MainServicesPage/WhyThis";
 import RevenueCalculator from "../RevenueCalculator/RevenueCalculator";
 import ServicePageFeatured from "../ServicePageFeatured/ServicePageFeatured";
+import StrategicMarketing from "../StrategicMarketing/StrategicMarketing";
 import WhyService from "../WhyService/WhyService";
 
 import "./page.css";
@@ -16,6 +17,7 @@ import "./page.css";
 export default function ServicePage({
   featuredData,
   firstSectionData,
+  contentSectionData,
   secondData,
   cardData,
   imageData,
@@ -36,6 +38,7 @@ export default function ServicePage({
       {cardData?.published && cardData.items?.length > 0 && (
         <ServiceCard data={cardData.items} />
       )}
+      <StrategicMarketing data={contentSectionData} />
       {secondData?.published && <IndustrySolutions data={secondData} />}
 
       {whyThisData?.published && <WhyThis data={whyThisData} />}
