@@ -9,16 +9,16 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const ContactForm = () => {
- const [formData, setFormData] = useState({
-  name: "",
-  lastName: "",
-  email: "",
-  phone: "",
-  subject: [],
-  message: "",
-  hasWebsite: "",
-  website: "",
-});
+  const [formData, setFormData] = useState({
+    name: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    subject: [],
+    message: "",
+    hasWebsite: "",
+    website: "",
+  });
 
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState(null);
@@ -47,17 +47,16 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-   const payload = {
-  name: formData.name,
-  lastName: formData.lastName,
-  email: formData.email,
-  phone: formData.phone,
-  subject: formData.subject.join(", "),
-  query: formData.message,
-  hasWebsite: formData.hasWebsite,
-  website: formData.website
-};
-
+    const payload = {
+      name: formData.name,
+      lastName: formData.lastName,
+      email: formData.email,
+      phone: formData.phone,
+      subject: formData.subject.join(", "),
+      query: formData.message,
+      hasWebsite: formData.hasWebsite,
+      website: formData.website,
+    };
 
     try {
       const res = await CreateLeads(payload);
@@ -100,176 +99,168 @@ const ContactForm = () => {
   };
 
   return (
-    
-      <div className="contact-form">
-        <form onSubmit={handleSubmit}>
-          {/* Row 1 */}
-          <div className="fromgrouprow">
-            <div className="formgroupform2">
-              <label htmlFor="name">First Name</label>
-              {errors.name && <span className="error-msg">{errors.name}</span>}
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="formgroupform2">
-              <label htmlFor="lastname">Last Name</label>
-              {errors.lastName && (
-                <span className="error-msg">{errors.lastName}</span>
-              )}
-              <input
-                type="text"
-                id="lastname"
-                name="lastName"
-                value={formData.lastName}
-                onChange={handleChange}
-              />
-            </div>
-          </div>
-
-          {/* Row 2 */}
-          <div className="fromgrouprow">
-            <div className="formgroupform2">
-              <label htmlFor="email">Email</label>
-              {errors.email && (
-                <span className="error-msg">{errors.email}</span>
-              )}
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="formgroupform2">
-              <label htmlFor="phone">Phone</label>
-              {errors.phone && (
-                <span className="error-msg">{errors.phone}</span>
-              )}
-              <PhoneInput
-                id="phone"
-                name="phone"
-                value={formData.phone}
-                onChange={handlePhoneChange}
-                countryCodeEditable={false}
-              />
-            </div>
-          </div>
- {/* Website Question with Radio Buttons */}
-<div className="formgroupform2 website-radio-group">
- 
-  <label>Do you have a website?</label>
-  {errors.hasWebsite && (
-                <span className="error-msg">{errors.hasWebsite}</span>
-              )}
-
-  <div className="radio-options">
-    <label className="radio-item">
-      <input
-        type="radio"
-        name="hasWebsite"
-        value="yes"
-        checked={formData.hasWebsite === "yes"}
-        onChange={handleChange}
-      />
-      Yes
-    </label>
-
-    <label className="radio-item">
-      <input
-        type="radio"
-        name="hasWebsite"
-        value="no"
-        checked={formData.hasWebsite === "no"}
-        onChange={(e) => {
-          handleChange(e);
-          setFormData((prev) => ({ ...prev, website: "" }));
-        }}
-      />
-      No
-    </label>
-  </div>
-</div>
-{formData.hasWebsite === "yes" && (
-  <div className="formgroupform2">
-    <label htmlFor="website">Website URL</label>
-     {errors.website && (
-                <span className="error-msg">{errors.website}</span>
-              )}
-    <input
-      type="text"
-      id="website"
-      name="website"
-      placeholder="Enter your website URL"
-      value={formData.website}
-      onChange={handleChange}
-    />
-  </div>
-)}
-
-
-
-
-          {/* ✅ Subject Checkboxes */}
-          <div className="formgroupform2 full-width">
-            <label>Select Subject / Service?</label>
-            {errors.subject && (
-              <span className="error-msg">{errors.subject}</span>
-            )}
-            <div className="checkbox-grid">
-              {[
-                "SEO",
-                "Social & Paid Media",
-                "Web Development",
-                "Designing",
-                "Google Ads",
-                "Content Writing",
-                "General Inquiry",
-                "Other",
-              ].map((subject) => {
-                const id = subject.toLowerCase().replace(/\s+/g, "-");
-                return (
-                  <div className="checkbox-item" key={id}>
-                    <input
-                      id={id}
-                      type="checkbox"
-                      name="subject"
-                      value={subject}
-                      checked={formData.subject.includes(subject)}
-                      onChange={handleSubjectChange}
-                    />
-                    <label htmlFor={id} className="checkbox-label">
-                      {subject}
-                    </label>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Message */}
-          <div className="formgroupform2 full-width">
-            <label htmlFor="message">Message</label>
-            {errors.query && <span className="error-msg">{errors.query}</span>}
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Enter your message..."
-              value={formData.message}
+    <div className="contact-form">
+      <form onSubmit={handleSubmit}>
+        {/* Row 1 */}
+        <div className="fromgrouprow">
+          <div className="formgroupform2">
+            <label htmlFor="name">First Name</label>
+            {errors.name && <span className="error-msg">{errors.name}</span>}
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
               onChange={handleChange}
-            ></textarea>
+            />
           </div>
+          <div className="formgroupform2">
+            <label htmlFor="lastname">Last Name</label>
+            {errors.lastName && (
+              <span className="error-msg">{errors.lastName}</span>
+            )}
+            <input
+              type="text"
+              id="lastname"
+              name="lastName"
+              value={formData.lastName}
+              onChange={handleChange}
+            />
+          </div>
+        </div>
 
-          <button className="submit-btn" type="submit">
-            Submit <FaArrowRight />
-          </button>
-        </form>
-      </div>  
+        {/* Row 2 */}
+        <div className="fromgrouprow">
+          <div className="formgroupform2">
+            <label htmlFor="email">Email</label>
+            {errors.email && <span className="error-msg">{errors.email}</span>}
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="formgroupform2">
+            <label htmlFor="phone">Phone</label>
+            {errors.phone && <span className="error-msg">{errors.phone}</span>}
+            <PhoneInput
+              id="phone"
+              name="phone"
+              value={formData.phone}
+              onChange={handlePhoneChange}
+              countryCodeEditable={false}
+              aria-label="Phone number"
+            />
+          </div>
+        </div>
+        {/* Website Question with Radio Buttons */}
+        <div className="formgroupform2 website-radio-group">
+          <label>Do you have a website?</label>
+          {errors.hasWebsite && (
+            <span className="error-msg">{errors.hasWebsite}</span>
+          )}
+
+          <div className="radio-options">
+            <label className="radio-item">
+              <input
+                type="radio"
+                name="hasWebsite"
+                value="yes"
+                checked={formData.hasWebsite === "yes"}
+                onChange={handleChange}
+              />
+              Yes
+            </label>
+
+            <label className="radio-item">
+              <input
+                type="radio"
+                name="hasWebsite"
+                value="no"
+                checked={formData.hasWebsite === "no"}
+                onChange={(e) => {
+                  handleChange(e);
+                  setFormData((prev) => ({ ...prev, website: "" }));
+                }}
+              />
+              No
+            </label>
+          </div>
+        </div>
+        {formData.hasWebsite === "yes" && (
+          <div className="formgroupform2">
+            <label htmlFor="website">Website URL</label>
+            {errors.website && (
+              <span className="error-msg">{errors.website}</span>
+            )}
+            <input
+              type="text"
+              id="website"
+              name="website"
+              placeholder="Enter your website URL"
+              value={formData.website}
+              onChange={handleChange}
+            />
+          </div>
+        )}
+
+        {/* ✅ Subject Checkboxes */}
+        <div className="formgroupform2 full-width">
+          <label>Select Subject / Service?</label>
+          {errors.subject && (
+            <span className="error-msg">{errors.subject}</span>
+          )}
+          <div className="checkbox-grid">
+            {[
+              "SEO",
+              "Social & Paid Media",
+              "Web Development",
+              "Designing",
+              "Google Ads",
+              "Content Writing",
+              "General Inquiry",
+              "Other",
+            ].map((subject) => {
+              const id = subject.toLowerCase().replace(/\s+/g, "-");
+              return (
+                <div className="checkbox-item" key={id}>
+                  <input
+                    id={id}
+                    type="checkbox"
+                    name="subject"
+                    value={subject}
+                    checked={formData.subject.includes(subject)}
+                    onChange={handleSubjectChange}
+                  />
+                  <label htmlFor={id} className="checkbox-label">
+                    {subject}
+                  </label>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Message */}
+        <div className="formgroupform2 full-width">
+          <label htmlFor="message">Message</label>
+          {errors.query && <span className="error-msg">{errors.query}</span>}
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Enter your message..."
+            value={formData.message}
+            onChange={handleChange}
+          ></textarea>
+        </div>
+
+        <button className="submit-btn" type="submit">
+          Submit <FaArrowRight />
+        </button>
+      </form>
+    </div>
   );
 };
 

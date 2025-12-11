@@ -1,10 +1,10 @@
-'use client'
+"use client";
 
-import { useEffect, useRef, useState } from 'react'
-import './HomeServices.css'
+import { useEffect, useRef, useState } from "react";
+import "./HomeServices.css";
 import { CiCircleChevLeft, CiCircleChevRight } from "react-icons/ci";
-import { FaArrowRight } from 'react-icons/fa6';
-import { useRouter } from 'next/navigation';
+import { FaArrowRight } from "react-icons/fa6";
+import { useRouter } from "next/navigation";
 
 const servicesData = [
   {
@@ -18,7 +18,7 @@ const servicesData = [
       "Build website authority and credibility for better rankings.",
     ],
     buttonText: "Explore SEO Services",
-    slug: "/services/seo"
+    slug: "/services/seo",
   },
   {
     tab: "Content Writing",
@@ -31,7 +31,7 @@ const servicesData = [
       "Plan and write content for a long-term connection.",
     ],
     buttonText: "Explore Content Services",
-    slug: "/services/content-writing"
+    slug: "/services/content-writing",
   },
   {
     tab: "Social Media & Paid Ads",
@@ -44,7 +44,7 @@ const servicesData = [
       "Analyze campaign results to refine marketing strategy.",
     ],
     buttonText: "Explore Social Media Services",
-    slug: "/services/social-media-marketing"
+    slug: "/services/social-media-marketing",
   },
   {
     tab: "Designing Services",
@@ -57,7 +57,7 @@ const servicesData = [
       "Develop logos, typography, and complete brand identity.",
     ],
     buttonText: "Explore Design Services",
-    slug: "/services/ui-ux"
+    slug: "/services/ui-ux",
   },
   {
     tab: "Google Ads",
@@ -70,7 +70,7 @@ const servicesData = [
       "Promote apps and target audiences effectively online.",
     ],
     buttonText: "Explore Google Ads Services",
-    slug: "/services/google-ads"
+    slug: "/services/google-ads",
   },
   {
     tab: "Web Development",
@@ -83,76 +83,85 @@ const servicesData = [
       "Develop online stores and interactive user elements.",
     ],
     buttonText: "Explore Web Development",
-    slug: "/services/web-development"
+    slug: "/services/web-development",
   },
 ];
 
 export default function HomeServices() {
   const router = useRouter();
-  const [activeTab, setActiveTab] = useState(servicesData[0].tab)
-  const [isSwitching, setIsSwitching] = useState(false)
-  const tabsRef = useRef(null)
-  const [canScrollLeft, setCanScrollLeft] = useState(false)
-  const [canScrollRight, setCanScrollRight] = useState(true)
+  const [activeTab, setActiveTab] = useState(servicesData[0].tab);
+  const [isSwitching, setIsSwitching] = useState(false);
+  const tabsRef = useRef(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
 
-  const activeContent = servicesData.find((item) => item.tab === activeTab)
+  const activeContent = servicesData.find((item) => item.tab === activeTab);
 
   const updateScrollButtons = () => {
-    const el = tabsRef.current
-    if (!el) return
+    const el = tabsRef.current;
+    if (!el) return;
 
-    setCanScrollLeft(el.scrollLeft > 0)
-    setCanScrollRight(el.scrollLeft + el.clientWidth < el.scrollWidth - 10)
-  }
+    setCanScrollLeft(el.scrollLeft > 0);
+    setCanScrollRight(el.scrollLeft + el.clientWidth < el.scrollWidth - 10);
+  };
 
   const scrollTabs = (direction) => {
-    const el = tabsRef.current
-    if (!el) return
+    const el = tabsRef.current;
+    if (!el) return;
 
-    const scrollAmount = 200
-    const newScroll = direction === 'left'
-      ? el.scrollLeft - scrollAmount
-      : el.scrollLeft + scrollAmount
+    const scrollAmount = 200;
+    const newScroll =
+      direction === "left"
+        ? el.scrollLeft - scrollAmount
+        : el.scrollLeft + scrollAmount;
 
-    el.scrollTo({ left: newScroll, behavior: "smooth" })
-  }
+    el.scrollTo({ left: newScroll, behavior: "smooth" });
+  };
 
   const handleTabClick = (tab) => {
-    setIsSwitching(true)
+    setIsSwitching(true);
 
     setTimeout(() => {
-      setActiveTab(tab)
-      setIsSwitching(false)
-    }, 150)
-  }
+      setActiveTab(tab);
+      setIsSwitching(false);
+    }, 150);
+  };
 
   useEffect(() => {
-    updateScrollButtons()
-    window.addEventListener("resize", updateScrollButtons)
-    return () => window.removeEventListener("resize", updateScrollButtons)
-  }, [])
+    updateScrollButtons();
+    window.addEventListener("resize", updateScrollButtons);
+    return () => window.removeEventListener("resize", updateScrollButtons);
+  }, []);
 
   return (
-    <section className="hservices-section" id='services'>
+    <section className="hservices-section" id="services">
       <div className="hservices-container">
-
-        <h2 className="hservices-title">Boost Your Online Presence with Expert Digital Marketing</h2>
+        <h2 className="hservices-title">
+          Boost Your Online Presence with Expert Digital Marketing
+        </h2>
 
         {/* Tabs With Arrows */}
         <div className="hservices-tabs-wrapper">
           <button
-            className={`scroll-btn ${!canScrollLeft ? 'disabled' : ''}`}
-            onClick={() => scrollTabs('left')}
+            aria-label="Left scroll arrow"
+            className={`scroll-btn ${!canScrollLeft ? "disabled" : ""}`}
+            onClick={() => scrollTabs("left")}
             disabled={!canScrollLeft}
           >
             <CiCircleChevLeft size={30} />
           </button>
 
-          <div className="hservices-tabs" ref={tabsRef} onScroll={updateScrollButtons}>
+          <div
+            className="hservices-tabs"
+            ref={tabsRef}
+            onScroll={updateScrollButtons}
+          >
             {servicesData.map((item) => (
               <button
                 key={item.tab}
-                className={`hservices-tab ${activeTab === item.tab ? 'active' : ''}`}
+                className={`hservices-tab ${
+                  activeTab === item.tab ? "active" : ""
+                }`}
                 onClick={() => handleTabClick(item.tab)}
               >
                 {item.tab}
@@ -161,8 +170,9 @@ export default function HomeServices() {
           </div>
 
           <button
-            className={`scroll-btn ${!canScrollRight ? 'disabled' : ''}`}
-            onClick={() => scrollTabs('right')}
+            aria-label="Right scroll arrow"
+            className={`scroll-btn ${!canScrollRight ? "disabled" : ""}`}
+            onClick={() => scrollTabs("right")}
             disabled={!canScrollRight}
           >
             <CiCircleChevRight size={30} />
@@ -170,7 +180,7 @@ export default function HomeServices() {
         </div>
 
         {/* Content Area */}
-        <div className={`hservices-content ${isSwitching ? 'switching' : ''}`}>
+        <div className={`hservices-content ${isSwitching ? "switching" : ""}`}>
           <div className="hservices-left">
             <h3 className="hservices-heading" key={`heading-${activeTab}`}>
               {activeContent.title}
@@ -179,9 +189,11 @@ export default function HomeServices() {
               {activeContent.description}
             </p>
 
-            <button 
-              className="hservices-link" 
-              onClick={() => { router.push(`${activeContent.slug}`) }}
+            <button
+              className="hservices-link"
+              onClick={() => {
+                router.push(`${activeContent.slug}`);
+              }}
               key={`btn-${activeTab}`}
             >
               {activeContent.buttonText} <FaArrowRight />
@@ -190,12 +202,14 @@ export default function HomeServices() {
 
           <div className="hservices-right" key={`features-${activeTab}`}>
             {activeContent.features.map((feature, i) => (
-              <div key={i} className="hservices-card">{feature}</div>
+              <div key={i} className="hservices-card">
+                {feature}
+              </div>
             ))}
             <div className="hservices-circle"></div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
