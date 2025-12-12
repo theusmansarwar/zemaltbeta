@@ -13,7 +13,7 @@ const Services = () => {
   const [services, setServices] = useState([]);
   const [loading, setLoading] = useState(true);
   const page = 1;
-  const rowsPerPages = 6;
+  const rowsPerPages = 10;
   // Fetch Services
   useEffect(() => {
     const loadServices = async () => {
