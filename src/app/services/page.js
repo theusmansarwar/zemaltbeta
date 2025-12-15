@@ -7,7 +7,6 @@ import DriveRevenue from "@/Components/DriveRevenue/DriveRevenue";
 import TestimonialSlider2 from "@/Components/TestimonialSlider/TestimonialSlider2";
 import GloballyTrusted from "@/Components/GloballyTrusted/GloballyTrusted";
 import HowDifferent from "@/Components/HowDifferent/HowDifferent";
-import BlogSection from "@/Components/BlogSection/BlogSection";
 import Faq from "@/Components/FAQ/Faq";
 import BussinessGrowth from "@/Components/BussinessGrowth/BussinessGrowth";
 import StrategicMarketing from "@/Components/StrategicMarketing/StrategicMarketing";
@@ -23,8 +22,10 @@ export const metadata = {
 const marketingContent = {
   title: "How Can Digital Campaigns Drive Business Growth?",
 
-  description: `<p>Campaigns designed by an expert digital marketing strategist transform online presence into measurable business growth. Brands from startups to multi-location companies expand their visibility, attract qualified leads, and increase engagement. Zemalt develops actionable strategies that improve website conversions, strengthen brand credibility, and generate tangible revenue. Every initiative emphasizes performance, ensuring campaigns deliver real results and scalable growth in competitive markets. </p>
-       <p>Intelligent planning leverages insights from a trusted digital marketing agency for small businesses and incorporates social media management and content creation services to enhance audience reach. Measurable outcomes include increased conversions, stronger online presence, and improved ROI. Experienced marketing companies know how to optimize every step, from traffic generation to engagement tracking. Each campaign supports long-term success, helping brands convert interest into loyal customers while securing a competitive advantage in the digital landscape. </p>`,
+  description: `<p>Campaigns designed by an <a href='https://zemalt.com/about-us'>expert digital marketing strategist </a> transform online presence into measurable business growth. Brands from startups to multi-location companies expand their visibility, attract qualified leads, and increase engagement. Zemalt develops actionable strategies that <a href='https://zemalt.com/services/ui-ux'>improve website conversions</a>, strengthen brand credibility, and generate tangible revenue. Every initiative emphasizes performance, ensuring campaigns deliver real results and scalable growth in competitive markets. </p>
+       <p>Intelligent planning leverages insights from a trusted digital marketing agency for small businesses and incorporates 
+       <a href='https://zemalt.com/services/social-media-marketing/account-manegement'>social media management</a>
+       and <a href='https://zemalt.com/services/content-writing'>content creation services</a> to enhance audience reach. Measurable outcomes include increased conversions, stronger online presence, and improved ROI. Experienced marketing companies know how to optimize every step, from traffic generation to engagement tracking. Each campaign supports long-term success, helping brands convert interest into loyal customers while securing a competitive advantage in the digital landscape. </p>`,
 };
 
 const reasonsData = {

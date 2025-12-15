@@ -98,7 +98,6 @@ html {
   overflow-wrap: break-word;
 }
 
-
 /* Optional: links */
 .dangerously-set-data a {
   color: var(--primary-color);
@@ -111,6 +110,11 @@ html {
   margin-bottom: 10px;
 }
 
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  cursor: pointer;
+}
 @media (max-width: 900px) {
   :root {
     --default-width: 90%;

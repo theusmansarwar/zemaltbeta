@@ -24,12 +24,12 @@ const reasonsData = {
     {
       question: "Proven Methods Strengthening Online Visibility",
       answer:
-        "Structured digital marketing with clear intent and reliable data boosts visibility. Targeted SEO services guide campaigns toward measurable reach across competitive markets. Strategic keyword planning and smart adjustments maintain stable performance across platforms. Focused content marketing increases engagement and retention. Zemalt uses refined methods to push projects toward consistent online growth. Every step emphasizes clarity, efficiency, and long-term results without unnecessary complexity or confusion.",
+        "Structured digital marketing with clear intent and reliable data boosts visibility. Targeted <a href='https://zemalt.com/services/seo'> SEO services</a> guide campaigns toward measurable reach across competitive markets. Strategic keyword planning and smart adjustments maintain stable performance across platforms. Focused content marketing increases engagement and retention. Zemalt uses refined methods to push projects toward consistent online growth. Every step emphasizes clarity, efficiency, and long-term results without unnecessary complexity or confusion.",
     },
     {
       question: "Creative Execution Elevating Brand Presence",
       answer:
-        "Strategic design and clear messaging enhance brand impact across digital channels. Social media marketing thrives through deep audience understanding and creative ideas. Visual coherence strengthens recognition, while PPC elements support engagement. Zemalt ensures polished concepts help brands stand out in crowded feeds. Every campaign balances fresh value, effective communication, and long-term appeal. Users experience clarity, relevance, and impact without feeling overwhelmed.",
+        "Strategic design and clear messaging enhance brand impact across digital channels. Social media marketing thrives through deep audience understanding and creative ideas. Visual coherence strengthens recognition, while <a href='https://zemalt.com/services/google-ads'>PPC elements</a> support engagement. Zemalt ensures polished concepts help brands stand out in crowded feeds. Every campaign balances fresh value, effective communication, and long-term appeal. Users experience clarity, relevance, and impact without feeling overwhelmed.",
     },
     {
       question: "Data Intelligence Guiding Smarter Decisions",
@@ -39,7 +39,7 @@ const reasonsData = {
     {
       question: "Industry Experience Delivering Reliable Results",
       answer:
-        "Zemalt applies expertise in SEO, web development, and social media marketing to maintain accuracy and efficiency. Tailored strategies improve reach, outperform competitors, and provide stability. Structured processes ensure campaigns remain organized, predictable, and refined. Complex challenges are simplified into actionable steps, guaranteeing reliable results and long-term growth. Every project benefits from tested methods and proven industry insight.",
+        "Zemalt applies expertise in SEO, <a href='https://zemalt.com/services/web-development'> web development </a>, and social media marketing to maintain accuracy and efficiency. Tailored strategies improve reach, outperform competitors, and provide stability. Structured processes ensure campaigns remain organized, predictable, and refined. Complex challenges are simplified into actionable steps, guaranteeing reliable results and long-term growth. Every project benefits from tested methods and proven industry insight.",
     },
   ],
 };
@@ -48,7 +48,7 @@ const marketingContent = {
   title: "Strategic Digital Marketing That Builds Trust and Accelerates Growth",
   description: `
       <p>
-        What drives real growth for a modern business? A clear strategy, consistent execution, and a digital presence that truly represents your vision. Our team guides you like a skilled digital marketing strategist who understands your goals and turns them into actionable steps. You get targeted campaigns, clean messaging, and social media management and content creation services that help your audience trust your brand.
+        What drives real growth for a modern business? A clear strategy, consistent execution, and a digital presence that truly represents your vision. Our team guides you like a skilled digital marketing strategist who understands your goals and turns them into actionable steps. You get targeted campaigns, clean messaging, and <a href='https://zemalt.com/services/social-media-marketing/account-manegement'>social media management</a> and <a href='https://zemalt.com/services/content-writing'>content creation services</a> that help your audience trust your brand.
       </p>
       <p>
         Business needs a partner that plans each step with focus. You receive support that fosters clarity, enhances visibility, and yields measurable results. A dedicated digital marketing agency for small businesses provides you with structure and long-term direction that many marketing companies often fail to deliver.

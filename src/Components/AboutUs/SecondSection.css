@@ -18,6 +18,8 @@
   font-size: var(--default-p-size);
   line-height: var(--p-line-height);
 }
+
+
 .second-section .right {
   width: 30%;
 }

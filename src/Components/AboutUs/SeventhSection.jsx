@@ -12,10 +12,10 @@ const SeventhSection = () => {
       <div className="bottom-content">
         <div className="left">
           <p>
-            Zemalt is a digital agency that helps your business grow online. It
-            works on SEO, Google Ads, social media, content, websites, and
-            design. The aim is simple. You get real results that make a
-            difference.
+            Zemalt is a <a href="https://zemalt.com">digital agency</a> that
+            helps your business grow online. It works on SEO, Google Ads, social
+            media, content, websites, and design. The aim is simple. You get
+            real results that make a difference.
           </p>
           <p>
             Our vision is clear, and we provide solutions that drive real
@@ -52,7 +52,15 @@ const SeventhSection = () => {
           </p>
         </div>
       </div>
-      <button className="proposal-btn" onClick={() => { router.push("/contact") }}>Get a Proposal<FaArrowRight /></button>
+      <button
+        className="proposal-btn"
+        onClick={() => {
+          router.push("/contact");
+        }}
+      >
+        Get a Proposal
+        <FaArrowRight />
+      </button>
     </div>
   );
 };

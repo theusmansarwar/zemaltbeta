@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import "./SecondSection.css";
 import { FaArrowRight } from "react-icons/fa6";
@@ -10,16 +10,21 @@ const SecondSection = () => {
       <div className="left">
         <h2>Grow Your Brand Online</h2>
         <p>
-          Your business needs clear steps to grow. A strong online presence
-          gives you reach and trust. People look for brands that show value and
-          stay easy to find. It is hard to stand out if your message looks weak.
-          You need design that looks sharp and words that connect.
+          Your business needs{" "}
+          <a href="https://zemalt.com/services">clear steps to grow</a>. A
+          strong online presence gives you reach and trust. People look for
+          brands that show value and stay easy to find. It is hard to stand out
+          if your message looks weak. You need design that looks sharp and words
+          that connect.
         </p>
         <p>
           Our work stays simple and clear. Each project aims to give you results
           that last. Our team studies your market and shapes a plan that fits.
-          You get designs that guide users. You get content that speaks in a
-          human tone.
+          You get designs that guide users. You get{" "}
+          <a href="https://zemalt.com/services/content-writing">
+            content that speaks in a human tone
+          </a>
+          .
         </p>
         <p>
           Each step keeps focus on results. We create pages that guide users
@@ -75,7 +80,14 @@ const SecondSection = () => {
             </div>
           </div>
         </div>
-        <button className="proposal-btn" onClick={() => { router.push("/contact") }}>Get a Proposal <FaArrowRight /></button>
+        <button
+          className="proposal-btn"
+          onClick={() => {
+            router.push("/contact");
+          }}
+        >
+          Get a Proposal <FaArrowRight />
+        </button>
       </div>
     </div>
   );

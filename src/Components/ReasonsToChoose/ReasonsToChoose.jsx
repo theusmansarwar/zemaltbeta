@@ -1,15 +1,11 @@
 import React from "react";
 import "./ReasonsToChoose.css";
 
-
-const ReasonsToChoose = ({data}) => {
+const ReasonsToChoose = ({ data }) => {
   return (
     <section className="reasons" id="why-choose-zemalt">
-      
       {/* Dynamic Heading */}
-      <h2 className="reasons-title">
-        {data.heading}
-      </h2>
+      <h2 className="reasons-title">{data.heading}</h2>
 
       {/* Dynamic Steps */}
       <div className="steps-container">
@@ -21,7 +17,10 @@ const ReasonsToChoose = ({data}) => {
 
             <div>
               <h3>{step.question}</h3>
-              <p className="step-text">{step.answer}</p>
+              <p
+                className="dangerously-set-data"
+                dangerouslySetInnerHTML={{ __html: step.answer }}
+              />
             </div>
           </div>
         ))}

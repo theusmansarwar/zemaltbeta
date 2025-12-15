@@ -19,6 +19,13 @@
   font-size: var(--default-p-size);
   line-height: var(--p-line-height);
 }
+.bussiness-growth .left a{
+  font-size: var(--default-p-size);
+  line-height: var(--p-line-height);
+  text-decoration: none;
+  color: var(--primary-color);
+  cursor: pointer;
+}
 .bussiness-growth .left .proposal-btn {
   width: 40%;
   background-color: var(--primary-color);

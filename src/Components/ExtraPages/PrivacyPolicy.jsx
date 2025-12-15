@@ -84,8 +84,9 @@ const PrivacyPolicy = () => {
         We take strong measures to protect your personal and project
         information. All data is stored securely and accessed only by authorized
         personnel. Our security practices include encryption, secure servers,
-        and careful handling of all client information. You can rely on Zemalt
-        for safe and professional management of your data.
+        and careful handling of all client information. You can rely on{" "}
+        <a href="https://zemalt.com">Zemalt</a> for safe and professional
+        management of your data.
       </p>
 
       <h2>Your Rights</h2>

@@ -13,14 +13,15 @@
   border-radius: 15px;
   color: var(--text-color4);
   width: calc(30% - 40px);
+  gap: 10px;
 }
 
 .testimonial-content {
-  width: calc(100%-100px);
+  width: 100%;
   height: 250px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 5px;
 }
 
 .testimonial-logo {
