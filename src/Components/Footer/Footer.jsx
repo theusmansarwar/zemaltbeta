@@ -28,6 +28,7 @@ const whatWeDoBest = [
   { slug: "ui-ux", label: "Designing" },
   { slug: "google-ads", label: "Google Ads" },
   { slug: "content-writing", label: "Content Writing" },
+  { slug: "video-editing", label: "Video Editing" },
 ];
 const industries = [
   { label: "E-Commerce & Retail" },

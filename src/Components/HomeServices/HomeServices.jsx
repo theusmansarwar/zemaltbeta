@@ -21,6 +21,33 @@ const servicesData = [
     slug: "/services/seo",
   },
   {
+    tab: "Web Development",
+    title: "Build Powerful and User-Friendly Websites",
+    description:
+      "A well-structured website enhances user experience, improves engagement, and supports business growth. Custom web development, responsive website design, and e-commerce solutions ensure your site functions smoothly across devices. Optimized layouts, interactive features, and clean code improve performance, navigation, and search visibility. ",
+    features: [
+      "Build responsive websites with functional business features.",
+      "Create layouts that adapt to all devices.",
+      "Develop online stores and interactive user elements.",
+    ],
+    buttonText: "Explore Web Development",
+    slug: "/services/web-development",
+  },
+  {
+    tab: "Designing Services",
+    title: "Capture Attention with Engaging and Professional Designs",
+    description:
+      "Strong design improves brand recognition and engages audiences effectively. From UI/UX design and website layouts to creative assets & custom art, thoughtful visuals communicate. Branding & identity design, advertising graphics, print media designs, and packaging concepts help businesses maintain a consistent image.",
+    features: [
+      "Produce illustrations, infographics, and marketing visuals.",
+      "Create visuals for social media and email campaigns.",
+      "Develop logos, typography, and complete brand identity.",
+    ],
+    buttonText: "Explore Design Services",
+    slug: "/services/ui-ux",
+  },
+
+  {
     tab: "Content Writing",
     title: "Create Content That Connects and Converts",
     description:
@@ -46,19 +73,7 @@ const servicesData = [
     buttonText: "Explore Social Media Services",
     slug: "/services/social-media-marketing",
   },
-  {
-    tab: "Designing Services",
-    title: "Capture Attention with Engaging and Professional Designs",
-    description:
-      "Strong design improves brand recognition and engages audiences effectively. From UI/UX design and website layouts to creative assets & custom art, thoughtful visuals communicate. Branding & identity design, advertising graphics, print media designs, and packaging concepts help businesses maintain a consistent image.",
-    features: [
-      "Produce illustrations, infographics, and marketing visuals.",
-      "Create visuals for social media and email campaigns.",
-      "Develop logos, typography, and complete brand identity.",
-    ],
-    buttonText: "Explore Design Services",
-    slug: "/services/ui-ux",
-  },
+
   {
     tab: "Google Ads",
     title: "Drive Growth with Targeted Google Ads",
@@ -72,18 +87,19 @@ const servicesData = [
     buttonText: "Explore Google Ads Services",
     slug: "/services/google-ads",
   },
+
   {
-    tab: "Web Development",
-    title: "Build Powerful and User-Friendly Websites",
+    tab: "Video Editing",
+    title: "Video Editing Services That Build Strong Visual Impact",
     description:
-      "A well-structured website enhances user experience, improves engagement, and supports business growth. Custom web development, responsive website design, and e-commerce solutions ensure your site functions smoothly across devices. Optimized layouts, interactive features, and clean code improve performance, navigation, and search visibility. ",
+      "A clear message drives attention and shapes how viewers see your brand. Clean cuts and smooth pacing help each video deliver meaning fast. The right edits improve flow, increase watch time, and support better engagement. Visual elements stay aligned across ads, reels, YouTube videos, and business content. Each edit strengthens identity and creates a polished look.",
     features: [
-      "Build responsive websites with functional business features.",
-      "Create layouts that adapt to all devices.",
-      "Develop online stores and interactive user elements.",
+      "Identify the purpose of the video and define the core message.",
+      "Adjust pacing and sequence to improve clarity.",
+      "Add text, graphics, and effects that support the brand tone.",
     ],
-    buttonText: "Explore Web Development",
-    slug: "/services/web-development",
+    buttonText: "Explore Video Editing",
+    slug: "/services/video-editing",
   },
 ];
 

@@ -19,6 +19,7 @@ const GrowYourBrand = () => {
           slug: "/services/social-media-marketing",
         },
         { label: "Google Ads Management", slug: "/services/google-ads" },
+        { label: "Video Editing", slug: "/services/video-editing" },
       ],
     },
     {
