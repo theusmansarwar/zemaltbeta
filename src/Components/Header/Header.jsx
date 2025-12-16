@@ -8,8 +8,6 @@ import { usePathname, useRouter } from "next/navigation";
 import { fetchDropDownServices } from "@/DAL/Fetch";
 import { toast } from "react-toastify";
 
-
-
 const Header = () => {
   const router = useRouter();
   const pathname = usePathname();
@@ -29,23 +27,21 @@ const Header = () => {
       try {
         const res = await fetchDropDownServices();
 
-
         const fetchedServices = Array.isArray(res?.services)
           ? res.services.map((service) => ({
-            name: service.title,
-            slug: service.slug,
-            menuImage: service.menuImg,
-            items: Array.isArray(service.subServices?.items)
-              ? service.subServices.items.map((sub) => ({
-                name: sub.title,
-                slug: sub.slug,
-              }))
-              : [],
-          }))
+              name: service.title,
+              slug: service.slug,
+              menuImage: service.menuImg,
+              items: Array.isArray(service.subServices?.items)
+                ? service.subServices.items.map((sub) => ({
+                    name: sub.title,
+                    slug: sub.slug,
+                  }))
+                : [],
+            }))
           : [];
 
         setServices(fetchedServices);
-
       } catch (error) {
         toast.error("Failed to fetch services:", error);
         setServices([]);
@@ -54,7 +50,6 @@ const Header = () => {
 
     getServices();
   }, []);
-
 
   return (
     <div className="main-wrapper-fixed-width">
@@ -115,10 +110,7 @@ const Header = () => {
           >
             Blogs
           </li>
-
-
         </ul>
-
 
         <button onClick={() => router.push("/contact")}>Get Started</button>
 
@@ -135,91 +127,132 @@ const Header = () => {
 
       {/* Desktop Services Dropdown */}
       {showDropdown && (
-        <div className="maindropdown-area"  >
-          <div className="maindropdown-area-flex " onMouseLeave={hidedropdown}>
-            <div className="left" onMouseEnter={hidedropdown}></div>
-            <div className="center" onMouseEnter={visibleDropdown}>
-              <ServicesDropDown services={services} />
+        <>
+          {/* BLUR OVERLAY */}
+          <div className="dropdown-overlay" onMouseEnter={hidedropdown} />
+
+          {/* DROPDOWN */}
+          <div className="maindropdown-area">
+            <div className="maindropdown-area-flex">
+              {/* LEFT CLOSE ZONE */}
+              <div className="left" onMouseEnter={hidedropdown} />
+
+              {/* CENTER (SAFE ZONE) */}
+              <div className="center" onMouseEnter={visibleDropdown}>
+                <ServicesDropDown services={services} onClose={hidedropdown} />
+              </div>
+
+              {/* RIGHT CLOSE ZONE */}
+              <div className="right" onMouseEnter={hidedropdown} />
             </div>
-            <div className="right" onMouseEnter={hidedropdown}></div>
           </div>
-        </div>
+        </>
       )}
 
       {/* Mobile Nav */}
       <div className={`mobile-menu ${mobileMenu ? "open" : ""}`}>
         <ul>
-          <li className={pathname === "/" ? "active" : ""}
+          <li
+            className={pathname === "/" ? "active" : ""}
             onClick={() => {
               router.push("/");
               setMobileMenu(false);
-            }}>Home</li>
+            }}
+          >
+            Home
+          </li>
           {/* Main Services */}
+          {/* ================= MOBILE SERVICES ================= */}
           <li>
             <div className="mobile-services-row">
+              {/* MAIN SERVICES LINK */}
               <span
-                className="mobile-link"
+                className={`mobile-link ${
+                  pathname.startsWith("/services") ? "active" : ""
+                }`}
                 onClick={() => {
                   router.push("/services");
-                  setMobileMenu(false); // close menu after navigation
+                  setMobileMenu(false);
                 }}
               >
                 Services
               </span>
+
               <FaAngleDown
                 className="expand-icon"
                 onClick={() => setIsServicesOpen(!isServicesOpen)}
               />
             </div>
 
+            {/* MAIN SERVICES LIST */}
             {isServicesOpen && (
               <ul className="mobile-submenu">
-                {services.map((service, idx) => (
-                  <li key={idx}>
-                    <div className="mobile-services-row">
-                      <span
-                        className="mobile-link"
-                        onClick={() => {
-                          router.push(`/services/${service.slug}`);
-                          setMobileMenu(false); // close after navigation
-                        }}
-                      >
-                        {service.name}
-                      </span>
-                      <FaAngleDown
-                        className="expand-icon"
-                        onClick={() =>
-                          setActiveService((prev) =>
-                            prev === service.slug ? null : service.slug
-                          )
-                        }
-                      />
-                    </div>
+                {services.map((service, idx) => {
+                  const isServiceActive =
+                    pathname === `/services/${service.slug}` ||
+                    pathname.startsWith(`/services/${service.slug}/`);
 
-                    {/* Subservices */}
-                    {activeService === service.slug && (
-                      <ul className="mobile-submenu">
-                        {service.items.map((sub, subIdx) => (
-                          <li
-                            key={subIdx}
-                            onClick={() => {
-                              router.push(
-                                `/services/${service.slug}/${sub.slug}`
-                              );
-                              setMobileMenu(false);
-                            }}
-                          >
-                            {sub.name}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </li>
-                ))}
+                  return (
+                    <li key={idx}>
+                      <div className="mobile-services-row">
+                        {/* MAIN SERVICE */}
+                        <span
+                          className={`mobile-link ${
+                            isServiceActive ? "active" : ""
+                          }`}
+                          onClick={() => {
+                            router.push(`/services/${service.slug}`);
+                            setMobileMenu(false);
+                          }}
+                        >
+                          {service.name}
+                        </span>
+
+                        <FaAngleDown
+                          className="expand-icon"
+                          onClick={() =>
+                            setActiveService((prev) =>
+                              prev === service.slug ? null : service.slug
+                            )
+                          }
+                        />
+                      </div>
+
+                      {/* SUB SERVICES */}
+                      {activeService === service.slug && (
+                        <ul className="mobile-submenu">
+                          {service.items.map((sub, subIdx) => {
+                            const isSubActive =
+                              pathname ===
+                              `/services/${service.slug}/${sub.slug}`;
+
+                            return (
+                              <li
+                                key={subIdx}
+                                className={isSubActive ? "active" : ""}
+                                onClick={() => {
+                                  router.push(
+                                    `/services/${service.slug}/${sub.slug}`
+                                  );
+                                  setMobileMenu(false);
+                                }}
+                              >
+                                {sub.name}
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             )}
           </li>
-          <li className={pathname === "/products" ? "active" : ""}
+          {/* ================= END MOBILE SERVICES ================= */}
+
+          <li
+            className={pathname === "/products" ? "active" : ""}
             onClick={() => {
               router.push("/products");
               setMobileMenu(false);
@@ -229,7 +262,8 @@ const Header = () => {
           </li>
 
           {/* Other menu items */}
-          <li className={pathname === "/case-study" ? "active" : ""}
+          <li
+            className={pathname === "/case-study" ? "active" : ""}
             onClick={() => {
               router.push("/case-study");
               setMobileMenu(false);
@@ -237,7 +271,8 @@ const Header = () => {
           >
             Case Studies
           </li>
-          <li className={pathname === "/industries" ? "active" : ""}
+          <li
+            className={pathname === "/industries" ? "active" : ""}
             onClick={() => {
               router.push("/industries");
               setMobileMenu(false);
@@ -245,7 +280,8 @@ const Header = () => {
           >
             Industries We Serve
           </li>
-          <li className={pathname === "/portfolio" ? "active" : ""}
+          <li
+            className={pathname === "/portfolio" ? "active" : ""}
             onClick={() => {
               router.push("/portfolio");
               setMobileMenu(false);
@@ -253,7 +289,8 @@ const Header = () => {
           >
             Portfolio
           </li>
-          <li className={pathname === "/blog" ? "active" : ""}
+          <li
+            className={pathname === "/blog" ? "active" : ""}
             onClick={() => {
               router.push("/blog");
               setMobileMenu(false);
@@ -261,8 +298,6 @@ const Header = () => {
           >
             Blogs
           </li>
-
-
         </ul>
       </div>
     </div>

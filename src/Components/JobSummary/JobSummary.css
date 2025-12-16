@@ -1,7 +1,7 @@
 .job-summary-card {
   width: calc(100% - 40px);
   padding: 20px;
-  background: var(--background2);
+  background: #f9f9f9;
   border-radius: 12px;
   height: fit-content;
   text-align: center;

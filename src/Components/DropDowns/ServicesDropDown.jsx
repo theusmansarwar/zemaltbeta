@@ -6,7 +6,7 @@ import { FiArrowRight } from "react-icons/fi";
 import { useRouter, usePathname } from "next/navigation";
 import { baseUrl } from "@/config/Config";
 
-const ServicesDropDown = ({ services }) => {
+const ServicesDropDown = ({ services ,onClose }) => {
   const router = useRouter();
   const pathname = usePathname();
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -25,6 +25,7 @@ const ServicesDropDown = ({ services }) => {
 
   const handleMainServiceClick = (service) => {
     router.push(`/services/${service.slug}`);
+    onClose?.(); //  CLOSE DROPDOWN
   };
 
   const handleSubServiceClick = (mainSlug, subSlug) => {
@@ -32,6 +33,7 @@ const ServicesDropDown = ({ services }) => {
       window.open(mainSlug, "_blank");
     } else {
       router.push(`/services/${mainSlug}/${subSlug}`);
+        onClose?.(); //  CLOSE DROPDOWN
     }
   };
 
@@ -98,7 +100,9 @@ const ServicesDropDown = ({ services }) => {
             className="view-all-btn"
             onClick={() => {
               router.push("/case-study");
+                onClose?.(); //CLOSE DROPDOWN
             }}
+            
           >
             Check Examples <FiArrowRight />
           </p>

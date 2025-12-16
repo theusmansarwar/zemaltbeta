@@ -2,7 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 50px 80px;
+  width: calc(100% - 10%);
+  padding: 40px var(--left-space);
   background-color: white;
 }
 
@@ -39,25 +40,31 @@
 }
 
 .benefit-card {
-  padding: 20px;
-  border-radius: 12px;
   text-align: left;
 }
 
-.benefit-icon {
-  font-size: 30px;
+.benefit-icon-container
+{
+  width: 60px;
+  height: 60px;
   background: var(--primary-color);
-  color: white;
-  padding: 15px;
   border-radius: 10px;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 15px;
+}
+.benefit-icon-container .benefit-icon
+{
+  width: 30px;
+  height: 30px;
+
 }
 
 .benefit-title {
   font-size: 16px;
   font-weight: bold;
-  color: #1d3557;
+  color: #001833;
   margin-bottom: 10px;
 }
 
@@ -65,4 +72,34 @@
   font-size: 14px;
   color: #444;
   line-height: 1.5;
+}
+
+@media(max-width:900px) {
+  .benefits {
+      width: calc(100% - 10%);
+    flex-direction: column;
+    padding: 20px var(--left-space);
+  }
+
+  .benefits-left, .benefits-right {
+    padding: 0;
+    width: 100%;
+  }
+
+  .benefits-right {
+    margin-top: 30px;
+    grid-template-columns: 1fr;
+      gap: 10px;
+  }
+  .benefit-icon-container
+{
+  width: 40px;
+  height: 40px;
+}
+.benefit-icon-container .benefit-icon
+{
+  width: 20px;
+  height: 20px;
+
+}
 }

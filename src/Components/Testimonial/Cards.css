@@ -1,7 +1,7 @@
 .cards-area-testimonials {
   display: flex;
   width: 100%;
-  gap: 5%;
+  gap: 2%;
   position: relative;
   z-index: 2;
 }
@@ -12,7 +12,7 @@
   padding: 20px;
   border-radius: 15px;
   color: var(--text-color4);
-  width: calc(30% - 40px);
+  width: calc(32% - 40px);
   gap: 10px;
 }
 
@@ -22,6 +22,7 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
+  
 }
 
 .testimonial-logo {

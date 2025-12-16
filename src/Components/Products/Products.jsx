@@ -4,7 +4,6 @@ import "./Products.css";
 import { FaArrowRightLong } from "react-icons/fa6";
 import ProductsPopup from "./ProductsPopup";
 import { baseUrl } from "@/config/Config";
-import truncateTextByWords from "@/utils/TruncateByWords";
 import { fetchProducts } from "@/DAL/Fetch";
 import ProductsSkeleton from "../SkeletonLoaders/ProductsSkeleton";
 import { toast } from "react-toastify";
@@ -56,7 +55,7 @@ const Products = () => {
           <div className="right">
             <h2>{item.name}</h2>
             {item.description && (
-              <div className="description"
+              <div className="desc"
                 dangerouslySetInnerHTML={{
                   __html: item.description,
                 }}

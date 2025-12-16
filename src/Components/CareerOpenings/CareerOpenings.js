@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./CareerOpenings.css";
 import { fetchJobs } from "@/DAL/Fetch";
 import { useRouter } from "next/navigation";
-import { FaRightLong } from "react-icons/fa6";
+import { FaArrowRight} from "react-icons/fa6";
 import { toast } from "react-toastify";
 
 const CareerOpenings = () => {
@@ -56,7 +56,8 @@ const CareerOpenings = () => {
       <h5 className="subtitle">COME JOIN US</h5>
       <h2 className="title">Career Openings</h2>
       <p className="description">
-        We're always looking for creative, talented self-starters to join the JMC family.
+        We're always looking for creative, talented self-starters to join the
+        JMC family.
         <br />
         Check out our open roles below and fill out an application.
       </p>
@@ -71,7 +72,9 @@ const CareerOpenings = () => {
               categories.map((cat, i) => (
                 <p
                   key={i}
-                  className={`category ${activeCategory === cat.name ? "active" : ""}`}
+                  className={`category ${
+                    activeCategory === cat.name ? "active" : ""
+                  }`}
                   onClick={() => setActiveCategory(cat.name)}
                 >
                   {cat.name} <span>({cat.count})</span>
@@ -88,23 +91,31 @@ const CareerOpenings = () => {
               .filter((job) => job.jobCategory === activeCategory)
               .map((job, i) => (
                 <div className="job-card" key={i}>
-                  <div className="job-title">{job.jobtitle}</div>
-                  <div className="job-info">
-                    <span>
-                      <strong>Experience</strong> <br /> {job.noofyearsexperience || "N/A"}
-                    </span>
-                    <span>
-                      <strong>Deadline</strong> <br />{" "}
-                      {job.lastdatetoapply
-                        ? new Date(job.lastdatetoapply).toLocaleDateString()
-                        : "N/A"}
-                    </span>
-                    <span className="arrow" onClick={() => { router.push(`/career/${job._id}`) }}><FaRightLong /></span>
-                  </div>
+                  <h3 className="job-title">{job.jobtitle}</h3>
+
+                  <span>
+                    <strong>Experience</strong> <br />{" "}
+                    {job.noofyearsexperience || "N/A"}
+                  </span>
+                  <span>
+                    <strong>Deadline</strong> <br />{" "}
+                    {job.lastdatetoapply
+                      ? new Date(job.lastdatetoapply).toLocaleDateString()
+                      : "N/A"}
+                  </span>
+                  <span
+                    className="arrow"
+                    onClick={() => {
+                      router.push(`/career/${job._id}`);
+                    }}
+                  >
+                    view <FaArrowRight />
+                  </span>
                 </div>
               ))}
 
-            {jobs.filter((job) => job.jobCategory === activeCategory).length === 0 && (
+            {jobs.filter((job) => job.jobCategory === activeCategory).length ===
+              0 && (
               <p className="no-jobs">No jobs available in this category.</p>
             )}
           </div>

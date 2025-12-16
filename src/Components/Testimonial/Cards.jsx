@@ -9,9 +9,7 @@ const Cards = () => {
         <div className="testimonial-content">
           <img className="testimonial-logo" src="/google.webp" alt="Google" />
           <p>
-            Clients appreciate the results shown on Google Reviews. Their
-            feedback highlights how our work boosts visibility, strengthens
-            brand presence, and delivers dependable quality.
+            Google Reviews highlight the trust clients place in our work and results. Their feedback reflects improved visibility, stronger brand presence, and consistent quality.
           </p>
         </div>
         <div className="check-now-button">
@@ -29,9 +27,7 @@ const Cards = () => {
             alt="Trustpilot"
           />
           <p>
-            Businesses share their stories on Trustpilot as they experience
-            consistent support, clear communication, and measurable improvements
-            through our services.
+            Trustpilot reviews reflect the confidence businesses place in our team. Clients highlight consistent support, clear communication, and measurable improvements.
           </p>
         </div>
         <div className="check-now-button">

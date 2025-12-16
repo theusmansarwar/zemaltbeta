@@ -93,6 +93,7 @@
   z-index: 60;
   overflow: hidden;
 }
+
 .maindropdown-area-flex {
   display: flex;
   overflow: hidden;
@@ -111,6 +112,16 @@
   width: 60%;
   height: calc(90vh - 111px);
   padding-top: 40px;
+}
+.dropdown-overlay {
+  position: fixed;
+  top: 90px; /* ⬅️ CRITICAL */
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 90px);
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+  z-index: 55;
 }
 
 /* Mobile Menu Styles */
@@ -145,6 +156,11 @@
 .mobile-menu ul li.active {
   color: var(--primary-color);
   position: relative;
+  font-weight: 600;
+}
+.mobile-link.active,
+.mobile-submenu li.active {
+  color: var(--primary-color);
   font-weight: 600;
 }
 

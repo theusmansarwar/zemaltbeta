@@ -35,7 +35,7 @@
 .products-grid .products-card .right h2 {
   font-size: var(--heading-three);
 }
-.products-grid .products-card .right .description {
+.products-grid .products-card .right .desc {
   font-size: var(--default-p-size);
   line-height: var(--p-line-height);
 }
