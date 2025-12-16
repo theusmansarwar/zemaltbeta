@@ -114,6 +114,7 @@ a {
   color: var(--primary-color);
   text-decoration: none;
   cursor: pointer;
+  font-weight: 600;
 }
 @media (max-width: 900px) {
   :root {

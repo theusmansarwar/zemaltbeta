@@ -11,7 +11,9 @@ const OurFormat = () => {
         <h2>What’s Our Format?</h2>
         <p>
           We welcome writers who share clear ideas, useful tips, and real
-          knowledge. Zemalt values content that is simple and easy to read.
+          knowledge. <a href="https://zemalt.com/">
+          Zemalt
+        </a> values content that is simple and easy to read.
           Every article must help the reader, reflect your expertise, and
           connect with the needs of business owners.
         </p>

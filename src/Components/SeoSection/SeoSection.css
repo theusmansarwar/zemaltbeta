@@ -53,6 +53,7 @@
   cursor: pointer;
   transition: color 0.3s ease;
   color: var(--main-color);
+  font-weight: 500;
 }
 
 .seo-section .seo-content-container .right ul li a:hover {

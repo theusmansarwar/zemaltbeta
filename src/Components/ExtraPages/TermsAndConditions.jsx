@@ -56,7 +56,9 @@ const TermsAndConditions = () => {
           zemalt.com
         </a>{" "}
         fairly and lawfully. The website is designed to share service
-        information and insights about our work. You agree not to use the site
+        information and insights <a href="https://zemalt.com/case-study">
+          about our work
+        </a>. You agree not to use the site
         in any manner that may harm it or interrupt operations.
       </p>
       <p>Avoid:</p>
@@ -195,7 +197,9 @@ const TermsAndConditions = () => {
       <h2>Governing Law</h2>
       <p>
         These Terms and Conditions follow the laws of <b>Pakistan</b>. Any
-        dispute related to Zemalt, its website, or services will be handled in
+        dispute related to Zemalt, its website, or <a href="https://zemalt.com/services">
+          services
+        </a> will be handled in
         Pakistani courts. Zemalt encourages mutual discussion and resolution
         before legal action. The company always operates under fair, ethical,
         and transparent standards.

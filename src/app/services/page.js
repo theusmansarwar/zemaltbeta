@@ -22,10 +22,9 @@ export const metadata = {
 const marketingContent = {
   title: "How Can Digital Campaigns Drive Business Growth?",
 
-  description: `<p>Campaigns designed by an <a href='https://zemalt.com/about-us'>expert digital marketing strategist </a> transform online presence into measurable business growth. Brands from startups to multi-location companies expand their visibility, attract qualified leads, and increase engagement. Zemalt develops actionable strategies that <a href='https://zemalt.com/services/ui-ux'>improve website conversions</a>, strengthen brand credibility, and generate tangible revenue. Every initiative emphasizes performance, ensuring campaigns deliver real results and scalable growth in competitive markets. </p>
+  description: `<p>Campaigns designed by an <a href='https://zemalt.com/about-us'>expert digital marketing strategist </a> transform online presence into measurable business growth. Brands from startups to multi-location companies expand their visibility, attract qualified leads, and increase engagement. Zemalt develops actionable strategies that improve website conversions, strengthen brand credibility, and generate tangible revenue. Every initiative emphasizes performance, ensuring campaigns deliver real results and scalable growth in competitive markets. </p>
        <p>Intelligent planning leverages insights from a trusted digital marketing agency for small businesses and incorporates 
-       <a href='https://zemalt.com/services/social-media-marketing/account-manegement'>social media management</a>
-       and <a href='https://zemalt.com/services/content-writing'>content creation services</a> to enhance audience reach. Measurable outcomes include increased conversions, stronger online presence, and improved ROI. Experienced marketing companies know how to optimize every step, from traffic generation to engagement tracking. Each campaign supports long-term success, helping brands convert interest into loyal customers while securing a competitive advantage in the digital landscape. </p>`,
+       social media management and <a href='https://zemalt.com/services/content-writing'>content creation services</a> to enhance audience reach. Measurable outcomes include increased conversions, stronger online presence, and improved ROI. Experienced marketing companies know how to optimize every step, from traffic generation to engagement tracking. Each campaign supports long-term success, helping brands convert interest into loyal customers while securing a competitive advantage in the digital landscape. </p>`,
 };
 
 const reasonsData = {
@@ -34,7 +33,7 @@ const reasonsData = {
     {
       question: "Targeted Traffic That Converts",
       answer:
-        "Zemalt designs campaigns that drive qualified website traffic and attract audiences most likely to convert. Using social media marketing agency techniques and precise targeting, each strategy increases online visibility, engagement, and brand recognition while maximizing performance across competitive digital markets.",
+        "Zemalt designs campaigns that drive qualified website traffic and attract audiences most likely to convert. Using <a href='https://zemalt.com/services/social-media-marketing'>social media marketing</a> agency techniques and precise targeting, each strategy increases online visibility, engagement, and brand recognition while maximizing performance across competitive digital markets.",
     },
     {
       question: "Measurable Lead Generation & Growth",
@@ -44,7 +43,7 @@ const reasonsData = {
     {
       question: "Results-Focused ROI",
       answer:
-        "Zemalt prioritizes profitable digital campaigns that improve ROI efficiently. Each initiative optimizes conversions, reduces wasted spend, and applies internet marketing services to deliver long-term performance. Transparent tracking ensures measurable outcomes, helping brands scale confidently.",
+        "Zemalt prioritizes profitable <a href='https://zemalt.com/services/google-ads'>digital campaigns that improve ROI</a> efficiently. Each initiative optimizes conversions, reduces wasted spend, and applies internet marketing services to deliver long-term performance. Transparent tracking ensures measurable outcomes, helping brands scale confidently.",
     },
     {
       question: "Scalable Strategies for Every Brand",

@@ -145,6 +145,7 @@
   transition: color 0.3s ease;
   text-decoration: none;
   color: var(--text-color4);
+  font-weight: 500;
 }
 .contact-item a:hover {
   color: var(--primary-color);
