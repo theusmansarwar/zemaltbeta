@@ -7,6 +7,7 @@ import ServicesDropDown from "../DropDowns/ServicesDropDown";
 import { usePathname, useRouter } from "next/navigation";
 import { fetchDropDownServices } from "@/DAL/Fetch";
 import { toast } from "react-toastify";
+import Link from "next/link";
 
 const Header = () => {
   const router = useRouter();
@@ -62,53 +63,38 @@ const Header = () => {
 
         {/* Desktop Nav */}
         <ul>
-          <li
-            className={pathname === "/" ? "active" : ""}
-            onClick={() => router.push("/")}
-          >
-            Home
+          <li className={pathname === "/" ? "active" : ""}>
+            <Link href="/">Home</Link>
           </li>
 
           <li
             className={pathname.startsWith("/services") ? "active" : ""}
-            onClick={() => router.push("/services")}
             onMouseEnter={visibleDropdown}
             onMouseLeave={hidedropdown}
           >
-            Services <FaAngleDown />
-          </li>
-          <li
-            className={pathname === "/products" ? "active" : ""}
-            onClick={() => router.push("/products")}
-          >
-            Our Products
+            <Link href="/services">
+              Services <FaAngleDown />
+            </Link>
           </li>
 
-          <li
-            className={pathname === "/case-study" ? "active" : ""}
-            onClick={() => router.push("/case-study")}
-          >
-            Case Studies
+          <li className={pathname === "/products" ? "active" : ""}>
+            <Link href="/products">Our Products</Link>
           </li>
 
-          <li
-            className={pathname === "/industries" ? "active" : ""}
-            onClick={() => router.push("/industries")}
-          >
-            Industries We Serve
-          </li>
-          <li
-            className={pathname === "/portfolio" ? "active" : ""}
-            onClick={() => router.push("/portfolio")}
-          >
-            Portfolio
+          <li className={pathname === "/case-study" ? "active" : ""}>
+            <Link href="/case-study">Case Studies</Link>
           </li>
 
-          <li
-            className={pathname === "/blog" ? "active" : ""}
-            onClick={() => router.push("/blog")}
-          >
-            Blogs
+          <li className={pathname === "/industries" ? "active" : ""}>
+            <Link href="/industries">Industries We Serve</Link>
+          </li>
+
+          <li className={pathname === "/portfolio" ? "active" : ""}>
+            <Link href="/portfolio">Portfolio</Link>
+          </li>
+
+          <li className={pathname === "/blog" ? "active" : ""}>
+            <Link href="/blog">Blogs</Link>
           </li>
         </ul>
 
@@ -149,34 +135,26 @@ const Header = () => {
         </>
       )}
 
-      {/* Mobile Nav */}
+     {/* Mobile Nav */}
       <div className={`mobile-menu ${mobileMenu ? "open" : ""}`}>
         <ul>
-          <li
-            className={pathname === "/" ? "active" : ""}
-            onClick={() => {
-              router.push("/");
-              setMobileMenu(false);
-            }}
-          >
-            Home
+          <li className={pathname === "/" ? "active" : ""}>
+            <Link href="/" onClick={() => setMobileMenu(false)}>
+              Home
+            </Link>
           </li>
-          {/* Main Services */}
-          {/* ================= MOBILE SERVICES ================= */}
+
           <li>
             <div className="mobile-services-row">
-              {/* MAIN SERVICES LINK */}
-              <span
+              <Link
+                href="/services"
                 className={`mobile-link ${
                   pathname.startsWith("/services") ? "active" : ""
                 }`}
-                onClick={() => {
-                  router.push("/services");
-                  setMobileMenu(false);
-                }}
+                onClick={() => setMobileMenu(false)}
               >
                 Services
-              </span>
+              </Link>
 
               <FaAngleDown
                 className="expand-icon"
@@ -184,7 +162,6 @@ const Header = () => {
               />
             </div>
 
-            {/* MAIN SERVICES LIST */}
             {isServicesOpen && (
               <ul className="mobile-submenu">
                 {services.map((service, idx) => {
@@ -195,18 +172,15 @@ const Header = () => {
                   return (
                     <li key={idx}>
                       <div className="mobile-services-row">
-                        {/* MAIN SERVICE */}
-                        <span
+                        <Link
+                          href={`/services/${service.slug}`}
                           className={`mobile-link ${
                             isServiceActive ? "active" : ""
                           }`}
-                          onClick={() => {
-                            router.push(`/services/${service.slug}`);
-                            setMobileMenu(false);
-                          }}
+                          onClick={() => setMobileMenu(false)}
                         >
                           {service.name}
-                        </span>
+                        </Link>
 
                         <FaAngleDown
                           className="expand-icon"
@@ -218,7 +192,6 @@ const Header = () => {
                         />
                       </div>
 
-                      {/* SUB SERVICES */}
                       {activeService === service.slug && (
                         <ul className="mobile-submenu">
                           {service.items.map((sub, subIdx) => {
@@ -230,14 +203,13 @@ const Header = () => {
                               <li
                                 key={subIdx}
                                 className={isSubActive ? "active" : ""}
-                                onClick={() => {
-                                  router.push(
-                                    `/services/${service.slug}/${sub.slug}`
-                                  );
-                                  setMobileMenu(false);
-                                }}
                               >
-                                {sub.name}
+                                <Link
+                                  href={`/services/${service.slug}/${sub.slug}`}
+                                  onClick={() => setMobileMenu(false)}
+                                >
+                                  {sub.name}
+                                </Link>
                               </li>
                             );
                           })}
@@ -249,54 +221,35 @@ const Header = () => {
               </ul>
             )}
           </li>
-          {/* ================= END MOBILE SERVICES ================= */}
 
-          <li
-            className={pathname === "/products" ? "active" : ""}
-            onClick={() => {
-              router.push("/products");
-              setMobileMenu(false);
-            }}
-          >
-            Our Products
+          <li className={pathname === "/products" ? "active" : ""}>
+            <Link href="/products" onClick={() => setMobileMenu(false)}>
+              Our Products
+            </Link>
           </li>
 
-          {/* Other menu items */}
-          <li
-            className={pathname === "/case-study" ? "active" : ""}
-            onClick={() => {
-              router.push("/case-study");
-              setMobileMenu(false);
-            }}
-          >
-            Case Studies
+          <li className={pathname === "/case-study" ? "active" : ""}>
+            <Link href="/case-study" onClick={() => setMobileMenu(false)}>
+              Case Studies
+            </Link>
           </li>
-          <li
-            className={pathname === "/industries" ? "active" : ""}
-            onClick={() => {
-              router.push("/industries");
-              setMobileMenu(false);
-            }}
-          >
-            Industries We Serve
+
+          <li className={pathname === "/industries" ? "active" : ""}>
+            <Link href="/industries" onClick={() => setMobileMenu(false)}>
+              Industries We Serve
+            </Link>
           </li>
-          <li
-            className={pathname === "/portfolio" ? "active" : ""}
-            onClick={() => {
-              router.push("/portfolio");
-              setMobileMenu(false);
-            }}
-          >
-            Portfolio
+
+          <li className={pathname === "/portfolio" ? "active" : ""}>
+            <Link href="/portfolio" onClick={() => setMobileMenu(false)}>
+              Portfolio
+            </Link>
           </li>
-          <li
-            className={pathname === "/blog" ? "active" : ""}
-            onClick={() => {
-              router.push("/blog");
-              setMobileMenu(false);
-            }}
-          >
-            Blogs
+
+          <li className={pathname === "/blog" ? "active" : ""}>
+            <Link href="/blog" onClick={() => setMobileMenu(false)}>
+              Blogs
+            </Link>
           </li>
         </ul>
       </div>

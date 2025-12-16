@@ -24,7 +24,7 @@
   gap: 20px;
   list-style: none;
 }
-.header-area ul li {
+.header-area ul li  {
   cursor: pointer;
   display: flex;
   align-items: flex-end;
@@ -34,11 +34,20 @@
   position: relative;
   font-weight: 500;
 }
-
-/* Hover text color */
-.header-area ul li:hover {
+/* Reset link styles inside header */
+.header-area ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  transition: color 0.3s ease;
+}
+.header-area ul li:hover a {
   color: var(--primary-color);
 }
+
+
 
 /* Animated underline (hover) */
 .header-area ul li::after {
@@ -58,11 +67,11 @@
   width: 100%;
 }
 
-/* Active state */
-.header-area ul li.active {
+.header-area ul li.active a {
   color: var(--primary-color);
   font-weight: 600;
 }
+
 
 /* Keep full underline for active item */
 .header-area ul li.active::after {
@@ -153,13 +162,21 @@
   border-bottom: 1px solid #eee;
   cursor: pointer;
 }
-.mobile-menu ul li.active {
+.mobile-menu ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  font-weight: 500;
+}
+
+.mobile-menu ul li.active a {
   color: var(--primary-color);
-  position: relative;
   font-weight: 600;
 }
-.mobile-link.active,
-.mobile-submenu li.active {
+
+.mobile-link.active ,
+.mobile-submenu li.active a{
   color: var(--primary-color);
   font-weight: 600;
 }
