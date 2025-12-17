@@ -73,14 +73,14 @@ const Featured = () => {
               router.push("/contact");
             }}
           >
-            Schedules a call <FaArrowRight />
+            Schedule a call <FaArrowRight />
           </button>
           <p
             onClick={() => {
               router.push("/case-study");
             }}
           >
-            View Case Study
+            View Case Studies
           </p>
         </div>
         <div className="trusted">

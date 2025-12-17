@@ -10,6 +10,7 @@ import {
 import "./Footer.css";
 import { IoCall, IoMail } from "react-icons/io5";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const companyLinks = [
   { slug: "/", label: "Home" },
@@ -133,8 +134,10 @@ export default function Footer() {
             <h3 className="column-title">Our Company</h3>
             <ul className="footer-links">
               {companyLinks.map((link, index) => (
-                <li key={index} onClick={() => router.push(link.slug)}>
-                  <FaAngleRight /> <span>{link.label}</span>
+                <li key={index}>
+                  <Link href={link.slug} className="footer-link">
+                    <FaAngleRight /> <span>{link.label}</span>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -157,11 +160,13 @@ export default function Footer() {
             <h3 className="column-title">What We Do Best</h3>
             <ul className="footer-links">
               {whatWeDoBest.map((service, index) => (
-                <li
-                  key={index}
-                  onClick={() => router.push(`/services/${service.slug}`)}
-                >
-                  <FaAngleRight /> <span>{service.label}</span>
+                <li key={index}>
+                  <Link
+                    href={`/services/${service.slug}`}
+                    className="footer-link"
+                  >
+                    <FaAngleRight /> <span>{service.label}</span>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -173,48 +178,38 @@ export default function Footer() {
           <div className="top">
             {" "}
             <div className="top-left">
-              <span
-                onClick={() => {
-                  router.push("/contact");
-                }}
+              <Link
+                href="/contact"
                 className="footer-bottom-link"
               >
                 Get in Touch
-              </span>
-              <span
-                onClick={() => {
-                  router.push("/team");
-                }}
+              </Link>
+              <Link
+                href="/team"
                 className="footer-bottom-link"
               >
                 Team
-              </span>
-              <span
-                onClick={() => {
-                  router.push("/career");
-                }}
+              </Link>
+              <Link
+                href="/career"
                 className="footer-bottom-link"
               >
                 Career
-              </span>
+              </Link>
             </div>
             <div className="top-right">
-              <span
-                onClick={() => {
-                  router.push("/terms-and-conditions");
-                }}
+              <Link
+                href="/terms-and-conditions"
                 className="footer-bottom-link"
               >
                 Terms & Conditions
-              </span>
-              <span
-                onClick={() => {
-                  router.push("/privacy-policy");
-                }}
+              </Link>
+              <Link
+                href="/privacy-policy"
                 className="footer-bottom-link"
               >
                 Privacy Policy
-              </span>
+              </Link>
             </div>
           </div>
           <div className="bottom">

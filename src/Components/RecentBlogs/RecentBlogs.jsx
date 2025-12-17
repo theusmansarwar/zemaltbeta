@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./RecentBlogs.css";
 import truncateTextByWords from "@/utils/TruncateByWords";
 import { useRouter } from "next/navigation";
-import { fetchallBloglist, fetchBlogCategories } from "@/DAL/Fetch"; // ✅ use new API
+import { fetchallBloglist, fetchBlogCategories } from "@/DAL/Fetch";
 import { baseUrl } from "@/config/Config";
 import { toast } from "react-toastify";
 
