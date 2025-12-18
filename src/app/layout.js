@@ -5,6 +5,7 @@ import Footer from "@/Components/Footer/Footer";
 import { Providers } from "./Providers";
 import { ToastContainer } from "react-toastify";
 import ViewCounter from "@/Components/ViewCounter/ViewCounter";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -66,20 +67,17 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta name="robots" content="noindex, nofollow" />
-        <meta
-          name="google-site-verification"
-          content="IWk3JxmqqlKhuNdHX_VaAjCRNCL_MJQTeMjOA583Xj4"
-        />
+       
         {/* <!-- Google tag (gtag.js) --> */}
-        <script
+      <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-LGJGHWTJ98"
-        ></script>
-        <script>
+        ></Script>
+        <Script>
           window.dataLayer = window.dataLayer || []; function gtag()
           {dataLayer.push(arguments)}
           gtag('js', new Date()); gtag('config', 'G-LGJGHWTJ98');
-        </script>
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
