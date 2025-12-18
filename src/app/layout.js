@@ -56,7 +56,7 @@ export const metadata = {
     description,
     images: [image],
   },
-   //  Add Google Search Console verification meta
+  //  Add Google Search Console verification meta
   other: {
     "google-site-verification": "IWk3JxmqqlKhuNdHX_VaAjCRNCL_MJQTeMjOA583Xj4",
   },
@@ -67,17 +67,21 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta name="robots" content="noindex, nofollow" />
-       
-        {/* <!-- Google tag (gtag.js) --> */}
-      <Script
-          async
+        {/* Google Analytics */}
+        <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-LGJGHWTJ98"
-        ></Script>
-        <Script>
-          window.dataLayer = window.dataLayer || []; function gtag()
-          {dataLayer.push(arguments)}
-          gtag('js', new Date()); gtag('config', 'G-LGJGHWTJ98');
+          strategy="afterInteractive"
+        />
+
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){window.dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LGJGHWTJ98');
+  `}
         </Script>
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
