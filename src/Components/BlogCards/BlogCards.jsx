@@ -15,7 +15,6 @@ import { formatDate } from "@/utils/FormatDate";
 import { FaChevronDown } from "react-icons/fa6";
 import { toast } from "react-toastify";
 
-
 const BlogCards = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -37,18 +36,6 @@ const BlogCards = () => {
   const [activeCategory, setActiveCategory] = useState("all");
   const [sortOrder, setSortOrder] = useState("desc");
 
-  useEffect(() => {
-    if (blogs.length > 0) {
-      const sorted = [...blogs].sort((a, b) => {
-        const dateA = new Date(a.createdAt);
-        const dateB = new Date(b.createdAt);
-        return sortOrder === "asc" ? dateA - dateB : dateB - dateA;
-      });
-      setBlogs(sorted);
-    }
-  }, [sortOrder]);
-
-
   //  Fetch categories
   useEffect(() => {
     const fetchCategories = async () => {
@@ -65,15 +52,22 @@ const BlogCards = () => {
   }, []);
 
   // Fetch blogs when filters change
-  useEffect(() => {
-    fetchData();
-  }, [page, rowsPerPage, activeCategory]);
+useEffect(() => {
+  fetchData();
+}, [page, rowsPerPage, activeCategory, sortOrder]);
+
 
   const fetchData = async () => {
     setLoading(true);
     try {
       const categoryId = activeCategory === "all" ? "" : activeCategory;
-      const res = await fetchallBloglist(categoryId, page, rowsPerPage, "");
+      const res = await fetchallBloglist(
+        categoryId,
+        page,
+        rowsPerPage,
+        "",
+        sortOrder
+      );
 
       if (res?.blogs?.length > 0) {
         setBlogs(res.blogs);
@@ -84,15 +78,12 @@ const BlogCards = () => {
         setTotalPages(1);
         setTotalItems(0);
       }
-
     } catch (error) {
       toast.error("Error fetching blogs");
       setBlogs([]);
       setTotalPages(1);
       setTotalItems(0);
-    }
-
-    finally {
+    } finally {
       setLoading(false);
     }
   };
