@@ -32,7 +32,7 @@ const BlogCards = () => {
   const [canScrollRight, setCanScrollRight] = useState(true);
   const [activeLink, setActiveLink] = useState(0);
 
-  const [rowsPerPage, setRowsPerPage] = useState(9);
+  const [rowsPerPage, setRowsPerPage] = useState(12);
   const [categories, setCategories] = useState([{ _id: "all", name: "All" }]);
   const [activeCategory, setActiveCategory] = useState("all");
   const [sortOrder, setSortOrder] = useState("desc");
