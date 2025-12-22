@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { fetchallBloglist, fetchBlogCategories } from "@/DAL/Fetch";
 import { baseUrl } from "@/config/Config";
 import { toast } from "react-toastify";
+import Link from "next/link";
 
 export default function RecentBlogs() {
   const router = useRouter();
@@ -68,10 +69,7 @@ export default function RecentBlogs() {
           ) : recentPosts.length > 0 ? (
             recentPosts.map((post) => (
               <React.Fragment key={post._id}>
-                <div
-                  className="post-item"
-                  onClick={() => router.push(`/blog/${post.slug}`)}
-                >
+                <Link className="post-item" href={`/blog/${post.slug}`}>
                   <div
                     className="post-image"
                     style={{
@@ -99,7 +97,7 @@ export default function RecentBlogs() {
                       {truncateTextByWords(post.title, 15)}
                     </h3>
                   </div>
-                </div>
+                </Link>
 
                 <div className="divider-line"></div>
               </React.Fragment>

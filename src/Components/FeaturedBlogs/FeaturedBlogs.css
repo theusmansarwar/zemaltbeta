@@ -23,6 +23,8 @@
   overflow: hidden;
   width: 32%;
   cursor: pointer;
+  color: var(--main-color);
+  font-weight: 500;
 }
 
 .b2b-blogs .b2b-blog-grid .b2b-blog-card .blog-card-img img {

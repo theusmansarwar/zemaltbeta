@@ -113,6 +113,8 @@
   justify-content: center;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
+  color: var(--main-color);
+  font-weight: 500;
 }
 
 .read-button:hover {

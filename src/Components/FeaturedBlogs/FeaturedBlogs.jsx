@@ -11,6 +11,7 @@ import { baseUrl } from "@/config/Config";
 import FeaturedBlogsSkeleton from "../SkeletonLoaders/FeaturedBlogsSkeleton";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
+import Link from "next/link";
 
 const FeaturedBlogs = () => {
   const router = useRouter();
@@ -40,16 +41,15 @@ const FeaturedBlogs = () => {
     <div className="b2b-blogs">
       <h2 className="b2b-heading">Featured Blogs</h2>
       <div className="b2b-blog-grid">
-        {blogs.length === 0 ? (
-          <FeaturedBlogsSkeleton count={6} />
-        ) : (
+        {
           blogs.map((post) => (
-            <div
+            <Link
               className="b2b-blog-card"
               key={post._id}
               onClick={() => {
                 router.push(`/blog/${post.slug}`);
               }}
+              href={`/blog/${post.slug}`}
             >
               {/* Blog Image */}
               <div className="blog-card-img">
@@ -102,9 +102,9 @@ const FeaturedBlogs = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))
-        )}
+        }
         {blogs.length === 0 && <p>No featured blogs found.</p>}
       </div>
     </div>

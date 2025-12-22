@@ -44,6 +44,7 @@
   padding: 10px;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: var(--main-color);
 }
 
 .post-item:hover {
@@ -84,7 +85,7 @@
 
 .post-title {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--main-color);
   margin: 0;
 }

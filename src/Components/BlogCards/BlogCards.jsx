@@ -14,6 +14,7 @@ import BCard from "../SkeletonLoaders/BCard";
 import { formatDate } from "@/utils/FormatDate";
 import { FaChevronDown } from "react-icons/fa6";
 import { toast } from "react-toastify";
+import Link from "next/link";
 
 const BlogCards = () => {
   const router = useRouter();
@@ -52,10 +53,9 @@ const BlogCards = () => {
   }, []);
 
   // Fetch blogs when filters change
-useEffect(() => {
-  fetchData();
-}, [page, rowsPerPage, activeCategory, sortOrder]);
-
+  useEffect(() => {
+    fetchData();
+  }, [page, rowsPerPage, activeCategory, sortOrder]);
 
   const fetchData = async () => {
     setLoading(true);
@@ -175,10 +175,10 @@ useEffect(() => {
           <BCard />
         ) : blogs.length > 0 ? (
           blogs.map((post, index) => (
-            <div
+            <Link
               key={post._id || `blog-${index}`}
+              href={`/blog/${post.slug}`}
               className="blog-post-card"
-              onClick={() => handleClick(post.slug)}
             >
               <div
                 className="post-image"
@@ -195,7 +195,7 @@ useEffect(() => {
                   {truncateTextByWords(post.title, 10)}
                 </h2>
               </div>
-            </div>
+            </Link>
           ))
         ) : (
           <p>No blogs found.</p>

@@ -11,6 +11,7 @@ import { baseUrl } from "@/config/Config";
 import TrendingBlogsSkeleton from "../SkeletonLoaders/TrendingBlogsSkeleton";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
+import Link from "next/link";
 
 const TrendingBlogs = () => {
   const router = useRouter();
@@ -41,12 +42,10 @@ const TrendingBlogs = () => {
       <h2 className="latest-heading">Trending Blogs</h2>
       <div className="latest-blog-grid">
         {trendingBlogs.map((post) => (
-          <div
+          <Link
             className="latest-blog-card"
             key={post._id}
-            onClick={() => {
-              router.push(`/blog/${post.slug}`);
-            }}
+            href={`/blog/${post.slug}`}
           >
             {/* Blog Image */}
             <div className="blog-card-img">
@@ -65,7 +64,9 @@ const TrendingBlogs = () => {
               <p className="blog-meta">6 Min Read</p>
               <hr />
               <div className="blog-footer">
-                <span className="blog-date">{formatDate(post.publishedDate)}</span>
+                <span className="blog-date">
+                  {formatDate(post.publishedDate)}
+                </span>
                 <div className="icons-container">
                   <a
                     href="https://www.facebook.com/zemaltpvtltd"
@@ -97,7 +98,7 @@ const TrendingBlogs = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
 
         {trendingBlogs.length === 0 && <p>No blogs found.</p>}

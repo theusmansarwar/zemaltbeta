@@ -116,6 +116,7 @@
   background: var(--text-color4);
   border: 1px solid rgba(220, 220, 220, 0.334);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: var(--main-color);
 }
 .blog-post-card:hover {
   transform: translateY(-5px);

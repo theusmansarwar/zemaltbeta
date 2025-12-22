@@ -7,6 +7,7 @@ import truncateTextByWords from "@/utils/TruncateByWords";
 import { useRouter } from "next/navigation";
 import BCard2 from "../SkeletonLoaders/BCard2";
 import { toast } from "react-toastify";
+import Link from "next/link";
 
 const colors = ["#ff4d4d", "#4caf50", "#2196f3", "#ff9800", "#9c27b0"];
 
@@ -74,13 +75,13 @@ const BlogSection = ({ data }) => {
                   <p className="description">
                     {truncateTextByWords(blog.description, 15)}
                   </p>
-                  <button
+                  <Link
                     aria-label="Read More"
                     className="read-button"
-                    onClick={() => router.push(`/blog/${blog.slug}`)}
+                    href={`/blog/${blog.slug}`}
                   >
                     <FaArrowRight />
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
