@@ -4,10 +4,11 @@ export const fetchallBloglist = async (
   activeCategory,
   page,
   rowsPerPages,
-  search
+  search,
+  sortOrder
 ) => {
   const reqObj = {
-    path: `/blog/list?categoryId=${activeCategory}&page=${page}&limit=${rowsPerPages}&search=${search}`,
+    path: `/blog/list?categoryId=${activeCategory}&page=${page}&limit=${rowsPerPages}&search=${search}&sortOrder=${sortOrder}`,
     method: "GET",
     headers: {},
     body: {},
@@ -196,11 +197,9 @@ export const getComments = async (data) => {
   const reqObj = {
     path: `/comment/approved-comment`,
     method: "GET",
-    headers: {
-    
-    },
+    headers: {},
 
-    postData: {data},
+    postData: { data },
   };
   return invokeApi(reqObj);
 };
@@ -208,11 +207,9 @@ export const getPortfolios = async (data) => {
   const reqObj = {
     path: `/portfolio/userportfolio`,
     method: "GET",
-    headers: {
-    
-    },
+    headers: {},
 
-    postData: {data},
+    postData: { data },
   };
   return invokeApi(reqObj);
 };
