@@ -1,3 +1,4 @@
+import Schema from "@/Components/Schema/Schema";
 import ServicePage from "@/Components/SERVICEPAGE/ServicePage";
 import { fetchServiceBySlug } from "@/DAL/Fetch";
 
@@ -7,7 +8,6 @@ import { fetchServiceBySlug } from "@/DAL/Fetch";
 async function getService(slug) {
   try {
     const res = await fetchServiceBySlug(slug);
-    
 
     if (res?.service) return res.service;
 
@@ -117,18 +117,58 @@ const Page = async ({ params }) => {
       "We are a trusted ad agency that drives fast growth and real reach. You get clear campaigns built on sharp strategy and smart targeting. Each plan cuts waste, raises clicks, and delivers steady leads that add lasting value to your business.",
   };
 
+  ///////////////// schema data ///////////////
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `https://zemalt.com/services/${params.serviceslug}#service`,
+    name: service.title,
+    description: service.metaDescription || service.description,
+    url: `https://zemalt.com/services/${params.serviceslug}`,
+    provider: {
+      "@type": "Organization",
+      name: "Zemalt",
+      url: "https://zemalt.com",
+    },
+    areaServed: {
+      "@type": "AdministrativeArea",
+      name: "Global",
+    },
+    serviceType: service.title,
+  };
+  const faqSchema =
+    service.faqs?.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: service.faqs.map((faq) => ({
+            "@type": "Question",
+            name: faq.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: faq.answer,
+            },
+          })),
+        }
+      : null;
+  /////////////////////////////////////////////////
   return (
-    <ServicePage
-      featuredData={featuredData}
-      firstSectionData={firstSectionData}
-      contentSectionData={contentSectionData}
-      secondData={secondData}
-      cardData={cardData}
-      imageData={imageData}
-      Faqs={faqsData}
-      CalulaterBottom={calculaterBottomData}
-      whyThisData={whyThisData}
-    />
+    <>
+      <Schema id="service-main" data={serviceSchema} />
+      {faqSchema && <Schema id="service-faq" data={faqSchema} />}
+
+      <ServicePage
+        featuredData={featuredData}
+        firstSectionData={firstSectionData}
+        contentSectionData={contentSectionData}
+        secondData={secondData}
+        cardData={cardData}
+        imageData={imageData}
+        Faqs={faqsData}
+        CalulaterBottom={calculaterBottomData}
+        whyThisData={whyThisData}
+      />
+    </>
   );
 };
 

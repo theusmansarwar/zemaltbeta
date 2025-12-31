@@ -12,12 +12,15 @@ import ImpactOfMarketing from "@/Components/ImpactOfMarketing/ImpactOfMarketing"
 import HomeServices from "@/Components/HomeServices/HomeServices";
 import ReasonsToChoose from "@/Components/ReasonsToChoose/ReasonsToChoose";
 import ContactSection from "@/Components/ContactSection/ContactSection";
+import Script from "next/script";
+import Schema from "@/Components/Schema/Schema";
 
 export const metadata = {
   title: "Zemalt | Digital Marketing, SEO & Web Design Services.",
   description:
     "Zemalt offers expert SEO, content writing, web design, UI/UX, and digital marketing services to build brands, boost rankings, and drive business growth",
 };
+
 const reasonsData = {
   heading: "Why Zemalt’s Digital Marketing Delivers High-Performance Results",
   steps: [
@@ -102,22 +105,114 @@ const blogHeaderData = {
   description:
     "Explore our blog for expert strategies, SEO tips, and marketing insights that help you drive traffic, increase engagement, and grow your business.Discover step- by - step guides, industry trends, and proven techniques to boost your online presence.Our posts simplify complex marketing concepts, giving you practical ideas to implement immediately.Stay informed, learn from real examples, and take your digital strategy to the next level.",
 };
+
+////////// schema data /////////////
+const homeServicesSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": "https://zemalt.com/#services",
+  name: "Zemalt Services",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      item: {
+        "@type": "Service",
+        name: "SEO Services",
+        url: "https://zemalt.com/services/seo",
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      item: {
+        "@type": "Service",
+        name: "Web Development",
+        url: "https://zemalt.com/services/web-development",
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      item: {
+        "@type": "Service",
+        name: "UI/UX Designing",
+        url: "https://zemalt.com/services/ui-ux",
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 4,
+      item: {
+        "@type": "Service",
+        name: "Social Media Marketing",
+        url: "https://zemalt.com/services/social-media-marketing",
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 5,
+      item: {
+        "@type": "Service",
+        name: "Google Ads",
+        url: "https://zemalt.com/services/google-ads",
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 6,
+      item: {
+        "@type": "Service",
+        name: "Content Writing",
+        url: "https://zemalt.com/services/content-writing",
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 7,
+      item: {
+        "@type": "Service",
+        name: "Video Editing",
+        url: "https://zemalt.com/services/video-editing",
+      },
+    },
+  ],
+};
+const homeFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://zemalt.com/#home-faqs",
+  mainEntity: Homepagefaqs.items.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+//////////////////////////////
 export default function Home() {
   return (
-    <div className={styles.Home}>
-      <Featured />
-      <OutBox />
-      <StrategicMarketing data={marketingContent} />
-      <ImpactOfMarketing />
-      <HomeServices />
-      <TestimonialSection />
-      <PortfolioSection />
-      <ReasonsToChoose data={reasonsData} />
-      <TestimonialSlider2 />
-      <BlogSection data={blogHeaderData} />
-      <Faq faqs={Homepagefaqs} />
-      <SeoSection />
-      <ContactSection />
-    </div>
+    <>
+      <Schema id="home-services-schema" data={homeServicesSchema} />
+      <Schema id="home-faq-schema" data={homeFaqSchema} />
+
+      <div className={styles.Home}>
+        <Featured />
+        <OutBox />
+        <StrategicMarketing data={marketingContent} />
+        <ImpactOfMarketing />
+        <HomeServices />
+        <TestimonialSection />
+        <PortfolioSection />
+        <ReasonsToChoose data={reasonsData} />
+        <TestimonialSlider2 />
+        <BlogSection data={blogHeaderData} />
+        <Faq faqs={Homepagefaqs} />
+        <SeoSection />
+        <ContactSection />
+      </div>
+    </>
   );
 }

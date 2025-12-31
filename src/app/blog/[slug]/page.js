@@ -1,5 +1,6 @@
 
 import BlogDetail from "@/Components/BlogDetail/BlogDetail";
+import Schema from "@/Components/Schema/Schema";
 import { baseUrl } from "@/config/Config";
 import { fetchBlogBySlug } from "@/DAL/Fetch";
 
@@ -45,6 +46,36 @@ export async function generateMetadata({ params }) {
     },
   };
 }
+///////////////////// schema data ///////////////
+const blogPostingSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": `https://zemalt.com/blog/${slug}#blogposting`,
+  headline: blog.title,
+  description: blog.metaDescription || blog.excerpt,
+  image: blog.thumbnail ? baseUrl + blog.thumbnail : undefined,
+  url: `https://zemalt.com/blog/${slug}`,
+  datePublished: blog.publishedDate,
+  dateModified: blog.updatedAt || blog.createdAt,
+  author: {
+    "@type": "Organization",
+    name: "Zemalt",
+    url: "https://zemalt.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Zemalt",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://zemalt.com/favicon.png",
+    },
+  },
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": `https://zemalt.com/blog/${slug}`,
+  },
+};
+////////////////////////////////////////////////
 const page = async ({ params }) => {
   const slug = (await params).slug;
 const res = await fetchBlogBySlug(slug);
@@ -55,9 +86,13 @@ const res = await fetchBlogBySlug(slug);
     notFound();
   }
   return (
+    <>
+    <Schema id="blog-posting-schema" schema={blogPostingSchema} />
+  
     <div>
       <BlogDetail slug={slug}/>
     </div>
+      </>
   );
 };
 

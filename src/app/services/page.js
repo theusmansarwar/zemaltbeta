@@ -13,6 +13,7 @@ import StrategicMarketing from "@/Components/StrategicMarketing/StrategicMarketi
 import ReasonsToChoose from "@/Components/ReasonsToChoose/ReasonsToChoose";
 import PricingPlan from "@/Components/PricingPlan/PricingPlan";
 import ContactSection from "@/Components/ContactSection/ContactSection";
+import Schema from "@/Components/Schema/Schema";
 
 export const metadata = {
   title: "Grow Your Brand Online with Zemalt | Digital Branding Solutions",
@@ -96,23 +97,115 @@ const Servicespagefaqs = {
     },
   ],
 };
+
+///////////// schema data /////////////
+const servicesListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Zemalt Digital Marketing Services",
+  itemListOrder: "https://schema.org/ItemListOrderAscending",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      item: {
+        "@type": "Service",
+        name: "SEO Services",
+        url: "https://zemalt.com/services/seo",
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      item: {
+        "@type": "Service",
+        name: "Web Development",
+        url: "https://zemalt.com/services/web-development",
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      item: {
+        "@type": "Service",
+        name: "UI/UX Design",
+        url: "https://zemalt.com/services/ui-ux",
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 4,
+      item: {
+        "@type": "Service",
+        name: "Social Media Marketing",
+        url: "https://zemalt.com/services/social-media-marketing",
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 5,
+      item: {
+        "@type": "Service",
+        name: "Google Ads Management",
+        url: "https://zemalt.com/services/google-ads",
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 6,
+      item: {
+        "@type": "Service",
+        name: "Content Writing",
+        url: "https://zemalt.com/services/content-writing",
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 7,
+      item: {
+        "@type": "Service",
+        name: "Video Editing",
+        url: "https://zemalt.com/services/video-editing",
+      },
+    },
+  ],
+};
+const servicesFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: Servicespagefaqs.items.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+//////////////////////////////////
+
 export default function Page() {
   return (
-    <div className={styles.Home}>
-      <Servicefeatured />
-      <BussinessGrowth />
-      <StrategicMarketing data={marketingContent} />
-      <Services />
-      <HowDifferent />
-      <Realworld />
-      <DriveRevenue />
-      <ReasonsToChoose data={reasonsData} />
-      <TestimonialSlider2 />
-      <GloballyTrusted />
-      <LastBottom />
-      <PricingPlan />
-      <Faq faqs={Servicespagefaqs} />
-      <ContactSection />
-    </div>
+    <>
+      <Schema id="services-list" data={servicesListSchema} />
+      <Schema id="services-faq" data={servicesFaqSchema} />
+
+      <div className={styles.Home}>
+        <Servicefeatured />
+        <BussinessGrowth />
+        <StrategicMarketing data={marketingContent} />
+        <Services />
+        <HowDifferent />
+        <Realworld />
+        <DriveRevenue />
+        <ReasonsToChoose data={reasonsData} />
+        <TestimonialSlider2 />
+        <GloballyTrusted />
+        <LastBottom />
+        <PricingPlan />
+        <Faq faqs={Servicespagefaqs} />
+        <ContactSection />
+      </div>
+    </>
   );
 }

@@ -6,6 +6,7 @@ import { Providers } from "./Providers";
 import { ToastContainer } from "react-toastify";
 import ViewCounter from "@/Components/ViewCounter/ViewCounter";
 import Script from "next/script";
+import Schema from "@/Components/Schema/Schema";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -62,6 +63,48 @@ export const metadata = {
   },
 };
 
+/////////////////// Schema data /////////////
+const globalSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://zemalt.com/#website",
+      name: "Zemalt",
+      url: "https://zemalt.com",
+      potentialAction: {
+        "@type": "SearchAction",
+        target: "https://zemalt.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string",
+      },
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://zemalt.com/#organization",
+      name: "Zemalt",
+      url: "https://zemalt.com",
+      logo: "https://zemalt.com/favicon.png",
+      sameAs: [
+        "https://www.linkedin.com/company/zemalt/",
+        "https://www.instagram.com/zemaltpvtltd/",
+        "https://www.facebook.com/zemaltpvtltd",
+      ],
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://zemalt.com/#localbusiness",
+      name: "Zemalt",
+      url: "https://zemalt.com",
+      image: "https://zemalt.com/favicon.png",
+      priceRange: "$$",
+      address: {
+        "@type": "PostalAddress",
+        addressCountry: "PK",
+      },
+    },
+  ],
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -81,24 +124,7 @@ export default function RootLayout({ children }) {
     gtag('config', 'G-LGJGHWTJ98');
   `}
         </Script>
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              name: "Zemalt",
-              url: "https://zemalt.com",
-              logo: "https://zemalt.com/favicon.png",
-              sameAs: [
-                "https://www.linkedin.com/company/zemalt/",
-                "https://www.instagram.com/zemaltpvtltd/",
-                "https://www.facebook.com/zemaltpvtltd",
-              ],
-            }),
-          }}
-        />
+         <Schema id="global-schema" data={globalSchema} />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${jakarta.variable}`}
