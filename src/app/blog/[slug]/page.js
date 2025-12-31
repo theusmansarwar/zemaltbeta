@@ -7,7 +7,10 @@ export async function generateMetadata({ params }) {
   const slug = (await params).slug;
   const res = await fetchBlogBySlug(slug);
   const blog = res?.blog;
-
+ //  No metadata for deleted blogs
+  if (!blog) {
+    return {};
+  }
   const title = blog?.title || slug.replace(/-/g, " ");
   const description =
     blog?.metaDescription ||
@@ -44,7 +47,13 @@ export async function generateMetadata({ params }) {
 }
 const page = async ({ params }) => {
   const slug = (await params).slug;
+const res = await fetchBlogBySlug(slug);
+  const blog = res?.blog;
 
+  //  UI fallback for deleted blogs
+  if (!blog) {
+    notFound();
+  }
   return (
     <div>
       <BlogDetail slug={slug}/>
