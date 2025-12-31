@@ -46,7 +46,18 @@ export async function generateMetadata({ params }) {
     },
   };
 }
-///////////////////// schema data ///////////////
+
+const page = async ({ params }) => {
+  const slug = (await params).slug;
+const res = await fetchBlogBySlug(slug);
+  const blog = res?.blog;
+
+  //  UI fallback for deleted blogs
+  if (!blog) {
+    notFound();
+  }
+
+  ///////////////////// schema data ///////////////
 const blogPostingSchema = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
@@ -76,15 +87,6 @@ const blogPostingSchema = {
   },
 };
 ////////////////////////////////////////////////
-const page = async ({ params }) => {
-  const slug = (await params).slug;
-const res = await fetchBlogBySlug(slug);
-  const blog = res?.blog;
-
-  //  UI fallback for deleted blogs
-  if (!blog) {
-    notFound();
-  }
   return (
     <>
     <Schema id="blog-posting-schema" schema={blogPostingSchema} />
