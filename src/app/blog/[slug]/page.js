@@ -3,6 +3,7 @@ import BlogDetail from "@/Components/BlogDetail/BlogDetail";
 import Schema from "@/Components/Schema/Schema";
 import { baseUrl } from "@/config/Config";
 import { fetchBlogBySlug } from "@/DAL/Fetch";
+import { notFound } from "next/navigation";
 
 export async function generateMetadata({ params }) {
   const slug = (await params).slug;
