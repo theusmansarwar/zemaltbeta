@@ -1,4 +1,3 @@
-
 import BlogDetail from "@/Components/BlogDetail/BlogDetail";
 import Schema from "@/Components/Schema/Schema";
 import { baseUrl } from "@/config/Config";
@@ -9,7 +8,7 @@ export async function generateMetadata({ params }) {
   const slug = (await params).slug;
   const res = await fetchBlogBySlug(slug);
   const blog = res?.blog;
- //  No metadata for deleted blogs
+  //  No metadata for deleted blogs
   if (!blog) {
     return {};
   }
@@ -50,7 +49,7 @@ export async function generateMetadata({ params }) {
 
 const page = async ({ params }) => {
   const slug = (await params).slug;
-const res = await fetchBlogBySlug(slug);
+  const res = await fetchBlogBySlug(slug);
   const blog = res?.blog;
 
   //  UI fallback for deleted blogs
@@ -59,43 +58,43 @@ const res = await fetchBlogBySlug(slug);
   }
 
   ///////////////////// schema data ///////////////
-const blogPostingSchema = {
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "@id": `https://zemalt.com/blog/${slug}#blogposting`,
-  headline: blog.title,
-  description: blog.metaDescription || blog.excerpt,
-  image: blog.thumbnail ? baseUrl + blog.thumbnail : undefined,
-  url: `https://zemalt.com/blog/${slug}`,
-  datePublished: blog.publishedDate,
-  dateModified: blog.updatedAt || blog.createdAt,
-  author: {
-    "@type": "Organization",
-    name: "Zemalt",
-    url: "https://zemalt.com",
-  },
-  publisher: {
-    "@type": "Organization",
-    name: "Zemalt",
-    logo: {
-      "@type": "ImageObject",
-      url: "https://zemalt.com/favicon.png",
+  const blogPostingSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": `https://zemalt.com/blog/${slug}#blogposting`,
+    headline: blog.title,
+    description: blog.metaDescription || blog.excerpt,
+    image: blog.thumbnail ? baseUrl + blog.thumbnail : undefined,
+    url: `https://zemalt.com/blog/${slug}`,
+    datePublished: blog.publishedDate,
+    dateModified: blog.updatedAt || blog.createdAt,
+    author: {
+      "@type": "Organization",
+      name: "Zemalt",
+      url: "https://zemalt.com",
     },
-  },
-  mainEntityOfPage: {
-    "@type": "WebPage",
-    "@id": `https://zemalt.com/blog/${slug}`,
-  },
-};
-////////////////////////////////////////////////
+    publisher: {
+      "@type": "Organization",
+      name: "Zemalt",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://zemalt.com/favicon.png",
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://zemalt.com/blog/${slug}`,
+    },
+  };
+  ////////////////////////////////////////////////
   return (
     <>
-    <Schema id="blog-posting-schema" schema={blogPostingSchema} />
-  
-    <div>
-      <BlogDetail slug={slug}/>
-    </div>
-      </>
+      <Schema id="blog-posting-schema" schema={blogPostingSchema} />
+
+      <div>
+        <BlogDetail slug={slug} />
+      </div>
+    </>
   );
 };
 
