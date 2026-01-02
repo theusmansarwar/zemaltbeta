@@ -1,6 +1,5 @@
-
 import styles from "./page.module.css";
-import React from "react";
+import React, { Suspense } from "react";
 import BlogCards from "@/Components/BlogCards/BlogCards";
 import TrendingBlogs from "@/Components/TrendingBlogs/TrendingBlogs";
 import FeaturedBlogs from "@/Components/FeaturedBlogs/FeaturedBlogs";
@@ -61,7 +60,9 @@ const page = () => {
 
       <div className={styles.Home}>
         <ServicePageFeatured data={featuredData} />
-        <BlogCards />
+        <Suspense fallback={null}>
+          <BlogCards />
+        </Suspense>
         <TrendingBlogs />
         <FeaturedBlogs />
       </div>

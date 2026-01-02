@@ -43,13 +43,12 @@ const FeaturedBlogs = () => {
       <div className="b2b-blog-grid">
         {
           blogs.map((post) => (
-            <Link
+            <div
               className="b2b-blog-card"
               key={post._id}
               onClick={() => {
                 router.push(`/blog/${post.slug}`);
               }}
-              href={`/blog/${post.slug}`}
             >
               {/* Blog Image */}
               <div className="blog-card-img">
@@ -102,7 +101,7 @@ const FeaturedBlogs = () => {
                   </div>
                 </div>
               </div>
-            </Link>
+            </div>
           ))
         }
         {blogs.length === 0 && <p>No featured blogs found.</p>}
