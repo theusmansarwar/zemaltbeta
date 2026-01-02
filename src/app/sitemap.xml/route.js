@@ -1,4 +1,8 @@
-import { fetchServicesSlugs, getblogSlugs } from "@/DAL/Fetch";
+import {
+  fetchServicesSlugs,
+  fetchSubServicesSlugs,
+  getblogSlugs,
+} from "@/DAL/Fetch";
 
 export const dynamic = "force-dynamic";
 
@@ -8,7 +12,7 @@ export async function GET() {
     "",
     "services",
     "products",
-    "case-study", 
+    "case-study",
     "industries",
     "portfolio",
     "contact",
@@ -20,6 +24,7 @@ export async function GET() {
     "privacy-policy",
   ];
 
+  let subServicesRoutes = [];
   let serviceRoutes = [];
   let blogRoutes = [];
   try {
@@ -31,26 +36,38 @@ export async function GET() {
     if (res2?.slugs && Array.isArray(res2.slugs)) {
       serviceRoutes = res2.slugs.map((service) => `services/${service.slug}`);
     }
+    const res3 = await fetchSubServicesSlugs();
+    if (res3?.slugs && Array.isArray(res3.slugs)) {
+      subServicesRoutes = res3.slugs.map(
+        (sub) => `services/${sub.parentServiceSlug}/${sub.slug}`
+      );
+    }
   } catch (error) {
     console.error("Error fetching slugs:", error);
   }
-  const allRoutes = [...staticRoutes, ...serviceRoutes, ...blogRoutes];
+  const allRoutes = [
+    ...staticRoutes,
+    ...subServicesRoutes,
+    ...serviceRoutes,
+    ...blogRoutes,
+  ];
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   ${allRoutes
-      .map(
-        (route) => `
+    .map(
+      (route) => `
     <url>
       <loc>${baseUrl}/${route}</loc>
       <lastmod>${new Date().toISOString()}</lastmod>
       <changefreq>weekly</changefreq>
-      <priority>${route.startsWith("services/") || route.startsWith("blog/")
-            ? "0.7"
-            : "0.9"
-          }</priority>
+      <priority>${
+        route.startsWith("services/") || route.startsWith("blog/")
+          ? "0.7"
+          : "0.9"
+      }</priority>
     </url>`
-      )
-      .join("")}
+    )
+    .join("")}
 </urlset>`;
   return new Response(sitemap, {
     headers: {
