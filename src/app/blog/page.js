@@ -15,7 +15,7 @@ const featuredData = {
   title: "BLOGS",
   spanTitle: "",
   description:
-    "The Zemalt blog shares insights on digital marketing, SEO strategies, branding, and product design. You find expert tips that help your business grow and stand out online. Each article explains trends in search engine optimization, content marketing, and social media growth. You also learn about creative design practices that improve user experience. Stay updated with strategies that boost visibility, drive traffic, and build long-term success. .",
+    "The Zemalt blog shares insights on digital marketing, SEO strategies, branding, and product design. You find expert tips that help your business grow and stand out online. Each article explains trends in search engine optimization, content marketing, and social media growth. You also learn about creative design practices that improve user experience. Stay updated with strategies that boost visibility, drive traffic, and build long-term success.",
 };
 
 /////////////// schema data /////////////
