@@ -48,6 +48,8 @@ export async function middleware(req) {
     "/services/Content Writing": "/services/content-writing",
 
     "/services/Google Ads": "/services/google-ads",
+    
+    "/services/Web Development": "/services/web-development",
   };
   if (SERVICE_REDIRECTS[pathname]) {
     return NextResponse.redirect(
