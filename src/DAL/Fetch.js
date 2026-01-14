@@ -46,9 +46,9 @@ export const fetchBlogBySlug = async (id) => {
   };
   return invokeApi(reqObj);
 };
-export const fetchFeaturedBlog = async () => {
+export const fetchFeaturedBlog = async (limit) => {
   const reqObj = {
-    path: `/blog/featured`,
+    path: `/blog/featured?limit=${limit}`,
     method: "GET",
     headers: {},
 

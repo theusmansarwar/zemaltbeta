@@ -103,13 +103,15 @@
   .blog-card-content
   .blog-footer
   .icons-container
-  a
   .icon {
   cursor: pointer;
   transition: color 0.2s ease;
   font-size: 14px;
   flex-shrink: 0;
   color: var(--main-color);
+  outline: none;
+  border: none;
+  background: transparent;
 }
 
 .b2b-blogs
@@ -118,7 +120,6 @@
   .blog-card-content
   .blog-footer
   .icons-container
-  a
   .icon:hover {
   color: var(--primary-color);
 }

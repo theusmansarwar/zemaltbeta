@@ -43,9 +43,9 @@ const TrendingBlogs = () => {
       <div className="latest-blog-grid">
         {trendingBlogs.map((post) => (
           <Link
-            className="latest-blog-card"
             key={post._id}
             href={`/blog/${post.slug}`}
+            className="latest-blog-card"
           >
             {/* Blog Image */}
             <div className="blog-card-img">
@@ -55,46 +55,71 @@ const TrendingBlogs = () => {
             {/* Blog Content */}
             <div className="blog-card-content">
               <span className="blog-category">{post.category.name}</span>
+
               <h3 className="blog-title">
                 {truncateTextByWords(post.title, 8)}
               </h3>
+
               <p className="blog-description">
                 {truncateTextByWords(post.description, 20)}
               </p>
+
               <p className="blog-meta">6 Min Read</p>
               <hr />
+
               <div className="blog-footer">
                 <span className="blog-date">
                   {formatDate(post.publishedDate)}
                 </span>
+
                 <div className="icons-container">
-                  <a
-                    href="https://www.facebook.com/zemaltpvtltd"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  {/* FACEBOOK */}
+                  <button
+                    type="button"
+                    className="icon"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      window.open(
+                        "https://www.facebook.com/zemaltpvtltd",
+                        "_blank"
+                      );
+                    }}
                   >
-                    <div className="icon">
-                      <RiFacebookFill />
-                    </div>
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/company/zemalt/"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    <RiFacebookFill />
+                  </button>
+
+                  {/* LINKEDIN */}
+                  <button
+                    type="button"
+                    className="icon"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      window.open(
+                        "https://www.linkedin.com/company/zemalt/",
+                        "_blank"
+                      );
+                    }}
                   >
-                    <div className="icon">
-                      <FaLinkedinIn />
-                    </div>
-                  </a>
-                  <a
-                    href="https://www.instagram.com/zemaltpvtltd/"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    <FaLinkedinIn />
+                  </button>
+
+                  {/* INSTAGRAM */}
+                  <button
+                    type="button"
+                    className="icon"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      window.open(
+                        "https://www.instagram.com/zemaltpvtltd/",
+                        "_blank"
+                      );
+                    }}
                   >
-                    <div className="icon">
-                      <AiFillInstagram />
-                    </div>
-                  </a>
+                    <AiFillInstagram />
+                  </button>
                 </div>
               </div>
             </div>
