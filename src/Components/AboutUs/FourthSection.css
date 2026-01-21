@@ -6,27 +6,13 @@
   height: fit-content;
   justify-content: space-between;
   margin-bottom: 40px;
-
 }
 
 .fourth-section .left {
-  width: 60%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-
-.fourth-section .right {
-  width: 35%;
-  height: auto;
-  max-height: 600px;
-  overflow: hidden;
-  position: relative;
-}
-
-.fourth-section .right img {
-  width: 100%;
-  height: auto;
 }
 
 .fourth-section .left h2 {
@@ -82,23 +68,13 @@
   background-color: transparent;
 }
 
-
-
-
 @media (max-width: 900px) {
   .fourth-section {
     padding: 20px var(--left-space);
     margin-bottom: 10px;
   }
 
-  .fourth-section .left {
-    width: 100%;
-  }
-
-  .fourth-section .right {
-    display: none;
-  }
-
+ 
 
   .fourth-section .left .buttons-area {
     align-items: flex-start;

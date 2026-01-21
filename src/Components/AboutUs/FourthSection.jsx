@@ -69,9 +69,7 @@ const FourthSection = () => {
           </p>
         </div>
       </div>
-      <div className="right">
-        <img src="/why-choose-zemalt.webp" alt="" />
-      </div>
+    
     </div>
   );
 };
