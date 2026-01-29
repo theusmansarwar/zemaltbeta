@@ -15,7 +15,6 @@
 }
 
 .header-area img {
-  height: 30px;
   cursor: pointer;
 }
 .header-area ul {
@@ -224,9 +223,7 @@
   .header-area {
     height: 70px;
   }
-  .header-area img {
-    height: 20px;
-  }
+  
   .header-area ul {
     display: none;
   }

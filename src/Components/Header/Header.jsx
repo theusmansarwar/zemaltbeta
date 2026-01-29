@@ -8,6 +8,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { fetchDropDownServices } from "@/DAL/Fetch";
 import { toast } from "react-toastify";
 import Link from "next/link";
+import Image from "next/image";
 
 const Header = () => {
   const router = useRouter();
@@ -55,10 +56,14 @@ const Header = () => {
   return (
     <div className="main-wrapper-fixed-width">
       <div className="header-area">
-        <img
+        <Image
           src="/zemalt-logo.webp"
-          onClick={() => router.push("/")}
           alt="Zemalt.com"
+          width={135}
+          height={30}
+          sizes="(max-width: 1100px) 100px, 135px"
+          priority
+          onClick={() => router.push("/")}
         />
 
         {/* Desktop Nav */}
@@ -135,7 +140,7 @@ const Header = () => {
         </>
       )}
 
-     {/* Mobile Nav */}
+      {/* Mobile Nav */}
       <div className={`mobile-menu ${mobileMenu ? "open" : ""}`}>
         <ul>
           <li className={pathname === "/" ? "active" : ""}>
@@ -186,7 +191,7 @@ const Header = () => {
                           className="expand-icon"
                           onClick={() =>
                             setActiveService((prev) =>
-                              prev === service.slug ? null : service.slug
+                              prev === service.slug ? null : service.slug,
                             )
                           }
                         />

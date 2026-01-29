@@ -123,7 +123,7 @@ const Featured = () => {
         </div>
         <div className="bottom">
           <div className="left">
-            <p>
+            <p> 
               <hr />
               Drive More Traffic and Sales{" "}
             </p>
